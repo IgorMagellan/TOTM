@@ -1,0 +1,284 @@
+~~~~~~~~~~~~~~~~~~~~~
+* TOTM версия 1.9.4 *
+~~~~~~~~~~~~~~~~~~~~~
+for Lomaps and mapsforge V3
+
+26/11/2017
+мост через реку для path, footway 
+27/11/2017
+wood
+28/11/2017
+отображ троп path с имеющим тег sac_scale
+29/11/2017
+visible names mountain_pass,volcano,saddle,cave_entrance,river,stream|canal,water bodies; 
+ele cave_entrance...
+scrub 
+30/11/2017
+cat="tms_safety" (ladder, тросы безопасности, ступеньки) в Туризм
+steps (HiLo)
+1/12/2017
+barrier=fence
+tree в категорию "Лес+кустарник"
+4/12/1027
+opacity swamp
+7/12/2017 
+railway=rail (c bridge=yes)
+25/12/2017 
+цвета вuildings точно как в OTM
+30/12/2017
+Buildings name c z16 в "Названия мест" c priority=-1
+* TOTM версия 0.4
+15/01/2018
+underground waterways водные туннели 
+отображение underground waterways tunnel=culvert Vol UK
+исправлены родники - (двойная иконка)+размер уменьш
+16/01/2018
+intermittent для рек и ручьев
+всё водное озера, пруды, реки и ручьи... 
+регулировка видимости barrier
+17/01/2018
+embankment 
+цвета дорог primary
+болото поверх пруда
+карьеры quarry
+heath
+18/01/2018 
+Версия 1
+Переделка всех штриховок и пунктиров под locus-extended="1"
+сортировка и оптимизация графики (не закончил)
+shingle
+20/01/2018 
+ЛЭП, power tags, вернул ориг кустарник
+ВЕРСИЯ 1.1
+21/01/2018 
+?? trunk с layer=-1 tunnel, цвет trunk_link bridges yes no
+fix: sport=swimming отображалась как поверхность воды (н.Тургояк)
+optimiz: natural=heath
+22/01/2018
+meadow|grass|grassland - перерисовал чтобы позаметнее+заливка
+поправил цвет leisure=swimming_pool
+переделал wetland: 
+OAM - не имеет тега тип болота (отображ весь wetland одинаково)
+LM - bog, swamp, tidalflat, marsh (нет reedbed)
+wood=  лиственный более теплый
+cat="tms_water-land" в aeroway, natural=geyser, waterway|natural=waterfall,rapids 
+ВЕРСИЯ 1.2
+23/01/2018
+перерисовал кустарник 
+повыш.заметность grassland, meadow
+wetland=marsh как reedbed
+ВЕРСИЯ 1.3
+24/01/2018
+законч.полная реорганизация графики
+vi-ty cutline 
+изм.cliff closed=no
+optimiz:bridleway, cycleway
+highway=primary_link|trunk_link|motorway_link
+25/01/2018
+optimiz: все aerialway
+way=trail_visibility, raw_sac_scale|sac_scale  !!! переделать stroke-dasharray !!!
+ВЕРСИЯ 1.4
+optimiz: natural=fell, orchard, vineyard
+leisure|landuse=park, pitch, cemetery|grave_yard
+все railway+bridges
+все туннели 
+26/01/2018
+ВЕРСИЯ 1.5
+замена bare_rock.png
+все highway -> locus-extended=1
+ВЕРСИЯ 1.6
+заменен mountain_pass|saddle
+добавлен natural=stone (ОАМ)  (только node)
+29/01/2018
+заменен tower:communication
+доб turning_circle
+нек цвета старших дорог
+railway |spur|siding|yard - не закончено
+ВЕРСИЯ 1.7
+зимние маршруты piste from Lomaps theme
+доб.man_made=adit|adit_disused zoom-min="15" перериcовать disused?
+доб колодцы water_well из ElOAM, возможно, стоит перерисовать коричневый у питьевой воды
+natural=volcano
+изм.цвет и толщину core-линии highway=secondary
+bare_rock поверх wood
+ВЕРСИЯ 1.8
+перерисовал wood с transparency
+waterway|natural=waterfall dy=-20
+e="any" k="power" v="tower" символ опоры ЛЭП
+исправл landuse|natural=reservoir|basin
+исправл cave_entrance высота
+поправл отображение glacier, scree
+доб summit:cross|man_made" v="yes|cross"
+другой bare_rock и правильность отображения горных объектов и заливок
+
+ВЕРСИЯ 1.9
+только для LM применение подмены lm_landuse
+Поправил information=guidepost
+
+11/10/2018 
+выключил пока колодцы man_made=water_well  (иконки не удалялись!)
+регулировал видимость на разных зумах amenity|waterway|natural = drinking_water|water_point|spring|fountain
+
+29/11/2018
+landuse kindergarten, school...
+contour pathtext rotate_up=false (всегда "в гору")
+
+ВЕРСИЯ 1.9.2
+3/1/2019
+выделение landuse hospital, residential, регулировка наложений
+чуть потолще contour lines на z18 и ниже
+убрал подписи на fence|wall|city_wall
+добавил water sources zoom-min="13"
+добавил barrier=turnstile (OAM), name=neighbourhood|quarter
+
+ВЕРСИЯ 1.9.3
+2/7/2019
+добавил natural=earth_bank в правило cliff,  natural=gully (только LM!)
+
+ВЕРСИЯ 1.9.4
+упростил правило для lm_landuse (LM)
+убрал ошибку в заливке landuse=residential на z12
+исправил неотображение water на z меньше 12
+водные пути доб |seas_yes к wwi_yes; intermittent|seasonal (ОАМ)
+добавил пересыхающие reservoir|basin|water (ОАМ)
+добавил в жд disused; service=siding|spur|yard (LM)
+добавил railway=abandoned (ОАМ)
+добавил tms_crossings traffic_signals(светофоры), level_crossing (пеш.переходы); #DAM плотины, weir
+stroke-linecap="butt" на пересыхающих waterway
+16/3/2020
+поправил неотображение k="tower" v="communication" и "observation" на картах LM
+28/3/2020
+сделал чуть потемнее landuse=residential  (ОАМ)
+поправил слабое отображение лыжных трасс в составе ГЛК (pistes for WINTER LOMAPS)
+4/4/2020
+добавил highway=raceway 
+исправил отображение highway=turning_circle|mini_roundabout 
+переместил в конец tms_crossings traffic_signals - попытка выправить отображение
+5/5/2020
+перерисовал hw=track tracktype="grade1" 
+добавил заметности просек cutline
+6/6/2020
+исправил видимость подписи nature_reserve на z12-16
+ditch|gully -> коричневый штрих c z14
+ridge коричневый 
+17/8/2020
+добавил охотничьи вышки amenity=hunting_stand в слой Элементы ландшафта
+
+ВЕРСИЯ 1.9.5
+май-август 2021
+Переделка меню на более логичную последовательность
+[Доб.:] отображение бродов ford (cat="tms_barriers"); tree_row; станции метро subway со своей иконкой в tms_trans-pub; recycling в Picnic; 
+building=construction (OAM)
+[Изм.:] турникет turnstile (cat="tms_barriers"); хребты ridge|arete; возможность полного отключения названий (cat=tms_land-names): fuel, 
+bus_station, shops, рынков, фонтанов и пр.; поправил подписи playground, picnic_site, picnic_table, camp_site, bus_station, bicycle_rental; 
+переделал и разделил обрывы cliff, earth_bank;
+[Повыш.приор.:] fuel
+[Err.:] поправил неотображение подписей для hospital, pharmacy, doctors
+[Доб.:] подписи stadium, sport=soccer, tennis, golf, shooting; post_office; information=guidepost, board, office; 
+tourism=information; leisure=firepit(LM); amenity=bbq(LM)
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* TOTM версия 2.3 (mapsforge) *
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+for mapsforge V4+
+
+ВЕРСИЯ 2.0 (16/6/2019)
+remove all: dp;fill-sea-areas="0";curve="cubic";scale-font-size;fontset-family="sans-book";rotate_up="false";stroke-opacity;force-draw="1"
+найти замену !
+bg-rect-...; symbol-color; scale-icon-size; scale=; scale-dy-size=
+
+ВЕРСИЯ 2.1 (28/06/2019)
+-Вернул svg->png для леса,scrub,meadow,grass из-за неотображения их в десктопном Cruiser
+-zmin13 на тропах #path
+-stroke-linecap="round" на дорогах
+-переделал отображение tower=communication
+-zmin14 sports
+-замена stroke-opacity у landuse|natural=reservoir|basin|water 
+-убрал ошибку в заливке landuse=residential на z12
+-добавил tms_crossings traffic_signals(светофоры), level_crossing (пеш.переходы); #DAM плотины, weir
+-водные пути доб |seas_yes к wwi_yes; intermittent|seasonal
+-исправил неточное отображение ditch|drain
+-настройка streams,rivers, embankments 
+-добавил пересыхающие reservoir|basin|water
+-исправил неотображение water на z меньше 12
+-добавил в жд disused; service=siding|spur|yard
+-изм.контурные линии и надписи в сторону уменьшения
+
+ВЕРСИЯ 2.2
+добавил natural=earth_bank в правило cliff,  natural=gully (только LM!,  в расчете, что ломапсы тоже будут V4 или OAM  включит их в свои данные)
+добавил railway=abandoned 
+добавил категории tms_borders; адм.границы 2,3,4 admin_level
+28/3/2020
+поправил слабое отображение лыжных трасс в составе ГЛК (pistes for WINTER LOMAPS)
+4/4/2020
+добавил highway=raceway
+исправил отображение highway=turning_circle|mini_roundabout 
+переместил в конец tms_crossings traffic_signals - попытка выправить отображение
+5/5/2020
+перерисовал hw=track tracktype="grade1" 
+добавил заметности просек cutline
+добавил бергштрихи на контурные линии contour_ext
+10/5/2020 закомментил пока бергштрихи :)
+6/6/2020
+исправил видимость подписи nature_reserve на z12-16
+ditch|gully -> коричневый штрих c z14
+ridge коричневый 
+17/8/2020
+увеличил wayside_cross
+добавил охотничьи вышки amenity=hunting_stand в слой Элементы ландшафта
+
+ВЕРСИЯ 2.3
+03/04/2021
+изменил рис.лестницы steps
+переделал и разделил обрывы cliff, earth_bank, gully
+05/04/2021
+добавил tree_row
+полное отключение названий для магазинов, рынков, фонтанов, полиции, пожарок, театров, остановок, памятников и пр. (добавлением cat=tms_land-names)
+[Err] скорректировал отображение подписей для hospital, pharmacy, doctors
+перетасовал меню на более логичную последовательность
+10/04/2021
+изменил рисунок на barrier|natural=ditch|gully, элементы рельефа коричневые (+ridge|arete)
+добавил трубопроводы man_made=pipeline
+01/05/2021
+[Err] исправил - неотображение названий автозаправок, банков, стадионов, парковок, школ и д/с
+03/05/2021
+увеличил размер шрифта на всех POI font-size="9"->"10"; некоторых "8"->"9"; настройка других размеров подписей-arete..
+настройка иконок embassy, police, playground, national_park, picnic_site, laundry|dry_cleaning, bicycle
+добавил названия information=guidepost, board, office; tourism=information
+04/05/2021
+добавил броды ford в Барьеры; building=construction, historic|building=ruins; via_ferrata, recycling в Picnic
+добавил надписи sport=soccer, tennis, golf, shooting
+перерисовал турникет turnstile
+05/05/2021
+display=always на всех основных symbols POI
+поправил подписи playground, picnic_site, picnic_table, camp_site, bicycle_rental; рисование culvert
+07/05/2021
+добавил надписи post_office; 
+добавил администрации(townhall) в tms_bureaucracy; станции метро со своей иконкой в tms_trans-pub
+08/05/2021
+изм.подписей остановок обществ.транспорта
+оптимиз.риcования river|canal|stream|drain|ditch
+12/05/2021
+оптимиз.риcования вершин peak 
+08/07/2021
+регулировка толщин дорог residential|service|.. 
+поправил подпись amenity=place_of_worship
+12/07/2021
+добавил подпись amenity=shelter type=lean_to
+05/08/2021
+добавил ООПТ, aboriginal_lands
+24/08/2021
+поправил landuse|leisure=military
+добавил building=ruins|collapsed
+корректировка pipeline на scale="all"
+27/08/2021
+переделал mountain_pass|saddle
+28/08/2021
+переделал названия озер (reservoir|basin|water)
+30/08/2021
+zoom-min на просеках
+16/09/2021
+stroke-linecap="butt" на waterway=ditch; увеличил water-intermittent.png symbol-width="3"
+
