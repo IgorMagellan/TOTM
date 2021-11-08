@@ -12,4 +12,5 @@ Contains two xml files for maps of version 3 and for maps of versions 4 and high
 
 [Changelog, starting November 2017 (Russian)](TOTM-changelog.txt)  
 
-<!-- ![кокойто.png](/symbols/s_bicycle_shop.png) -->
+<!-- ![кокойто.png](/symbols/s_bicycle_shop.png) 
+пример коммента -->
