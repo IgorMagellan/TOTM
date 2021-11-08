@@ -1597,7 +1597,7 @@ Transparency for HEX colors (100% - непрозрачный)
 
 <!-- mountain pass -->
 <rule cat="tms_peak" e="node" k="mountain_pass|saddle" v="yes" zoom-min="14">
-	<symbol priority="85" src="file:/symbols/mountain_pass.svg" symbol-scaling="size" symbol-height="16" symbol-width="16"  /> <!--   -->
+	<symbol priority="85" src="file:/symbols/mountain_pass_45.svg" symbol-scaling="size" symbol-height="16" symbol-width="16"  />
 	<caption k="name" dy="-8dp" priority="85" font-style="bold_italic" font-size="9dp" fill="#444444" stroke="#ffffff" stroke-width="1.5dp" scale-font-size="15,1.2" />
 	<caption k="ele" dy="12dp" priority="85" font-style="bold_italic" font-size="8dp" fill="#444444" stroke="#ffffff" stroke-width="1dp" scale-font-size="15,1.2"/>
 </rule>

@@ -1,4 +1,6 @@
 # TOTM - Tiramisu as OpenTopoMap
-This is theme for mapsforge maps.
+RenderTheme for Locus, OruxMaps, Cruiser and other mapsforge compatible programs.
 
-Read history
+Contains two xml files for maps of version 3 and for maps of versions 4 and higher.
+
+
