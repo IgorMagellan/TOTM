@@ -1984,7 +1984,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule e="node" k="drinking_water" v="no">	<symbol display="always" priority="305" id="tms_drop" src="file:/symbols/s_spring_nd.png" symbol-scaling="size" symbol-height="13" symbol-width="10"/> </rule>
 		<rule e="node" k="drinking_water" v="yes">	
 			<symbol display="always" priority="305" id="tms_drop" src="file:/symbols/s_spring_d.png" symbol-scaling="size" symbol-height="13" symbol-width="10"/> 
-			<symbol display="always" priority="306" id="tms_drop"  src="file:/symbols/s_spring_drinking_water.svg" symbol-height="6" />
+			<!-- <symbol display="always" priority="306" id="tms_drop"  src="file:/symbols/s_spring_drinking_water.svg" symbol-height="6" /> -->
 		</rule>
 	</rule>
 	<rule cat="tms_water" e="any" k="amenity" v="fountain" zoom-min="16">
