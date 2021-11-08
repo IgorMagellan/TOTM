@@ -4,6 +4,7 @@
 RenderTheme for Locus, OruxMaps, Cruiser and other mapsforge compatible programs.
 
 Contains two xml files for maps of version 3 and for maps of versions 4 and higher.
+
 Changelog, starting November 2017
 https://github.com/IgorMagellan/TOTM/blob/main/TOTM-changelog.txt (Russian)
 
