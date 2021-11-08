@@ -1,5 +1,4 @@
-
-![TOTM.png](https://github.com/IgorMagellan/TOTM/blob/015e7baadac8e6f278969e6f7785b5b071696818/TOTM.png) ![TOTM mapsforge.png](https://raw.githubusercontent.com/IgorMagellan/TOTM/main/TOTM%20mapsforge.png)
+![TOTM.png](TOTM.png)    ![TOTM mapsforge.png](TOTM%20mapsforge.png)
 # TOTM - Tiramisu as OpenTopoMap
 RenderTheme for Locus, OruxMaps, Cruiser and other mapsforge compatible programs.
 
