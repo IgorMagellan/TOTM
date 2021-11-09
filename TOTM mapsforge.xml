@@ -1954,13 +1954,13 @@ Transparency for HEX colors (100% - непрозрачный)
 	
 		<rule cat="tms_water" e="any" k="man_made" v="water_well" zoom-min="15">
 			<rule e="any" k="drinking_water" v="yes|~">
-				<symbol id="s_ww_drink" display="always" src="file:/symbols/ww-d.svg" symbol-scaling="size" symbol-height="18" />
+				<symbol id="s_ww_drink" display="always" src="file:/symbols/ww_drink2.svg" symbol-scaling="size" symbol-height="18" />
 				<rule e="any" k="*" v="*" zoom-min="16">
 					<caption k="name" symbol-id="s_ww_drink" position="above" font-style="bold_italic" font-size="10" fill="#115DFF" stroke="#E5FFFFFF" stroke-width="2" />
 				</rule>			
 			</rule>
 			<rule e="any" k="drinking_water" v="no">
-				<symbol id="s_ww_nodrink" display="always" src="file:/symbols/ww-nd5.svg" symbol-scaling="size" symbol-height="18" />
+				<symbol id="s_ww_nodrink" display="always" src="file:/symbols/ww_nodrink2.svg" symbol-scaling="size" symbol-height="18" />
 				<rule e="any" k="*" v="*" zoom-min="16">
 					<caption k="name" symbol-id="s_ww_nodrink" font-style="bold" font-size="10" fill="#d900d9" stroke="#E5FFFFFF" stroke-width="2" />
 				</rule>
