@@ -281,4 +281,9 @@ display=always на всех основных symbols POI
 zoom-min на просеках
 16/09/2021
 stroke-linecap="butt" на waterway=ditch; увеличил water-intermittent.png symbol-width="3"
+07/11/2021
+оптимизация (minify) всей SVG графики в обеих версиях
+08/11/2021
+добавил колодцы
+
 

@@ -794,7 +794,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			</rule>
 			<pathText cat="tms_land-names" priority="3" k="name" font-style="bold" font-size="10" fill="#0034AE" stroke="#FFFFFF" stroke-width="1" />
 		</rule>
-		<!-- Ручей -->  <!-- УРРА можно переписать все на scale-all -->
+		<!-- Ручей --> 
 		<rule e="way" k="waterway" v="stream" zoom-min="12">
 			<rule e="way" k="*" v="*" zoom-max="15">
 				<rule e="way" k="intermittent|seasonal" v="~">
@@ -820,10 +820,10 @@ Transparency for HEX colors (100% - непрозрачный)
 					<line stroke="#1d4dff" scale="all" stroke-width="0.3" stroke-dasharray="2.6,1.7" stroke-linecap="butt" /> 
 				</rule>			
 			</rule>			
-			<rule e="way" k="*" v="*" zoom-min="13">   <!-- подписи и стрелочки -->
-				<pathText cat="tms_land-names" k="name" font-family="serif" font-style="italic" font-size="10" dy="2" fill="#2626ff" stroke="#ffffff" stroke-width="1.4" repeat="true" repeat-start="80" repeat-gap="250" />				
-				<!-- symbol-scaling="size" symbol-height="14" symbol-width="14"    -->
-				<lineSymbol src="file:/symbols/bluearrow.svg" dy="0.1" repeat="true" repeat-gap="200" repeat-start="30" scale="all" display="always" symbol-scaling="percent" symbol-percent="90" />		<!-- 	scale="1.2" 	 -->						
+			<rule e="way" k="*" v="*" zoom-min="14">   <!-- подписи и стрелочки  fill="#2626ff" -->
+				<pathText cat="tms_land-names" k="name" font-family="serif" font-style="italic" font-size="10" dy="1.4" fill="#2020ff" stroke="#ffffff" stroke-width="1.4" repeat="true" repeat-start="80" repeat-gap="250" />				
+				<!-- symbol-scaling="size" symbol-height="14" symbol-width="14" dy="0.1" scale="all"    -->
+				<lineSymbol src="file:/symbols/bluearrow.svg" dy="-1.6" repeat="true" repeat-gap="200" repeat-start="30" display="always" symbol-scaling="size" symbol-width="14" />		<!-- 	scale="1.2" 	 -->						
 			</rule>				
 		</rule>
 		<!-- Река -->
@@ -844,7 +844,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			</rule>			
 			<rule e="way" k="*" v="*" zoom-min="13">   <!-- подписи и стрелочки -->
 				<pathText cat="tms_land-names" priority="3" k="name"  font-style="italic" font-family="serif" font-size="10" fill="#2020ff" stroke="#FFFFFF" stroke-width="2.1" repeat="true" repeat-gap="300" repeat-start="50" /> 
-				<lineSymbol src="file:/symbols/bluearrow.svg" align-center="true" scale="all" display="always" symbol-scaling="size" symbol-height="12" symbol-width="12" repeat="true" repeat-gap="250" repeat-start="20"  />
+				<lineSymbol src="file:/symbols/bluearrow.svg" align-center="true" scale="all" display="always" symbol-scaling="size" symbol-width="14" repeat="true" repeat-gap="250" repeat-start="20"  />
 			</rule>
 		</rule>	
 		<rule e="way" k="waterway" v="riverbank" closed="yes">
@@ -860,31 +860,16 @@ Transparency for HEX colors (100% - непрозрачный)
 <!-- Вставлено Magellan  VUK-->		
 	<!-- underground waterways -->
 	<rule cat="tms_land-base" e="way" k="tunnel" v="true|yes|culvert" zoom-min="14">
-<!-- 	
-		<rule e="way" k="waterway" v="ditch">
-			<line stroke="#665887ff" stroke-width="0.6" />
-			<line stroke="#995887ff" stroke-width="0.6" stroke-dasharray="9,9" stroke-linecap="butt" />
-		</rule>
-		<rule e="way" k="waterway" v="drain">
-			<line stroke="#665887ff" stroke-width="0.7" />
-			<line stroke="#995887ff" stroke-width="0.7" stroke-dasharray="9,9" stroke-linecap="butt" />
-		</rule>
- -->		
 		<rule e="way" k="waterway" v="stream|drain|ditch"> 
 			<line stroke="#665887ff" stroke-width="0.7" />
 			<line stroke="#995887ff" scale="all" stroke-width="0.7" stroke-dasharray="0.6,0.6" stroke-linecap="butt" />
-		</rule>
-		
-<!-- 		<rule e="way" k="waterway" v="canal">
-			<line stroke="#665887ff" stroke-width="1.1" />
-			<line stroke="#995887ff" stroke-width="1.1" stroke-dasharray="9,9" stroke-linecap="butt" />
-		</rule> -->
-		
+		</rule>	
 		<rule e="way" k="waterway" v="river|canal">
 			<line stroke="#405887ff" stroke-width="1" />
 			<line stroke="#995887ff" scale="all" stroke-width="1" stroke-dasharray="3,5" stroke-linecap="butt" />  <!-- закончить и проверитьс scale="all" -->
 		</rule>
 	</rule>
+	
 	<rule cat="tms_land-base" e="way" k="tunnel|location" v="yes|culvert|underground" zoom-min="16">
 		<rule e="way" k="man_made" v="pipeline">
 			<line stroke="#995887ff" stroke-width="1.0" />
@@ -924,15 +909,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			</rule>
 		</rule>
 	</rule>
-	
-<!-- 	<rule cat="tms_land-base"  e="any" k="landuse|natural" v="reservoir|basin|water" zoom-min="13" zoom-max="15">
-		<caption cat="tms_land-names" priority="3" k="name" font-style="italic" font-family="serif"   font-size="9" fill="#2020ff" stroke="#FFFFFF" stroke-width="1" />
-	</rule>
-	<rule cat="tms_land-base" e="any" k="landuse|natural" v="reservoir|basin|water" zoom-min="16">
-		<caption cat="tms_land-names" priority="3" k="name" font-style="italic" font-family="serif" font-size="10" fill="#2020ff" stroke="#FFFFFF" stroke-width="1.2" />
-		<caption cat="tms_land-names" k="ele" dy="13" font-style="bold_italic" font-size="10" fill="#2020ff" stroke="#FFFFFF" stroke-width="1.0" />
-	</rule>
-	 -->
+
   <rule e="node" k="landuse|natural" v="reservoir|basin|water" cat="tms_land-base">
     <rule e="any" k="amenity" v="~" cat="tms_land-names">
       <rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge">
@@ -1942,58 +1919,61 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>	
 	
 <!-- water sources -->
+
 	<rule cat="tms_water" e="any" k="amenity|waterway|natural|man_made" v="drinking_water|water_point|spring|fountain|water_well" zoom-min="13" zoom-max="14">
 		<symbol display="always" priority="305"  src="file:/symbols/s_water.svg" symbol-scaling="size" symbol-height="12" symbol-width="12" />
 	</rule>
-
-	<rule cat="tms_water" e="any" k="amenity|natural" v="spring" zoom-min="15"> <!-- drinking_water|water_point| -->
-<!-- 		<symbol display="always" priority="305" src="file:/symbols/spring.svg" symbol-scaling="size" symbol-height="20" symbol-width="20"  />   
- -->		<caption cat="tms_land-names" k="name" dy="-18" priority="105" font-style="bold_italic" font-size="10" fill="#115DFF" stroke="#ffffff"	stroke-width="3" /> 
-	</rule>
-	<rule cat="tms_water" e="any" k="amenity|waterway" v="drinking_water|water_point" zoom-min="15">
-		<symbol display="always" priority="305" id="tms_drop" src="file:/symbols/s_drinking_water.png" symbol-scaling="size" symbol-height="13" symbol-width="10"  />
-<!-- 		<caption symbol-id="tms_drop"  k="name" font-style="italic" font-size="8dp" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" /> -->  <!-- потом закомменить - повтор выше -->
-	</rule>	
-	<!-- CopyPast ElOAM **** -->
-	<!-- выключил пока колодцы -->
 	
-<!-- 		<rule cat="tms_water" e="any" k="man_made" v="water_well">
-			<rule e="any" k="drinking_water" v="no|~">
-				<symbol id="s_water_well" src="file:/symbols/s_water_well.svg" symbol-scaling="size" symbol-height="16" symbol-width="16" />
-				<rule e="any" k="*" v="*">
-					<caption k="name" symbol-id="s_water_well" position="above" font-style="bold_italic" font-size="9dp" fill="#115DFF" stroke="#E5FFFFFF" stroke-width="2dp" />
-					<caption k="ele" priority="-5" symbol-id="s_water_well" position="below" font-size="9dp" font-style="bold_italic" fill="#115DFF" stroke="#E5FFFFFF" stroke-width="2dp" />
+	<rule cat="tms_water" e="node" k="amenity|natural" v="spring" zoom-min="15">
+		<rule e="node" k="drinking_water|amenity" v="yes|drinking_water">	
+			<symbol display="always" priority="505" id="tms_drop" src="file:/symbols/s_spring_d.png" symbol-scaling="size" symbol-height="13" /> 
+		</rule>		
+		<rule e="node" k="drinking_water" v="no">	
+			<symbol display="always" priority="405" id="tms_drop" src="file:/symbols/s_spring_nd.png" symbol-scaling="size" symbol-height="13" /> 
+		</rule>
+		<rule e="node" k="drinking_water" v="~">	
+			<symbol display="always" priority="505" id="tms_drop" src="file:/symbols/s_spring.png" symbol-scaling="size" symbol-height="13"  /> 
+		</rule>			
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption symbol-id="tms_drop" k="name" priority="105" position="above" font-style="bold_italic" font-size="10" fill="#115DFF" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>					
+	</rule>	
+	
+    <rule cat="tms_water" e="any" k="amenity|waterway" v="drinking_water|water_point" zoom-min="15">
+		<rule e="any" k="drinking_water" v="yes|~">
+			<rule e="any" k="natural" v="~">
+				<rule e="any" k="man_made" v="~">   <!-- ??? -->
+				<symbol id="s_drinking_water" display="always" src="file:/symbols/s_drinking_water.png" symbol-scaling="size" symbol-height="14" />
+				<rule e="any" k="*" v="*" zoom-min="16">
+					<caption k="name" symbol-id="s_drinking_water" font-style="italic" font-size="9" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
+				</rule>
 				</rule>
 			</rule>
-			<rule e="any" k="drinking_water" v="yes">
-				<symbol id="s_water_well_drinking" priority="74" src="file:/symbols/s_water_well_drinking.svg" symbol-scaling="size" symbol-height="16" symbol-width="16" />
-				<rule e="any" k="*" v="*">
-					<caption k="name" symbol-id="s_water_well_drinking" position="above" font-style="bold" font-size="9dp" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2dp" />
-					<caption k="ele" priority="-5" symbol-id="s_water_well_drinking" position="below" font-size="9dp" font-style="bold" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2dp" />
+		</rule>
+	</rule>	
+	
+		<rule cat="tms_water" e="any" k="man_made" v="water_well" zoom-min="15">
+			<rule e="any" k="drinking_water" v="yes|~">
+				<symbol id="s_ww_drink" display="always" src="file:/symbols/ww-d.svg" symbol-scaling="size" symbol-height="18" />
+				<rule e="any" k="*" v="*" zoom-min="16">
+					<caption k="name" symbol-id="s_ww_drink" position="above" font-style="bold_italic" font-size="10" fill="#115DFF" stroke="#E5FFFFFF" stroke-width="2" />
+				</rule>			
+			</rule>
+			<rule e="any" k="drinking_water" v="no">
+				<symbol id="s_ww_nodrink" display="always" src="file:/symbols/ww-nd5.svg" symbol-scaling="size" symbol-height="18" />
+				<rule e="any" k="*" v="*" zoom-min="16">
+					<caption k="name" symbol-id="s_ww_nodrink" font-style="bold" font-size="10" fill="#d900d9" stroke="#E5FFFFFF" stroke-width="2" />
 				</rule>
 			</rule>			
-		</rule>	 -->
-
-	<!-- **** -->
-
-	<rule cat="tms_water" e="node" k="natural" v="spring" zoom-min="15">
-		<rule e="node" k="drinking_water" v="~">	
-			<symbol display="always" priority="305" id="tms_drop" src="file:/symbols/s_spring.png" symbol-scaling="size" symbol-height="13" symbol-width="10" /> 
-		</rule>
-		
-		<rule e="node" k="drinking_water" v="no">	<symbol display="always" priority="305" id="tms_drop" src="file:/symbols/s_spring_nd.png" symbol-scaling="size" symbol-height="13" symbol-width="10"/> </rule>
-		<rule e="node" k="drinking_water" v="yes">	
-			<symbol display="always" priority="305" id="tms_drop" src="file:/symbols/s_spring_d.png" symbol-scaling="size" symbol-height="13" symbol-width="10"/> 
-			<!-- <symbol display="always" priority="306" id="tms_drop"  src="file:/symbols/s_spring_drinking_water.svg" symbol-height="6" /> -->
-		</rule>
-	</rule>
+		</rule>	
+	
 	<rule cat="tms_water" e="any" k="amenity" v="fountain" zoom-min="16">
 		<rule e="node" k="drinking_water" v="~|no">
-			<symbol priority="305" id="tms_fountain" display="always" src="file:/symbols/s_fountain.png" symbol-scaling="size" symbol-height="14" symbol-width="14"/>
+			<symbol priority="305" id="tms_fountain" display="always" src="file:/symbols/s_fountain.png" symbol-scaling="size" symbol-height="14" />
 			<caption symbol-id="tms_fountain" cat="tms_land-names" k="name" font-style="italic" font-size="8" fill="#743a00" stroke="#FFFFFF" stroke-width="1.0" />
 		</rule>
 		<rule e="node" k="drinking_water" v="yes">
-			<symbol priority="305" id="tms_fountain" display="always" src="file:/symbols/s_fountain_d.png" symbol-scaling="size" symbol-height="14" symbol-width="14" />
+			<symbol priority="305" id="tms_fountain" display="always" src="file:/symbols/s_fountain_d.png" symbol-scaling="size" symbol-height="14" />
 			<caption symbol-id="tms_fountain" cat="tms_land-names" k="name" font-style="italic" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 		</rule>
 	</rule>
