@@ -283,8 +283,10 @@ zoom-min на просеках
 stroke-linecap="butt" на waterway=ditch; увеличил water-intermittent.png symbol-width="3"
 08/11/2021
 initial release in github
-оптимизация (minify) всей SVG графики в обеих версиях
+оптимизация (minify) всей SVG графики
 08/11/2021
 добавил колодцы (water_well)
+10/11/2021 
+чистка, оптимизация, причесывание и устранение неточностей всего кода
 
 
