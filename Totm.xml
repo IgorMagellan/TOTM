@@ -168,11 +168,6 @@ Transparency for HEX colors (100% - непрозрачный)
 		<name lang="ru" value="Зимние маршруты" />		
 		<cat id="tms_routes"/>
 	</layer>	
-<!-- 	<layer id="tms_borders" enabled="false">
-		<name lang="en" value="Admin boundarys"/>
-		<name lang="ru" value="Административные границы" />		
-		<cat id="tms_borders"/>
-	</layer>	 -->
 
 <!-- Base -->
 		<layer id="tms_hiking" visible="true">
@@ -183,7 +178,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<overlay id="tms_contours"/>
 			<overlay id="tms_land-ele"/>
 			<overlay id="tms_up-hw"/>		
-			<overlay id="tms_land-names"/>							
+			<overlay id="tms_land-names"/>
 			<overlay id="tms_emergency"/>			
 			<overlay id="tms_water"/>
 			<overlay id="tms_tourism"/>			
@@ -199,9 +194,6 @@ Transparency for HEX colors (100% - непрозрачный)
 			<overlay id="tms_trans-pub"/>			
 			<overlay id="tms_religion"/>
 			<overlay id="tms_barriers-hk"/>	
-			
-<!-- 			<overlay id="tms_borders"/>				
- -->			
 			<overlay id="tms_routes"/>				
 			<overlay id="tms_up-osm"/>	
 			<cat id="tms_tracks"/>
@@ -1581,8 +1573,7 @@ Transparency for HEX colors (100% - непрозрачный)
 				<caption k="name" priority="88" symbol-id="s_peak" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 				<caption k="ele" priority="-5" symbol-id="s_peak" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule> -->
-	
-	
+		
 	<rule cat="tms_peak" e="node" k="natural" v="volcano" zoom-min="12">
 		<symbol display="always" priority="430" id="tms_volcano" src="file:/symbols/s_volcano.svg" /> <!--  scale="0.8"   cat="tms_land-names" -->  
 		<caption priority="315" symbol-id="tms_volcano" cat="tms_land-names" k="name" dy="-18" font-style="bold" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" /> 		
@@ -1730,28 +1721,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol display="always" priority="305" scale="2"  symbol-width="7" src="file:/symbols/spring.svg" />   <!-- symbol-width="9"  -->
 		<caption cat="tms_land-names" k="name" dy="-28" font-style="bold_italic" font-size="9dp" fill="#115DFF" stroke="#ffffff"	stroke-width="3dp" />  <!-- cat="tms_land-names" --> <!-- пока пусть виден независимо -->
 	</rule>
-	
-	<!-- CopyPast ElOAM **** -->
-	<!-- выключил пока колодцы -->
-	
-<!-- 		<rule cat="tms_water" e="any" k="man_made" v="water_well">
-			<rule e="any" k="drinking_water" v="no|~">
-				<symbol id="s_water_well" src="file:/symbols/s_water_well.svg" symbol-scaling="size" symbol-height="16" symbol-width="16" />
-				<rule e="any" k="*" v="*">
-					<caption k="name" symbol-id="s_water_well" position="above" font-style="bold_italic" font-size="9dp" fill="#115DFF" stroke="#E5FFFFFF" stroke-width="2dp" />
-					<caption k="ele" priority="-5" symbol-id="s_water_well" position="below" font-size="9dp" font-style="bold_italic" fill="#115DFF" stroke="#E5FFFFFF" stroke-width="2dp" />
-				</rule>
-			</rule>
-			<rule e="any" k="drinking_water" v="yes">
-				<symbol id="s_water_well_drinking" priority="74" src="file:/symbols/s_water_well_drinking.svg" symbol-scaling="size" symbol-height="16" symbol-width="16" />
-				<rule e="any" k="*" v="*">
-					<caption k="name" symbol-id="s_water_well_drinking" position="above" font-style="bold" font-size="9dp" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2dp" />
-					<caption k="ele" priority="-5" symbol-id="s_water_well_drinking" position="below" font-size="9dp" font-style="bold" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2dp" />
-				</rule>
-			</rule>			
-		</rule>	 -->
 
-	<!-- **** -->
 	<rule cat="tms_water" e="any" k="amenity|waterway" v="drinking_water|water_point" zoom-min="15">
 		<symbol display="always" priority="305" id="tms_drop" src="file:/symbols/s_drinking_water.png" />
 <!-- 		<caption symbol-id="tms_drop"  k="name" font-style="italic" font-size="8dp" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" /> -->  <!-- потом закомменить - повтор выше -->
@@ -1905,11 +1875,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity|building" v="school|library|university|college|kindergarten">
 		<caption symbol-id="tms_educat" cat="tms_land-names"  k="name" font-style="normal" dy="-14dp" font-size="8dp" fill="#004020" stroke="#FFFFFF" stroke-width="2.0dp" />  <!-- fill="#000090"  -->
 	</rule>
-	<!-- Magellan -->
-<!-- 	<rule cat="tms_schools" zoom-min="14" e="any" k="amenity|building" v="kindergarten">
-		<caption  k="name" font-style="normal" font-size="8dp" fill="#3600D9" stroke="#FFFFFF" stroke-width="2.0dp" />
-	</rule>	 -->
-	<!-- Magellan -->
+
 	<rule cat="tms_culture" zoom-min="14" e="any" k="historic|building" v="ruins">
 		<symbol src="file:/symbols/s_ruins.png" />
 	</rule>
@@ -1946,23 +1912,6 @@ Transparency for HEX colors (100% - непрозрачный)
 			<caption symbol-id="s_stadium"  k="name" dy="16dp" font-style="bold" font-size="10dp" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
-
-	<rule e="any" k="leisure" v="*" zoom-min="15">
-		<rule cat="tms_picnic" e="any" k="*" v="*" >	
-			<rule e="any" k="leisure" v="firepit" zoom-min="16">
-				<symbol src="file:/symbols/s_poi_firepit_osm.svg" symbol-id="s_firepit" symbol-color="#755741" symbol-width="12dp" scale-icon-size="17,1.15"/>   
-				<caption k="name" symbol-id="s_firepit" font-style="bold" font-size="10dp" dy="-12dp" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
-			</rule>
-		</rule>	
-		
-	</rule>	
-
-    <rule e="any" k="amenity" v="bbq" cat="tms_picnic">
-		<symbol src="file:/symbols/s_poi_bbq_osm.svg" symbol-id="s_bbq" display="always" symbol-color="#755741" symbol-width="12dp" scale-icon-size="17,1.15"/>
-		<rule e="any" k="*" v="*" zoom-min="16">
-			<caption k="name" symbol-id="s_bbq" font-style="bold" font-size="10dp" dy="-12dp" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
-		</rule>
-    </rule>	
 	
 	<rule cat="tms_sport" e="any" k="amenity" v="bicycle_rental"><symbol priority="225" id="s_bicycle_rental" src="file:/symbols/s_bicycle_rental.png" />
 		<rule e="any" k="*" v="*" zoom-min="16">
@@ -2026,7 +1975,24 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol priority="220" id="tms_zoo" src="file:/symbols/s_zoo.png" />
 		<caption priority="115" symbol-id="tms_zoo" cat="tms_land-names" k="name" font-style="bold" font-size="8dp" fill="#552200" stroke="#FFFFFF" stroke-width="2.0dp" />
 	</rule>
-	
+
+	<!--! разобраться тут с вложенностью правил -->
+	<rule e="any" k="leisure" v="*" zoom-min="15">
+		<rule cat="tms_picnic" e="any" k="*" v="*" >	
+			<rule e="any" k="leisure" v="firepit" zoom-min="16">
+				<symbol src="file:/symbols/s_poi_firepit_osm.svg" symbol-id="s_firepit" symbol-color="#755741" symbol-width="12dp" scale-icon-size="17,1.15"/>   
+				<caption k="name" symbol-id="s_firepit" font-style="bold" font-size="10dp" dy="-12dp" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>			
+	</rule>	
+
+    <rule e="any" k="amenity" v="bbq" cat="tms_picnic">
+		<symbol src="file:/symbols/s_poi_bbq_osm.svg" symbol-id="s_bbq" display="always" symbol-color="#755741" symbol-width="12dp" scale-icon-size="17,1.15"/>
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption k="name" symbol-id="s_bbq" font-style="bold" font-size="10dp" dy="-12dp" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+    </rule>	
+
 <!-- place of worship -->
 	<rule cat="tms_religion" zoom-min="14" e="any" k="historic" v="wayside_cross"><symbol src="file:/symbols/s_wayside_cross.png" /></rule>
 	<rule cat="tms_religion" e="any" k="building" v="church"><symbol src="file:/symbols/s_church.png" /></rule>
