@@ -180,6 +180,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<name lang="ru" value="Топокарта v2.3" />
 			<cat id="tms_tracks"/>
 			<cat id="tms_hk"/>
+
 			<overlay id="tms_land-base"/>
 			<overlay id="tms_new-wood"/>
 			<overlay id="tms_contours"/>
@@ -2405,6 +2406,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<caption cat="tms_land-names" k="name" symbol-id="s_info_terminal" position="below" font-style="bold" font-size="10" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
+
 	<rule cat="tms_info" e="any" k="tourism" v="information">
 		<rule e="any" k="information" v="~">
 			<symbol priority="240" id="s_info_terminal" display="always" src="file:/symbols/s_info_terminal.png" symbol-height="16" symbol-width="16" />
@@ -2596,11 +2598,11 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- public transportation -->
 	<rule cat="tms_trans-pub" e="any" k="amenity" v="bus_station">
-		<symbol priority="215" id="tms_bus-station" display="always" src="file:/symbols/s_bus_station.png" symbol-height="14" symbol-width="16" />
+		<symbol priority="215" id="tms_bus-station" display="always" src="file:/symbols/s_bus_station.png" symbol-height="14" />
 		<caption priority="110" symbol-id="tms_bus-station" cat="tms_land-names" k="name" position="below" font-style="bold" font-size="10" fill="#005acf" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 	<rule cat="tms_trans-pub" e="node" k="highway" v="bus_stop">
-		<symbol priority="205" id="tms_bus-stop" display="always" src="file:/symbols/s_bus.png" symbol-height="16" />
+		<symbol priority="205" id="tms_bus-stop" display="always" src="file:/symbols/s_bus.png" symbol-height="14" />
 		<caption priority="100" symbol-id="tms_bus-stop" cat="tms_land-names" k="name" position="below" font-style="bold" font-size="10" fill="#005acf" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 
