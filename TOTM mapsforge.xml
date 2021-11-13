@@ -1915,7 +1915,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule e="way" k="tunnel" v="~|false|no">
 		<rule e="way" k="area" v="~|false|no">
 			<rule e="way" k="highway" v="*">
-				<rule e="way" k="oneway" v="yes|true" zoom-min="16">					<!-- symbol-scaling="size" symbol-height="32" symbol-width="32" symbol-color="#FF2626" -->
+				<rule e="way" k="oneway" v="yes|true" zoom-min="16">
 					<lineSymbol src="file:/symbols/oneway.svg" symbol-width="32" align-center="true" repeat="true" />
 				</rule>
 			</rule>
