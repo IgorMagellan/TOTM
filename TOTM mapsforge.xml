@@ -2012,6 +2012,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			</rule>
 		</rule>
 	</rule>
+	
 	<rule cat="tms_peak" e="node" k="summit:cross|man_made" v="yes|cross" >
 		<symbol id="s_peak_cross" priority="88" display="always" src="file:/symbols/s_peak_cross.svg" symbol-height="16" />
 		<caption k="ele" priority="-5" symbol-id="s_peak_cross" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1" />
@@ -2019,6 +2020,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<caption k="name" priority="88" symbol-id="s_peak_cross" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
+
 	<rule cat="tms_peak" e="node" k="natural" v="volcano" zoom-min="12">
 		<symbol priority="430" id="tms_volcano" display="always" src="file:/symbols/s_volcano.svg" symbol-height="16" />
 		<!-- scale="0.8" cat="tms_land-names" -->
@@ -2092,6 +2094,15 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol priority="10" id="tms_tree" display="always" cat="tms_land-base" src="file:/symbols/s_tree.png" symbol-height="15" />
 		<caption symbol-id="tms_tree" cat="tms_land-names" k="name" font-style="bold" font-size="9" fill="#006600" stroke="#FFFFFF" stroke-width="2.0" />
 		<caption symbol-id="tms_tree" cat="tms_land-names" k="ele" font-style="bold" font-size="8" fill="#006600" stroke="#FFFFFF" stroke-width="2.0" />
+	</rule>
+
+	<!-- added at Felipe's request -->
+	<rule cat="tms_peak" e="node" k="man_made" v="survey_point">
+		<symbol id="s_survey_point" priority="101" display="always" src="file:/symbols/s_survey_point.svg" symbol-height="16" />
+		<caption k="ele" priority="5" symbol-id="s_survey_point" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.5" />
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption k="name" priority="88" symbol-id="s_survey_point" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.5" />
+		</rule>
 	</rule>
 
 	<!-- accommodation -->
