@@ -292,3 +292,5 @@ initial release in github
 улучшены пороги, перекаты - rapids
 14/11/2021 
 добавлен survey_point
+15/11/2021
+добавлен emergency телефон и emergency access point

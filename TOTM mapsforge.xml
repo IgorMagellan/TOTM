@@ -2458,12 +2458,26 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<rule cat="tms_emergency" e="any" k="amenity" v="clinic|doctors" zoom-min="14">
 		<symbol id="s_doctors" priority="315" display="always" src="file:/symbols/s_doctors.png" symbol-width="14" />
-		<!-- Magellan insert -->
 		<caption priority="200" symbol-id="s_doctors" cat="tms_land-names" k="name" position="above" font-style="bold" font-size="10" fill="#D90000" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 
+	<rule cat="tms_emergency" e="any" k="highway" v="emergency_access_point" zoom-min="14">
+		<symbol id="s_emergency_access_point" priority="325" display="always" src="file:/symbols/s_emergency_access_point.svg" symbol-height="24" />
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption k="name" symbol-id="s_emergency_access_point" position="above" font-style="bold" font-size="10" fill="#D90000" stroke="#CCFFFFFF" stroke-width="2" />
+			<caption k="addr:housenumber" symbol-id="s_emergency_access_point" position="below" font-style="bold" font-size="10" fill="#D90000" stroke="#CCFFFFFF" stroke-width="2" />
+		</rule>
+	</rule>	
+
+	<rule cat="tms_emergency" e="any" k="emergency" v="phone" zoom-min="15">
+		<symbol id="s_emergency_phone" priority="82" display="always" src="file:/symbols/s_emergency_phone.svg" symbol-height="16" />
+		<rule e="any" k="*" v="*" zoom-min="17">
+			<caption k="name" symbol-id="s_emergency_phone" position="above" font-style="bold" font-size="10" fill="#D90000" stroke="#CCFFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+
 	<rule cat="tms_emergency" e="any" k="amenity" v="telephone">
-		<symbol priority="400" src="file:/symbols/telephone.svg" symbol-width="14" />
+		<symbol priority="320" src="file:/symbols/telephone.svg" symbol-width="14" />
 	</rule>
 
 	<rule cat="tms_emergency" e="any" k="amenity" v="police|ranger_station">
@@ -2704,6 +2718,15 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_bureaucracy" e="any" k="amenity" v="bank">
 		<symbol priority="230" id="s_bank" display="always" src="file:/symbols/s_bank.png" symbol-height="14" symbol-width="16" />
 	</rule>
+
+	<rule cat="tms_bureaucracy" e="any" k="amenity" v="bank">
+		<caption cat="tms_land-names" priority="230" symbol-id="s_bank" k="name" position="above" font-style="bold" font-size="10" fill="#FF4000" stroke="#FFFFFF" stroke-width="1.5" />
+	</rule>
+	<!-- operator нет в tagmapping! -->
+	<rule cat="tms_bureaucracy" e="node" k="amenity" v="atm">
+		<caption cat="tms_land-names" priority="200" symbol-id="s_atm" k="name" position="below" font-style="bold" font-size="10" fill="#FF4000" stroke="#FFFFFF" stroke-width="1.5" />
+	</rule>
+
 	<rule cat="tms_bureaucracy" e="any" k="amenity" v="post_box">
 		<symbol priority="230" display="always" src="file:/symbols/s_postbox.png" symbol-width="12" />
 	</rule>
@@ -2718,13 +2741,6 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_land-names" priority="200" k="name" symbol-id="s_townhall" position="above" font-style="bold" font-size="10" fill="#403000" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
-	</rule>
-	<rule cat="tms_bureaucracy" e="any" k="amenity" v="bank">
-		<caption cat="tms_land-names" priority="230" symbol-id="s_bank" k="name" position="above" font-style="bold" font-size="10" fill="#FF4000" stroke="#FFFFFF" stroke-width="1.5" />
-	</rule>
-	<!-- operator нет в tagmapping! -->
-	<rule cat="tms_bureaucracy" e="node" k="amenity" v="atm">
-		<caption cat="tms_land-names" priority="200" symbol-id="s_atm" k="name" position="below" font-style="bold" font-size="10" fill="#FF4000" stroke="#FFFFFF" stroke-width="1.5" />
 	</rule>
 
 	<!-- man_made -->
