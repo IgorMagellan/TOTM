@@ -2093,7 +2093,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_new-wood" e="node" k="natural" v="tree">
 		<symbol priority="10" id="tms_tree" display="always" cat="tms_land-base" src="file:/symbols/s_tree.png" symbol-height="15" />
 		<caption symbol-id="tms_tree" cat="tms_land-names" k="name" font-style="bold" font-size="9" fill="#006600" stroke="#FFFFFF" stroke-width="2.0" />
-		<caption symbol-id="tms_tree" cat="tms_land-names" k="ele" font-style="bold" font-size="8" fill="#006600" stroke="#FFFFFF" stroke-width="2.0" />
+		<caption symbol-id="tms_tree" cat="tms_land-names" k="ele" position="below" font-style="bold" font-size="8" fill="#006600" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 
 	<!-- added at Felipe's request -->
@@ -2463,7 +2463,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<rule cat="tms_emergency" e="any" k="amenity" v="telephone">
-		<symbol priority="400" src="file:/symbols/s_telephone.png" symbol-height="14" symbol-width="14" />
+		<symbol priority="400" src="file:/symbols/telephone.svg" symbol-width="14" />
 	</rule>
 
 	<rule cat="tms_emergency" e="any" k="amenity" v="police|ranger_station">
