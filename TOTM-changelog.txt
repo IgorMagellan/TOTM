@@ -293,4 +293,6 @@ initial release in github
 14/11/2021 
 добавлен survey_point
 15/11/2021
-добавлен emergency телефон и emergency access point
+добавлен дефибриллятор, emergency телефон и emergency access point
+18/11/2021
+заливка леса png->svg

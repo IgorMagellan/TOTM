@@ -274,17 +274,19 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule cat="tms_new-wood" e="way" k="*" v="*" zoom-min="9" zoom-max="11">
 			<area fill="#b3d97e" />
 		</rule>
+
 		<rule cat="tms_new-wood" e="way" k="*" v="*" zoom-min="12">
 			<rule e="way" k="wood|leaf_type" v="coniferous|needleleaved">
-				<area src="file:/patterns/forest_3xvn.png" symbol-width="55" />
+				<area src="file:/patterns/wood-xv.svg" symbol-height ="60" />
 			</rule>
 			<rule e="way" k="wood|leaf_type" v="deciduous|broadleaved">
-				<area src="file:/patterns/forest_3lst.png" symbol-width="55" />
+				<area src="file:/patterns/wood-lst.svg" symbol-height="60" />
 			</rule>
 			<rule e="way" k="wood|leaf_type" v="~|mixed|leafless">
-				<area src="file:/patterns/forest_3mix.png" symbol-width="55" />
+				<area src="file:/patterns/wood-mix.svg" symbol-height="60" />
 			</rule>
 		</rule>
+
 		<!-- Обводка -->
 		<rule cat="tms_new-wood" e="way" k="*" v="*" zoom-min="15" zoom-max="16">
 			<line stroke="#00661A" stroke-width="0.18" stroke-dasharray="0.3, 2" />
@@ -504,7 +506,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- embankment and dyke -->
-	<!-- двесторонняя дамба,насыпь like embankment=yes VUK only OpenAndroMaps-->
+	<!-- двесторонняя дамба,насыпь like embankment=yes -->
 	<rule e="way" k="man_made" v="dyke" zoom-min="15" cat="tms_man-made">
 		<rule e="way" k="embankment|highway" v="~">
 			<line stroke="#b38600" scale="all" stroke-width="3.2" stroke-dasharray="0.16,2.0" stroke-linecap="butt" />
@@ -2099,9 +2101,9 @@ Transparency for HEX colors (100% - непрозрачный)
 	<!-- added at Felipe's request -->
 	<rule cat="tms_peak" e="node" k="man_made" v="survey_point">
 		<symbol id="s_survey_point" priority="101" display="always" src="file:/symbols/s_survey_point.svg" symbol-height="16" />
-		<caption k="ele" priority="5" symbol-id="s_survey_point" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.5" />
+		<caption k="ele" priority="5" symbol-id="s_survey_point" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<caption k="name" priority="88" symbol-id="s_survey_point" position="above" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="1.5" />
+			<caption k="name" priority="88" symbol-id="s_survey_point" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 

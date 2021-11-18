@@ -267,9 +267,19 @@ Transparency for HEX colors (100% - непрозрачный)
 	
 	<rule cat="tms_land-base" e="way" k="natural|landuse" v="forest|wood">
 		
-		
-	<!-- Лес с вариантом графики ilarki	2  -->
-		 <rule cat="tms_new-wood" e="any" k="wood|leaf_type" v="coniferous|needleleaved" zoom-min="12" >
+	<rule cat="tms_new-wood" e="way" k="*" v="*" zoom-min="12">
+		<rule e="way" k="wood|leaf_type" v="coniferous|needleleaved">
+			<area src="file:/patterns/wood-xv.svg" symbol-height ="60" />
+		</rule>
+		<rule e="way" k="wood|leaf_type" v="deciduous|broadleaved">
+			<area src="file:/patterns/wood-lst.svg" symbol-height="60" />
+		</rule>
+		<rule e="way" k="wood|leaf_type" v="~|mixed|leafless">
+			<area src="file:/patterns/wood-mix.svg" symbol-height="60" />
+		</rule>
+	</rule>
+
+		 <!-- <rule cat="tms_new-wood" e="any" k="wood|leaf_type" v="coniferous|needleleaved" zoom-min="12" >
 			<area src="file:/patterns/forest_3xvn.png"  /> 
 		</rule> 
 		<rule cat="tms_new-wood" e="any" k="wood|leaf_type" v="deciduous|broadleaved" zoom-min="12" >	
@@ -277,7 +287,8 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 		<rule cat="tms_new-wood" e="any" k="wood|leaf_type" v="~|mixed|leafless" zoom-min="12" >
 			<area src="file:/patterns/forest_3mix.png"  /> 			  
-		</rule>			
+		</rule>			 -->
+
 	<!-- Обводка --> 
 		<rule cat="tms_new-wood" e="way" k="natural|landuse" v="forest|wood"  zoom-min="15" zoom-max="99"> 
 			<line stroke="#00661A" stroke-width="0.18" stroke-dasharray="0.5, 1" /> <!-- stroke="#1C9E1F" --> 
@@ -333,7 +344,6 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_land-base" e="way" k="landuse" v="village_green|recreation_ground|greenfield" zoom-min="13"> <area fill="#BBBDE3CB" stroke="#6FC13D" stroke-width="0.2" /> </rule>
 	<rule cat="tms_land-base" e="way" k="landuse" v="allotments" zoom-min="13"> <area src="file:/patterns/allotments.png"  />	</rule>
 	
-	<!-- https://github.com/der-stefan/OpenTopoMap/blob/master/mapnik/styles-otm/landuse.xml -->
 	<rule cat="tms_land-base" e="way" k="landuse|amenity" v="cemetery|grave_yard" zoom-min="11">
 		<area fill="#adc4b6" stroke="#333333" stroke-width="0.3" />
 	</rule>
@@ -866,8 +876,6 @@ Transparency for HEX colors (100% - непрозрачный)
 
 <!-- 	БОЛОТА  -->
 
-	<!-- https://github.com/der-stefan/OpenTopoMap/blob/master/mapnik/styles-otm/landuse-over-water.xml -->
-
 	<rule cat="tms_land-base" e="way" k="natural" v="wetland" zoom-min="12">
 		<rule e="way" k="wetland" v="swamp">	
 			<area fill="#4D73b64b"/> 
@@ -1060,7 +1068,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<area fill="#BBFAEBB9" /> 
 		<area src="file:/patterns/sand.png" symbol-width="8dp"/> 		
 	</rule>	
-	<!-- Magellan -->
+
 	<rule e="way" k="highway|railway|public_transport" v="platform">
 		<rule e="any" k="tunnel" v="~|no|false">
 			<rule e="any" k="*" v="*" closed="yes">
@@ -1403,7 +1411,6 @@ Transparency for HEX colors (100% - непрозрачный)
 				<rule e="way" k="tracktype" v="grade2|~" zoom-min="13" >
 					<line stroke="#111111" stroke-width="0.64" />
 				</rule>				
-			
 				<!-- конец Основной блок track   -->		
 		</rule>
 		
@@ -1428,7 +1435,6 @@ Transparency for HEX colors (100% - непрозрачный)
 				<rule e="way" k="highway" v="motorway" zoom-min="13" ><line stroke="#fb9e2a" stroke-width="0.67" /></rule>				
 			</rule>
 
-<!-- Доб Magellan -->
 		<rule e="way" k="highway" v="raceway" zoom-min="14">   
 			<line stroke="#ff7373" stroke-width="1.5" stroke-linecap="butt" />
 			<line stroke="#ffcfbf" stroke-width="0.8" stroke-linecap="butt" />			
