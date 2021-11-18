@@ -262,7 +262,6 @@ Transparency for HEX colors (100% - непрозрачный)
  
 <!-- vegetation -->
 
-<!-- https://github.com/der-stefan/OpenTopoMap/blob/master/mapnik/styles-otm/landuse-over-hillshade.xml -->
 	<rule cat="tms_land-base" e="way" k="natural|landuse" v="forest|wood"  zoom-min="9" zoom-max="11"> <area fill="#b3d97e" /> </rule> <!-- fill="#FFFFFF" -->
 	
 	<rule cat="tms_land-base" e="way" k="natural|landuse" v="forest|wood">
@@ -278,16 +277,6 @@ Transparency for HEX colors (100% - непрозрачный)
 			<area src="file:/patterns/wood-mix.svg" symbol-height="60" />
 		</rule>
 	</rule>
-
-		 <!-- <rule cat="tms_new-wood" e="any" k="wood|leaf_type" v="coniferous|needleleaved" zoom-min="12" >
-			<area src="file:/patterns/forest_3xvn.png"  /> 
-		</rule> 
-		<rule cat="tms_new-wood" e="any" k="wood|leaf_type" v="deciduous|broadleaved" zoom-min="12" >	
-			<area src="file:/patterns/forest_3lst.png"  />   
-		</rule>
-		<rule cat="tms_new-wood" e="any" k="wood|leaf_type" v="~|mixed|leafless" zoom-min="12" >
-			<area src="file:/patterns/forest_3mix.png"  /> 			  
-		</rule>			 -->
 
 	<!-- Обводка --> 
 		<rule cat="tms_new-wood" e="way" k="natural|landuse" v="forest|wood"  zoom-min="15" zoom-max="99"> 
@@ -1845,7 +1834,9 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol id="s_doctors" priority="300" src="file:/symbols/s_doctors.png" force-draw="1"  />
 		<caption symbol-id="s_doctors" priority="300" cat="tms_land-names" k="name" dy="-12dp" font-style="bold" font-size="9dp" fill="#D90000" stroke="#FFFFFF" stroke-width="2.0dp" />				
 	</rule>
-	<rule cat="tms_emergency" e="any" k="amenity" v="telephone">	<symbol priority="400" src="file:/symbols/s_telephone.png" /></rule>
+	<rule cat="tms_emergency" e="any" k="amenity" v="telephone">	
+		<symbol priority="320" src="file:/symbols/telephone.svg" symbol-width="16" />
+	</rule>		
 	<rule cat="tms_emergency" e="any" k="amenity" v="police">		<symbol priority="400" src="file:/symbols/s_police.png" /></rule>
 	<rule cat="tms_emergency" e="any" k="amenity" v="fire_station">	<symbol priority="400" src="file:/symbols/s_firebrigade.png" /></rule>
 	<rule cat="tms_emergency" e="any" k="amenity|building" v="embassy">
