@@ -1523,7 +1523,6 @@ Transparency for HEX colors (100% - непрозрачный)
 			<line stroke="#666666" stroke-width="0.2" stroke-linecap="butt" />
 			<line stroke="#666666" stroke-width="0.6" stroke-dasharray="0.3,40,0.3,30" />
 		</rule>
-	
 	</rule>		
 	
 <!-- housenumbers -->
@@ -1544,14 +1543,11 @@ Transparency for HEX colors (100% - непрозрачный)
 		<caption k="addr:housenumber" font-style="bold" font-size="20" fill="#000000" stroke="#FFFFFF" stroke-width="4.0" />
 	</rule>	
 </rule>	
-<!-- Magellan -->	
-
 
 <!-- Places -->
 	
 <!-- natural -->
 
-<!-- вставлено -->
 	<rule cat="tms_peak" e="node" k="natural" v="peak" zoom-min="12">
 		<symbol display="always" priority="430" id="tms_peak" src="file:/symbols/peak.svg" scale="0.8" />  		
 		<caption priority="315" symbol-id="tms_peak" cat="tms_land-names" k="name" dy="-18" font-style="bold" font-size="18" fill="#000000" stroke="#ffffff" stroke-width="4.00" /> 
