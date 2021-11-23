@@ -303,15 +303,15 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<rule cat="tms_land-base" e="way" k="natural|landuse" v="grass|grassland" zoom-min="13">
-		<area fill="#26E6FFDB" />
+		<area fill="#90E6FFDB" />
 		<!-- #26E5FF99 больше желтого  #4DFFFFFF белый #BBE6FFDB больше зеленого-->		<!-- symbol-width="32" #0D99FF99" была в версии 1.1 -->
-		<area src="file:/patterns/meadow-m-2.png" symbol-width="16" />
+		<area src="file:/patterns/meadow-m-2.svg" symbol-width="16" />
 	</rule>
 	<rule cat="tms_land-base" e="way" k="landuse|natural" v="meadow" zoom-min="12">
-		<area fill="#20E5FF99" />
+		<area fill="#50E5FF99" />
 		<!-- stroke="#CFFFBF" stroke-width="0.125dp" -->		<!-- #26E5FF99 больше желтого-->		<!-- #0D99FF99" была в версии 1.1 -->
 		<rule e="way" k="*" v="*" zoom-min="13">
-			<area src="file:/patterns/meadow-m-2.png" symbol-width="18" />
+			<area src="file:/patterns/meadow-m-2.svg" symbol-width="16" />   <!--?  мб уменьшить width -->
 		</rule>
 	</rule>
 
@@ -408,7 +408,7 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- Area names Magellan -->
 	<rule cat="tms_land-names" e="way" k="*" v="*" zoom-min="13">
-		<rule cat="tms_land-base" e="way" k="natural|landuse" v="glacier|land|beach|sand|rock|fell|wetland|scree|landfill|quarry|farm|farmland" zoom-min="14">
+		<rule cat="tms_land-base" e="way" k="natural|landuse" v="glacier|land|beach|sand|rock|fell|scree|landfill|quarry|farm|farmland" zoom-min="14">
 			<caption cat="tms_land-names" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="1.5" />
 			<!-- fill="#444444"  -->
 		</rule>

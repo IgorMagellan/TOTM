@@ -285,13 +285,13 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 	
 	<rule cat="tms_land-base" e="way" k="natural|landuse" v="grass|grassland" zoom-min="13"> 
-		<area fill="#4DFFFFFF" />	   <!-- #26E5FF99 больше желтого   #BBE6FFDB больше зеленого-->       <!-- symbol-width="32" #0D99FF99" была в версии 1.1 -->
-		<area src="file:/patterns/meadow-m-2.png" scale="0.7" /> 
+		<area fill="#50E6FFDB" />	   <!-- #26E5FF99 больше желтого   #BBE6FFDB больше зеленого-->       <!-- symbol-width="32" #0D99FF99" была в версии 1.1 -->
+		<area src="file:/patterns/meadow-m-2.svg" symbol-width="16" />   <!--  scale="0.7" -->
 	</rule>				
 	<rule cat="tms_land-base" e="way" k="landuse|natural" v="meadow" zoom-min="12"> 
-		<area fill="#20E5FF99" />	  <!-- stroke="#CFFFBF" stroke-width="0.125dp" -->  <!-- #26E5FF99 больше желтого-->       <!-- #0D99FF99" была в версии 1.1 -->
+		<area fill="#60E5FF99" />	  <!-- stroke="#CFFFBF" stroke-width="0.125dp" -->  <!-- #26E5FF99 больше желтого-->       <!-- #0D99FF99" была в версии 1.1 -->
 		<rule e="way" k="*" v="*" zoom-min="13">  
-			<area src="file:/patterns/meadow-m-2.png" scale="0.8" /> 
+			<area src="file:/patterns/meadow-m-2.svg" symbol-width="16" />  <!-- scale="0.8"  -->
 		</rule>					
 	</rule>		
 	
@@ -1300,11 +1300,11 @@ Transparency for HEX colors (100% - непрозрачный)
 				<rule e="way" k="highway" v="unclassified|residential|living_street"> <line stroke="#777777" stroke-width="1.3" /> </rule>
 				<rule e="way" k="highway" v="byway"> <line stroke="#777777" stroke-width="1.3" /> </rule>
 				<rule e="way" k="highway" v="tertiary|tertiary_link"> <line stroke="#ffd900" stroke-width="1.3" /> </rule>
-				<rule e="way" k="highway" v="secondary_link"> <line stroke="#ffd900" stroke-width="1.3" /> </rule>    <!-- ЗДЕСЬ???   stroke-width="1.3" -->
+				<rule e="way" k="highway" v="secondary_link"> <line stroke="#ffd900" stroke-width="1.3" /> </rule>    
 				<rule e="way" k="highway" v="primary_link"> <line stroke="#ffd900" stroke-width="1.3" /> </rule>
 				<rule e="way" k="highway" v="trunk_link"> <line stroke="#ff9326" stroke-width="1.3" /> </rule> <!-- line stroke="#cc1111" -->
 				<rule e="way" k="highway" v="motorway_link"> <line stroke="#ff9326" stroke-width="1.3" /> </rule> <!--  stroke="#cc1111" -->
-				<rule e="way" k="highway" v="secondary"> <line stroke="#ffd900" stroke-width="1.3" /> </rule>  <!-- ЗДЕСЬ??? -->
+				<rule e="way" k="highway" v="secondary"> <line stroke="#ffd900" stroke-width="1.3" /> </rule>  
 			</rule>
 			<rule e="way" k="highway" v="primary"> <line stroke="#fb9e2a" stroke-width="1.9" /></rule>   <!-- line stroke="#cc1111" -->
 			<rule e="way" k="highway" v="trunk"> <line stroke="#ffffff" stroke-width="1.1" /> </rule>
@@ -1320,7 +1320,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_hk" e="way" k="highway" v="footway" zoom-min="15" ><line stroke="#000000" stroke-width="0.38"  stroke-dasharray="0.7,1.5" stroke-linecap="round" /></rule>
 
 	
-<!-- 	Magellan steps HiLo	 -->
+<!-- 	Magellan steps  -->
 	<rule cat="tms_hk" e="way" k="highway" v="steps" zoom-min="15"> 			
 		<line stroke="#666666" stroke-width="0.9" stroke-dasharray="0.6,0.8" stroke-linecap="butt" />
 		<rule cat="tms_land-names"  e="way" k="*" v="*" zoom-min="16">
@@ -1494,7 +1494,6 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 		<rule e="way" k="*" v="*"><pathText display="always" k="name" dy="-2" font-style="bold" font-size="8dp" fill="#222222" stroke="#E5FFFFFF" stroke-width="1.1dp" /></rule>				
 	</rule>
-
 	
 	<!-- highway one-way markers -->
 		<rule e="way" k="tunnel" v="~|false|no">
@@ -1507,7 +1506,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			</rule>
 		</rule>
 
-	<!-- Power areas and lines hilo-->
+	<!-- Power areas and lines -->
 	<rule cat="tms_power" e="way" k="power" v="*" zoom-min="13">
 		<!-- power generator -->
 		<rule cat="tms_land-base" e="way" k="power" v="generator|station|sub_station|substation" >
@@ -1527,7 +1526,6 @@ Transparency for HEX colors (100% - непрозрачный)
 	
 <!-- housenumbers -->
 
-<!-- Вставлено Magellan -->	
 <rule cat="tms_land-base" e="any" k="addr:housenumber" v="*" zoom-min="16">
 	<rule cat="tms_up-osm" e="way" k="addr:housenumber" v="*" zoom-min="16" zoom-max="16">
 		<caption k="addr:housenumber" font-style="bold" font-size="14" fill="#000000" stroke="#ffffff" stroke-width="4.0" />
@@ -1609,7 +1607,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<caption symbol-id="tms_tree" cat="tms_land-names" position="above" k="name" font-style="bold" font-size="8dp" fill="#006600" stroke="#FFFFFF" stroke-width="2.0dp" />
  		<caption symbol-id="tms_tree" cat="tms_land-names" position="below" k="ele"  font-style="bold" font-size="8dp" fill="#006600" stroke="#FFFFFF" stroke-width="2.0dp" />
 	</rule>
-	<!-- Magellan -->
+
 <!-- accommodation -->
 	<rule cat="tms_camp" e="any" zoom-min="14" k="tourism" v="camp_site">	<symbol priority="235" id="tms_touring" src="file:/symbols/s_camp_site.png" /> </rule>
 	<rule cat="tms_camp" e="any" zoom-min="14" k="tourism" v="caravan_site"><symbol priority="235" id="tms_touring" src="file:/symbols/s_caravan_site.png" /> </rule>
@@ -1840,7 +1838,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<caption symbol-id="tms_embassy" cat="tms_land-names" k="name" dy="-12dp" font-style="bold" font-size="9dp" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	
-<!-- aeroway symbols and captions -->   <!-- Magellan -->
+<!-- aeroway symbols and captions -->   
 <rule cat="tms_land-base" e="any" k="aeroway" v="*">
 	<rule e="any" k="aeroway" v="helipad" zoom-min="13"><symbol priority="255" src="file:/symbols/s_helipad.png" /></rule>
 	<rule e="any" k="aeroway" v="aerodrome|airport" zoom-min="12"><symbol src="file:/symbols/s_airport.png" /></rule>
@@ -1934,7 +1932,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>	
 	<rule cat="tms_trans-pub" e="any" k="railway|building|light_rail" v="station|train_station">
 		<rule e="any" k="station" v="subway">
-			<symbol id="s_pt_subway" priority="405" force-draw="1" src="file:/symbols/subway7x32.png"  />  <!-- symbol-scaling="size" symbol-height="32" symbol-color="#755741"  symbol-width="16dp" scale-icon-size="17,1.1"  -->
+			<symbol id="s_pt_subway" priority="405" force-draw="1" src="file:/symbols/subway7x32.png"  />  
 			<caption cat="tms_land-names" priority="405" k="name" symbol-id="s_pt_subway" dy="-20" font-style="bold" font-size="10dp" fill="#ff0013" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>		
 		<rule e="any" k="station" v="~">		
@@ -1968,21 +1966,16 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol priority="220" id="tms_zoo" src="file:/symbols/s_zoo.png" />
 		<caption priority="115" symbol-id="tms_zoo" cat="tms_land-names" k="name" font-style="bold" font-size="8dp" fill="#552200" stroke="#FFFFFF" stroke-width="2.0dp" />
 	</rule>
-
-	<!--! разобраться тут с вложенностью правил -->
-	<rule e="any" k="leisure" v="*" zoom-min="15">
-		<rule cat="tms_picnic" e="any" k="*" v="*" >	
-			<rule e="any" k="leisure" v="firepit" zoom-min="16">
-				<symbol src="file:/symbols/s_poi_firepit_osm.svg" symbol-id="s_firepit" symbol-color="#755741" symbol-width="12dp" scale-icon-size="17,1.15"/>   
-				<caption k="name" symbol-id="s_firepit" font-style="bold" font-size="10dp" dy="-12dp" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
-			</rule>
-		</rule>			
-	</rule>	
-
-    <rule e="any" k="amenity" v="bbq" cat="tms_picnic">
+	
+	<rule at="tms_picnic" e="any" k="leisure" v="firepit" >
+		<symbol src="file:/symbols/s_poi_firepit_osm.svg" symbol-id="s_firepit" symbol-color="#755741" symbol-width="12dp" scale-icon-size="17,1.15"/>   
+		<caption cat="tms_land-names" k="name" symbol-id="s_firepit" font-style="bold" font-size="10dp" dy="-12dp" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+	</rule>
+			
+    <rule cat="tms_picnic" e="any" k="amenity" v="bbq" >
 		<symbol src="file:/symbols/s_poi_bbq_osm.svg" symbol-id="s_bbq" display="always" symbol-color="#755741" symbol-width="12dp" scale-icon-size="17,1.15"/>
-		<rule e="any" k="*" v="*" zoom-min="16">
-			<caption k="name" symbol-id="s_bbq" font-style="bold" font-size="10dp" dy="-12dp" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+		<rule e="any" k="*" v="*" zoom-min="17">
+			<caption cat="tms_land-names" k="name" symbol-id="s_bbq" font-style="bold" font-size="10dp" dy="-12dp" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
     </rule>	
 
@@ -2001,7 +1994,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_bureaucracy" e="any" k="amenity" v="atm">			<symbol priority="230" src="file:/symbols/s_atm.png" /> </rule>
 	<rule cat="tms_bureaucracy" e="any" k="amenity" v="bank">			<symbol priority="230" force-draw="1" src="file:/symbols/s_bank.png" /></rule>
 	<rule cat="tms_bureaucracy" e="any" k="amenity" v="post_box">		<symbol src="file:/symbols/s_postbox.png" /></rule>
-	<!-- Magellan insert	 -->	
+
 	<rule cat="tms_bureaucracy" e="any" k="amenity" v="post_office">	
 		<symbol id="s_postoffice" priority="240" force-draw="1" src="file:/symbols/s_postoffice.png" />
 		<rule e="any" k="*" v="*" zoom-min="16">
@@ -2014,11 +2007,6 @@ Transparency for HEX colors (100% - непрозрачный)
 
 <!-- man_made -->
 
-<!-- 	<rule cat="tms_man-made" e="node" k="tower" v="communication">
-	    <rule e="node" k="*" v="*" zoom-max="13">				<symbol force-draw="1" src="file:/symbols/mast-comm.svg" symbol-width="8dp"/></rule>	
-	    <rule e="node" k="*" v="*" zoom-min="14" zoom-max="16">	<symbol force-draw="1" src="file:/symbols/mast-comm.svg" symbol-width="16dp"/></rule>
-	    <rule e="node" k="*" v="*" zoom-min="17">				<symbol force-draw="1" src="file:/symbols/mast-comm.svg" symbol-width="24dp"/></rule>		
-	</rule>		 -->
 	<rule cat="tms_man-made" e="any" k="tower:type|tower" v="communication">
 	    <rule e="any" k="*" v="*" zoom-max="13">				<symbol force-draw="1" src="file:/symbols/mast-comm.svg" symbol-width="8dp"/></rule>	
 	    <rule e="any" k="*" v="*" zoom-min="14" zoom-max="16">	<symbol force-draw="1" src="file:/symbols/mast-comm.svg" symbol-width="16dp"/></rule>
@@ -2028,11 +2016,9 @@ Transparency for HEX colors (100% - непрозрачный)
 	    <rule e="node" k="*" v="*" zoom-min="15" zoom-max="15">	<symbol id="hunting_stand" src="file:/symbols/hunting_stand.svg" symbol-width="12dp"/></rule>	
 	    <rule e="node" k="*" v="*" zoom-min="16">				<symbol id="hunting_stand" src="file:/symbols/hunting_stand.svg" symbol-width="16dp"/></rule>	
 	</rule>
-<!-- 
-	<rule cat="tms_man-made" e="node" k="tower" v="observation"><symbol src="file:/symbols/s_tower_observation.png" /></rule>
- --> 
-	<rule cat="tms_man-made" e="any" k="tower:type|tower" v="surveillance|observation"><symbol src="file:/symbols/s_tower_observation.png" /></rule>
 
+ 
+	<rule cat="tms_man-made" e="any"  k="tower:type|tower" v="surveillance|observation"><symbol src="file:/symbols/s_tower_observation.png" /></rule>
 	<rule cat="tms_man-made" e="node" k="man_made" v="windmill"><symbol priority="200" src="file:/symbols/s_windmill.png" /></rule>
 	<rule cat="tms_man-made" e="node" k="man_made" v="lighthouse"><symbol src="file:/symbols/s_lighthouse.png" /></rule>
 	<rule cat="tms_man-made" e="node" k="generator:source" v="wind"><symbol src="file:/symbols/s_power_wind.png" /></rule>

@@ -296,3 +296,5 @@ initial release in github
 добавлен дефибриллятор, emergency телефон и emergency access point
 18/11/2021
 заливка леса png->svg
+18/11/2021
+перерисовал meadow|grassland
