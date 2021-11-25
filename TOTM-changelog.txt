@@ -296,5 +296,7 @@ initial release in github
 добавлен дефибриллятор, emergency телефон и emergency access point
 18/11/2021
 заливка леса png->svg
-18/11/2021
+23/11/2021
 перерисовал meadow|grassland
+25/11/2021
+обводка wood на z14, переделал bureaucracy

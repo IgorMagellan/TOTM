@@ -288,7 +288,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 
 		<!-- Обводка -->
-		<rule cat="tms_new-wood" e="way" k="*" v="*" zoom-min="15" zoom-max="16">
+		<rule cat="tms_new-wood" e="way" k="*" v="*" zoom-min="14" zoom-max="16">
 			<line stroke="#00661A" stroke-width="0.18" stroke-dasharray="0.3, 2" />
 		</rule>
 		<rule cat="tms_new-wood" e="way" k="*" v="*" zoom-min="17" zoom-max="17">
@@ -311,7 +311,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<area fill="#50E5FF99" />
 		<!-- stroke="#CFFFBF" stroke-width="0.125dp" -->		<!-- #26E5FF99 больше желтого-->		<!-- #0D99FF99" была в версии 1.1 -->
 		<rule e="way" k="*" v="*" zoom-min="13">
-			<area src="file:/patterns/meadow-m-2.svg" symbol-width="16" />   <!--?  мб уменьшить width -->
+			<area src="file:/patterns/meadow-m-2.svg" symbol-width="16" />
 		</rule>
 	</rule>
 
@@ -2495,7 +2495,7 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<rule cat="tms_emergency" e="any" k="amenity|building" v="fire_station">
 		<symbol priority="400" id="s_fire_station" display="always" src="file:/symbols/s_firebrigade.png" symbol-width="16" />
-		<rule e="any" k="*" v="*">
+		<rule e="any" k="*" v="*" zoom-min="15">
 			<caption priority="400" cat="tms_land-names" symbol-id="s_fire_station" k="name" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="2" />
 		</rule>
 	</rule>
@@ -2720,34 +2720,33 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- bureaucracy -->
-	<rule cat="tms_bureaucracy" e="any" k="amenity" v="atm">
-		<symbol priority="230" id="s_atm" display="always" src="file:/symbols/s_atm.png" symbol-width="12" />
-	</rule>
-	<rule cat="tms_bureaucracy" e="any" k="amenity" v="bank">
-		<symbol priority="230" id="s_bank" display="always" src="file:/symbols/s_bank.png" symbol-height="14" symbol-width="16" />
-	</rule>
-
-	<rule cat="tms_bureaucracy" e="any" k="amenity" v="bank">
-		<caption cat="tms_land-names" priority="230" symbol-id="s_bank" k="name" position="above" font-style="bold" font-size="10" fill="#FF4000" stroke="#FFFFFF" stroke-width="1.5" />
-	</rule>
-	<!-- operator нет в tagmapping! -->
-	<rule cat="tms_bureaucracy" e="node" k="amenity" v="atm">
-		<caption cat="tms_land-names" priority="200" symbol-id="s_atm" k="name" position="below" font-style="bold" font-size="10" fill="#FF4000" stroke="#FFFFFF" stroke-width="1.5" />
-	</rule>
-
-	<rule cat="tms_bureaucracy" e="any" k="amenity" v="post_box">
-		<symbol priority="230" display="always" src="file:/symbols/s_postbox.png" symbol-width="12" />
-	</rule>
-	<rule cat="tms_bureaucracy" e="any" k="amenity" v="post_office">
-		<symbol priority="240" id="s_postoffice" display="always" src="file:/symbols/s_postoffice.png" symbol-width="16" />
-		<rule e="any" k="*" v="*" zoom-min="16">
-			<caption cat="tms_land-names" priority="240" k="name" symbol-id="s_postoffice" position="above" font-style="bold" font-size="10" fill="#403000" stroke="#E5FFFFFF" stroke-width="2" />
+	<rule cat="tms_bureaucracy" e="any" k="*" v="*" zoom-min="14" >
+		<rule e="any" k="amenity" v="atm">
+			<symbol priority="230" id="s_atm" display="always" src="file:/symbols/s_atm.png" symbol-width="12" />
+			<rule e="any" k="*" v="*" zoom-min="15">
+				<caption cat="tms_land-names" priority="200" symbol-id="s_atm" k="name" position="below" font-style="bold" font-size="10" fill="#FF4000" stroke="#FFFFFF" stroke-width="1.5" />
+			</rule>
 		</rule>
-	</rule>
-	<rule cat="tms_bureaucracy" e="any" k="amenity" v="townhall" zoom-min="15">
-		<symbol priority="210" id="s_townhall" display="always" src="file:/symbols/s_townhall-el.svg" symbol-width="16" />
-		<rule e="any" k="*" v="*" zoom-min="16">
-			<caption cat="tms_land-names" priority="200" k="name" symbol-id="s_townhall" position="above" font-style="bold" font-size="10" fill="#403000" stroke="#E5FFFFFF" stroke-width="2" />
+		<rule e="any" k="amenity" v="bank">
+			<symbol priority="230" id="s_bank" display="always" src="file:/symbols/s_bank.png" symbol-height="14" symbol-width="16" />
+			<rule e="any" k="*" v="*" zoom-min="15">
+				<caption cat="tms_land-names" priority="230" symbol-id="s_bank" k="name" position="above" font-style="bold" font-size="10" fill="#FF4000" stroke="#FFFFFF" stroke-width="1.5" />
+			</rule>
+		</rule>
+		<rule e="any" k="amenity" v="post_box">
+			<symbol priority="230" display="always" src="file:/symbols/s_postbox.png" symbol-width="12" />
+		</rule>
+		<rule e="any" k="amenity" v="post_office">
+			<symbol priority="240" id="s_postoffice" display="always" src="file:/symbols/s_postoffice.png" symbol-width="16" />
+			<rule e="any" k="*" v="*" zoom-min="16">
+				<caption cat="tms_land-names" priority="240" k="name" symbol-id="s_postoffice" position="above" font-style="bold" font-size="10" fill="#403000" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>
+		<rule e="any" k="amenity" v="townhall" >   <!-- zoom-min="15" -->
+			<symbol priority="210" id="s_townhall" display="always" src="file:/symbols/s_townhall-el.svg" symbol-width="16" />
+			<rule e="any" k="*" v="*" zoom-min="16">
+				<caption cat="tms_land-names" priority="200" k="name" symbol-id="s_townhall" position="above" font-style="bold" font-size="10" fill="#403000" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
 		</rule>
 	</rule>
 
