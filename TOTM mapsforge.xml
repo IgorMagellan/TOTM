@@ -27,7 +27,7 @@ Transparency for HEX colors (100% - непрозрачный)
 -->
 	<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://mapsforge.org/renderTheme" 
 	xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd" 
-	version="4" map-background="#ffffff" map-background-outside="#ffffff">
+	version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 	<stylemenu id="totm_2_3" defaultvalue="tms_hiking" defaultlang="en">
 
@@ -1754,7 +1754,7 @@ Transparency for HEX colors (100% - непрозрачный)
 					</rule>
 					<rule e="any" k="*" v="*" zoom-min="17" zoom-max="18">
 						<line stroke="#111111" stroke-width="0.32" />
-						<line stroke="#ff2626" stroke-width="0.32" stroke-dasharray="4.0,9" stroke-linecap="butt" />
+						<line stroke="#ff2626" stroke-width="0.32"   stroke-dasharray="4,9"  stroke-linecap="butt" />
 					</rule>
 					<rule e="any" k="*" v="*" zoom-min="19">
 						<line stroke="#222222" stroke-width="0.24" />
@@ -1780,16 +1780,16 @@ Transparency for HEX colors (100% - непрозрачный)
 
 				<rule e="way" k="tracktype" v="grade2|~">
 					<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14">
-						<line stroke="#111111" stroke-width="0.64" />
+						<line stroke="#111111" stroke-width="0.64" stroke-linecap="butt" />
 					</rule>
 					<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
-						<line stroke="#222222" stroke-width="0.48" />
+						<line stroke="#222222" stroke-width="0.48" stroke-linecap="butt" />
 					</rule>
 					<rule e="any" k="*" v="*" zoom-min="17" zoom-max="18">
-						<line stroke="#222222" stroke-width="0.32" />
+						<line stroke="#222222" stroke-width="0.32" stroke-linecap="butt" />
 					</rule>
 					<rule e="any" k="*" v="*" zoom-min="19">
-						<line stroke="#333333" stroke-width="0.24" />
+						<line stroke="#333333" stroke-width="0.24" stroke-linecap="butt" />
 					</rule>
 				</rule>
 				<!-- конец Основной блок track   -->
@@ -2274,7 +2274,7 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- water sources -->
 	<rule cat="tms_water" e="any" k="amenity|waterway|natural|man_made" v="drinking_water|water_point|spring|fountain|water_well" zoom-min="13" zoom-max="14">
-		<symbol display="always" priority="305" src="file:/symbols/s_water.svg" symbol-width="12" />
+		<symbol display="always" priority="505" src="file:/symbols/s_water.svg" symbol-width="12" />
 	</rule>
 
 	<rule cat="tms_water" e="node" k="amenity|natural" v="spring" zoom-min="15">
