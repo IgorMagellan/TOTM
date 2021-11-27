@@ -265,7 +265,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 	<rule cat="tms_land-base" e="way" k="landuse" v="quarry" zoom-min="12">
 		<area fill="#80F2EFE4" />
-		<area symbol-width="6" src="file:/patterns/quarry.png" />
+		<area src="file:/patterns/quarry.svg" symbol-width="10" />
 	</rule>
 
 	<!-- vegetation -->
@@ -2800,7 +2800,7 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- crossings -->
 	<rule cat="tms_crossings" e="any" k="highway" v="traffic_signals">
-		<symbol display="always" priority="300" src="file:/symbols/s_traffic_signal.png" symbol-height="24" />
+		<symbol display="always" priority="300" src="file:/symbols/s_traffic_signal.svg" symbol-height="24" />
 	</rule>
 	<rule cat="tms_crossings" e="any" k="railway" v="crossing" zoom-min="16">
 		<symbol display="always" src="file:/symbols/s_railway-crossing-small.png" symbol-width="16" />

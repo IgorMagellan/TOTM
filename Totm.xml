@@ -257,7 +257,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>		
 	<rule cat="tms_land-base" e="way" k="landuse" v="quarry" zoom-min="12" >
 		<area fill="#80F2EFE4"  />	 
-		<area symbol-width="6dp" src="file:/patterns/quarry.png" />
+		<area src="file:/patterns/quarry.svg" symbol-width="8dp" />
 	</rule>	
  
 <!-- vegetation -->
@@ -864,7 +864,6 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 <!-- 	БОЛОТА  -->
-
 	<rule cat="tms_land-base" e="way" k="natural" v="wetland" zoom-min="12">
 		<rule e="way" k="wetland" v="swamp">	
 			<area fill="#4D73b64b"/> 
@@ -881,7 +880,6 @@ Transparency for HEX colors (100% - непрозрачный)
 			<area src="file:/patterns/tidalflat.png" />
 		</rule>		
 		<rule e="way" k="wetland" v="marsh">	
-				<!-- <area src="file:/patterns/p_marsh.svg" symbol-width="24" /> было в тирамисе 3LE+-->
 			<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14"><area src="file:/patterns/reedbed.png" /></rule>
 			<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16"><area src="file:/patterns/reedbed.png" scale="1.7" /></rule>
 			<rule e="any" k="*" v="*" zoom-min="17" zoom-max="99"><area src="file:/patterns/reedbed.png" scale="2.0" /></rule>					
@@ -891,9 +889,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<area src="file:/patterns/wetland.png" />  <!--  scale="0.9" -->
 		</rule>			
 	</rule>
-	
 <!-- 	КОНЕЦ БОЛОТ -->	
-	
 	
 <!-- waterway structures -->
 	<rule cat="tms_land-base" e="way" k="tunnel" v="~|no">
@@ -2034,7 +2030,7 @@ Transparency for HEX colors (100% - непрозрачный)
 <!-- crossings -->
 	<rule cat="tms_crossings" e="node" k="railway" v="crossing" zoom-min="16">			<symbol priority="410" src="file:/symbols/s_railway-crossing-small.png" symbol-scaling="size" symbol-height="18" symbol-width="16" /></rule>
 	<rule cat="tms_crossings" e="node" k="railway" v="level_crossing" zoom-min="16">	<symbol priority="410" src="file:/symbols/s_railway-crossing.png" symbol-scaling="size" symbol-height="22" symbol-width="17"/></rule>
-	<rule cat="tms_crossings" e="node" k="highway" v="traffic_signals" zoom-min="16">	<symbol priority="405" src="file:/symbols/s_traffic_signal.png" symbol-scaling="size" symbol-height="20" symbol-width="8"/></rule>
+	<rule cat="tms_crossings" e="node" k="highway" v="traffic_signals" >	<symbol priority="405" src="file:/symbols/s_traffic_signal.svg" symbol-scaling="size" symbol-height="20" symbol-width="8"/></rule>
 
 	
 	<!-- блок ниже вставлен из UniGCcz, изменен by Magellan  -->
