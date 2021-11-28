@@ -1621,7 +1621,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<caption cat="tms_land-names" symbol-id="s_picnic_site" k="name" dy="-12dp" font-style="bold" font-size="10dp" fill="#000000" stroke="#ffffff" stroke-width="2dp" />	
 	</rule>
     <rule cat="tms_picnic" e="any" k="amenity" v="recycling">
-		<symbol id="s_recycling" src="file:/symbols/s_recycling.png" symbol-height="12" />
+		<symbol id="s_recycling" src="file:/symbols/s_recycling.svg" symbol-height="12dp" />
 		<rule e="any" k="*" v="*" >
 			<caption cat="tms_land-names" k="name" symbol-id="s_recycling" font-style="bold" font-size="9dp" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2dp" />
 		</rule>
@@ -1729,7 +1729,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 <!-- food -->
-	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="butcher">		<symbol priority="245" id="tms_shop" src="file:/symbols/s_butcher.png" /></rule>
+	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="butcher">		<symbol priority="245" id="tms_shop" src="file:/symbols/s_butcher.svg" symbol-width="12dp" /></rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="supermarket">	<symbol priority="245" id="tms_shop" src="file:/symbols/s_supermarket.svg" symbol-width="12dp" /></rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="convenience">	<symbol priority="245" id="tms_shop" src="file:/symbols/s_convenience.png" /></rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="bakery">			<symbol priority="245" id="tms_shop" src="file:/symbols/s_bakery.png" /></rule>
@@ -1812,25 +1812,25 @@ Transparency for HEX colors (100% - непрозрачный)
 
 <!-- emergency -->
 	<rule cat="tms_emergency" e="any" k="amenity" v="hospital">		
-		<symbol id="s_hospital" priority="400" src="file:/symbols/s_hospital.png" force-draw="1" />
+		<symbol id="s_hospital" priority="400" src="file:/symbols/s_hospital.svg" force-draw="1" symbol-width="12dp" />
 		<!-- Magellan insert -->
 		<caption priority="400"  cat="tms_land-names" symbol-id="s_hospital" k="name" display="always" dy="-12dp" font-style="bold" font-size="9dp" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0dp" />		
 	</rule>
 	<rule cat="tms_emergency" e="any" k="amenity" v="pharmacy">
-		<symbol id="s_pharmacy" priority="250" src="file:/symbols/s_pharmacy.png" />
+		<symbol id="s_pharmacy" priority="250" src="file:/symbols/s_pharmacy.svg" symbol-width="13" />
 		<caption priority="250"  symbol-id="s_pharmacy" cat="tms_land-names" k="name" dy="-12dp" font-style="bold" font-size="9dp" fill="#336600" stroke="#FFFFFF" stroke-width="2.0dp" />				
 	</rule>
 	<rule cat="tms_emergency" e="any" k="amenity" v="clinic|doctors">		
-		<symbol id="s_doctors" priority="300" src="file:/symbols/s_doctors.png" force-draw="1"  />
+		<symbol id="s_doctors" priority="300" src="file:/symbols/s_doctors.svg" force-draw="1" symbol-width="13" />
 		<caption symbol-id="s_doctors" priority="300" cat="tms_land-names" k="name" dy="-12dp" font-style="bold" font-size="9dp" fill="#D90000" stroke="#FFFFFF" stroke-width="2.0dp" />				
 	</rule>
 	<rule cat="tms_emergency" e="any" k="amenity" v="telephone">	
-		<symbol priority="320" src="file:/symbols/telephone.svg" symbol-width="16" />
+		<symbol priority="320" src="file:/symbols/s_telephone.svg" symbol-width="13" />
 	</rule>		
-	<rule cat="tms_emergency" e="any" k="amenity" v="police">		<symbol priority="400" src="file:/symbols/s_police.png" /></rule>
-	<rule cat="tms_emergency" e="any" k="amenity" v="fire_station">	<symbol priority="400" src="file:/symbols/s_firebrigade.png" /></rule>
+	<rule cat="tms_emergency" e="any" k="amenity" v="police">		<symbol priority="400" src="file:/symbols/s_police.svg" symbol-width="16" /></rule>
+	<rule cat="tms_emergency" e="any" k="amenity" v="fire_station">	<symbol priority="400" src="file:/symbols/s_firebrigade.svg" symbol-width="16" /></rule>
 	<rule cat="tms_emergency" e="any" k="amenity|building" v="embassy">
-		<symbol id="tms_embassy" priority="400" src="file:/symbols/s_embassy.png" />
+		<symbol id="tms_embassy" priority="400" src="file:/symbols/s_embassy.png" symbol-width="13" />
 		<caption symbol-id="tms_embassy" cat="tms_land-names" k="name" dy="-12dp" font-style="bold" font-size="9dp" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	
@@ -1855,10 +1855,10 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 <!-- cultural stuff -->
-	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity|building" v="library"><symbol id="tms_educat" src="file:/symbols/s_library.png" /></rule>
-	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity|building" v="school"><symbol  id="tms_educat" src="file:/symbols/s_school.png" /></rule>
-	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity|building" v="university|college"><symbol id="tms_educat" src="file:/symbols/s_university.png" /></rule>
-	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity|building" v="kindergarten">	<symbol priority="220" id="tms_educat" src="file:/symbols/s_kindergarten.png" /></rule>	
+	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity|building" v="library"><symbol id="tms_educat" src="file:/symbols/s_library.svg" symbol-width="12dp" /></rule>
+	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity|building" v="school"><symbol  id="tms_educat" src="file:/symbols/s_school.svg" symbol-width="12dp" /></rule>
+	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity|building" v="university|college"><symbol id="tms_educat" src="file:/symbols/s_university.svg" symbol-width="12dp" /></rule>
+	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity|building" v="kindergarten">	<symbol priority="220" id="tms_educat" src="file:/symbols/s_kindergarten.svg" symbol-width="14dp" /></rule>	
 	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity|building" v="school|library|university|college|kindergarten">
 		<caption symbol-id="tms_educat" cat="tms_land-names"  k="name" font-style="normal" dy="-14dp" font-size="8dp" fill="#004020" stroke="#FFFFFF" stroke-width="2.0dp" />  <!-- fill="#000090"  -->
 	</rule>
@@ -1909,7 +1909,7 @@ Transparency for HEX colors (100% - непрозрачный)
 <!-- car stuff -->
 	<rule cat="tms_trans-priv" e="any" k="amenity" v="parking">
 		<rule e="any" k="access" v="private">	<symbol priority="210" src="file:/symbols/s_parking_private.png" /></rule>
-		<rule e="any" k="*" v="*">				<symbol priority="210" src="file:/symbols/s_parking.png" /></rule>
+		<rule e="any" k="*" v="*">				<symbol priority="210" src="file:/symbols/s_parking.svg" symbol-height="12" /></rule>
 	</rule>
 	<rule cat="tms_trans-priv" e="any" k="amenity" v="fuel">
 		<symbol priority="310" force-draw="1" id="s_trans-priv" src="file:/symbols/s_fuel.png" />
