@@ -1751,7 +1751,7 @@ Transparency for HEX colors (100% - непрозрачный)
 
 <!-- other shops -->
 	<rule cat="tms_shops" e="any" k="shop" v="bicycle"><symbol priority="215" id="tms_shop" src="file:/symbols/s_bicycle_shop.png" /></rule>
-	<rule cat="tms_shops" e="any" k="shop" v="doityourself|hardware">	<symbol priority="215" id="tms_shop" src="file:/symbols/s_diy.png" /></rule>
+	<rule cat="tms_shops" e="any" k="shop" v="doityourself|hardware">	<symbol priority="215" id="tms_shop" src="file:/symbols/s_diy.svg" symbol-width="12dp" /></rule>
 	<rule cat="tms_shops" e="any" k="shop" v="laundry">		<symbol priority="215" id="tms_shop" src="file:/symbols/s_laundry.png" /></rule>
 	<rule cat="tms_shops" e="any" k="shop" v="florist">		<symbol priority="215" id="tms_shop" src="file:/symbols/s_florist.png" /></rule>
 	<rule cat="tms_shops" e="any"  zoom-min="14" k="shop" v="bicycle|doityourself|hardware|laundry|florist">
