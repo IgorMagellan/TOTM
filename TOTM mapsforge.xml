@@ -2336,7 +2336,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_butcher.png" symbol-height="16" />
 	</rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="supermarket">
-		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_supermarket.png" symbol-height="16" />
+		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_supermarket.svg" symbol-height="16" />
 	</rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="convenience">
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_convenience.png" symbol-height="16" />
@@ -2666,13 +2666,13 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- leisure time -->
 	<rule cat="tms_leisure" e="any" k="leisure" v="playground" zoom-min="15">
-		<symbol priority="120" id="tms_leisure" src="file:/symbols/s_playground.png" symbol-height="16" />
+		<symbol priority="120" id="tms_leisure" src="file:/symbols/s_playground.svg" symbol-height="16" />
 	</rule>
 	<rule cat="tms_leisure" e="any" k="amenity" v="cinema">
-		<symbol priority="220" id="tms_leisure" display="always" src="file:/symbols/s_cinema.png" symbol-height="16" />
+		<symbol priority="220" id="tms_leisure" display="always" src="file:/symbols/s_cinema.svg" symbol-height="16" />
 	</rule>
 	<rule cat="tms_leisure" e="any" k="amenity" v="theatre">
-		<symbol priority="220" id="tms_leisure" display="always" src="file:/symbols/s_theatre.png" symbol-height="16" />
+		<symbol priority="220" id="tms_leisure" display="always" src="file:/symbols/s_theatre.svg" symbol-height="16" />
 	</rule>
 	<rule cat="tms_leisure" e="any" k="*" v="playground|cinema|theatre" zoom-min="16">
 		<caption priority="-15" symbol-id="tms_leisure" cat="tms_land-names" k="name" position="above" font-size="8" font-style="bold" fill="#004900" stroke="#FFFFFF" stroke-width="2.0" />

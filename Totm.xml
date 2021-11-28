@@ -1730,7 +1730,7 @@ Transparency for HEX colors (100% - непрозрачный)
 
 <!-- food -->
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="butcher">		<symbol priority="245" id="tms_shop" src="file:/symbols/s_butcher.png" /></rule>
-	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="supermarket">	<symbol priority="245" id="tms_shop" src="file:/symbols/s_supermarket.png" /></rule>
+	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="supermarket">	<symbol priority="245" id="tms_shop" src="file:/symbols/s_supermarket.svg" symbol-width="12dp" /></rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="convenience">	<symbol priority="245" id="tms_shop" src="file:/symbols/s_convenience.png" /></rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="bakery">			<symbol priority="245" id="tms_shop" src="file:/symbols/s_bakery.png" /></rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="restaurant">	<symbol priority="245" id="tms_shop" src="file:/symbols/s_restaurant.png" /></rule>
@@ -1942,9 +1942,9 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 <!-- leisure time -->
-	<rule cat="tms_leisure" e="any" k="leisure" v="playground">	<symbol priority="220" id="tms_leisure" src="file:/symbols/s_playground.png" /></rule>
-	<rule cat="tms_leisure" e="any" k="amenity" v="cinema">		<symbol priority="220" id="tms_leisure" src="file:/symbols/s_cinema.png" /></rule>
-	<rule cat="tms_leisure" e="any" k="amenity" v="theatre">	<symbol priority="220" id="tms_leisure" src="file:/symbols/s_theatre.png" /></rule>
+	<rule cat="tms_leisure" e="any" k="leisure" v="playground">	<symbol priority="220" id="tms_leisure" src="file:/symbols/s_playground.svg" symbol-height="12dp" /></rule>
+	<rule cat="tms_leisure" e="any" k="amenity" v="cinema">		<symbol priority="220" id="tms_leisure" src="file:/symbols/s_cinema.svg" symbol-height="12dp" /></rule>
+	<rule cat="tms_leisure" e="any" k="amenity" v="theatre">	<symbol priority="220" id="tms_leisure" src="file:/symbols/s_theatre.svg" symbol-height="12dp" /></rule>
 	<rule cat="tms_leisure" e="any" k="*" v="playground|cinema|theatre">
 		<caption priority="15" symbol-id="tms_leisure" cat="tms_land-names" k="name" dy="-12dp" font-size="8dp" font-style="bold" fill="#004900" stroke="#FFFFFF" stroke-width="2.0dp" />
 	</rule>
@@ -2030,7 +2030,7 @@ Transparency for HEX colors (100% - непрозрачный)
 <!-- crossings -->
 	<rule cat="tms_crossings" e="node" k="railway" v="crossing" zoom-min="16">			<symbol priority="410" src="file:/symbols/s_railway-crossing-small.png" symbol-scaling="size" symbol-height="18" symbol-width="16" /></rule>
 	<rule cat="tms_crossings" e="node" k="railway" v="level_crossing" zoom-min="16">	<symbol priority="410" src="file:/symbols/s_railway-crossing.png" symbol-scaling="size" symbol-height="22" symbol-width="17"/></rule>
-	<rule cat="tms_crossings" e="node" k="highway" v="traffic_signals" >	<symbol priority="405" src="file:/symbols/s_traffic_signal.svg" symbol-scaling="size" symbol-height="20" symbol-width="8"/></rule>
+	<rule cat="tms_crossings" e="node" k="highway" v="traffic_signals" >	<symbol priority="405" src="file:/symbols/s_traffic_signal.svg" symbol-scaling="size" symbol-height="20" /></rule>
 
 	
 	<!-- блок ниже вставлен из UniGCcz, изменен by Magellan  -->
