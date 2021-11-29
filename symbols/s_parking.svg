@@ -1,92 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="24"
-   height="24"
-   viewBox="0 0 6.3499995 6.3499995"
-   version="1.1"
-   id="svg8165"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="s_parking-src.svg">
-  <defs
-     id="defs8159" />
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="15.839192"
-     inkscape:cx="8.5723151"
-     inkscape:cy="15.273971"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     units="px"
-     inkscape:window-width="1130"
-     inkscape:window-height="730"
-     inkscape:window-x="45"
-     inkscape:window-y="182"
-     inkscape:window-maximized="0"
-     inkscape:pagecheckerboard="true"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0"
-     gridtolerance="10"
-     guidetolerance="10"
-     objecttolerance="20" />
-  <metadata
-     id="metadata8162">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(-0.5917137,-290.19228)">
-    <rect
-       style="display:inline;fill:#0042e8;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.52916664;stroke-miterlimit:4;stroke-dasharray:none"
-       id="rect5243"
-       width="5.8208327"
-       height="5.8208327"
-       x="0.87182724"
-       y="290.47473"
-       rx="1.0583333" />
-    <rect
-       rx="1.0583333"
-       y="290.47473"
-       x="0.87182713"
-       height="5.8208327"
-       width="5.8208327"
-       id="rect9437-2"
-       style="display:inline;fill:#0042e8;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.26458332" />
-    <g
-       transform="matrix(0.14676581,0,0,0.14676581,-195.15225,290.21177)"
-       id="text9679"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:none">
-      <path
-         style="fill:#ffffff;fill-opacity:1"
-         inkscape:connector-curvature="0"
-         id="path9684"
-         d="M 1345.2852,35.710937 V 7.078125 h 9.2773 c 3.5156,2.86e-5 5.8073,0.1432577 6.875,0.4296875 1.6406,0.4297153 3.0143,1.3639591 4.1211,2.8027345 1.1067,1.438826 1.6601,3.297548 1.6602,5.576172 -1e-4,1.75783 -0.3191,3.235693 -0.9571,4.433593 -0.638,1.197931 -1.4486,2.138686 -2.4316,2.822266 -0.9831,0.683606 -1.9825,1.136079 -2.9981,1.357422 -1.3802,0.273448 -3.3789,0.410167 -5.9961,0.410156 h -3.7695 v 10.800781 z m 5.7812,-23.789062 v 8.125 h 3.1641 c 2.2786,1.6e-5 3.802,-0.149724 4.5703,-0.449219 0.7682,-0.299463 1.3704,-0.768212 1.8066,-1.40625 0.4362,-0.638002 0.6543,-1.380189 0.6543,-2.226562 0,-1.041646 -0.306,-1.90102 -0.9179,-2.578125 -0.612,-0.677061 -1.3868,-1.100237 -2.3243,-1.269531 -0.6901,-0.130185 -2.0768,-0.195289 -4.1601,-0.195313 z" />
-    </g>
+<svg width="24" height="24" version="1.1" viewBox="0 0 6.35 6.35" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(-.60724 -290.21)">
+  <rect x=".87183" y="290.47" width="5.8208" height="5.8208" rx="1.0583" fill="#0042e8" stroke="#fff" stroke-width=".52917"/>
+  <rect x=".87183" y="290.47" width="5.8208" height="5.8208" rx="1.0583" fill="#0042e8"/>
+  <g transform="matrix(.14677 0 0 .14677 -195.15 290.21)" fill="#fff">
+   <path d="m1345.3 35.711v-28.633h9.2773c3.5156 2.86e-5 5.8073.14326 6.875.42969 1.6406.42972 3.0143 1.364 4.1211 2.8027 1.1067 1.4388 1.6601 3.2975 1.6602 5.5762-1e-4 1.7578-.3191 3.2357-.9571 4.4336-.638 1.1979-1.4486 2.1387-2.4316 2.8223-.9831.68361-1.9825 1.1361-2.9981 1.3574-1.3802.27345-3.3789.41017-5.9961.41016h-3.7695v10.801zm5.7812-23.789v8.125h3.1641c2.2786 1.6e-5 3.802-.14972 4.5703-.44922.7682-.29946 1.3704-.76821 1.8066-1.4062.4362-.638.6543-1.3802.6543-2.2266 0-1.0416-.306-1.901-.9179-2.5781-.612-.67706-1.3868-1.1002-2.3243-1.2695-.6901-.13018-2.0768-.19529-4.1601-.19531z" fill="#fff"/>
   </g>
+ </g>
 </svg>

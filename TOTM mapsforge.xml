@@ -1129,7 +1129,7 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<rule cat="tms_attraction" e="way" k="tourism" v="attraction" closed="yes">
 		<area fill="#BBF2CAEA" stroke="#CCAAC5" />
-		<symbol id="tms_attraction" src="file:/symbols/s_attraction.png" symbol-width="12" />
+		<symbol id="tms_attraction" src="file:/symbols/s_attraction.svg" symbol-width="13" />
 		<rule e="any" k="*" v="*" zoom-min="15">
 			<caption cat="tms_land-names" symbol-id="tms_attraction" k="name" font-style="bold" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
@@ -1137,7 +1137,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_attraction" e="way" k="tourism" v="attraction" closed="no">
 		<line stroke="#BBF2CAEA" stroke-width="0.8" stroke-dasharray="6,12" stroke-linecap="round" />
 		<rule e="any" k="*" v="*" zoom-max="14">
-			<symbol id="tms_attraction" src="file:/symbols/s_attraction.png" symbol-width="12" />
+			<symbol id="tms_attraction" src="file:/symbols/s_attraction.svg" symbol-width="13" />
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="15">
 			<caption cat="tms_land-names" symbol-id="tms_attraction" k="name" font-style="bold" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
@@ -1293,7 +1293,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<rule cat="tms_culture" e="any" k="historic|building" v="ruins" zoom-min="15">
-		<symbol src="file:/symbols/s_ruins.png" display="always" symbol-height="12" symbol-width="13" />
+		<symbol src="file:/symbols/s_ruins.svg" display="always" symbol-height="12" />
 	</rule>
 
 	<rule cat="tms_land-base" zoom-min="16" e="way" k="building" v="*">
@@ -1485,7 +1485,7 @@ Transparency for HEX colors (100% - непрозрачный)
 				<pathText k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="1" />
 			</rule>
 			<rule e="way" k="railway" v="funicular" zoom-min="14">
-				<symbol src="file:/symbols/s_rail_funicular.png" symbol-height="18" />
+				<symbol src="file:/symbols/s_rail_funicular.svg" symbol-height="16" />
 			</rule>
 		</rule>
 	</rule>
@@ -2074,7 +2074,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<rule cat="tms_tour" e="node" k="natural" v="cave_entrance" zoom-min="13">
-		<symbol priority="425" id="tms_cave" display="always" src="file:/symbols/s_cave_entrance.png" symbol-width="13" />
+		<symbol priority="425" id="tms_cave" display="always" src="file:/symbols/s_cave_entrance.svg" symbol-width="13" />
 		<caption cat="tms_land-names" priority="310" symbol-id="tms_cave" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
 		<caption cat="tms_land-names" symbol-id="tms_cave" position="below" k="ele" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
@@ -2229,22 +2229,22 @@ Transparency for HEX colors (100% - непрозрачный)
 	<!-- barriers -->
 	<rule cat="tms_barriers" e="node" k="barrier" v="*" zoom-min="15">
 		<rule e="node" k="barrier" v="bollard">
-			<symbol priority="415" display="always" src="file:/symbols/s_bollard.png" symbol-width="15" />
+			<symbol priority="415" display="always" src="file:/symbols/s_bollard.svg" symbol-height="16" />
 		</rule>
 		<rule e="node" k="barrier" v="block">
-			<symbol priority="415" display="always" src="file:/symbols/s_block.png" symbol-width="15" />
+			<symbol priority="415" display="always" src="file:/symbols/s_block.svg" symbol-height="16" />
 		</rule>
 		<rule e="node" k="barrier" v="lift_gate|chain">
-			<symbol priority="415" display="always" src="file:/symbols/s_lift_gate.png" symbol-width="15" />
+			<symbol priority="415" display="always" src="file:/symbols/s_lift_gate.svg" symbol-height="16" />
 		</rule>
 		<rule e="node" k="barrier" v="stile">
-			<symbol priority="415" display="always" src="file:/symbols/s_stile.png" symbol-width="15" />
+			<symbol priority="415" display="always" src="file:/symbols/s_stile.svg" symbol-height="16" />
 		</rule>
 		<rule e="node" k="barrier" v="cycle_barrier">
-			<symbol priority="415" display="always" src="file:/symbols/s_cycle_barrier.png"  symbol-width="15" />
+			<symbol priority="415" display="always" src="file:/symbols/s_cycle_barrier.svg"  symbol-height="16" />
 		</rule>
 		<rule e="node" k="barrier" v="gate">
-			<symbol priority="415" display="always" src="file:/symbols/s_gate.png" symbol-width="15" />
+			<symbol priority="415" display="always" src="file:/symbols/s_gate.svg" symbol-height="16" />
 		</rule>
 		<rule e="node" k="barrier" v="turnstile">
 			<symbol priority="405" display="always" src="file:/symbols/s_turnstile3.svg" symbol-width="16" />
@@ -2279,13 +2279,13 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<rule cat="tms_water" e="node" k="amenity|natural" v="spring" zoom-min="15">
 		<rule e="node" k="drinking_water|amenity" v="yes|drinking_water">
-			<symbol display="always" priority="505" id="tms_drop" src="file:/symbols/s_spring_d.png" symbol-height="13" />
+			<symbol display="always" priority="505" id="tms_drop" src="file:/symbols/s_spring_d.svg" symbol-height="13" />
 		</rule>
 		<rule e="node" k="drinking_water" v="no">
-			<symbol display="always" priority="405" id="tms_drop" src="file:/symbols/s_spring_nd.png" symbol-height="13" />
+			<symbol display="always" priority="405" id="tms_drop" src="file:/symbols/s_spring_nd.svg" symbol-height="13" />
 		</rule>
 		<rule e="node" k="drinking_water" v="~">
-			<symbol display="always" priority="505" id="tms_drop" src="file:/symbols/s_spring.png" symbol-height="13" />
+			<symbol display="always" priority="505" id="tms_drop" src="file:/symbols/s_spring.svg" symbol-height="13" />
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption symbol-id="tms_drop" k="name" priority="105" position="above" font-style="bold_italic" font-size="10" fill="#115DFF" stroke="#E5FFFFFF" stroke-width="2" />
@@ -2296,7 +2296,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule e="any" k="drinking_water" v="yes|~">
 			<rule e="any" k="natural" v="~">
 				<rule e="any" k="man_made" v="~">	<!-- ??? -->
-					<symbol id="s_drinking_water" display="always" src="file:/symbols/s_drinking_water.png" symbol-height="14" />
+					<symbol id="s_drinking_water" display="always" src="file:/symbols/s_drinking_water.svg" symbol-height="13" />
 					<rule e="any" k="*" v="*" zoom-min="16">
 						<caption k="name" symbol-id="s_drinking_water" font-style="italic" font-size="9" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
 					</rule>
@@ -2333,31 +2333,31 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- food -->
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="butcher">
-		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_butcher.svg" symbol-height="16" />
+		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_butcher.svg" symbol-height="17" />
 	</rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="supermarket">
-		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_supermarket.svg" symbol-height="16" />
+		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_supermarket.svg" symbol-height="17" />
 	</rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="convenience">
-		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_convenience.png" symbol-height="16" />
+		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_convenience.svg" symbol-height="17" />
 	</rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="bakery">
-		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_bakery.png" symbol-height="16" />
+		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_bakery.svg" symbol-height="17" />
 	</rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="restaurant">
-		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_restaurant.png" symbol-height="16" />
+		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_restaurant.svg" symbol-height="17" />
 	</rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="fast_food">
-		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_fastfood.png" symbol-height="16" />
+		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_fastfood.svg" symbol-height="17" />
 	</rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="biergarten">
-		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_biergarten.png" symbol-height="16" />
+		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_biergarten.svg" symbol-height="17" />
 	</rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="cafe">
-		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_cafe.png" symbol-height="16" />
+		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_cafe.svg" symbol-height="17" />
 	</rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop|amenity" v="pub|bar|beverages">
-		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_pub.png" symbol-height="16" />
+		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_pub.svg" symbol-height="17" />
 	</rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop|amenity" v="butcher|supermarket|convenience|bakery|restaurant|fast_food|biergarten|cafe|pub|bar|beverages">
 		<rule e="any" k="*" v="*" zoom-min="16">
@@ -2367,7 +2367,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	
 	<!-- рынки, базары -->
 	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="marketplace">
-		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_marketplace.png" symbol-width="17"/>
+		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_marketplace.svg" symbol-width="17"/>
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption priority="135" cat="tms_land-names" symbol-id="tms_shop" k="name" position="above" font-style="bold" font-size="10" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
@@ -2375,16 +2375,16 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- other shops -->
 	<rule cat="tms_shops" e="any" k="shop" v="bicycle">
-		<symbol priority="215" id="tms_shop" display="always" src="file:/symbols/s_bicycle_shop.png" symbol-width="16"/>
+		<symbol priority="215" id="tms_shop" display="always" src="file:/symbols/s_bicycle_shop.svg" symbol-width="18"/>
 	</rule>
 	<rule cat="tms_shops" e="any" k="shop" v="doityourself|hardware">
-		<symbol priority="215" id="tms_shop" display="always" src="file:/symbols/s_diy.svg" symbol-width="16" />
+		<symbol priority="215" id="tms_shop" display="always" src="file:/symbols/s_diy.svg" symbol-width="18" />
 	</rule>
 	<rule cat="tms_shops" e="any" k="shop" v="laundry|dry_cleaning">
-		<symbol priority="215" id="tms_shop" display="always" src="file:/symbols/s_laundry.png" symbol-width="16" />
+		<symbol priority="215" id="tms_shop" display="always" src="file:/symbols/s_laundry.svg" symbol-width="17" />
 	</rule>
 	<rule cat="tms_shops" e="any" k="shop" v="florist">
-		<symbol priority="215" id="tms_shop" display="always" src="file:/symbols/s_florist.png" symbol-width="16" />
+		<symbol priority="215" id="tms_shop" display="always" src="file:/symbols/s_florist.svg" symbol-width="17" />
 	</rule>
 	<rule cat="tms_shops" e="any" zoom-min="14" k="shop" v="bicycle|doityourself|hardware|laundry|dry_cleaning|florist">
 		<caption priority="110" cat="tms_land-names" symbol-id="tms_shop" k="name" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
@@ -2489,7 +2489,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<rule cat="tms_emergency" e="any" k="amenity" v="police|ranger_station">
-		<symbol priority="300" id="s_police" display="always" src="file:/symbols/s_police.svg" symbol-width="16" />
+		<symbol priority="300" id="s_police" display="always" src="file:/symbols/s_police.svg" symbol-width="14" />
 		<caption priority="300" cat="tms_land-names" symbol-id="s_police" k="name" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#ffffff" stroke-width="2" />
 	</rule>
 
@@ -2510,10 +2510,10 @@ Transparency for HEX colors (100% - непрозрачный)
 	<!-- aeroway symbols and captions -->
 	<rule cat="tms_land-base" e="any" k="aeroway" v="*">
 		<rule e="any" k="aeroway" v="helipad" zoom-min="13">
-			<symbol priority="255" display="always" src="file:/symbols/s_helipad.png" symbol-height="16" symbol-width="16" />
+			<symbol priority="255" display="always" src="file:/symbols/s_helipad.svg" symbol-height="16" symbol-width="17" />
 		</rule>
 		<rule e="any" k="aeroway" v="aerodrome|airport" zoom-min="12">
-			<symbol display="always" src="file:/symbols/s_airport.png" symbol-height="16" symbol-width="16" />
+			<symbol display="always" src="file:/symbols/s_airport.svg" symbol-width="14" />
 		</rule>
 		<rule cat="tms_land-names" e="any" k="aeroway" v="*" zoom-min="16">
 			<caption k="name" font-style="bold" font-size="10" fill="#005DD5" stroke="#FFFFFF" stroke-width="2" />
@@ -2538,7 +2538,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule  e="way" k="*" v="*" closed="no">
 			<line stroke="#80d90036" stroke-width="0.1" scale="all" stroke-dasharray="0.2,0.4" stroke-linecap="round" />
 		</rule>			
-		<symbol priority="260" id="tms_rapids" display="always" src="file:/symbols/s_rapids.png" symbol-height="16" />
+		<symbol priority="260" id="tms_rapids" display="always" src="file:/symbols/s_rapids.svg" symbol-height="16" />
 		<caption priority="140" symbol-id="tms_rapids" k="name" cat="tms_land-names" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 
@@ -2579,11 +2579,11 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- #sport -->
 	<rule cat="tms_sport" e="any" k="leisure" v="slipway" zoom-min="14">
-		<symbol priority="225" display="always" src="file:/symbols/s_slipway.png" symbol-height="16" />
+		<symbol priority="225" display="always" src="file:/symbols/s_slipway.svg" symbol-height="16" />
 	</rule>
 	<rule cat="tms_sport" e="any" k="sport|leisure" v="swimming|water_park" zoom-min="14">
 		<rule e="any" k="access" v="~|yes">
-			<symbol id="s_swim" priority="225" display="always" src="file:/symbols/s_swimming_outdoor.png" symbol-height="16" />
+			<symbol id="s_swim" priority="225" display="always" src="file:/symbols/s_swimming_outdoor.svg" symbol-height="17" />
 		</rule>
 		<rule cat="tms_land-names" e="any" k="*" v="*" zoom-min="15">
 			<caption symbol-id="s_swim" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
@@ -2591,30 +2591,30 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 	<rule cat="tms_sport" e="any" k="sport" v="*" zoom-min="14">
 		<rule e="any" k="sport" v="soccer">
-			<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_soccer.png" symbol-height="16" />
+			<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_soccer.svg" symbol-height="17" />
 		</rule>
 		<rule e="any" k="sport" v="tennis">
-			<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_tennis.png" symbol-height="16" />
+			<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_tennis.svg" symbol-height="17" />
 		</rule>
 		<rule e="any" k="sport|leisure" v="golf|golf_course">
-			<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_golf.png" symbol-height="16" />
+			<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_golf.svg" symbol-height="17" />
 		</rule>
 		<rule e="any" k="sport" v="shooting">
-			<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_shooting.png" symbol-height="16" />
+			<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_shooting.svg" symbol-height="17" />
 		</rule>
 		<rule cat="tms_land-names" e="any" k="*" v="*" zoom-min="15">
 			<caption symbol-id="s_sport" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 	<rule cat="tms_sport" e="any" k="leisure" v="stadium" zoom-min="14">
-		<symbol priority="250" id="s_stadium" display="always" src="file:/symbols/s_stadium.png" symbol-height="16" />
+		<symbol priority="250" id="s_stadium" display="always" src="file:/symbols/s_stadium.svg" symbol-width ="21" />
 		<rule cat="tms_land-names" e="any" k="*" v="*" zoom-min="15">
 			<caption symbol-id="s_stadium" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 
 	<rule cat="tms_sport" e="any" k="amenity" v="bicycle_rental" zoom-min="14">
-		<symbol priority="225" display="always" id="s_bicycle_rental" src="file:/symbols/s_bicycle_rental.png" symbol-height="16" />
+		<symbol priority="225" display="always" id="s_bicycle_rental" src="file:/symbols/s_bicycle_rental.svg" symbol-height="17" />
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption k="name" symbol-id="s_bicycle_rental" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
@@ -2623,7 +2623,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	<!-- car stuff -->
 	<rule cat="tms_trans-priv" e="any" k="amenity" v="parking" zoom-min="15">
 		<rule e="any" k="access" v="private">
-			<symbol id="s_parking" priority="210" src="file:/symbols/s_parking_private.png" symbol-height="12" />
+			<symbol id="s_parking" priority="210" src="file:/symbols/s_parking_private.svg" symbol-height="12" />
 		</rule>
 		<rule e="any" k="*" v="*">
 			<symbol id="s_parking" priority="210" src="file:/symbols/s_parking.svg" symbol-height="12" />
@@ -2633,17 +2633,17 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 	<rule cat="tms_trans-priv" e="any" k="amenity" v="fuel" zoom-min="14">
-		<symbol priority="310" id="s_trans-priv" display="always" src="file:/symbols/s_fuel.png" symbol-height="16" />
+		<symbol priority="310" id="s_trans-priv" display="always" src="file:/symbols/s_fuel.svg" symbol-height="14" />
 		<caption priority="310" symbol-id="s_trans-priv" cat="tms_land-names" k="name" position="above" font-style="bold" font-size="10" fill="#0036D9" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 
 	<!-- public transportation -->
 	<rule cat="tms_trans-pub" e="any" k="amenity" v="bus_station">
-		<symbol priority="215" id="tms_bus-station" display="always" src="file:/symbols/s_bus_station.png" symbol-height="14" />
+		<symbol priority="215" id="tms_bus-station" display="always" src="file:/symbols/s_bus_station.svg" symbol-width="16" />
 		<caption priority="110" symbol-id="tms_bus-station" cat="tms_land-names" k="name" position="below" font-style="bold" font-size="10" fill="#005acf" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 	<rule cat="tms_trans-pub" e="node" k="highway" v="bus_stop">
-		<symbol priority="205" id="tms_bus-stop" display="always" src="file:/symbols/s_bus.png" symbol-height="14" />
+		<symbol priority="205" id="tms_bus-stop" display="always" src="file:/symbols/s_bus.svg" symbol-height="14" />
 		<caption priority="100" symbol-id="tms_bus-stop" cat="tms_land-names" k="name" position="below" font-style="bold" font-size="10" fill="#005acf" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 
@@ -2654,13 +2654,13 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 
 		<rule e="any" k="station" v="~">
-			<symbol priority="205" id="tms_train-station" display="always" src="file:/symbols/s_trainstation.png" symbol-height="16" />
+			<symbol priority="205" id="tms_train-station" display="always" src="file:/symbols/s_trainstation.svg" symbol-height="14" />
 			<caption priority="100" symbol-id="tms_train-station" cat="tms_land-names" k="name" position="below" font-style="bold" font-size="10" fill="#005acf" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 
 	<rule cat="tms_trans-pub" e="node" k="railway" v="halt|tram_stop">
-		<symbol priority="205" id="tms_tram-stop" display="always" src="file:/symbols/s_tram_stop.png" symbol-height="16" />
+		<symbol priority="205" id="tms_tram-stop" display="always" src="file:/symbols/s_tram_stop.svg" symbol-height="14" />
 		<caption priority="100" symbol-id="tms_tram-stop" cat="tms_land-names" k="name" position="below" font-style="bold" font-size="10" fill="#005acf" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 
@@ -2679,14 +2679,14 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<rule cat="tms_attraction" e="node" k="tourism" v="viewpoint">
-		<symbol priority="215" id="tms_viewpoint" display="always" src="file:/symbols/s_viewpoint.png" symbol-height="16" />
+		<symbol priority="215" id="tms_viewpoint" display="always" src="file:/symbols/s_viewpoint.svg" symbol-height="14" />
 		<rule e="any" k="*" v="*" cat="tms_land-names">
 			<caption priority="15" symbol-id="tms_viewpoint" k="name" position="above" font-size="9" font-style="bold" fill="#005acf" stroke="#FFFFFF" stroke-width="1.2" />
 			<caption priority="10" symbol-id="tms_viewpoint" k="ele" position="below" font-size="9" font-style="bold" fill="#005acf" stroke="#FFFFFF" stroke-width="1.2" />
 		</rule>
 	</rule>
 	<rule cat="tms_attraction" e="node" k="tourism" v="attraction">
-		<symbol priority="220" id="tms_attraction" display="always" src="file:/symbols/s_attraction.png" symbol-width="14" />
+		<symbol priority="220" id="tms_attraction" display="always" src="file:/symbols/s_attraction.svg" symbol-height="13" />
 		<caption cat="tms_land-names" priority="115" symbol-id="tms_attraction" k="name" position="above" font-style="bold" font-size="8" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<rule cat="tms_attraction" e="any" k="tourism" v="zoo" zoom-min="15">
@@ -2722,22 +2722,22 @@ Transparency for HEX colors (100% - непрозрачный)
 	<!-- bureaucracy -->
 	<rule cat="tms_bureaucracy" e="any" k="*" v="*" zoom-min="14" >
 		<rule e="any" k="amenity" v="atm">
-			<symbol priority="230" id="s_atm" display="always" src="file:/symbols/s_atm.png" symbol-width="12" />
+			<symbol priority="230" id="s_atm" display="always" src="file:/symbols/s_atm.svg" symbol-width="10" />
 			<rule e="any" k="*" v="*" zoom-min="15">
 				<caption cat="tms_land-names" priority="200" symbol-id="s_atm" k="name" position="below" font-style="bold" font-size="10" fill="#FF4000" stroke="#FFFFFF" stroke-width="1.5" />
 			</rule>
 		</rule>
 		<rule e="any" k="amenity" v="bank">
-			<symbol priority="230" id="s_bank" display="always" src="file:/symbols/s_bank.png" symbol-height="14" symbol-width="16" />
+			<symbol priority="230" id="s_bank" display="always" src="file:/symbols/s_bank.svg" symbol-height="14" />
 			<rule e="any" k="*" v="*" zoom-min="15">
 				<caption cat="tms_land-names" priority="230" symbol-id="s_bank" k="name" position="above" font-style="bold" font-size="10" fill="#FF4000" stroke="#FFFFFF" stroke-width="1.5" />
 			</rule>
 		</rule>
 		<rule e="any" k="amenity" v="post_box">
-			<symbol priority="230" display="always" src="file:/symbols/s_postbox.png" symbol-width="12" />
+			<symbol priority="230" display="always" src="file:/symbols/s_postbox.svg" symbol-width="11" />
 		</rule>
 		<rule e="any" k="amenity" v="post_office">
-			<symbol priority="240" id="s_postoffice" display="always" src="file:/symbols/s_postoffice.png" symbol-width="16" />
+			<symbol priority="240" id="s_postoffice" display="always" src="file:/symbols/s_postoffice.svg" symbol-width="16" />
 			<rule e="any" k="*" v="*" zoom-min="16">
 				<caption cat="tms_land-names" priority="240" k="name" symbol-id="s_postoffice" position="above" font-style="bold" font-size="10" fill="#403000" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>

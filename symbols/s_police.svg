@@ -1,12 +1,12 @@
 <svg version="1.1" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(-2.33 -2.05)">
-  <rect x="3.4" y="3.13" width="25.8" height="25.8" rx="12.9" fill="#ff0000" stroke="#ffffff" stroke-width="2.15"/>
-  <rect x="3.25" y="3.13" width="26" height="26" rx="13" fill="#000000"/>
-  <g transform="translate(-1848 -520)">
-   <path d="m1862 528-1.15 1.17v1.17h8.05v-1.17l-1.15-1.17z" color="#000000" fill="#26b8ff"/>
-   <path d="m1862 531v.561c0 2.17 1.45 3.93 3.23 3.93 1.78 0 3.23-1.76 3.23-3.93v-.561z" color="#000000" fill="#ffffff"/>
-   <path d="m1861 536c-1.38 0-1.85 2.24-1.85 3.58v5.37h2.48l6.29-8.95z" color="#000000" fill="#26b8ff"/>
-   <path d="m1869 536-6.29 8.95h8.13v-5.37c0-1.34-.461-3.58-1.85-3.58z" color="#000000" fill="#26b8ff"/>
+ <g transform="translate(-2.3267 -2.0482)">
+  <rect x="3.4036" y="3.1251" width="25.846" height="25.846" rx="12.923" fill="#f00" stroke="#fff" stroke-width="2.1539"/>
+  <rect x="3.25" y="3.1251" width="26" height="26" rx="13"/>
+  <g transform="translate(-1848.3 -520.29)">
+   <path d="m1861.8 527.5-1.1505 1.1747v1.1747h8.053v-1.1747l-1.1505-1.1747z" color="#000000" fill="#26b8ff"/>
+   <path d="m1861.5 530.84v.56093c0 2.1686 1.446 3.9266 3.2296 3.9266 1.7837 0 3.2296-1.758 3.2296-3.9266v-.56093z" color="#000000" fill="#fff"/>
+   <path d="m1860.6 535.88c-1.3841 0-1.8455 2.2383-1.8455 3.5813v5.3719h2.4799l6.2861-8.9531z" color="#000000" fill="#26b8ff"/>
+   <path d="m1868.9 535.88-6.2861 8.9531h8.1316v-5.3719c0-1.343-.4614-3.5813-1.8455-3.5813z" color="#000000" fill="#26b8ff"/>
   </g>
  </g>
 </svg>
