@@ -2430,20 +2430,20 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- safety measures -->
 	<rule cat="tms_safety" e="any" k="via_ferrata_flag" v="set">
-		<symbol id="s_via_ferrata" display="always" src="file:/symbols/s_via_ferrata.png" symbol-height="14" />
+		<symbol id="s_via_ferrata" display="always" src="file:/symbols/s_via_ferrata.svg" symbol-height="13" />
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_land-names" k="name" symbol-id="s_via_ferrata" font-style="bold" font-size="10" fill="#39AC39" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 
 	<rule cat="tms_safety" zoom-min="15" e="any" k="safety_rope" v="*">
-		<symbol priority="250" display="always" src="file:/symbols/s_safety_rope.png" symbol-width="14" />
+		<symbol priority="250" display="always" src="file:/symbols/s_safety_rope.svg" symbol-width="13" />
 	</rule>
 	<rule cat="tms_safety" zoom-min="15" e="any" k="ladder" v="*">
-		<symbol priority="250" display="always" src="file:/symbols/s_ladder.png" symbol-width="14"/>
+		<symbol priority="250" display="always" src="file:/symbols/s_ladder.svg" symbol-width="13"/>
 	</rule>
 	<rule cat="tms_safety" zoom-min="15" e="any" k="rungs" v="*">
-		<symbol priority="250" display="always" src="file:/symbols/s_rungs.png" symbol-width="14"/>
+		<symbol priority="250" display="always" src="file:/symbols/s_rungs.svg" symbol-width="13"/>
 	</rule>
 
 	<!-- emergency hospital, pharmacy, doctors -->

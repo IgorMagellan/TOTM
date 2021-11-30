@@ -1794,16 +1794,16 @@ Transparency for HEX colors (100% - непрозрачный)
 		
 <!-- safety measures -->
     <rule cat="tms_safety" e="any" k="via_ferrata_flag" v="set">
-      <symbol id="s_via_ferrata" force-draw="1" src="file:/symbols/s_via_ferrata.png" symbol-scaling="size" symbol-height="14" />
+      <symbol id="s_via_ferrata" force-draw="1" src="file:/symbols/s_via_ferrata.svg" symbol-width="13"/>
       <rule e="any" k="*" v="*" zoom-min="16">
         <caption cat="tms_land-names" k="name" symbol-id="s_via_ferrata" font-style="bold" font-size="9dp" fill="#39AC39" stroke="#E5FFFFFF" stroke-width="1dp" />
       </rule>
     </rule>
 
 
-	<rule cat="tms_safety" zoom-min="15" e="any" k="safety_rope" v="*">	<symbol priority="250" src="file:/symbols/s_safety_rope.png" /> </rule>
-	<rule cat="tms_safety" zoom-min="15" e="any" k="ladder" v="*">		<symbol priority="250" src="file:/symbols/s_ladder.png" /> </rule>
-	<rule cat="tms_safety" zoom-min="15" e="any" k="rungs" v="*">		<symbol priority="250" src="file:/symbols/s_rungs.png" /> </rule>
+	<rule cat="tms_safety" zoom-min="15" e="any" k="safety_rope" v="*">	<symbol priority="250" src="file:/symbols/s_safety_rope.svg" symbol-width="13"/> </rule>
+	<rule cat="tms_safety" zoom-min="15" e="any" k="ladder" v="*">		<symbol priority="250" src="file:/symbols/s_ladder.svg" symbol-width="13"/> </rule>
+	<rule cat="tms_safety" zoom-min="15" e="any" k="rungs" v="*">		<symbol priority="250" src="file:/symbols/s_rungs.svg" symbol-width="13"/> </rule>
 
 <!-- emergency -->
 	<rule cat="tms_emergency" e="any" k="amenity" v="hospital">		
