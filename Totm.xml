@@ -899,9 +899,9 @@ Transparency for HEX colors (100% - непрозрачный)
 
 			<!-- #WEIR -->
 			<rule e="way" k="waterway" v="weir"> 
-				<line stroke="#5E8BAD" stroke-width="0.7" /> <line stroke="#EEEEEE" stroke-width="0.7" stroke-dasharray="3,0.5" stroke-linecap="butt" /> 
+				<line stroke="#5E8BAD" stroke-width="0.7" /> <line stroke="#EEEEEE" stroke-width="0.7" stroke-dasharray="3,0.5" stroke-linecap="butt" />
 			</rule>
-			<rule e="any" k="waterway" v="weir" zoom-min="15"> <symbol src="file:/symbols/s_weir.png" symbol-scaling="size" symbol-height="13" symbol-width="13"/> </rule>			
+			<rule e="any" k="waterway" v="weir" zoom-min="15"> <symbol src="file:/symbols/s_weir.svg" symbol-scaling="size" symbol-width="13"/> </rule>
 			<!-- #DAM плотины -->		
 			<rule e="way" k="waterway" v="dam">	
 				<line stroke="#333333" stroke-width="2" />
@@ -913,7 +913,7 @@ Transparency for HEX colors (100% - непрозрачный)
 					<pathText k="name" dy="1" font-style="normal" font-family="sans_serif" font-size="10" fill="#333333" stroke="#ffffff" stroke-width="1.5" />
 				</rule>		
 			</rule>
-			<rule e="any" k="waterway" v="dam" zoom-min="15"> <symbol src="file:/symbols/s_dam.png" symbol-scaling="size" symbol-height="13" symbol-width="13"/> </rule>				
+			<rule e="any" k="waterway" v="dam" zoom-min="15"> <symbol src="file:/symbols/s_dam.svg" symbol-scaling="size" symbol-width="13"/> </rule>
 			<!-- Еще вариант плотины -->
 		<!-- 		<rule e="way" k="waterway" v="dam" zoom-min="12">
 					<area fill="#ECEBD9" />
@@ -1841,7 +1841,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<caption priority="140" symbol-id="tms_geyser" cat="tms_land-names" k="name" dy="14dp" font-style="bold" font-size="8dp" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0dp" />
 	</rule>
 	<rule cat="tms_water-land" e="any" k="waterway|natural" v="waterfall" zoom-min="14">
-		<symbol priority="260" id="tms_waterfall" src="file:/symbols/s_waterfall.png" />
+		<symbol priority="260" id="tms_waterfall" src="file:/symbols/s_waterfall.svg" symbol-height="13"/>
 		<caption priority="140" symbol-id="tms_waterfall" k="name" cat="tms_land-names" dy="-12dp" font-style="bold" font-size="8dp" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0dp" />
 	</rule>
 	<rule cat="tms_water-land" e="any" k="waterway|natural" v="rapids" zoom-min="14">

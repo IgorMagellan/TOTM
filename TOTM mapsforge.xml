@@ -1043,7 +1043,7 @@ Transparency for HEX colors (100% - непрозрачный)
 				<line stroke="#EEEEEE" stroke-width="0.7" stroke-dasharray="5,1" stroke-linecap="butt" />
 			</rule>
 			<rule e="any" k="waterway" v="weir" zoom-min="15">
-				<symbol src="file:/symbols/s_weir.png" symbol-height="13"/>
+				<symbol src="file:/symbols/s_weir.svg" symbol-height="13"/>
 			</rule>
 			<!-- #DAM плотины -->
 			<rule e="way" k="waterway" v="dam">
@@ -1057,7 +1057,7 @@ Transparency for HEX colors (100% - непрозрачный)
 				</rule>
 			</rule>
 			<rule e="any" k="waterway" v="dam" zoom-min="15">
-				<symbol src="file:/symbols/s_dam.png" symbol-width="13"/>
+				<symbol src="file:/symbols/s_dam.svg" symbol-width="13"/>
 			</rule>
 			<rule e="way" k="man_made" v="pipeline">
 				<rule e="way" k="tunnel" v="~|no">
@@ -2526,7 +2526,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<caption priority="140" symbol-id="tms_geyser" cat="tms_land-names" k="name" font-style="bold" font-size="10" fill="#0034AE" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 	<rule cat="tms_water-land" e="any" k="waterway|natural" v="waterfall" zoom-min="14">
-		<symbol priority="260" id="tms_waterfall" display="always" src="file:/symbols/s_waterfall.png" symbol-height="14"/>
+		<symbol priority="260" id="tms_waterfall" display="always" src="file:/symbols/s_waterfall.svg" symbol-height="13"/>
 		<caption priority="140" symbol-id="tms_waterfall" k="name" cat="tms_land-names" position="above" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	<!-- пороги, перекаты -->
