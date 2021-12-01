@@ -381,7 +381,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<area src="file:/patterns/grave_yard.png" symbol-height="16" />
 	</rule>
 	<rule cat="tms_land-base" e="way" k="landuse|amenity" v="cemetery|grave_yard" zoom-min="15">
-		<symbol src="file:/symbols/s_cemetery.png" symbol-width="16" />
+		<symbol src="file:/symbols/s_cemetery.svg" symbol-width="16" />
 	</rule>
 
 	<!-- military -->
@@ -1870,10 +1870,10 @@ Transparency for HEX colors (100% - непрозрачный)
 
 			<rule e="way" k="highway" v="*" zoom-min="14">
 				<rule e="way" k="access" v="destination">
-					<line src="file:/symbols/p_access-destination.png" stroke-width="1.5" />
+					<line src="file:/patterns/p_access-destination.svg" stroke-width="1.5" />
 				</rule>
 				<rule e="way" k="access" v="private">
-					<line src="file:/symbols/p_access-private.png" stroke-width="1.0" />
+					<line src="file:/patterns/p_access-private.svg" stroke-width="1.0" />
 				</rule>
 			</rule>
 		</rule>
@@ -2151,18 +2151,18 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule e="any" k="name" v="*">
 			<rule e="any" k="access|reservation" v="private|no|members_only">
 				<rule e="any" k="winter_room" v="wr_yes">
-					<symbol display="always" priority="435" id="tms_hut" src="file:/symbols/s_alpine_hut_pr_w.png" symbol-height="14" symbol-width="16" />
+					<symbol display="always" priority="435" id="tms_hut" src="file:/symbols/s_alpine_hut_pr_w.svg" symbol-width="16" />
 				</rule>
 				<rule e="any" k="winter_room" v="~">
-					<symbol display="always" priority="435" id="tms_hut" src="file:/symbols/s_alpine_hut_pr.png" symbol-height="14" symbol-width="16" />
+					<symbol display="always" priority="435" id="tms_hut" src="file:/symbols/s_alpine_hut_pr.svg" symbol-width="16" />
 				</rule>
 			</rule>
 			<rule e="any" k="access" v="~|open|public|designated|permissive">
 				<rule e="any" k="winter_room" v="wr_yes">
-					<symbol display="always" priority="435" id="tms_hut" src="file:/symbols/s_alpine_hut_w.png" symbol-height="14" symbol-width="16" />
+					<symbol display="always" priority="435" id="tms_hut" src="file:/symbols/s_alpine_hut_w.svg" symbol-width="16" />
 				</rule>
 				<rule e="any" k="winter_room" v="~">
-					<symbol display="always" priority="435" id="tms_hut" src="file:/symbols/s_alpine_hut.png" symbol-height="14" symbol-width="16" />
+					<symbol display="always" priority="435" id="tms_hut" src="file:/symbols/s_alpine_hut.svg" symbol-width="16" />
 				</rule>
 			</rule>
 			<rule e="node" k="*" v="*" zoom-min="14">
@@ -2181,12 +2181,12 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 	<rule cat="tms_huts" e="any" k="tourism" v="wilderness_hut" zoom-min="14">
 		<rule e="any" k="access|reservation" v="private|no|members_only">
-			<symbol display="always" priority="435" id="tms_hut" src="file:/symbols/s_wilderness_hut_private.png" symbol-height="16" symbol-width="16" />
+			<symbol display="always" priority="435" id="tms_hut" src="file:/symbols/s_wilderness_hut_private.svg" symbol-width="16" />
 		</rule>
 		<rule e="any" k="access|reservation" v="~|*">
-			<symbol display="always" priority="435" id="tms_hut" src="file:/symbols/s_wilderness_hut.png" symbol-height="16" symbol-width="16" />
+			<symbol display="always" priority="435" id="tms_hut" src="file:/symbols/s_wilderness_hut.svg" symbol-width="16" />
 		</rule>
-		<rule e="node" k="*" v="*" zoom-min="14">
+		<rule e="node" k="*" v="*" zoom-min="14">		<!--? разобрться тут - одно и то же правило way и node  -->
 			<caption cat="tms_land-names" priority="320" symbol-id="tms_hut" k="name" font-style="bold" font-size="10" fill="#FF0000" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 		<rule e="node" k="*" v="*" zoom-min="17">
@@ -2199,13 +2199,13 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<rule cat="tms_huts" e="any" k="amenity" v="shelter" zoom-min="14">
 		<rule e="any" k="shelter_type" v="rock_shelter" zoom-min="14">
-			<symbol display="always" priority="435" id="tms_hut" src="file:/symbols/s_shelter_rock.png" symbol-width="16" />
+			<symbol display="always" priority="435" id="tms_hut" src="file:/symbols/s_shelter_rock.svg" symbol-width="15" />
 		</rule>
 		<rule e="any" k="shelter_type" v="basic_hut" zoom-min="14">
-			<symbol display="always" priority="435" id="tms_hut" src="file:/symbols/s_shelter_basic_hut.png" symbol-height="16" />
+			<symbol display="always" priority="435" id="tms_hut" src="file:/symbols/s_shelter_basic_hut.svg" symbol-height="15" />
 		</rule>
 		<rule e="any" k="shelter_type" v="~|weather_shelter|lean_to|picnic_shelter" zoom-min="14">
-			<symbol display="always" priority="435" id="tms_shelter" src="file:/symbols/s_shelter.png" symbol-width="16" />
+			<symbol display="always" priority="435" id="tms_shelter" src="file:/symbols/s_shelter.svg" symbol-width="16" />
 			<rule e="any" k="*" v="*" zoom-min="16">
 				<caption cat="tms_land-names" priority="320" symbol-id="tms_shelter" k="name" position="above" font-style="bold" font-size="10" fill="#FF0000" stroke="#FFFFFF" stroke-width="2" />
 			</rule>
@@ -2780,10 +2780,10 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol display="always" src="file:/symbols/s_power_wind.png" symbol-height="47" />
 	</rule>
 	<rule cat="tms_man-made" e="node" k="generator:source" v="hydro|tidal|wave">
-		<symbol display="always" src="file:/symbols/s_power.png" symbol-width="16" />
+		<symbol display="always" src="file:/symbols/s_power.svg" symbol-width="16" />
 	</rule>
 	<rule cat="tms_man-made" e="node" k="generator:source" v="solar">
-		<symbol display="always" src="file:/symbols/s_power_solar.png" symbol-width="16" />
+		<symbol display="always" src="file:/symbols/s_power_solar.svg" symbol-width="16" />
 	</rule>
 	<rule cat="tms_man-made" e="node" k="generator:source" v="gas|oil|diesel|gasoline|biomass|biofuel|waste|geothermal">
 		<symbol display="always" src="file:/symbols/s_power.png" symbol-width="16"/>
