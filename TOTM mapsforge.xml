@@ -2108,17 +2108,17 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- accommodation -->
 	<rule cat="tms_camp" e="any" zoom-min="14" k="tourism" v="camp_site">
-		<symbol priority="235" id="s_camp" display="always" src="file:/symbols/s_camp_site.png" symbol-height="16" />
+		<symbol priority="235" id="s_camp" display="always" src="file:/symbols/s_camp_site.svg" symbol-height="16" />
 		<caption cat="tms_land-names" priority="510" symbol-id="s_camp" k="name" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 	<rule cat="tms_camp" e="any" zoom-min="14" k="tourism" v="caravan_site">
-		<symbol priority="235" id="tms_touring" display="always" src="file:/symbols/s_caravan_site.png" symbol-width="16" />
+		<symbol priority="235" id="tms_touring" display="always" src="file:/symbols/s_caravan_site.svg" symbol-width="16" />
 	</rule>
 	<rule cat="tms_acco" e="any" zoom-min="14" k="tourism" v="hostel">
-		<symbol priority="235" id="tms_touring" display="always" src="file:/symbols/s_hostel.png" symbol-width="16" />
+		<symbol priority="235" id="tms_touring" display="always" src="file:/symbols/s_hostel.svg" symbol-width="16" />
 	</rule>
 	<rule cat="tms_acco" e="any" zoom-min="14" k="tourism|building" v="hotel|motel|chalet|guest_house">
-		<symbol priority="235" id="tms_touring" display="always" src="file:/symbols/s_hotel.png" symbol-width="16" />
+		<symbol priority="235" id="tms_touring" display="always" src="file:/symbols/s_hotel.svg" symbol-width="16" />
 	</rule>
 	<rule cat="tms_acco" e="any" zoom-min="14" k="tourism|building" v="hostel|hotel|motel|chalet|guest_house|caravan_site">
 		<caption cat="tms_land-names" priority="230" symbol-id="tms_touring" k="name" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
@@ -2129,10 +2129,10 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol priority="235" display="always" src="file:/symbols/s_bench.png" symbol-width="12"/>
 	</rule>
 	<rule cat="tms_picnic" e="any" zoom-min="14" k="amenity" v="toilets">
-		<symbol priority="235" display="always" src="file:/symbols/s_toilets.png" symbol-height="16" symbol-width="16"/>
+		<symbol priority="235" display="always" src="file:/symbols/s_toilets.svg" symbol-width="16"/>
 	</rule>
 	<rule cat="tms_picnic" e="any" zoom-min="14" k="tourism|leisure" v="picnic_site|picnic_table">
-		<symbol priority="225" id="s_picnic_site" src="file:/symbols/s_picnic_site.png" symbol-width="16"/>
+		<symbol priority="225" id="s_picnic_site" src="file:/symbols/s_picnic_site.svg" symbol-width="14"/>
 		<caption cat="tms_land-names" priority="220" symbol-id="s_picnic_site" position="above" k="name" font-style="bold" font-size="10" fill="#66001a" stroke="#ffffff" stroke-width="2" />
 	</rule>
 
@@ -2563,7 +2563,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol id="tms_monument" display="always" src="file:/symbols/s_monument.png" symbol-width="16" />
 	</rule>
 	<rule cat="tms_culture" zoom-min="14" e="any" k="historic" v="memorial">
-		<symbol id="tms_monument" display="always" src="file:/symbols/s_memorial.png" symbol-width="14" />
+		<symbol id="tms_monument" display="always" src="file:/symbols/s_memorial.svg" symbol-width="16" />
 	</rule>
 	<rule cat="tms_culture" zoom-min="14" e="any" k="historic" v="memorial|monument">
 		<caption symbol-id="tms_monument" cat="tms_land-names" k="name" position="above" font-style="bold" font-size="10" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
@@ -2803,10 +2803,10 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol display="always" priority="300" src="file:/symbols/s_traffic_signal.svg" symbol-height="24" />
 	</rule>
 	<rule cat="tms_crossings" e="any" k="railway" v="crossing" zoom-min="16">
-		<symbol display="always" src="file:/symbols/s_railway-crossing-small.png" symbol-width="16" />
+		<symbol display="always" src="file:/symbols/s_railway-crossing-small.svg" symbol-height="16" />
 	</rule>
 	<rule cat="tms_crossings" e="any" k="railway" v="level_crossing" zoom-min="16">
-		<symbol display="always" src="file:/symbols/s_railway-crossing.png" symbol-height="22" />
+		<symbol display="always" src="file:/symbols/s_railway-crossing.svg" symbol-width="22" />
 	</rule>
 	<rule cat="tms_land-names" e="way" k="landuse" v="retail|commercial|industrial|brownfield|garages|construction|greenfield" zoom-min="14">
 		<caption k="name" font-style="italic" font-family="serif" font-size="12" fill="#666666" stroke="#bbbbbb" stroke-width="0.1" />
