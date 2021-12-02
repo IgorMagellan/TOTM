@@ -1971,13 +1971,13 @@ Transparency for HEX colors (100% - непрозрачный)
     </rule>	
 
 <!-- place of worship -->
-	<rule cat="tms_religion" zoom-min="14" e="any" k="historic" v="wayside_cross"><symbol src="file:/symbols/s_wayside_cross.png" /></rule>
+	<rule cat="tms_religion" zoom-min="14" e="any" k="historic" v="wayside_cross"><symbol src="file:/symbols/s_wayside_cross.svg" symbol-height="11" /></rule>
 	<rule cat="tms_religion" e="any" k="building" v="church"><symbol src="file:/symbols/s_church.png" /></rule>
 	<rule cat="tms_religion" e="any" k="amenity" v="place_of_worship">
-		<rule e="any" k="religion" v="christian">	<symbol id="tms_worship" src="file:/symbols/s_church.png" /></rule>
-		<rule e="any" k="religion" v="jewish">		<symbol id="tms_worship" src="file:/symbols/s_synagogue.png" /></rule>
-		<rule e="any" k="religion" v="muslim">		<symbol id="tms_worship" src="file:/symbols/s_mosque.png" /></rule>
-		<rule e="any" k="religion" v="~|*">			<symbol id="tms_worship" src="file:/symbols/s_place_of_worship.png" /></rule>
+		<rule e="any" k="religion" v="christian">	<symbol id="tms_worship" src="file:/symbols/s_church.svg" symbol-height="12dp" /></rule>
+		<rule e="any" k="religion" v="jewish">		<symbol id="tms_worship" src="file:/symbols/s_synagogue.svg" symbol-height="12dp" /></rule>
+		<rule e="any" k="religion" v="muslim">		<symbol id="tms_worship" src="file:/symbols/s_mosque.svg" symbol-height="12dp" /></rule>
+		<rule e="any" k="religion" v="~|*">			<symbol id="tms_worship" src="file:/symbols/s_place_of_worship.svg" symbol-height="13" /></rule>
 	</rule>
 	<rule cat="tms_religion" e="any" k="amenity" v="place_of_worship"><caption symbol-id="tms_worship" cat="tms_land-names" k="name" dy="-20" font-size="9dp" font-style="bold" fill="#444444" stroke="#FFFFFF" stroke-width="2.0dp" /></rule>
 
