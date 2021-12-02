@@ -2117,7 +2117,10 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_acco" e="any" zoom-min="14" k="tourism" v="hostel">
 		<symbol priority="235" id="tms_touring" display="always" src="file:/symbols/s_hostel.svg" symbol-width="16" />
 	</rule>
-	<rule cat="tms_acco" e="any" zoom-min="14" k="tourism|building" v="hotel|motel|chalet|guest_house">
+	<rule cat="tms_acco" e="any" zoom-min="14" k="tourism" v="chalet">
+		<symbol priority="235" id="tms_touring" display="always" src="file:/symbols/s_chalet.svg" symbol-width="16" />
+	</rule>	
+	<rule cat="tms_acco" e="any" zoom-min="14" k="tourism|building" v="hotel|motel|guest_house">
 		<symbol priority="235" id="tms_touring" display="always" src="file:/symbols/s_hotel.svg" symbol-width="16" />
 	</rule>
 	<rule cat="tms_acco" e="any" zoom-min="14" k="tourism|building" v="hostel|hotel|motel|chalet|guest_house|caravan_site">
@@ -2126,7 +2129,7 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- picnic -->
 	<rule cat="tms_picnic" e="node" zoom-min="14" k="amenity" v="bench">
-		<symbol priority="235" display="always" src="file:/symbols/s_bench.png" symbol-width="12"/>
+		<symbol priority="235" display="always" src="file:/symbols/s_bench.svg" symbol-width="12"/>
 	</rule>
 	<rule cat="tms_picnic" e="any" zoom-min="14" k="amenity" v="toilets">
 		<symbol priority="235" display="always" src="file:/symbols/s_toilets.svg" symbol-width="16"/>
@@ -2560,7 +2563,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<rule cat="tms_culture" zoom-min="14" e="any" k="historic" v="monument">
-		<symbol id="tms_monument" display="always" src="file:/symbols/s_monument.png" symbol-width="16" />
+		<symbol id="tms_monument" display="always" src="file:/symbols/s_monument.svg" symbol-width="20" />
 	</rule>
 	<rule cat="tms_culture" zoom-min="14" e="any" k="historic" v="memorial">
 		<symbol id="tms_monument" display="always" src="file:/symbols/s_memorial.svg" symbol-width="16" />
@@ -2573,7 +2576,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<caption symbol-id="tms_castle" cat="tms_land-names" k="name" position="above" font-style="bold" font-size="10" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 	<rule cat="tms_culture" e="any" k="tourism|building" v="museum">
-		<symbol id="tms_museum" display="always" src="file:/symbols/s_museum.png" symbol-width="20" />
+		<symbol id="tms_museum" display="always" src="file:/symbols/s_museum.svg" symbol-width="20" />
 		<caption symbol-id="tms_museum" cat="tms_land-names" k="name" position="above" font-style="bold" font-size="10" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 
