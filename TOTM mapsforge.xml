@@ -164,7 +164,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<cat id="tms_borders"/>
 		</layer>
 		<layer id="tms_oopt" enabled="true">
-			<name lang="en" value="Nature Protected Areas + "/>
+			<name lang="en" value="Nature Protected and aborigenal areas"/>
 			<name lang="ru" value="ООПТ: заповедники, заказники, нац.парки + резервации" />
 			<cat id="tms_oopt"/>
 		</layer>
