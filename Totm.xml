@@ -1017,8 +1017,8 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<rule cat="tms_attraction" e="way" k="amenity" v="fountain" closed="yes" zoom-min="16">
 		<area fill="#B5D6F1" stroke="#000080" stroke-width="0.15" />
-		<rule e="any" k="drinking_water" v="yes"> <symbol src="file:/symbols/s_fountain_d.png" /> </rule>
-		<rule e="any" k="drinking_water" v="*|~"> <symbol src="file:/symbols/s_fountain.png" /> </rule>
+		<rule e="any" k="drinking_water" v="yes"> <symbol src="file:/symbols/s_fountain_d.svg" symbol-width="14" /> </rule>
+		<rule e="any" k="drinking_water" v="*|~"> <symbol src="file:/symbols/s_fountain.svg" symbol-width="14" /> </rule>
 	</rule>
 
 	
@@ -1599,7 +1599,7 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	
 	<rule cat="tms_new-wood" e="node" k="natural" v="tree">
-		<symbol id="tms_tree" cat="tms_land-base" src="file:/symbols/s_tree.png" />
+		<symbol id="tms_tree" cat="tms_land-base" src="file:/symbols/s_tree.svg" symbol-height="15" />
 		<caption symbol-id="tms_tree" cat="tms_land-names" position="above" k="name" font-style="bold" font-size="8dp" fill="#006600" stroke="#FFFFFF" stroke-width="2.0dp" />
  		<caption symbol-id="tms_tree" cat="tms_land-names" position="below" k="ele"  font-style="bold" font-size="8dp" fill="#006600" stroke="#FFFFFF" stroke-width="2.0dp" />
 	</rule>
@@ -1716,11 +1716,11 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<rule cat="tms_water" e="any" k="amenity" v="fountain" zoom-min="16">
 		<rule e="node" k="drinking_water" v="~|no">
-			<symbol display="always" priority="305" id="tms_fountain" src="file:/symbols/s_fountain.png" />
+			<symbol display="always" priority="305" id="tms_fountain" src="file:/symbols/s_fountain.svg" symbol-width="14"/>
 			<caption cat="tms_land-names" symbol-id="tms_fountain" k="name" font-style="italic" font-size="8dp" fill="#743a00" stroke="#FFFFFF" stroke-width="1.0dp" />
 		</rule>
 		<rule e="node" k="drinking_water" v="yes">
-			<symbol display="always" priority="305" id="tms_fountain" src="file:/symbols/s_fountain_d.png" />
+			<symbol display="always" priority="305" id="tms_fountain" src="file:/symbols/s_fountain_d.svg" symbol-width="14"/>
 			<caption cat="tms_land-names" symbol-id="tms_fountain" k="name" font-style="italic" font-size="8dp" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0dp" />
 		</rule>
 	</rule>
@@ -1757,14 +1757,14 @@ Transparency for HEX colors (100% - непрозрачный)
 
 <!-- tourist info -->
 	<rule cat="tms_info" e="any"  zoom-min="14" k="information" v="office">	
-		<symbol priority="240" id="s_info_office" src="file:/symbols/s_info_office.png" force-draw="1" /> 
+		<symbol priority="240" id="s_info_office" src="file:/symbols/s_info_office.svg" force-draw="1" symbol-height="14" /> 
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_land-names" k="name" symbol-id="s_info_office" dy="-16dp" font-style="bold" font-size="10dp" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2dp" />
 		</rule>		
 	</rule>
 	
 	<rule cat="tms_info" e="any"  zoom-min="14" k="information" v="board">	
-		<symbol priority="240" id="s_info_board" src="file:/symbols/s_info_board.png" force-draw="1" /> 
+		<symbol priority="240" id="s_info_board" src="file:/symbols/s_info_board.svg" force-draw="1" symbol-width="14"/> 
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_land-names" k="name" symbol-id="s_info_board" dy="-16dp" font-style="bold" font-size="10dp" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2dp" />
 		</rule>	
@@ -1779,7 +1779,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 	
 	<rule cat="tms_info" e="any"  zoom-min="14" k="information" v="terminal">
-		<symbol priority="240" id="s_info_terminal" force-draw="1" src="file:/symbols/s_info_terminal.png" symbol-height="16" symbol-width="16" /> 
+		<symbol priority="240" id="s_info_terminal" force-draw="1" src="file:/symbols/s_info_terminal.svg" symbol-width="10" /> 
 		<rule e="any" k="*" v="*" zoom-min="15">	
 			<caption cat="tms_land-names" k="name" symbol-id="s_info_terminal" dy="-16dp" font-style="bold" font-size="10dp" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2dp" />
 		</rule>		
@@ -1787,7 +1787,7 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<rule cat="tms_info" e="any"  zoom-min="14" k="tourism" v="information">
 		<rule e="any" k="information" v="~">		
-			<symbol priority="240" id="s_info_terminal" force-draw="1" src="file:/symbols/s_info_terminal.png" symbol-height="16" symbol-width="16" /> 
+			<symbol priority="240" id="s_info_terminal" force-draw="1" src="file:/symbols/s_info_terminal.svg" symbol-width="10" /> 
 			<rule e="any" k="*" v="*" zoom-min="15">	
 				<caption cat="tms_land-names" k="name" symbol-id="s_info_terminal" dy="-16dp" font-style="bold" font-size="10dp" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2dp" />
 			</rule>		
@@ -1839,7 +1839,7 @@ Transparency for HEX colors (100% - непрозрачный)
 </rule>
 <!-- water -->
 	<rule cat="tms_water-land" e="node" k="natural" v="geyser" zoom-min="13">
-		<symbol priority="260" id="tms_geyser" src="file:/symbols/s_geyser.png" />
+		<symbol priority="260" id="tms_geyser" src="file:/symbols/s_geyser.svg" symbol-height="20"/>
 		<caption priority="140" symbol-id="tms_geyser" cat="tms_land-names" k="name" dy="14dp" font-style="bold" font-size="8dp" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0dp" />
 	</rule>
 	<rule cat="tms_water-land" e="any" k="waterway|natural" v="waterfall" zoom-min="14">
@@ -1869,7 +1869,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<caption symbol-id="tms_monument" cat="tms_land-names" k="name" dy="-14dp" font-style="bold" font-size="9dp" fill="#552200" stroke="#FFFFFF" stroke-width="2.0dp" />
 	</rule>
 	<rule cat="tms_culture" zoom-min="14" e="any" k="historic|building" v="castle">
-		<symbol id="tms_castle" src="file:/symbols/s_castle.png" />
+		<symbol id="tms_castle" src="file:/symbols/s_castle.svg" symbol-width="17" />
 		<caption symbol-id="tms_castle" cat="tms_land-names" k="name" dy="-14dp" font-style="bold" font-size="9dp" fill="#552200" stroke="#FFFFFF" stroke-width="2.0dp" />
 	</rule>
 	<rule cat="tms_culture" e="any" k="tourism|building" v="museum">
@@ -1956,7 +1956,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<caption cat="tms_land-names" priority="115" symbol-id="tms_attraction" k="name" dy="-12" position="above" font-style="bold" font-size="8dp" fill="#552200" stroke="#FFFFFF" stroke-width="2.0dp" />
 	</rule>
 	<rule cat="tms_attraction" e="any" k="tourism" v="zoo" zoom-min="15">
-		<symbol priority="220" id="tms_zoo" src="file:/symbols/s_zoo.png" />
+		<symbol priority="220" id="tms_zoo" src="file:/symbols/s_zoo.svg" symbol-height="22" />
 		<caption priority="115" symbol-id="tms_zoo" cat="tms_land-names" k="name" font-style="bold" font-size="8dp" fill="#552200" stroke="#FFFFFF" stroke-width="2.0dp" />
 	</rule>
 	
@@ -2011,15 +2011,15 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
  
-	<rule cat="tms_man-made" e="any"  k="tower:type|tower" v="surveillance|observation"><symbol src="file:/symbols/s_tower_observation.png" /></rule>
+	<rule cat="tms_man-made" e="any"  k="tower:type|tower" v="surveillance|observation"><symbol src="file:/symbols/s_tower_observation.svg" symbol-height="16" /></rule>
 	<rule cat="tms_man-made" e="node" k="man_made" v="windmill"><symbol priority="200" src="file:/symbols/s_windmill.png" /></rule>
 	<rule cat="tms_man-made" e="node" k="man_made" v="lighthouse"><symbol src="file:/symbols/s_lighthouse.png" /></rule>
 	<rule cat="tms_man-made" e="node" k="generator:source" v="wind"><symbol src="file:/symbols/s_power_wind.png" /></rule>
 	<rule cat="tms_man-made" e="node" k="generator:source" v="hydro|tidal|wave"><symbol src="file:/symbols/s_power.svg" symbol-width="12dp"/></rule>
 	<rule cat="tms_man-made" e="node" k="generator:source" v="solar"><symbol src="file:/symbols/s_power_solar.svg" symbol-width="12dp" /></rule>
-	<rule cat="tms_man-made" e="node" k="generator:source" v="gas|oil|diesel|gasoline|biomass|biofuel|waste|geothermal"><symbol src="file:/symbols/s_power.png" /></rule>
-	<rule cat="tms_man-made" e="node" k="generator:source" v="coal"><symbol src="file:/symbols/s_power.png" /></rule>
-	<rule cat="tms_man-made" e="node" k="generator:source" v="nuclear"><symbol src="file:/symbols/s_power.png" /></rule>
+	<rule cat="tms_man-made" e="node" k="generator:source" v="gas|oil|diesel|gasoline|biomass|biofuel|waste|geothermal"><symbol src="file:/symbols/s_power.svg" symbol-width="12dp" /></rule>
+	<rule cat="tms_man-made" e="node" k="generator:source" v="coal"><symbol src="file:/symbols/s_power.svg" symbol-width="12dp" /></rule>
+	<rule cat="tms_man-made" e="node" k="generator:source" v="nuclear"><symbol src="file:/symbols/s_power.svg" symbol-width="12dp" /></rule>
 	
 	<rule cat="tms_power" e="any" k="power" v="tower" zoom-min="16">
 		<symbol src="file:/symbols/power_tower.svg" symbol-height="8dp" scale-icon-size="16,1.25" />
