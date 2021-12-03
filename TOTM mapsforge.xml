@@ -2774,13 +2774,13 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol priority="200" display="always" src="file:/symbols/s_tower_observation.svg" symbol-height="16" />
 	</rule>
 	<rule cat="tms_man-made" e="node" k="man_made" v="windmill">
-		<symbol priority="200" display="always" src="file:/symbols/s_windmill.png" symbol-height="19" />
+		<symbol priority="200" display="always" src="file:/symbols/s_windmill.svg" symbol-width="19" />
 	</rule>
 	<rule cat="tms_man-made" e="node" k="man_made" v="lighthouse">
-		<symbol display="always" src="file:/symbols/s_lighthouse.png" symbol-width="18"/>
+		<symbol display="always" src="file:/symbols/s_lighthouse.svg" symbol-width="18"/>
 	</rule>
 	<rule cat="tms_man-made" e="node" k="generator:source" v="wind">
-		<symbol display="always" src="file:/symbols/s_power_wind.png" symbol-height="47" />
+		<symbol display="always" src="file:/symbols/s_power_wind.svg" symbol-height="29" />
 	</rule>
 	<rule cat="tms_man-made" e="node" k="generator:source" v="hydro|tidal|wave">
 		<symbol display="always" src="file:/symbols/s_power.svg" symbol-width="16" />

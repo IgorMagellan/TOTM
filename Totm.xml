@@ -2012,9 +2012,9 @@ Transparency for HEX colors (100% - непрозрачный)
 
  
 	<rule cat="tms_man-made" e="any"  k="tower:type|tower" v="surveillance|observation"><symbol src="file:/symbols/s_tower_observation.svg" symbol-height="16" /></rule>
-	<rule cat="tms_man-made" e="node" k="man_made" v="windmill"><symbol priority="200" src="file:/symbols/s_windmill.png" /></rule>
-	<rule cat="tms_man-made" e="node" k="man_made" v="lighthouse"><symbol src="file:/symbols/s_lighthouse.png" /></rule>
-	<rule cat="tms_man-made" e="node" k="generator:source" v="wind"><symbol src="file:/symbols/s_power_wind.png" /></rule>
+	<rule cat="tms_man-made" e="node" k="man_made" v="windmill"><symbol priority="200" src="file:/symbols/s_windmill.svg" symbol-width="19" /></rule>
+	<rule cat="tms_man-made" e="node" k="man_made" v="lighthouse"><symbol src="file:/symbols/s_lighthouse.svg" symbol-width="18" /></rule>
+	<rule cat="tms_man-made" e="node" k="generator:source" v="wind"><symbol src="file:/symbols/s_power_wind.svg" symbol-height="29"/></rule>
 	<rule cat="tms_man-made" e="node" k="generator:source" v="hydro|tidal|wave"><symbol src="file:/symbols/s_power.svg" symbol-width="12dp"/></rule>
 	<rule cat="tms_man-made" e="node" k="generator:source" v="solar"><symbol src="file:/symbols/s_power_solar.svg" symbol-width="12dp" /></rule>
 	<rule cat="tms_man-made" e="node" k="generator:source" v="gas|oil|diesel|gasoline|biomass|biofuel|waste|geothermal"><symbol src="file:/symbols/s_power.svg" symbol-width="12dp" /></rule>
