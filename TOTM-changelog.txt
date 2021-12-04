@@ -300,3 +300,5 @@ initial release in github
 перерисовал meadow|grassland
 25/11/2021
 обводка wood на z14, переделал bureaucracy
+03/12/2021
+В меню военные территории(tms_tmilitary) перенес в ООПТ(tms_oopt)

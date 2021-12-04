@@ -164,13 +164,9 @@ Transparency for HEX colors (100% - непрозрачный)
 			<cat id="tms_borders"/>
 		</layer>
 		<layer id="tms_oopt" enabled="true">
-			<name lang="en" value="Nature Protected and aborigenal areas"/>
-			<name lang="ru" value="ООПТ: заповедники, заказники, нац.парки + резервации" />
+			<name lang="en" value="Nature Protected, aboriginal and military areas"/>
+			<name lang="ru" value="ООПТ: заповедники, заказники, нац.парки, резервации + Военные территории" />
 			<cat id="tms_oopt"/>
-		</layer>
-		<layer id="tms_tmilitary" enabled="true">
-			<name lang="en" value="Military boundarys"/>
-			<name lang="ru" value="Военные территории" />
 			<cat id="tms_tmilitary"/>
 		</layer>
 
@@ -386,11 +382,11 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- military -->
 	<rule cat="tms_land-base" e="any" k="landuse|leisure" v="military">
-		<rule cat="tms_tmilitary" e="way" k="landuse" v="military" zoom-max="12">			<!-- zoom-min="11"  -->
+		<rule cat="tms_tmilitary" e="way" k="landuse" v="military" zoom-max="12" >
 			<area src="file:/patterns/military_area_z12.png" symbol-width="22" />
 			<line stroke="#80ff2626" stroke-width="0.4" stroke-linecap="butt" />
 		</rule>
-		<rule cat="tms_tmilitary" e="way" k="landuse" v="military" zoom-min="13">
+		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-min="13" >
 			<area src="file:/patterns/military_area.png" symbol-width="16" />
 			<line stroke="#80ff2626" stroke-width="0.4" stroke-linecap="butt" />
 		</rule>
@@ -401,7 +397,8 @@ Transparency for HEX colors (100% - непрозрачный)
 	<!-- все остальные military обьекты - бомбоубежища... итд -->
 	<rule cat="tms_land-base" e="any" k="*" v="*">
 		<rule cat="tms_tmilitary" e="way" k="military" v="*" zoom-min="13">
-			<area src="file:/patterns/military_area.png" symbol-width="16" />
+			<!-- <area src="file:/patterns/military_area.png" symbol-width="16" /> -->
+			<area src="file:/patterns/military_area.svg" symbol-width="16" />			
 			<line stroke="#80ff2626" stroke-width="0.2" stroke-linecap="butt" />
 		</rule>
 	</rule>
