@@ -301,4 +301,8 @@ initial release in github
 25/11/2021
 обводка wood на z14, переделал bureaucracy
 03/12/2021
-В меню военные территории(tms_tmilitary) перенес в ООПТ(tms_oopt)
+В меню Перенес в ООПТ(tms_oopt) военные территории(tms_tmilitary) 
+04/12/2021
+Перерисовал штольни (adit), heath, grave_yard, oth.patterns
+05/12/2021
+добавил магазины outdoor,dive,fishing,hunting (sports)

@@ -334,12 +334,15 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<rule cat="tms_land-base" e="way" k="natural" v="heath" closed="yes" zoom-min="13">
-		<area fill="#bbeef0d9"/>
-		<rule e="way" k="*" v="*" zoom-max="15">
-			<area src="file:/patterns/p_heath.png" />
+		<area fill="#bbeef0d9"/> 
+		<rule e="way" k="*" v="*" zoom-max="14">
+			<area src="file:/patterns/heath.svg" symbol-width="24" />
 		</rule>
-		<rule e="way" k="*" v="*" zoom-min="16">
-			<area src="file:/patterns/p_heath_2.png" symbol-width="32" />
+		<rule e="way" k="*" v="*" zoom-min="15" zoom-max="16">
+			<area src="file:/patterns/heath.svg" symbol-width="28" />
+		</rule>		
+		<rule e="way" k="*" v="*" zoom-min="17">
+			<area src="file:/patterns/heath.svg" symbol-width="32" />
 		</rule>
 	</rule>
 
@@ -369,12 +372,9 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_land-base" e="way" k="landuse" v="allotments" zoom-min="13">
 		<area src="file:/patterns/allotments.png" />
 	</rule>
-	<rule cat="tms_land-base" e="way" k="landuse|amenity" v="cemetery|grave_yard" zoom-min="11">
-		<area fill="#adc4b6" stroke="#333333" stroke-width="0.3" />
-	</rule>
 	<rule cat="tms_land-base" e="way" k="landuse|amenity" v="cemetery|grave_yard" zoom-min="13">
-		<area fill="#adc4b6" stroke="#333333" stroke-width="0.3" />
-		<area src="file:/patterns/grave_yard.png" symbol-height="16" />
+		<area fill="#adc4b6" stroke="#333333" stroke-width="0.24" />
+		<area src="file:/patterns/grave_yard.svg" symbol-height="18" />
 	</rule>
 	<rule cat="tms_land-base" e="way" k="landuse|amenity" v="cemetery|grave_yard" zoom-min="15">
 		<symbol src="file:/symbols/s_cemetery.svg" symbol-width="16" />
@@ -382,12 +382,16 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- military -->
 	<rule cat="tms_land-base" e="any" k="landuse|leisure" v="military">
-		<rule cat="tms_tmilitary" e="way" k="landuse" v="military" zoom-max="12" >
-			<area src="file:/patterns/military_area_z12.png" symbol-width="22" />
+		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-max="13" >
+			<area src="file:/patterns/military_area.svg" symbol-width="20" />
 			<line stroke="#80ff2626" stroke-width="0.4" stroke-linecap="butt" />
 		</rule>
-		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-min="13" >
-			<area src="file:/patterns/military_area.png" symbol-width="16" />
+		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-min="14" zoom-max="16" >
+			<area src="file:/patterns/military_area.svg" symbol-width="30" />
+			<line stroke="#80ff2626" stroke-width="0.4" stroke-linecap="butt" />
+		</rule>
+		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-min="17" >
+			<area src="file:/patterns/military_area.svg" symbol-width="40" />
 			<line stroke="#80ff2626" stroke-width="0.4" stroke-linecap="butt" />
 		</rule>
 		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-min="12">
@@ -397,8 +401,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	<!-- все остальные military обьекты - бомбоубежища... итд -->
 	<rule cat="tms_land-base" e="any" k="*" v="*">
 		<rule cat="tms_tmilitary" e="way" k="military" v="*" zoom-min="13">
-			<!-- <area src="file:/patterns/military_area.png" symbol-width="16" /> -->
-			<area src="file:/patterns/military_area.svg" symbol-width="16" />			
+			<area src="file:/patterns/military_area.svg" symbol-width="30" />
 			<line stroke="#80ff2626" stroke-width="0.2" stroke-linecap="butt" />
 		</rule>
 	</rule>
@@ -1002,7 +1005,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<area src="file:/patterns/reedbed.png" />
 		</rule>
 		<rule e="way" k="wetland" v="tidalflat">
-			<area src="file:/patterns/tidalflat.png" />
+			<area src="file:/patterns/tidalflat.svg" symbol-width="10" />
 		</rule>
 		<rule e="way" k="wetland" v="marsh">
 			<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14">
@@ -1200,7 +1203,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	<!-- переставлено сверху, чтобы пляж не отображался водой -->
 	<rule cat="tms_land-base" e="way" k="natural" v="beach|sand" zoom-min="11">
 		<area fill="#BBFAEBB9" />
-		<area src="file:/patterns/sand.png" symbol-width="8"/>
+		<area src="file:/patterns/sand.svg" symbol-width="10"/>
 	</rule>
 
 	<rule e="way" k="highway|railway|public_transport" v="platform">
@@ -2070,20 +2073,20 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
-	<rule cat="tms_tour" e="node" k="natural" v="cave_entrance" zoom-min="13">
+	<rule cat="tms_tour" e="node" k="natural" v="cave_entrance" zoom-min="14">
 		<symbol priority="425" id="tms_cave" display="always" src="file:/symbols/s_cave_entrance.svg" symbol-width="13" />
 		<caption cat="tms_land-names" priority="310" symbol-id="tms_cave" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
 		<caption cat="tms_land-names" symbol-id="tms_cave" position="below" k="ele" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 
-	<rule cat="tms_tour" e="any" k="man_made" v="adit" zoom-min="15">
-		<symbol priority="425" id="tms_adit" display="always" src="file:/symbols/adit-32.png" symbol-width="16" />
+	<rule cat="tms_tour" e="any" k="man_made" v="adit" >
+		<symbol priority="425" id="tms_adit" display="always" src="file:/symbols/adit.svg" symbol-width="20" />
 		<caption cat="tms_land-names" priority="310" symbol-id="tms_adit" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
 		<caption cat="tms_land-names" symbol-id="tms_adit" position="below" k="ele" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 
-	<rule cat="tms_tour" e="any" k="man_made" v="adit_disused" zoom-min="15">
-		<symbol priority="425" id="tms_adit" display="always" src="file:/symbols/adit-32-dis.png" symbol-width="16" />
+	<rule cat="tms_tour" e="any" k="man_made" v="adit_disused" >
+		<symbol priority="425" id="tms_adit" display="always" src="file:/symbols/adit-dis.svg" symbol-width="20" />
 		<caption cat="tms_land-names" symbol-id="tms_adit" priority="310" k="name" position="above" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
 		<caption cat="tms_land-names" symbol-id="tms_adit" k="ele" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
@@ -2364,7 +2367,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<caption priority="135" cat="tms_land-names" symbol-id="tms_shop" k="name" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
-	
+
 	<!-- рынки, базары -->
 	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="marketplace">
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_marketplace.svg" symbol-width="17"/>
@@ -2388,6 +2391,12 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 	<rule cat="tms_shops" e="any" zoom-min="14" k="shop" v="bicycle|doityourself|hardware|laundry|dry_cleaning|florist">
 		<caption priority="110" cat="tms_land-names" symbol-id="tms_shop" k="name" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
+	</rule>
+	<rule cat="tms_shops" e="any" k="shop" v="sports">
+		<symbol id="s_sports_shop" display="always" src="file:/symbols/s_shop-sports.svg" symbol-height="17" />
+		<rule e="any" k="*" v="*">
+			<caption k="name" symbol-id="s_sports_shop" priority="135" cat="tms_land-names" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
+		</rule>
 	</rule>
 
 	<!-- tourist info -->
