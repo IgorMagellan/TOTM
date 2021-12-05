@@ -100,12 +100,12 @@ Transparency for HEX colors (100% - непрозрачный)
 		</layer>
 		<layer id="tms_trans-priv" enabled="false">
 			<name lang="en" value="Transportation (private)"/>
-			<name lang="ru" value="Транспорт (частный): парковки, заправки" />
+			<name lang="ru" value="Автомобиль: парковки, заправки, автомагазины, запчасти и автосервисы" />
 			<cat id="tms_trans-priv"/>
 		</layer>
 		<layer id="tms_trans-pub" enabled="false">
 			<name lang="en" value="Transportation (public)"/>
-			<name lang="ru" value="Транспорт (общественный): станции, остановки автобусные, ж/д, трамвайные, метро" />
+			<name lang="ru" value="Транспорт (общественный): автобус, жд, метро, трамвай, станции, остановки" />
 			<cat id="tms_trans-pub"/>
 		</layer>
 		<layer id="tms_tourism" enabled="true">
@@ -403,6 +403,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule cat="tms_tmilitary" e="way" k="military" v="*" zoom-min="13">
 			<area src="file:/patterns/military_area.svg" symbol-width="30" />
 			<line stroke="#80ff2626" stroke-width="0.2" stroke-linecap="butt" />
+			<caption cat="tms_land-names" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#ff4000" stroke="#FFFFFF" stroke-width="1.7" />
 		</rule>
 	</rule>
 
@@ -418,7 +419,6 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 		<rule cat="tms_land-base" e="way" k="landuse|leisure" v="allotments|cemetery|industrial|village_green|recreation_ground|grass|park|garden|common|green|dog_park" zoom-min="15">
 			<caption cat="tms_land-names" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#004D66" stroke="#FFFFFF" stroke-width="1.5" />
-			<!-- были красненькие -->
 		</rule>
 	</rule>
 
@@ -2398,6 +2398,12 @@ Transparency for HEX colors (100% - непрозрачный)
 			<caption k="name" symbol-id="s_sports_shop" priority="135" cat="tms_land-names" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
+	<rule cat="tms_trans-priv" e="any" k="shop" v="car">
+		<symbol priority="245" id="tms_carshop" display="always" src="file:/symbols/s_car-shop.svg" symbol-height="17" />
+		<rule e="any" k="*" v="*">
+			<caption k="name" symbol-id="tms_carshop" priority="135" cat="tms_land-names" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
+		</rule>		
+	</rule>	
 
 	<!-- tourist info -->
 	<rule cat="tms_info" e="any" k="information" v="office">
@@ -2678,10 +2684,10 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol priority="120" id="tms_leisure" src="file:/symbols/s_playground.svg" symbol-height="16" />
 	</rule>
 	<rule cat="tms_leisure" e="any" k="amenity" v="cinema">
-		<symbol priority="220" id="tms_leisure" display="always" src="file:/symbols/s_cinema.svg" symbol-height="16" />
+		<symbol priority="240" id="tms_leisure" display="always" src="file:/symbols/s_cinema.svg" symbol-height="17" />
 	</rule>
 	<rule cat="tms_leisure" e="any" k="amenity" v="theatre">
-		<symbol priority="220" id="tms_leisure" display="always" src="file:/symbols/s_theatre.svg" symbol-height="16" />
+		<symbol priority="240" id="tms_leisure" display="always" src="file:/symbols/s_theatre.svg" symbol-height="19" />
 	</rule>
 	<rule cat="tms_leisure" e="any" k="*" v="playground|cinema|theatre" zoom-min="16">
 		<caption priority="-15" symbol-id="tms_leisure" cat="tms_land-names" k="name" position="above" font-size="8" font-style="bold" fill="#004900" stroke="#FFFFFF" stroke-width="2.0" />

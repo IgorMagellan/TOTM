@@ -1,10 +1,10 @@
-<svg width="32" height="32" version="1.1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
- <rect x="1" y="1" width="30" height="30" rx="4" fill="#808080" stroke="#fff" stroke-width="2"/>
+<svg id="SVGRoot" width="32" height="32" version="1.1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+ <rect x="1" y="1" width="30" height="30" rx="4" fill="#808080" stroke="#ffffff" stroke-width="2"/>
  <rect x="1" y="1" width="30" height="30" rx="4" fill="#4d4d4d"/>
- <g fill="#fff">
-  <path d="m9 4c-.3643 0-1 .606-1 1.3182v16.682h16v-16.682c0-.71217-.6372-1.3182-1.3858-1.3182z" color="#000000" style="text-decoration-line:none;text-indent:0;text-transform:none"/>
-  <path d="m8.4866 23.5h15.172l.8551 1h-17.027z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="m6.4972 27.5h19v-1h-18.989l-.011 1z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+ <g fill="#ffffff">
+  <path d="M 9,4 C 8.6357,4 8,4.606 8,5.31817 V 22 H 24 V 5.31817 C 24,4.606 23.3628,4 22.6142,4 Z" color="#000000" style="text-decoration-line:none;text-indent:0;text-transform:none"/>
+  <path d="m8.4866 23.5h15.172l0.8551 1h-17.027z" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m6.4972 27.5h19v-1h-18.989l-0.011 1z" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
  </g>
- <text x="8.703125" y="14.969724" fill="#4d4d4d" font-family="Oswald" font-size="10.667px" letter-spacing="0px" word-spacing="0px" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:0%" xml:space="preserve"><tspan x="8.703125" y="14.969724" font-family="Oswald" font-size="10.667px" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;line-height:1.25">RIP</tspan></text>
+ <text x="8.661623" y="13.602854" fill="#4d4d4d" font-family="'Liberation Sans Narrow'" font-weight="bold" letter-spacing="0px" word-spacing="0px" style="line-height:0%" xml:space="preserve"><tspan x="8.661623" y="13.602854" font-size="10.565px" style="line-height:1.25">RIP</tspan></text>
 </svg>

@@ -1745,11 +1745,17 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<rule cat="tms_shops" e="any" k="shop" v="sports">
-		<symbol id="s_sports_shop" display="always" src="file:/symbols/s_shop-sports.svg" symbol-height="12dp" />
+		<symbol id="s_sports_shop" src="file:/symbols/s_shop-sports.svg" symbol-height="12dp" />
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption k="name" symbol-id="s_sports_shop" priority="135" cat="tms_land-names" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
+	<rule cat="tms_trans-priv" e="any" k="shop" v="car">
+		<symbol priority="245" id="tms_carshop" src="file:/symbols/s_car-shop.svg" symbol-height="17" />
+		<rule e="any" k="*" v="*">
+			<caption k="name" symbol-id="tms_carshop" priority="135" cat="tms_land-names" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
+		</rule>		
+	</rule>	
 
 <!-- tourist info -->
 	<rule cat="tms_info" e="any"  zoom-min="14" k="information" v="office">	
@@ -1936,8 +1942,8 @@ Transparency for HEX colors (100% - непрозрачный)
 
 <!-- leisure time -->
 	<rule cat="tms_leisure" e="any" k="leisure" v="playground">	<symbol priority="220" id="tms_leisure" src="file:/symbols/s_playground.svg" symbol-height="12dp" /></rule>
-	<rule cat="tms_leisure" e="any" k="amenity" v="cinema">		<symbol priority="220" id="tms_leisure" src="file:/symbols/s_cinema.svg" symbol-height="12dp" /></rule>
-	<rule cat="tms_leisure" e="any" k="amenity" v="theatre">	<symbol priority="220" id="tms_leisure" src="file:/symbols/s_theatre.svg" symbol-height="12dp" /></rule>
+	<rule cat="tms_leisure" e="any" k="amenity" v="cinema">		<symbol priority="220" id="tms_leisure" src="file:/symbols/s_cinema.svg" symbol-height="13dp" /></rule>
+	<rule cat="tms_leisure" e="any" k="amenity" v="theatre">	<symbol priority="220" id="tms_leisure" src="file:/symbols/s_theatre.svg" symbol-height="19" /></rule>
 	<rule cat="tms_leisure" e="any" k="*" v="playground|cinema|theatre">
 		<caption priority="15" symbol-id="tms_leisure" cat="tms_land-names" k="name" dy="-12dp" font-size="8dp" font-style="bold" fill="#004900" stroke="#FFFFFF" stroke-width="2.0dp" />
 	</rule>
