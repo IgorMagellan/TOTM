@@ -27,7 +27,7 @@ Transparency for HEX colors (100% - непрозрачный)
 -->
 	<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://mapsforge.org/renderTheme" 
 	xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd" 
-	version="5" map-background="#ffffff" map-background-outside="#ffffff">
+	version="4" map-background="#ffffff" map-background-outside="#ffffff">
 
 	<stylemenu id="totm_2_3" defaultvalue="tms_hiking" defaultlang="en">
 
@@ -1225,6 +1225,18 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
+<!-- 	<rule e="way" k="smoothness" v="*" zoom-min="10">
+		<line stroke="#33cb82d9" stroke-width="6" stroke-linecap="butt" />
+		<line stroke="#cc8301b1" stroke-width="0.6" />
+	</rule>
+
+	<rule e="way" k="surface" v="*" zoom-min="10">
+		<line stroke="#33cb82d9" stroke-width="4" stroke-linecap="butt" />
+		<line stroke="#cc8301b1" stroke-width="0.5" />
+		<pathText cat="tms_land-names" k="name" dy="-3" font-style="italic" font-family="serif" font-size="15" fill="#bed522ec" stroke="#80bbbbbb" stroke-width="0.8" display="always" repeat-start="50" repeat-gap="30" />
+	</rule>	 -->
+
+
 	<!-- administrative borders -->
 	<rule cat="tms_borders" e="way" k="admin_level" v="2">		<!-- Страны, государства -->
 		<rule e="any" k="*" v="*" zoom-max="8">
@@ -2362,17 +2374,12 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop|amenity" v="pub|bar|beverages">
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_pub.svg" symbol-height="17" />
 	</rule>
-	<rule cat="tms_food" zoom-min="15" e="any" k="shop|amenity" v="butcher|supermarket|convenience|bakery|restaurant|fast_food|biergarten|cafe|pub|bar|beverages">
-		<rule e="any" k="*" v="*" zoom-min="16">
-			<caption priority="135" cat="tms_land-names" symbol-id="tms_shop" k="name" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
-		</rule>
-	</rule>
-
-	<!-- рынки, базары -->
 	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="marketplace">
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_marketplace.svg" symbol-width="17"/>
+	</rule>	
+	<rule cat="tms_food" zoom-min="15" e="any" k="shop|amenity" v="butcher|supermarket|convenience|bakery|restaurant|fast_food|biergarten|cafe|pub|bar|beverages|marketplace">
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<caption priority="135" cat="tms_land-names" symbol-id="tms_shop" k="name" position="above" font-style="bold" font-size="10" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
+			<caption priority="135" cat="tms_land-names" symbol-id="tms_shop" k="name" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 
@@ -2389,17 +2396,15 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_shops" e="any" k="shop" v="florist">
 		<symbol priority="215" id="tms_shop" display="always" src="file:/symbols/s_florist.svg" symbol-width="17" />
 	</rule>
-	<rule cat="tms_shops" e="any" zoom-min="14" k="shop" v="bicycle|doityourself|hardware|laundry|dry_cleaning|florist">
+	<rule cat="tms_shops" e="any" k="shop" v="sports">
+		<symbol priority="215" id="tms_shop" display="always" src="file:/symbols/s_shop-sports.svg" symbol-width="17" />
+	</rule>	
+	<rule cat="tms_shops" e="any" k="shop" v="bicycle|doityourself|hardware|laundry|dry_cleaning|florist|sports" zoom-min="15" >
 		<caption priority="110" cat="tms_land-names" symbol-id="tms_shop" k="name" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
-	<rule cat="tms_shops" e="any" k="shop" v="sports">
-		<symbol id="s_sports_shop" display="always" src="file:/symbols/s_shop-sports.svg" symbol-height="17" />
-		<rule e="any" k="*" v="*">
-			<caption k="name" symbol-id="s_sports_shop" priority="135" cat="tms_land-names" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
-		</rule>
-	</rule>
+
 	<rule cat="tms_trans-priv" e="any" k="shop" v="car">
-		<symbol priority="245" id="tms_carshop" display="always" src="file:/symbols/s_car-shop.svg" symbol-height="17" />
+		<symbol priority="245" id="tms_carshop" display="always" src="file:/symbols/s_car-shop.svg" symbol-width="17" />
 		<rule e="any" k="*" v="*">
 			<caption k="name" symbol-id="tms_carshop" priority="135" cat="tms_land-names" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 		</rule>		
@@ -2627,7 +2632,12 @@ Transparency for HEX colors (100% - непрозрачный)
 			<caption symbol-id="s_stadium" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
-
+	<rule cat="tms_sport" e="any" k="leisure" v="sports_centre">
+		<symbol id="s_gym" display="always" src="file:/symbols/s_gym.svg" symbol-height="17" />
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption cat="tms_land-names" k="name" symbol-id="s_gym" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
 	<rule cat="tms_sport" e="any" k="amenity" v="bicycle_rental" zoom-min="14">
 		<symbol priority="225" display="always" id="s_bicycle_rental" src="file:/symbols/s_bicycle_rental.svg" symbol-height="17" />
 		<rule e="any" k="*" v="*" zoom-min="16">
@@ -2648,7 +2658,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 	<rule cat="tms_trans-priv" e="any" k="amenity" v="fuel" zoom-min="14">
-		<symbol priority="310" id="s_trans-priv" display="always" src="file:/symbols/s_fuel.svg" symbol-height="14" />
+		<symbol priority="310" id="s_trans-priv" display="always" src="file:/symbols/s_fuel.svg" symbol-height="16" />
 		<caption priority="310" symbol-id="s_trans-priv" cat="tms_land-names" k="name" position="above" font-style="bold" font-size="10" fill="#0036D9" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 

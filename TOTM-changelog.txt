@@ -306,3 +306,5 @@ initial release in github
 Перерисовал штольни (adit), heath, grave_yard, oth.patterns
 05/12/2021
 добавил магазины outdoor,dive,fishing,hunting (sports); автомагазины, ремонт и автосервис (car-shop)
+06/12/2021
+добавил cпортивные залы и центры(gym)
