@@ -2264,6 +2264,9 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule e="node" k="barrier" v="turnstile">
 			<symbol priority="405" display="always" src="file:/symbols/s_turnstile3.svg" symbol-width="16" />
 		</rule>		<!-- symbol-color="#ff4000" -->
+		<rule e="node" k="barrier" v="log">
+			<symbol priority="415" display="always" src="file:/symbols/s_log2.svg" symbol-height="16" />
+		</rule>		
 	</rule>
 
 	<!-- fords -->
@@ -2376,8 +2379,11 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="marketplace">
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_marketplace.svg" symbol-width="17"/>
-	</rule>	
-	<rule cat="tms_food" zoom-min="15" e="any" k="shop|amenity" v="butcher|supermarket|convenience|bakery|restaurant|fast_food|biergarten|cafe|pub|bar|beverages|marketplace">
+	</rule>
+	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="mall">
+		<symbol priority="250" id="tms_shop" display="always" src="file:/symbols/s_mall3.svg" symbol-width="20"/>
+	</rule>		
+	<rule cat="tms_food" zoom-min="15" e="any" k="shop|amenity" v="butcher|supermarket|convenience|bakery|restaurant|fast_food|biergarten|cafe|pub|bar|beverages|marketplace|mall">
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption priority="135" cat="tms_land-names" symbol-id="tms_shop" k="name" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
@@ -2397,7 +2403,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol priority="215" id="tms_shop" display="always" src="file:/symbols/s_florist.svg" symbol-width="17" />
 	</rule>
 	<rule cat="tms_shops" e="any" k="shop" v="sports">
-		<symbol priority="215" id="tms_shop" display="always" src="file:/symbols/s_shop-sports.svg" symbol-width="17" />
+		<symbol priority="215" id="tms_shop" display="always" src="file:/symbols/s_shop-sports.svg" symbol-width="18" />
 	</rule>	
 	<rule cat="tms_shops" e="any" k="shop" v="bicycle|doityourself|hardware|laundry|dry_cleaning|florist|sports" zoom-min="15" >
 		<caption priority="110" cat="tms_land-names" symbol-id="tms_shop" k="name" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />

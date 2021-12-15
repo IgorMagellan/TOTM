@@ -308,3 +308,5 @@ initial release in github
 добавил магазины outdoor,dive,fishing,hunting (sports); автомагазины, ремонт и автосервис (car-shop)
 06/12/2021
 добавил cпортивные залы и центры(gym)
+15/12/2021
+добавил ТРК и центры(mall); упавшее дерево (barrier=log)
