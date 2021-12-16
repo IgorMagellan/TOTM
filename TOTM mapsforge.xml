@@ -1053,7 +1053,7 @@ Transparency for HEX colors (100% - непрозрачный)
 					<area fill="#CCCCCC" />
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="16">
-					<pathText k="name" dy="1" font-style="normal" font-family="sans_serif" font-size="10" fill="#333333" stroke="#ffffff" stroke-width="1.5" />
+					<pathText cat="tms_land-names" k="name" dy="1" font-style="normal" font-family="sans_serif" font-size="10" fill="#333333" stroke="#ffffff" stroke-width="1.5" />
 				</rule>
 			</rule>
 			<rule e="any" k="waterway" v="dam" zoom-min="15">
@@ -1064,7 +1064,7 @@ Transparency for HEX colors (100% - непрозрачный)
 					<line stroke="#CCCCCC" stroke-width="0.9" stroke-linecap="butt" />
 					<line stroke="#9CA6BA" stroke-width="0.7" scale="all" stroke-dasharray="1.8,0.6" stroke-linecap="butt" />
 					<line stroke="#FFFFFF" stroke-width="0.15" stroke-linecap="butt" />
-					<pathText k="name" font-style="normal" font-size="9" fill="#9CA6BA" stroke="#FFFFFF" stroke-width="1" />
+					<pathText cat="tms_land-names" k="name" font-style="normal" font-size="9" fill="#9CA6BA" stroke="#FFFFFF" stroke-width="1" />
 				</rule>
 			</rule>
 		</rule>
@@ -1072,20 +1072,20 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- natural ways -->
 	<rule cat="tms_land-base" e="way" k="natural" v="valley|gorge" zoom-min="13">
-		<pathText k="name" font-style="italic" font-family="serif" font-size="11" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
+		<pathText cat="tms_land-names" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#E6444444" stroke="#cce0e0e0" stroke-width="2.0" />
 	</rule>
 
 	<!-- Обрывы -->
 	<rule cat="tms_land-base" e="way" k="natural" v="cliff" zoom-min="13">
 		<line stroke="#BF111111" dy="0.5" stroke-width="1" stroke-dasharray="0.2,1" stroke-linecap="butt" scale="all" />
 		<line stroke="#BF111111" stroke-width="0.3" stroke-linecap="butt" />
-		<pathText k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
+		<pathText cat="tms_land-names" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
 	</rule>
 
 	<rule cat="tms_land-base" e="way" k="natural" v="earth_bank" zoom-min="13">
 		<line stroke="#BFbc4b00" dy="0.5" stroke-width="1" stroke-dasharray="0.2,1" stroke-linecap="butt" scale="all" />
 		<line stroke="#BFbc4b00" stroke-width="0.3" stroke-linecap="butt" />
-		<pathText k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#313140" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
+		<pathText cat="tms_land-names" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#313140" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
 	</rule>
 
 	<!-- Малые овраги, канавы -->
@@ -1094,12 +1094,12 @@ Transparency for HEX colors (100% - непрозрачный)
 		<line stroke="#80bc4b00" dy="-0.25" stroke-width="0.4" stroke-dasharray="0,4,1,4" stroke-linecap="butt" />
 		<line stroke="#80bc4b00" dy="0.4" stroke-width="0.1" stroke-linecap="butt" />
 		<line stroke="#80bc4b00" dy="-0.4" stroke-width="0.1" stroke-linecap="butt" />
-		<pathText k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
+		<pathText cat="tms_land-names" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
 	</rule>
 	<rule cat="tms_land-base" e="way" k="barrier|natural" v="ditch|gully" closed="yes">
 		<line stroke="#80bc4b00" dy="0.25" stroke-width="0.4" stroke-dasharray="1,8" stroke-linecap="butt" />
 		<line stroke="#80bc4b00" dy="0.4" stroke-width="0.1" stroke-linecap="butt" />
-		<pathText k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
+		<pathText cat="tms_land-names" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
 	</rule>
 
 	<!-- Просеки OAM -->
@@ -1755,24 +1755,57 @@ Transparency for HEX colors (100% - непрозрачный)
 
 			<rule cat="tms_hk" e="way" k="highway" v="track" zoom-min="13">
 				<!-- Плохие дороги -->
-				<rule e="way" k="tracktype" v="grade3|grade4|grade5">
+				<rule e="way" k="tracktype" v="grade3">
 					<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14">
-						<line stroke="#000000" stroke-width="0.64" />
-						<line stroke="#ff2626" stroke-width="0.64" stroke-dasharray="3.0,7" stroke-linecap="butt" />
+						<line stroke="#000000" stroke-width="0.64" stroke-dasharray="6,0.4" scale="all" stroke-linecap="butt" />
 					</rule>
 					<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
-						<line stroke="#111111" stroke-width="0.48" />
-						<line stroke="#ff2626" stroke-width="0.48" stroke-dasharray="3.5,8" stroke-linecap="butt" />
+						<line stroke="#111111" stroke-width="0.48" stroke-dasharray="6,0.3" scale="all" stroke-linecap="butt" />
 					</rule>
 					<rule e="any" k="*" v="*" zoom-min="17" zoom-max="18">
-						<line stroke="#111111" stroke-width="0.32" />
-						<line stroke="#ff2626" stroke-width="0.32"   stroke-dasharray="4,9"  stroke-linecap="butt" />
+						<line stroke="#111111" stroke-width="0.32" stroke-dasharray="6,0.2" scale="all" stroke-linecap="butt" />
 					</rule>
 					<rule e="any" k="*" v="*" zoom-min="19">
-						<line stroke="#222222" stroke-width="0.24" />
-						<line stroke="#ff2626" stroke-width="0.24" stroke-dasharray="4.5,10" stroke-linecap="butt" />
+						<line stroke="#222222" stroke-width="0.24" stroke-dasharray="6,0.15" scale="all" stroke-linecap="butt" />
 					</rule>
 				</rule>
+
+				<rule e="way" k="tracktype" v="grade4">
+					<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14">
+						<line stroke="#000000" stroke-width="0.64" stroke-dasharray="6,0.4" scale="all" stroke-linecap="butt" />
+					</rule>
+					<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
+						<line stroke="#ff8000" stroke-width="0.48" />
+						<line stroke="#111111" stroke-width="0.48" stroke-dasharray="3,0.7" scale="all" stroke-linecap="butt" />
+					</rule>
+					<rule e="any" k="*" v="*" zoom-min="17" zoom-max="18">
+						<line stroke="#ff8000" stroke-width="0.32" />
+						<line stroke="#111111" stroke-width="0.32" stroke-dasharray="4,0.8" scale="all" stroke-linecap="butt" />
+					</rule>
+					<rule e="any" k="*" v="*" zoom-min="19">
+						<line stroke="#ff8000" stroke-width="0.24" />
+						<line stroke="#222222" stroke-width="0.24" stroke-dasharray="5,0.9" scale="all" stroke-linecap="butt" />
+					</rule>
+				</rule>
+
+				<rule e="way" k="tracktype" v="grade5">
+					<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14">
+						<line stroke="#000000" stroke-width="0.64" stroke-dasharray="6,0.4" scale="all" stroke-linecap="butt" />
+					</rule>
+					<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
+						<line stroke="#d90036" stroke-width="0.48" />
+						<line stroke="#111111" stroke-width="0.48" stroke-dasharray="1.9,1.4" scale="all" stroke-linecap="butt" />
+					</rule>
+					<rule e="any" k="*" v="*" zoom-min="17" zoom-max="18">
+						<line stroke="#d90036" stroke-width="0.32" />
+						<line stroke="#111111" stroke-width="0.32" stroke-dasharray="2.4,2.0" scale="all" stroke-linecap="butt" />
+					</rule>
+					<rule e="any" k="*" v="*" zoom-min="19">
+						<line stroke="#d90036" stroke-width="0.24" />
+						<line stroke="#222222" stroke-width="0.24" stroke-dasharray="3,2.6" scale="all" stroke-linecap="butt" />
+					</rule>
+				</rule>
+
 
 				<!-- Хорошие дороги -->
 				<rule e="way" k="tracktype" v="grade1">
@@ -2632,14 +2665,14 @@ Transparency for HEX colors (100% - непрозрачный)
 			<caption symbol-id="s_sport" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
-	<rule cat="tms_sport" e="any" k="leisure" v="stadium" zoom-min="14">
+	<rule cat="tms_sport" e="any" k="leisure" v="stadium" >
 		<symbol priority="250" id="s_stadium" display="always" src="file:/symbols/s_stadium.svg" symbol-width ="21" />
 		<rule cat="tms_land-names" e="any" k="*" v="*" zoom-min="15">
 			<caption symbol-id="s_stadium" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 	<rule cat="tms_sport" e="any" k="leisure" v="sports_centre">
-		<symbol id="s_gym" display="always" src="file:/symbols/s_gym.svg" symbol-height="17" />
+		<symbol priority="245" id="s_gym" display="always" src="file:/symbols/s_gym.svg" symbol-height="17" />
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_land-names" k="name" symbol-id="s_gym" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
