@@ -1639,11 +1639,8 @@ Transparency for HEX colors (100% - непрозрачный)
 			<!-- paths and footways -->
 			<!--   #FOOTWAY -->
 			<rule cat="tms_hk" e="way" k="highway" v="footway">
-				<rule e="any" k="*" v="*" zoom-min="15" zoom-max="17">
-					<line stroke="#402000" stroke-width="0.38" scale="all" stroke-dasharray="0.18,0.6" stroke-linecap="round" />
-				</rule>
-				<rule e="any" k="*" v="*" zoom-min="18" zoom-max="99">
-					<line stroke="#402000" stroke-width="0.34" scale="all" stroke-dasharray="0.18,0.6" stroke-linecap="round" />
+				<rule e="any" k="*" v="*" zoom-min="13" >
+					<line stroke="#ea402000" stroke-width="0.38" scale="all" stroke-dasharray="0.18,0.6" stroke-linecap="round" />
 				</rule>
 			</rule>
 
