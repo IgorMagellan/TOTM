@@ -863,7 +863,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<area src="file:/patterns/reedbed.png" />
 		</rule>		
 		<rule e="way" k="wetland" v="tidalflat">	
-			<area src="file:/patterns/tidalflat.svg" symbol-width="10" />
+			<area src="file:/patterns/tidalflat.png" />
 		</rule>		
 		<rule e="way" k="wetland" v="marsh">	
 			<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14"><area src="file:/patterns/reedbed.png" /></rule>
@@ -919,20 +919,12 @@ Transparency for HEX colors (100% - непрозрачный)
 			</rule>
 		</rule>
 	</rule>
-<!-- 	<rule e="way" k="waterway" v="dam">
-		<line stroke="#333333" stroke-width="1" />
-		<line stroke="#CCCCCC" stroke-width="1" stroke-dasharray="10,1" stroke-linecap="butt" />
-		<rule e="any" k="*" v="*" closed="yes">
-			<area fill="#CCCCCC" />
-		</rule>
-	</rule> -->
 
 <!-- natural ways -->
 	<rule cat="tms_land-base" e="way" k="natural" v="valley|gorge" zoom-min="13">
 		<pathText k="name" font-style="italic" font-family="serif" font-size="11" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 	
-	<!-- Magellan -->
 	<!-- Обрывы -->
 	<rule cat="tms_land-base" e="way" k="natural" v="cliff" zoom-min="15">  
 		<line stroke="#BF111111" stroke-width="0.2dp" curve="cubic"/>	
@@ -1315,9 +1307,9 @@ Transparency for HEX colors (100% - непрозрачный)
 
  <!-- начало otm	 -->				
 				<!-- отображ троп с имеющим тег sac_scale -->
-			<rule e="way" k="sac_scale" v="*" zoom-min="14" ><line stroke="#000000" stroke-width="0.50"  stroke-dasharray="3.2,3" stroke-linecap="round" /></rule>
+			<rule e="way" k="sac_scale" v="*" zoom-min="13" ><line stroke="#000000" stroke-width="0.50"  stroke-dasharray="3.2,3" stroke-linecap="round" /></rule>
 			<!-- отображ троп БЕЗ тега sac_scale -->
-			<rule e="way" k="sac_scale" v="~" zoom-min="14" ><line stroke="#000000" stroke-width="0.50"  stroke-dasharray="3.2,3" stroke-linecap="round" /></rule>
+			<rule e="way" k="sac_scale" v="~" zoom-min="13" ><line stroke="#000000" stroke-width="0.50"  stroke-dasharray="3.2,3" stroke-linecap="round" /></rule>
 
 <!-- конец otm	 -->		
 			
@@ -1413,7 +1405,7 @@ Transparency for HEX colors (100% - непрозрачный)
 
 <!-- highway captions -->
 			<!-- исправления Magellan названия улиц -->  <!--  font-style="bold"  -->
-			<rule cat="tms_up-hw" e="way" k="highway" v="footway|path|track|bridleway|steps|byway" zoom-min="14"> <pathText k="name" dy="-4" font-style="bold_italic" font-size="9dp" fill="#606060" stroke="#FFFFFF" stroke-width="1dp" /> </rule> <!--  font-size="8"  stroke-width="2" -->
+			<rule cat="tms_up-hw" e="way" k="highway" v="footway|path|track|bridleway|steps|byway" zoom-min="14"> <pathText k="name" dy="-4" font-style="bold_italic" font-size="9dp" fill="#606060" stroke="#FFFFFF" stroke-width="1dp" /> </rule> 
 			<rule cat="tms_up-hw" e="way" k="highway" v="cycleway|service|construction|road|pedestrian|unclassified|residential|living_street|tertiary|tertiary_link|raceway" zoom-min="15"> <pathText k="name" font-style="bold" font-size="11dp" fill="#606060" stroke="#FFFFFF" stroke-width="2.5dp" /> </rule> <!-- font-size="9" stroke-width="2" -->
 			<rule cat="tms_up-hw" e="way" k="highway" v="secondary_link|primary_link|trunk_link|motorway_link|secondary|primary" zoom-min="14"> <pathText k="name" font-style="bold" font-size="12dp" fill="#606060" stroke="#FFFFFF" stroke-width="2.5dp" /> </rule>  <!-- font-size="10" stroke-width="2"  -->
 			<rule cat="tms_up-hw" e="any" k="highway" v="primary|secondary|tertiary" zoom-min="11">
@@ -1795,10 +1787,13 @@ Transparency for HEX colors (100% - непрозрачный)
 		
 <!-- safety measures -->
     <rule cat="tms_safety" e="any" k="via_ferrata_flag" v="set">
-      <symbol id="s_via_ferrata" force-draw="1" src="file:/symbols/s_via_ferrata.svg" symbol-width="13"/>
-      <rule e="any" k="*" v="*" zoom-min="16">
-        <caption cat="tms_land-names" k="name" symbol-id="s_via_ferrata" font-style="bold" font-size="9dp" fill="#39AC39" stroke="#E5FFFFFF" stroke-width="1dp" />
-      </rule>
+		<line stroke="#333333" stroke-width="0.58" stroke-linecap="butt"/>
+		<line stroke="#ff4c4d" stroke-width="0.32" stroke-linecap="butt"/>
+		<line stroke="#ffff00" stroke-width="0.5" stroke-dasharray="0.7,1.1" stroke-linecap="butt" scale="all"/>
+		<symbol id="s_via_ferrata" force-draw="1" src="file:/symbols/s_via_ferrata.svg" symbol-width="13"/>
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption cat="tms_land-names" k="name" symbol-id="s_via_ferrata" font-style="bold" font-size="9dp" fill="#39AC39" stroke="#E5FFFFFF" stroke-width="1dp" />
+		</rule>
     </rule>
 
 
@@ -1824,7 +1819,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol priority="320" src="file:/symbols/s_telephone.svg" symbol-width="13" />
 	</rule>		
 	<rule cat="tms_emergency" e="any" k="amenity" v="police">		<symbol priority="400" src="file:/symbols/s_police.svg" symbol-width="14" /></rule>
-	<rule cat="tms_emergency" e="any" k="amenity" v="fire_station">	<symbol priority="400" src="file:/symbols/s_firebrigade.svg" symbol-width="16" /></rule>
+	<rule cat="tms_emergency" e="any" k="amenity" v="fire_station">	<symbol priority="400" src="file:/symbols/s_firebrigade.png" /></rule>
 	<rule cat="tms_emergency" e="any" k="amenity|building" v="embassy">
 		<symbol id="tms_embassy" priority="400" src="file:/symbols/s_embassy.svg" symbol-width="13" />
 		<caption symbol-id="tms_embassy" cat="tms_land-names" k="name" dy="-12dp" font-style="bold" font-size="9dp" fill="#000000" stroke="#FFFFFF" stroke-width="2.0" />
