@@ -1534,11 +1534,8 @@ Transparency for HEX colors (100% - непрозрачный)
 						<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
 							<line stroke="#111111" stroke-width="0.8" stroke-linecap="butt"/>
 						</rule>
-						<rule e="any" k="*" v="*" zoom-min="17" zoom-max="18">
+						<rule e="any" k="*" v="*" zoom-min="17" >
 							<line stroke="#111111" stroke-width="0.7" stroke-linecap="butt"/>
-						</rule>
-						<rule e="any" k="*" v="*" zoom-min="19">
-							<line stroke="#111111" stroke-width="0.6" stroke-linecap="butt"/>
 						</rule>
 					</rule>
 				</rule>
@@ -1759,11 +1756,8 @@ Transparency for HEX colors (100% - непрозрачный)
 					<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
 						<line stroke="#111111" stroke-width="0.48" stroke-dasharray="6,0.3" scale="all" stroke-linecap="butt" />
 					</rule>
-					<rule e="any" k="*" v="*" zoom-min="17" zoom-max="18">
+					<rule e="any" k="*" v="*" zoom-min="17" >
 						<line stroke="#111111" stroke-width="0.32" stroke-dasharray="6,0.2" scale="all" stroke-linecap="butt" />
-					</rule>
-					<rule e="any" k="*" v="*" zoom-min="19">
-						<line stroke="#222222" stroke-width="0.24" stroke-dasharray="6,0.15" scale="all" stroke-linecap="butt" />
 					</rule>
 				</rule>
 
@@ -1775,13 +1769,9 @@ Transparency for HEX colors (100% - непрозрачный)
 						<line stroke="#ff8000" stroke-width="0.48" />
 						<line stroke="#111111" stroke-width="0.48" stroke-dasharray="3,0.7" scale="all" stroke-linecap="butt" />
 					</rule>
-					<rule e="any" k="*" v="*" zoom-min="17" zoom-max="18">
+					<rule e="any" k="*" v="*" zoom-min="17" >
 						<line stroke="#ff8000" stroke-width="0.32" />
 						<line stroke="#111111" stroke-width="0.32" stroke-dasharray="4,0.8" scale="all" stroke-linecap="butt" />
-					</rule>
-					<rule e="any" k="*" v="*" zoom-min="19">
-						<line stroke="#ff8000" stroke-width="0.24" />
-						<line stroke="#222222" stroke-width="0.24" stroke-dasharray="5,0.9" scale="all" stroke-linecap="butt" />
 					</rule>
 				</rule>
 
@@ -1791,15 +1781,11 @@ Transparency for HEX colors (100% - непрозрачный)
 					</rule>
 					<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
 						<line stroke="#d90036" stroke-width="0.48" />
-						<line stroke="#111111" stroke-width="0.48" stroke-dasharray="1.9,1.4" scale="all" stroke-linecap="butt" />
+						<line stroke="#66001a" stroke-width="0.48" stroke-dasharray="1.9,1.4" scale="all" stroke-linecap="butt" />
 					</rule>
-					<rule e="any" k="*" v="*" zoom-min="17" zoom-max="18">
+					<rule e="any" k="*" v="*" zoom-min="17" >
 						<line stroke="#d90036" stroke-width="0.32" />
-						<line stroke="#111111" stroke-width="0.32" stroke-dasharray="2.4,2.0" scale="all" stroke-linecap="butt" />
-					</rule>
-					<rule e="any" k="*" v="*" zoom-min="19">
-						<line stroke="#d90036" stroke-width="0.24" />
-						<line stroke="#222222" stroke-width="0.24" stroke-dasharray="3,2.6" scale="all" stroke-linecap="butt" />
+						<line stroke="#66001a" stroke-width="0.32" stroke-dasharray="2.4,2.0" scale="all" stroke-linecap="butt" />
 					</rule>
 				</rule>
 
@@ -1812,11 +1798,8 @@ Transparency for HEX colors (100% - непрозрачный)
 					<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
 						<line stroke="#fdfdff" stroke-width="0.60" />
 					</rule>
-					<rule e="any" k="*" v="*" zoom-min="17" zoom-max="18">
+					<rule e="any" k="*" v="*" zoom-min="17" >
 						<line stroke="#fdfdff" stroke-width="0.50" />
-					</rule>
-					<rule e="any" k="*" v="*" zoom-min="19">
-						<line stroke="#fdfdff" stroke-width="0.38" />
 					</rule>
 				</rule>
 
@@ -1827,11 +1810,8 @@ Transparency for HEX colors (100% - непрозрачный)
 					<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
 						<line stroke="#222222" stroke-width="0.48" stroke-linecap="butt" />
 					</rule>
-					<rule e="any" k="*" v="*" zoom-min="17" zoom-max="18">
+					<rule e="any" k="*" v="*" zoom-min="17" >
 						<line stroke="#222222" stroke-width="0.32" stroke-linecap="butt" />
-					</rule>
-					<rule e="any" k="*" v="*" zoom-min="19">
-						<line stroke="#333333" stroke-width="0.24" stroke-linecap="butt" />
 					</rule>
 				</rule>
 				<!-- конец Основной блок track   -->
@@ -2171,7 +2151,7 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- picnic -->
 	<rule cat="tms_picnic" e="node" zoom-min="14" k="amenity" v="bench">
-		<symbol priority="235" display="always" src="file:/symbols/s_bench.svg" symbol-width="12"/>
+		<symbol priority="200" display="always" src="file:/symbols/s_bench.svg" symbol-width="12"/>
 	</rule>
 	<rule cat="tms_picnic" e="any" zoom-min="14" k="amenity" v="toilets">
 		<symbol priority="235" display="always" src="file:/symbols/s_toilets.svg" symbol-width="16"/>
@@ -2381,7 +2361,7 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- food -->
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="butcher">
-		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_butcher.svg" symbol-height="17" />
+		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_butcher.svg" symbol-height="16" />
 	</rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="supermarket">
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_supermarket.svg" symbol-height="17" />
@@ -2412,8 +2392,13 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="mall">
 		<symbol priority="250" id="tms_shop" display="always" src="file:/symbols/s_mall3.svg" symbol-width="20"/>
-	</rule>		
-	<rule cat="tms_food" zoom-min="15" e="any" k="shop|amenity" v="butcher|supermarket|convenience|bakery|restaurant|fast_food|biergarten|cafe|pub|bar|beverages|marketplace|mall">
+	</rule>
+
+	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="organic|shop_farm|greengrocer|cheese">
+		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_organic.svg" symbol-height="16" />
+	</rule>
+
+	<rule cat="tms_food" zoom-min="15" e="any" k="shop|amenity" v="butcher|supermarket|convenience|bakery|restaurant|fast_food|biergarten|cafe|pub|bar|beverages|marketplace|mall|organic|shop_farm|greengrocer|cheese">
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption priority="135" cat="tms_land-names" symbol-id="tms_shop" k="name" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
@@ -2434,8 +2419,18 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 	<rule cat="tms_shops" e="any" k="shop" v="sports">
 		<symbol priority="215" id="tms_shop" display="always" src="file:/symbols/s_shop-sports.svg" symbol-width="18" />
-	</rule>	
-	<rule cat="tms_shops" e="any" k="shop" v="bicycle|doityourself|hardware|laundry|dry_cleaning|florist|sports" zoom-min="15" >
+	</rule>
+	<rule cat="tms_shops" e="any" k="shop" v="hairdresser">
+		<symbol priority="210" id="tms_shop" display="always" src="file:/symbols/s_hairdresser3.svg" symbol-width="17" />
+	</rule>
+	<rule cat="tms_shops" e="any" k="shop" v="travel_agency">
+		<symbol priority="210" id="tms_shop" display="always" src="file:/symbols/s_travel_agency.svg" symbol-width="17" />
+	</rule>
+	<rule cat="tms_shops" e="any" k="shop" v="chemist">
+		<symbol priority="205" id="tms_shop" display="always" src="file:/symbols/s_chemist.svg" symbol-width="17" />
+	</rule>
+
+	<rule cat="tms_shops" e="any" k="shop" v="bicycle|doityourself|hardware|laundry|dry_cleaning|florist|sports|hairdresser|travel_agency|chemist" zoom-min="15" >
 		<caption priority="110" cat="tms_land-names" symbol-id="tms_shop" k="name" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 
@@ -2812,31 +2807,40 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- man_made -->
-	<rule cat="tms_man-made" e="node" k="tower" v="communication">
-		<rule e="node" k="*" v="*" zoom-min="13" zoom-max="13">
-			<symbol display="always" src="file:/symbols/mast-comm.svg" symbol-width="16"/>
-		</rule>
-		<rule e="node" k="*" v="*" zoom-min="14">
-			<symbol display="always" src="file:/symbols/mast-comm.svg" symbol-width="24"/>
+	<rule cat="tms_man-made" e="node" k="tower" v="communication" zoom-min="13">
+		<symbol priority="200" display="always" id="s_tower" src="file:/symbols/mast-comm.svg" symbol-width="22"/>	
+		<rule e="node" k="*" v="*" zoom-min="16">
+			<caption cat="tms_land-names" priority="200" symbol-id="s_tower" k="name" position="below" font-style="bold" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
-	<rule cat="tms_man-made" e="any" k="amenity" v="hunting_stand" >
-		<rule e="any" k="*" v="*" zoom-min="15" zoom-max="15">
-			<symbol id="hunting_stand" display="always" src="file:/symbols/hunting_stand.svg" symbol-width="12"/>
-		</rule>
-		<rule e="any" k="*" v="*" zoom-min="16">
-			<symbol id="hunting_stand" display="always" src="file:/symbols/hunting_stand.svg" symbol-width="16"/>
+	<rule cat="tms_man-made" e="node" k="tower" v="observation" zoom-min="13">
+		<symbol priority="200" display="always" id="s_tower" src="file:/symbols/s_tower_observation.svg" symbol-height="16" />
+		<rule e="node" k="*" v="*" zoom-min="16">
+			<caption cat="tms_land-names" priority="200" symbol-id="s_tower" k="name" position="below" font-style="bold" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
-	<rule cat="tms_man-made" e="node" k="tower" v="observation">
-		<symbol priority="200" display="always" src="file:/symbols/s_tower_observation.svg" symbol-height="16" />
+	<rule cat="tms_man-made" e="any" k="amenity" v="hunting_stand" zoom-min="14" >
+		<symbol id="hunting_stand" display="always" src="file:/symbols/hunting_stand.svg" symbol-width="16"/>
+		<rule e="node" k="*" v="*" zoom-min="16">
+			<caption cat="tms_land-names" priority="200" symbol-id="hunting_stand" k="name" position="below" font-style="bold" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
 	</rule>
 	<rule cat="tms_man-made" e="node" k="man_made" v="windmill">
-		<symbol priority="200" display="always" src="file:/symbols/s_windmill.svg" symbol-width="19" />
+		<symbol priority="200" display="always" id="s_windmill" src="file:/symbols/s_windmill.svg" symbol-width="19" />
+		<rule e="node" k="*" v="*" zoom-min="16">
+			<caption cat="tms_land-names" priority="200" symbol-id="s_windmill" k="name" position="below" font-style="bold" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
 	</rule>
 	<rule cat="tms_man-made" e="node" k="man_made" v="lighthouse">
-		<symbol display="always" src="file:/symbols/s_lighthouse.svg" symbol-width="18"/>
+		<symbol display="always" id="s_lighthouse" src="file:/symbols/s_lighthouse.svg" symbol-width="18"/>
+		<rule e="node" k="*" v="*" zoom-min="16">
+			<caption cat="tms_land-names" priority="200" symbol-id="s_lighthouse" k="name" position="below" font-style="bold" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
 	</rule>
+	<rule cat="tms_power" e="any" k="power" v="tower" zoom-min="16">    <!-- опора ЛЭП - в OAM пока не используется -->
+		<symbol display="always" src="file:/symbols/power_tower.svg" symbol-height="22" />
+	</rule>
+
 	<rule cat="tms_man-made" e="node" k="generator:source" v="wind">
 		<symbol display="always" src="file:/symbols/s_power_wind.svg" symbol-height="29" />
 	</rule>
@@ -2854,9 +2858,6 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 	<rule cat="tms_man-made" e="node" k="generator:source" v="nuclear">
 		<symbol display="always" src="file:/symbols/s_power.svg" symbol-width="16" />
-	</rule>
-	<rule cat="tms_power" e="any" k="power" v="tower" zoom-min="16">
-		<symbol display="always" src="file:/symbols/power_tower.svg" symbol-height="12" />
 	</rule>
 
 	<!-- crossings -->

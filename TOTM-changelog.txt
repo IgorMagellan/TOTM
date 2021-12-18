@@ -165,7 +165,7 @@ ridge коричневый
 добавил охотничьи вышки amenity=hunting_stand в слой Элементы ландшафта
 
 ВЕРСИЯ 1.9.5
-май-август 2021
+май-декабрь 2021
 Переделка меню на более логичную последовательность
 [Доб.:] отображение бродов ford (cat="tms_barriers"); tree_row; станции метро subway со своей иконкой в tms_trans-pub; recycling в Picnic; 
 building=construction (OAM)
@@ -175,7 +175,7 @@ bus_station, shops, рынков, фонтанов и пр.; поправил п
 [Повыш.приор.:] fuel
 [Err.:] поправил неотображение подписей для hospital, pharmacy, doctors
 [Доб.:] подписи stadium, sport=soccer, tennis, golf, shooting; post_office; information=guidepost, board, office; 
-tourism=information; leisure=firepit(LM); amenity=bbq(LM)
+tourism=information; leisure=firepit(LM); amenity=bbq(LM); shop=organic,hairdresser
 
 
 
@@ -312,4 +312,5 @@ initial release in github
 добавил ТРК и центры(mall); упавшее дерево (barrier=log)
 16/12/2021
 улучшено tracktype3,4,5
-
+18/12/2021
+подписи для вышек, башен, маяков; оптимиз.tracktype; shop=organic,hairdresser,travel_agency,chemist
