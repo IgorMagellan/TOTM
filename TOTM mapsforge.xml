@@ -47,11 +47,6 @@ Transparency for HEX colors (100% - непрозрачный)
 			<name lang="ru" value="Лес+кустарник"/>
 			<cat id="tms_new-wood"/>
 		</layer>
-		<layer id="tms_up-osm" enabled="false">
-			<name lang="en" value="Raise house numbers (z16)"/>
-			<name lang="ru" value="Поднять № домов (z16)"/>
-			<cat id="tms_up-osm"/>
-		</layer>
 		<layer id="tms_up-hw" enabled="true">
 			<name lang="en" value="Names of streets, roads, paths"/>
 			<name lang="ru" value="Имена улиц, дорог, троп"/>
@@ -100,7 +95,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		</layer>
 		<layer id="tms_trans-priv" enabled="false">
 			<name lang="en" value="Transportation (private)"/>
-			<name lang="ru" value="Автомобиль: парковки, заправки, автомагазины, запчасти и автосервисы" />
+			<name lang="ru" value="Автомобиль: парковки, заправки, автомагазины и автосервисы" />
 			<cat id="tms_trans-priv"/>
 		</layer>
 		<layer id="tms_trans-pub" enabled="false">
@@ -110,7 +105,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		</layer>
 		<layer id="tms_tourism" enabled="true">
 			<name lang="en" value="Tourism"/>
-			<name lang="ru" value="Туризм, +пещеры, зоопарки" />
+			<name lang="ru" value="Туризм + пещеры, зоопарки" />
 			<cat id="tms_tour"/>
 			<cat id="tms_info"/>
 			<cat id="tms_attraction"/>
@@ -123,7 +118,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		</layer>
 		<layer id="tms_freetime" enabled="false">
 			<name lang="en" value="Free time"/>
-			<name lang="ru" value="Развлечения: Спорт, кино, театры, игр.площадки" />
+			<name lang="ru" value="Развлечения: Спорт, кино, театры, игровые площадки" />
 			<cat id="tms_sport"/>
 			<cat id="tms_leisure"/>
 		</layer>
@@ -153,10 +148,15 @@ Transparency for HEX colors (100% - непрозрачный)
 			<name lang="ru" value="Экстренные службы, полиция, больницы, аптеки, доктора.." />
 			<cat id="tms_emergency"/>
 		</layer>
-		<layer id="tms_routes" enabled="false">
+		<layer id="tms_up-osm" enabled="false">
+			<name lang="en" value="Raise house numbers (z16)"/>
+			<name lang="ru" value="Поднять № домов (z16)"/>
+			<cat id="tms_up-osm"/>
+		</layer>
+		<layer id="tms_wintertrail" enabled="false">
 			<name lang="en" value="Winter trails"/>
-			<name lang="ru" value="Зимние маршруты" />
-			<cat id="tms_routes"/>
+			<name lang="ru" value="Зимние тропы" />
+			<cat id="tms_wintertrail"/>
 		</layer>
 		<layer id="tms_borders" enabled="false">
 			<name lang="en" value="Admin boundarys"/>
@@ -201,7 +201,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<overlay id="tms_religion"/>
 			<overlay id="tms_barriers-hk"/>
 			<overlay id="tms_borders"/>
-			<overlay id="tms_routes"/>
+			<overlay id="tms_wintertrail"/>
 			<overlay id="tms_up-osm"/>
 		</layer>
 	</stylemenu>
@@ -569,7 +569,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- pistes for WINTER LOMAPS -->
-	<rule cat="tms_routes" e="way" k="piste:type" v="*">
+	<rule cat="tms_wintertrail" e="way" k="piste:type" v="*">
 		<!-- piste areas -->
 		<rule e="way" k="piste:type" v="downhill" closed="yes" zoom-min="14">
 			<rule e="way" k="piste:difficulty" v="novice">
