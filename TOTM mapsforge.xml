@@ -170,8 +170,8 @@ Transparency for HEX colors (100% - непрозрачный)
 			<cat id="tms_tmilitary"/>
 		</layer>
 		<layer id="tms_surface" enabled="true">
-			<name lang="en" value="Surface experiment"/>
-			<name lang="ru" value="Surface experiment" />
+			<name lang="en" value="‼ Surface experiment"/>
+			<name lang="ru" value="‼ Surface experiment" />
 			<cat id="tms_surface"/>
 		</layer>
 		<!-- Base -->
