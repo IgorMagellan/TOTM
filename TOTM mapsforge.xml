@@ -170,8 +170,8 @@ Transparency for HEX colors (100% - непрозрачный)
 			<cat id="tms_tmilitary"/>
 		</layer>
 		<layer id="tms_surface" enabled="true">
-			<name lang="en" value="‼ Surface experiment"/>
-			<name lang="ru" value="‼ Surface experiment" />
+			<name lang="en" value="‼ ᴓ Surface experiment"/>
+			<name lang="ru" value="‼ ᴓ Surface experiment" />
 			<cat id="tms_surface"/>
 		</layer>
 		<!-- Base -->
@@ -1529,15 +1529,19 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<rule e="way" k="tunnel" v="~|no|false">
-		<rule e="way" k="area" v="~|no|false">
-			<rule e="way" k="bridge" v="~|no|false">				<!-- ЗДЕСЬ TRACKs -->
 				<!-- surface подложка -->
-				<rule cat="tms_surface" e="way" k="surface" v="gravel|compacted|unpaved">
+				<rule cat="tms_surface" e="way" k="surface" v="gravel|compacted|unpaved" zoom-min="13" >
 					<line stroke="#5ae985" stroke-width="2.6" stroke-linecap="butt" />
 				</rule>
 
+				<rule cat="tms_surface" e="way" k="surface" v="asphalt|paving_stones" zoom-min="13" >
+					<line stroke="#ff9999" stroke-width="2.9" stroke-linecap="butt" />
+				</rule>	
+	
+		<rule e="way" k="area" v="~|no|false">
 
-
+				
+			<rule e="way" k="bridge" v="~|no|false">				<!-- ЗДЕСЬ TRACKs -->
 				<rule cat="tms_tracks" e="way" k="highway" v="track">
 					<rule e="way" k="tracktype" v="grade1">
 						<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14">
