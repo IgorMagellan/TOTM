@@ -316,3 +316,5 @@ initial release in github
 подписи для вышек, башен, маяков; оптимиз.tracktype; shop=organic,hairdresser,travel_agency,chemist; поправил via_ferrata
 19/12/2021
 изменено: guidepost
+22/12/2021
+experiment surface

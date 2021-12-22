@@ -1786,7 +1786,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>		
 		
 <!-- safety measures -->
-    <rule cat="tms_safety" e="any" k="via_ferrata_flag" v="set">
+    <rule cat="tms_safety" e="any" k="highway" v="via_ferrata">
 		<line stroke="#333333" stroke-width="0.58" stroke-linecap="butt"/>
 		<line stroke="#ff4c4d" stroke-width="0.32" stroke-linecap="butt"/>
 		<line stroke="#ffff00" stroke-width="0.5" stroke-dasharray="0.7,1.1" stroke-linecap="butt" scale="all"/>

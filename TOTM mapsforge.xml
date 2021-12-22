@@ -169,7 +169,11 @@ Transparency for HEX colors (100% - непрозрачный)
 			<cat id="tms_oopt"/>
 			<cat id="tms_tmilitary"/>
 		</layer>
-
+		<layer id="tms_surface" enabled="true">
+			<name lang="en" value="Surface experiment"/>
+			<name lang="ru" value="Surface experiment" />
+			<cat id="tms_surface"/>
+		</layer>
 		<!-- Base -->
 		<layer id="tms_hiking" visible="true">
 			<name lang="en" value="Topographic map v2.3"/>
@@ -177,6 +181,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<cat id="tms_tracks"/>
 			<cat id="tms_hk"/>
 
+			<overlay id="tms_surface"/>
 			<overlay id="tms_land-base"/>
 			<overlay id="tms_new-wood"/>
 			<overlay id="tms_contours"/>
@@ -1526,6 +1531,13 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule e="way" k="tunnel" v="~|no|false">
 		<rule e="way" k="area" v="~|no|false">
 			<rule e="way" k="bridge" v="~|no|false">				<!-- ЗДЕСЬ TRACKs -->
+				<!-- surface подложка -->
+				<rule cat="tms_surface" e="way" k="surface" v="gravel|compacted|unpaved">
+					<line stroke="#5ae985" stroke-width="2.6" stroke-linecap="butt" />
+				</rule>
+
+
+
 				<rule cat="tms_tracks" e="way" k="highway" v="track">
 					<rule e="way" k="tracktype" v="grade1">
 						<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14">
@@ -2596,19 +2608,19 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- cultural stuff -->
 	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity|building" v="library">
-		<symbol id="tms_educat" src="file:/symbols/s_library.svg" symbol-width="17" />
+		<symbol id="tms_educat" src="file:/symbols/s_library.svg" display="always" symbol-width="17" />
 	</rule>
 	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity|building" v="school">
-		<symbol id="tms_educat" src="file:/symbols/s_school.svg" symbol-width="17" />
+		<symbol id="tms_educat" src="file:/symbols/s_school.svg" display="always" symbol-width="17" />
 	</rule>
 	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity|building" v="university|college">
-		<symbol id="tms_educat" src="file:/symbols/s_university.svg"  symbol-width="17" />
+		<symbol id="tms_educat" src="file:/symbols/s_university.svg" display="always" symbol-width="17" />
 	</rule>
 	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity|building" v="kindergarten">
-		<symbol priority="220" id="tms_educat" src="file:/symbols/s_kindergarten.svg" symbol-width="17" />
+		<symbol priority="220" id="tms_educat" src="file:/symbols/s_kindergarten.svg" display="always" symbol-width="17" />
 	</rule>
 	<rule cat="tms_educat" zoom-min="16" e="any" k="amenity|building" v="school|library|university|college|kindergarten">
-		<caption symbol-id="tms_educat" cat="tms_land-names" priority="110" k="name" font-style="bold" position="above" font-size="10" fill="#004d66" stroke="#FFFFFF" stroke-width="2" />
+		<caption symbol-id="tms_educat" cat="tms_land-names" priority="110" k="name" display="always" font-style="bold" position="above" font-size="10" fill="#004d66" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 
 	<rule cat="tms_culture" zoom-min="14" e="any" k="historic" v="monument">
