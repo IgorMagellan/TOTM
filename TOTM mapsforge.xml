@@ -2456,8 +2456,11 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_shops" e="any" k="shop" v="chemist">
 		<symbol priority="205" id="tms_shop" display="always" src="file:/symbols/s_chemist.svg" symbol-width="17" />
 	</rule>
+	<rule cat="tms_shops" e="any" k="shop" v="books">
+		<symbol priority="205" id="tms_shop" display="always" src="file:/symbols/s_books.svg" symbol-width="17" />
+	</rule>
 
-	<rule cat="tms_shops" e="any" k="shop" v="bicycle|doityourself|hardware|laundry|dry_cleaning|florist|sports|hairdresser|travel_agency|chemist" zoom-min="15" >
+	<rule cat="tms_shops" e="any" k="shop" v="bicycle|doityourself|hardware|laundry|dry_cleaning|florist|sports|hairdresser|travel_agency|chemist|books" zoom-min="15" >
 		<caption priority="110" cat="tms_land-names" symbol-id="tms_shop" k="name" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 

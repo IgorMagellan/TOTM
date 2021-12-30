@@ -318,3 +318,5 @@ initial release in github
 изменено: guidepost
 22/12/2021
 experiment surface
+30/12/2021
+добавил книжные магазины (shop=books)
