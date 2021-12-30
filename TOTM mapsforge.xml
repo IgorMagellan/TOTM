@@ -1529,18 +1529,32 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<rule e="way" k="tunnel" v="~|no|false">
+
+	
+		<rule e="way" k="area" v="~|no|false">
 				<!-- surface подложка -->
-				<rule cat="tms_surface" e="way" k="surface" v="gravel|compacted|unpaved" zoom-min="13" >
+				
+			<rule cat="tms_surface" e="way" k="*" v="*" zoom-min="13" >			
+
+				<rule e="way" k="surface" v="*" >
+					<line stroke="#39222222" stroke-width="2.6" stroke-linecap="butt" />
+				</rule>	
+
+				<rule e="way" k="surface" v="gravel|compacted"  >
 					<line stroke="#5ae985" stroke-width="2.6" stroke-linecap="butt" />
 				</rule>
 
-				<rule cat="tms_surface" e="way" k="surface" v="asphalt|paving_stones" zoom-min="13" >
+				<rule e="way" k="surface" v="asphalt|smooth_paved" >
 					<line stroke="#ff9999" stroke-width="2.9" stroke-linecap="butt" />
 				</rule>	
-	
-		<rule e="way" k="area" v="~|no|false">
 
+				<rule e="way" k="surface" v="ground|unpaved" >
+					<line stroke="#730631f0" stroke-width="2.9" stroke-linecap="butt" />
+				</rule>	
 				
+			</rule>					
+			
+			
 			<rule e="way" k="bridge" v="~|no|false">				<!-- ЗДЕСЬ TRACKs -->
 				<rule cat="tms_tracks" e="way" k="highway" v="track">
 					<rule e="way" k="tracktype" v="grade1">
@@ -2862,19 +2876,19 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol display="always" src="file:/symbols/s_power_wind.svg" symbol-height="29" />
 	</rule>
 	<rule cat="tms_man-made" e="node" k="generator:source" v="hydro|tidal|wave">
-		<symbol display="always" src="file:/symbols/s_power.svg" symbol-width="16" />
+		<symbol display="always" src="file:/symbols/s_power.svg" symbol-width="16" symbol-height="14" />
 	</rule>
 	<rule cat="tms_man-made" e="node" k="generator:source" v="solar">
 		<symbol display="always" src="file:/symbols/s_power_solar.svg" symbol-width="16" />
 	</rule>
 	<rule cat="tms_man-made" e="node" k="generator:source" v="gas|oil|diesel|gasoline|biomass|biofuel|waste|geothermal">
-		<symbol display="always" src="file:/symbols/s_power.svg" symbol-width="16"/>
+		<symbol display="always" src="file:/symbols/s_power.svg" symbol-width="16" symbol-height="14" />
 	</rule>
 	<rule cat="tms_man-made" e="node" k="generator:source" v="coal">
-		<symbol display="always" src="file:/symbols/s_power.svg" symbol-width="16" />
+		<symbol display="always" src="file:/symbols/s_power.svg" symbol-width="16" symbol-height="14" />
 	</rule>
 	<rule cat="tms_man-made" e="node" k="generator:source" v="nuclear">
-		<symbol display="always" src="file:/symbols/s_power.svg" symbol-width="16" />
+		<symbol display="always" src="file:/symbols/s_power.svg" symbol-width="16" symbol-height="14" />
 	</rule>
 
 	<!-- crossings -->
