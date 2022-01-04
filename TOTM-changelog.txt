@@ -320,3 +320,5 @@ initial release in github
 experiment surface
 30/12/2021
 добавил книжные магазины (shop=books)
+04/01/2022
+добавил tourism=artwork 

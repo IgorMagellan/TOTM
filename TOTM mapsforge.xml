@@ -169,7 +169,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<cat id="tms_oopt"/>
 			<cat id="tms_tmilitary"/>
 		</layer>
-		<layer id="tms_surface" enabled="true">
+		<layer id="tms_surface" enabled="false">
 			<name lang="en" value="‼ ᴓ Surface experiment"/>
 			<name lang="ru" value="‼ ᴓ Surface experiment" />
 			<cat id="tms_surface"/>
@@ -1532,8 +1532,8 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	
 		<rule e="way" k="area" v="~|no|false">
-				<!-- surface подложка -->
-				
+
+			<!-- surface подложка -->
 			<rule cat="tms_surface" e="way" k="*" v="*" zoom-min="13" >			
 
 				<rule e="way" k="surface" v="*" >
@@ -1552,7 +1552,7 @@ Transparency for HEX colors (100% - непрозрачный)
 					<line stroke="#730631f0" stroke-width="2.9" stroke-linecap="butt" />
 				</rule>	
 				
-			</rule>					
+			</rule>
 			
 			
 			<rule e="way" k="bridge" v="~|no|false">				<!-- ЗДЕСЬ TRACKs -->
@@ -2510,14 +2510,21 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
+	<rule cat="tms_info" e="any" k="tourism" v="artwork" zoom-min="14">
+		<symbol priority="240" id="s_artwork" display="always" src="file:/symbols/s_artwork.svg" symbol-width="16"/>
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<caption cat="tms_land-names" k="name" symbol-id="s_artwork" position="below" font-style="bold" font-size="10" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>		
+	</rule>	
+
 	<!-- safety measures -->
 	<rule cat="tms_safety" e="any" k="via_ferrata_flag" v="set" zoom-min="13">
 		<line stroke="#333333" stroke-width="0.58" stroke-linecap="butt"/>
 		<line stroke="#ff4c4d" stroke-width="0.32" stroke-linecap="butt"/>
 		<line stroke="#ffff00" stroke-width="0.5" stroke-dasharray="0.7,1.1" scale="all" stroke-linecap="butt" />
-		<symbol id="s_via_ferrata" display="always" src="file:/symbols/s_via_ferrata.svg" symbol-height="13" />
-		<rule e="any" k="*" v="*" zoom-min="16">
-			<caption cat="tms_land-names" k="name" symbol-id="s_via_ferrata" font-style="bold" font-size="10" fill="#39AC39" stroke="#E5FFFFFF" stroke-width="2" />
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<symbol id="s_via_ferrata" display="always" src="file:/symbols/s_via_ferrata.svg" symbol-height="13" />
+			<caption cat="tms_land-names" k="name" symbol-id="s_via_ferrata" font-style="bold" font-size="10" fill="#ff0000" stroke="#80ffff00" stroke-width="2" />
 		</rule>
 	</rule>
 

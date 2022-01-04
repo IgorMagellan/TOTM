@@ -1790,9 +1790,9 @@ Transparency for HEX colors (100% - непрозрачный)
 		<line stroke="#333333" stroke-width="0.58" stroke-linecap="butt"/>
 		<line stroke="#ff4c4d" stroke-width="0.32" stroke-linecap="butt"/>
 		<line stroke="#ffff00" stroke-width="0.5" stroke-dasharray="0.7,1.1" stroke-linecap="butt" scale="all"/>
-		<symbol id="s_via_ferrata" force-draw="1" src="file:/symbols/s_via_ferrata.svg" symbol-width="13"/>
-		<rule e="any" k="*" v="*" zoom-min="16">
-			<caption cat="tms_land-names" k="name" symbol-id="s_via_ferrata" font-style="bold" font-size="9dp" fill="#39AC39" stroke="#E5FFFFFF" stroke-width="1dp" />
+		<rule e="any" k="*" v="*" zoom-min="15">
+		<symbol id="s_via_ferrata" force-draw="1" src="file:/symbols/s_via_ferrata.svg" symbol-width="13"/>		
+			<caption cat="tms_land-names" k="name" symbol-id="s_via_ferrata" font-style="bold" font-size="9dp" fill="#ff0000" stroke="#80ffff00" stroke-width="1dp" />
 		</rule>
     </rule>
 
