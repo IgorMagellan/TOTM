@@ -321,4 +321,6 @@ experiment surface
 30/12/2021
 добавил книжные магазины (shop=books)
 04/01/2022
-добавил tourism=artwork 
+добавил tourism=artwork; via_ferrata на z15
+07/01/2022
+добавил водонапорную башню water_tower
