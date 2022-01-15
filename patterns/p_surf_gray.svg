@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="580"
+   height="580"
+   version="1.0"
+   id="svg4"
+   sodipodi:docname="p_surf_asf.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.2396552"
+     inkscape:cx="290"
+     inkscape:cy="289.59666"
+     inkscape:current-layer="svg4" />
+  <path
+     fill="#0000ff"
+     fill-opacity="0.5"
+     d="M 159,0 256,97 0,353 0,421 159,580 227,580 34,387 290,131 546,387 C 482,451 417,516 353,580 l 68,0 C 474,527 527,474 580,421 L 580,353 324,97 C 356,64 388,32 421,0 L 353,0 290,63 227,0 Z"
+     id="path2"
+     style="fill:#666666;fill-opacity:0.50196081" />
+</svg>

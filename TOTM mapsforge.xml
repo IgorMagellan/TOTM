@@ -170,8 +170,8 @@ Transparency for HEX colors (100% - непрозрачный)
 			<cat id="tms_tmilitary"/>
 		</layer>
 		<layer id="tms_surface" enabled="false">
-			<name lang="en" value="‼ ᴓ Surface experiment"/>
-			<name lang="ru" value="‼ ᴓ Surface experiment" />
+			<name lang="en" value="‼ ᴓ Surface experiment For Route Planner only"/>
+			<name lang="ru" value="‼ ᴓ Surface experiment For Route Planner only" />
 			<cat id="tms_surface"/>
 		</layer>
 		<!-- Base -->
@@ -181,7 +181,6 @@ Transparency for HEX colors (100% - непрозрачный)
 			<cat id="tms_tracks"/>
 			<cat id="tms_hk"/>
 
-			<overlay id="tms_surface"/>
 			<overlay id="tms_land-base"/>
 			<overlay id="tms_new-wood"/>
 			<overlay id="tms_contours"/>
@@ -208,6 +207,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<overlay id="tms_borders"/>
 			<overlay id="tms_wintertrail"/>
 			<overlay id="tms_up-osm"/>
+			<overlay id="tms_surface"/>
 		</layer>
 	</stylemenu>
 
@@ -321,9 +321,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<area fill="#BFFFFFFF"/>
 		<area src="file:/patterns/p_scree.png" symbol-width="24" />
 	</rule>
-	<rule cat="tms_land-base" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="12">
-		<area src="file:/patterns/bare_rock-128.png" />
-	</rule>	<!-- symbol-width="48"  -->
+
 	<rule cat="tms_land-base" e="way" k="natural" v="glacier" zoom-min="9">
 		<area fill="#BFd0f8ff" />
 	</rule>
@@ -350,6 +348,10 @@ Transparency for HEX colors (100% - непрозрачный)
 			<area src="file:/patterns/heath.svg" symbol-width="32" />
 		</rule>
 	</rule>
+	
+	<rule cat="tms_land-base" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="12">
+		<area src="file:/patterns/bare_rock-128.png" />
+	</rule>	<!-- symbol-width="48"  -->
 
 	<rule cat="tms_land-base" e="way" k="natural" v="fell" zoom-min="13">
 		<area src="file:/patterns/p_fell.svg" symbol-width="25" />
@@ -1202,9 +1204,10 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_land-base" e="way" k="sport" v="tennis">
 		<area fill="#D18A6A" stroke="#B36C4C" stroke-width="0.2" />
 	</rule>
-	<rule cat="tms_land-base" e="way" k="power" v="station">
+	<rule cat="tms_land-base" e="way" k="power" v="station|generator|plant">
 		<area fill="#C4C4C4" stroke="#e4e4e4" stroke-width="0.2" />
 	</rule>
+	
 	<!-- переставлено сверху, чтобы пляж не отображался водой -->
 	<rule cat="tms_land-base" e="way" k="natural" v="beach|sand" zoom-min="11">
 		<area fill="#BBFAEBB9" />
@@ -1229,18 +1232,6 @@ Transparency for HEX colors (100% - непрозрачный)
 			<area fill="#80444444" stroke="#444444" stroke-width="0.2" />
 		</rule>
 	</rule>
-
-<!-- 	<rule e="way" k="smoothness" v="*" zoom-min="10">
-		<line stroke="#33cb82d9" stroke-width="6" stroke-linecap="butt" />
-		<line stroke="#cc8301b1" stroke-width="0.6" />
-	</rule>
-
-	<rule e="way" k="surface" v="*" zoom-min="10">
-		<line stroke="#33cb82d9" stroke-width="4" stroke-linecap="butt" />
-		<line stroke="#cc8301b1" stroke-width="0.5" />
-		<pathText cat="tms_land-names" k="name" dy="-3" font-style="italic" font-family="serif" font-size="15" fill="#bed522ec" stroke="#80bbbbbb" stroke-width="0.8" display="always" repeat-start="50" repeat-gap="30" />
-	</rule>	 -->
-
 
 	<!-- administrative borders -->
 	<rule cat="tms_borders" e="way" k="admin_level" v="2">		<!-- Страны, государства -->
@@ -1528,12 +1519,12 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
+
 	<rule e="way" k="tunnel" v="~|no|false">
 
-	
 		<rule e="way" k="area" v="~|no|false">
 
-			<!-- surface подложка -->
+			<!-- surfaces подложка -->
 			<rule cat="tms_surface" e="way" k="*" v="*" zoom-min="13" >			
 
 				<rule e="way" k="surface" v="*" >
@@ -1545,11 +1536,14 @@ Transparency for HEX colors (100% - непрозрачный)
 				</rule>
 
 				<rule e="way" k="surface" v="asphalt|smooth_paved" >
-					<line stroke="#ff9999" stroke-width="2.9" stroke-linecap="butt" />
+
+					<!-- <line stroke="#E9DD72" stroke-width="0.2" />					 -->
+					<!-- <line stroke="#ff9999" stroke-width="2.9" stroke-linecap="butt" /> -->
+					<line src="file:patterns/p_surf_gray.svg" symbol-height="8" stroke-width="2.9" stroke-linecap="butt" />					
 				</rule>	
 
 				<rule e="way" k="surface" v="ground|unpaved" >
-					<line stroke="#730631f0" stroke-width="2.9" stroke-linecap="butt" />
+					<line stroke="#73504802" stroke-width="2.2" stroke-linecap="butt" />
 				</rule>	
 				
 			</rule>
@@ -1976,12 +1970,9 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
-	<!-- Power areas and lines -->
+	<!-- Power lines -->
 	<rule cat="tms_power" e="way" k="power" v="*" zoom-min="13">
-		<!-- power generator -->
-		<rule cat="tms_land-base" e="way" k="power" v="generator|station|sub_station|substation">
-			<area fill="#C1C1C1" />
-		</rule>
+
 		<!--power line -->
 		<rule e="way" k="power" v="line" zoom-min="13">
 			<line stroke="#666666" stroke-width="0.2" stroke-linecap="butt" />
