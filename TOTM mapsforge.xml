@@ -2879,24 +2879,30 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol display="always" src="file:/symbols/power_tower.svg" symbol-height="22" />
 	</rule>
 
-	<rule cat="tms_man-made" e="node" k="generator:source" v="wind">
-		<symbol display="always" src="file:/symbols/s_power_wind.svg" symbol-height="29" />
+	<rule cat="tms_man-made" e="any" k="generator:source" v="wind">
+		<symbol display="always" id="s_generator" src="file:/symbols/s_power_wind.svg" symbol-height="29" />
 	</rule>
-	<rule cat="tms_man-made" e="node" k="generator:source" v="hydro|tidal|wave">
-		<symbol display="always" src="file:/symbols/s_power.svg" symbol-width="16" symbol-height="14" />
+	<rule cat="tms_man-made" e="any" k="generator:source" v="hydro|tidal|wave">
+		<symbol display="always" id="s_generator" src="file:/symbols/s_power_water.svg" symbol-width="18" />
 	</rule>
-	<rule cat="tms_man-made" e="node" k="generator:source" v="solar">
-		<symbol display="always" src="file:/symbols/s_power_solar.svg" symbol-width="16" />
+	<rule cat="tms_man-made" e="any" k="generator:source" v="solar">
+		<symbol display="always" id="s_generator" src="file:/symbols/s_power_solar.svg" symbol-width="18" />
 	</rule>
-	<rule cat="tms_man-made" e="node" k="generator:source" v="gas|oil|diesel|gasoline|biomass|biofuel|waste|geothermal">
-		<symbol display="always" src="file:/symbols/s_power.svg" symbol-width="16" symbol-height="14" />
+	<rule cat="tms_man-made" e="any" k="generator:source" v="gas">
+		<symbol display="always" id="s_generator" src="file:/symbols/s_power_gas.svg" symbol-width="18" />
 	</rule>
-	<rule cat="tms_man-made" e="node" k="generator:source" v="coal">
-		<symbol display="always" src="file:/symbols/s_power.svg" symbol-width="16" symbol-height="14" />
+	<rule cat="tms_man-made" e="any" k="generator:source" v="coal">
+		<symbol display="always" id="s_generator" src="file:/symbols/s_power_coal.svg" symbol-width="18" />
 	</rule>
-	<rule cat="tms_man-made" e="node" k="generator:source" v="nuclear">
-		<symbol display="always" src="file:/symbols/s_power.svg" symbol-width="16" symbol-height="14" />
+	<rule cat="tms_man-made" e="any" k="generator:source" v="nuclear">
+		<symbol display="always" id="s_generator" src="file:/symbols/s_power_nuclear.svg" symbol-width="18" />
 	</rule>
+	<rule cat="tms_man-made" e="any" k="generator:source" v="oil|diesel|gasoline|biomass|biofuel|waste|geothermal">
+		<symbol display="always" id="s_generator" src="file:/symbols/s_power.svg" symbol-width="16" />
+	</rule>	
+	<rule cat="tms_man-made" e="any" k="generator:source" v="*" zoom-min="16">
+        <caption cat="tms_land-names" priority="180" symbol-id="s_generator" k="name" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#BFffff00" stroke-width="2" />
+    </rule>	
 
 	<!-- crossings -->
 	<rule cat="tms_crossings" e="any" k="highway" v="traffic_signals">
