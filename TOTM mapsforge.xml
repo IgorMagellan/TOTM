@@ -53,7 +53,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<cat id="tms_up-hw"/>
 		</layer>
 		<layer id="tms_land-names" enabled="true">
-			<name lang="en" value="Names of places, objects, POI"/>
+			<name lang="en" value="Names of places, objects, POIs"/>
 			<name lang="ru" value="Названия мест, объектов, POI"/>
 			<cat id="tms_land-names"/>
 		</layer>
@@ -1304,8 +1304,8 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol src="file:/symbols/s_ruins.svg" display="always" symbol-height="12" />
 	</rule>
 
-	<rule cat="tms_land-base" zoom-min="16" e="way" k="building" v="*">
-		<caption cat="tms_land-names" priority="-1" k="name" font-style="bold" dy="-16" font-size="10" fill="#333333" stroke="#FFFFFF" stroke-width="2" />
+	<rule cat="tms_land-base" zoom-min="17" e="way" k="building" v="*">
+		<caption cat="tms_land-names" priority="0" k="name" font-style="bold" dy="-16" font-size="10" fill="#333333" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 	<!-- aeroways -->
 	<rule cat="tms_land-base" e="way" k="aeroway" v="*">
@@ -2113,7 +2113,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
-	<rule cat="tms_tour" e="node" k="natural" v="cave_entrance" zoom-min="14">
+	<rule cat="tms_tour" e="node" k="natural" v="cave_entrance" >
 		<symbol priority="425" id="tms_cave" display="always" src="file:/symbols/s_cave_entrance.svg" symbol-width="13" />
 		<caption cat="tms_land-names" priority="310" symbol-id="tms_cave" position="above" k="name" font-style="bold" font-size="10" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
 		<caption cat="tms_land-names" symbol-id="tms_cave" position="below" k="ele" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
