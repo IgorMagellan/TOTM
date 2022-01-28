@@ -2626,19 +2626,19 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- cultural stuff -->
-	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity|building" v="library">
+	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity" v="library">
 		<symbol id="tms_educat" src="file:/symbols/s_library.svg" display="always" symbol-width="17" />
 	</rule>
-	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity|building" v="school">
+	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity" v="school">
 		<symbol id="tms_educat" src="file:/symbols/s_school.svg" display="always" symbol-width="17" />
 	</rule>
-	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity|building" v="university|college">
+	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity" v="university|college">
 		<symbol id="tms_educat" src="file:/symbols/s_university.svg" display="always" symbol-width="17" />
 	</rule>
-	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity|building" v="kindergarten">
+	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity" v="kindergarten">
 		<symbol priority="220" id="tms_educat" src="file:/symbols/s_kindergarten.svg" display="always" symbol-width="17" />
 	</rule>
-	<rule cat="tms_educat" zoom-min="16" e="any" k="amenity|building" v="school|library|university|college|kindergarten">
+	<rule cat="tms_educat" zoom-min="16" e="any" k="amenity" v="school|library|university|college|kindergarten">
 		<caption symbol-id="tms_educat" cat="tms_land-names" priority="110" k="name" display="always" font-style="bold" position="above" font-size="10" fill="#004d66" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 

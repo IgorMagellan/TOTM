@@ -327,3 +327,6 @@ experiment surface
 18/01/2022
 подписи для всех generator:source, сделал новые иконки для nuclear, gas, hydro, coal
 переделал s_wilderness_hut_private.svg, s_alpine_hut_w.svg, s_alpine_hut_pr_w.svg - давали ошибку (только в Cruiser 2.1.2); s_cemetery.svg
+28/01/2022
+в tms_schools из к=amenity|building убрал building
+
