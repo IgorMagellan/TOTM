@@ -37,15 +37,10 @@ Transparency for HEX colors (100% - непрозрачный)
 			<name lang="ru" value="Контурные линии высот" />
 			<cat id="tms_contours"/>
 		</layer>
-		<layer id="tms_land-base" enabled="true">
+		<layer id="tms_terrain" enabled="true">
 			<name lang="en" value="Terrain"/>
 			<name lang="ru" value="Местность"/>
-			<cat id="tms_land-base"/>
-		</layer>
-		<layer id="tms_new-wood" enabled="true">
-			<name lang="en" value="Wood+scrub"/>
-			<name lang="ru" value="Лес+кустарник"/>
-			<cat id="tms_new-wood"/>
+			<cat id="tms_terrain"/>
 		</layer>
 		<layer id="tms_up-hw" enabled="true">
 			<name lang="en" value="Names of streets, roads, paths"/>
@@ -65,6 +60,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<cat id="tms_aerial"/>
 			<cat id="tms_power"/>
 			<cat id="tms_peak"/>
+			<cat id="tms_relief"/>
 		</layer>
 		<layer id="tms_water" enabled="true">
 			<name lang="en" value="Water points"/>
@@ -180,9 +176,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<name lang="ru" value="Топокарта v2.3" />
 			<cat id="tms_tracks"/>
 			<cat id="tms_hk"/>
-
-			<overlay id="tms_land-base"/>
-			<overlay id="tms_new-wood"/>
+			<overlay id="tms_terrain"/>
 			<overlay id="tms_contours"/>
 			<overlay id="tms_oopt"/>
 			<overlay id="tms_tmilitary"/>
@@ -213,7 +207,7 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- Background -->
 
-	<rule cat="tms_land-base" e="way" k="*" v="*">
+	<rule cat="tms_terrain" e="way" k="*" v="*">
 		<rule e="way" k="natural" v="sea">
 			<area fill="#97d2e3" />
 		</rule>
@@ -226,7 +220,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- landcover -->
-	<rule cat="tms_land-base" e="way" k="landuse" v="residential|farmyard" zoom-min="10">
+	<rule cat="tms_terrain" e="way" k="landuse" v="residential|farmyard" zoom-min="10">
 		<rule e="way" k="landuse|amenity" v="residential|farmyard" zoom-min="10" zoom-max="13">
 			<area fill="#4Daaaaaa"/>
 		</rule>
@@ -239,7 +233,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!--! только для LoMaps -->
-	<rule cat="tms_land-base" e="way" k="lm_landuse" v="residential_city|residential_village" zoom-min="10">
+	<rule cat="tms_terrain" e="way" k="lm_landuse" v="residential_city|residential_village" zoom-min="10">
 		<rule e="way" k="lm_landuse" v="residential_city|residential_village" zoom-min="10" zoom-max="14">
 			<area fill="#4Daaaaaa"/>
 		</rule>
@@ -248,35 +242,35 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
-	<rule cat="tms_land-base" e="way" k="amenity|tourism|historic" v="kindergarten|school|college|university|place_of_worship|biergarten|museum|ruins|castle|memorial|monument">
+	<rule cat="tms_terrain" e="way" k="amenity|tourism|historic" v="kindergarten|school|college|university|place_of_worship|biergarten|museum|ruins|castle|memorial|monument">
 		<area fill="#E3D7C3" stroke="#B3A99A" stroke-width="0.2" />
 	</rule>
 
-	<rule cat="tms_land-base" e="way" k="amenity" v="hospital">
+	<rule cat="tms_terrain" e="way" k="amenity" v="hospital">
 		<area fill="#F2D9D7" stroke="#DBBDBA" stroke-width="0.2" />
 	</rule>
 
-	<rule cat="tms_land-base" e="way" k="landuse" v="retail|commercial|industrial|brownfield|railway|garages|construction" zoom-min="13">
+	<rule cat="tms_terrain" e="way" k="landuse" v="retail|commercial|industrial|brownfield|railway|garages|construction" zoom-min="13">
 		<area fill="#BBC9DDDD" />
 	</rule>
 
-	<rule cat="tms_land-base" e="way" k="landuse" v="landfill" zoom-min="12">
+	<rule cat="tms_terrain" e="way" k="landuse" v="landfill" zoom-min="12">
 		<area src="file:/patterns/p_scree.png" symbol-width="64" />
 		<area fill="#CCF2EFE4" stroke="#9EA199" stroke-width="0.2" />
 	</rule>
-	<rule cat="tms_land-base" e="way" k="landuse" v="quarry" zoom-min="12">
+	<rule cat="tms_terrain" e="way" k="landuse" v="quarry" zoom-min="12">
 		<area fill="#80F2EFE4" />
 		<area src="file:/patterns/quarry.svg" symbol-width="10" />
 	</rule>
 
 	<!-- vegetation -->
 
-	<rule cat="tms_land-base" e="way" k="natural|landuse" v="forest|wood">
-		<rule cat="tms_new-wood" e="way" k="*" v="*" zoom-min="9" zoom-max="11">
+	<rule cat="tms_terrain" e="way" k="natural|landuse" v="forest|wood">
+		<rule e="way" k="*" v="*" zoom-min="9" zoom-max="11">
 			<area fill="#b3d97e" />
 		</rule>
 
-		<rule cat="tms_new-wood" e="way" k="*" v="*" zoom-min="12">
+		<rule e="way" k="*" v="*" zoom-min="12">
 			<rule e="way" k="wood|leaf_type" v="coniferous|needleleaved">
 				<area src="file:/patterns/wood-xv.svg" symbol-height ="60" />
 			</rule>
@@ -289,26 +283,26 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 
 		<!-- Обводка -->
-		<rule cat="tms_new-wood" e="way" k="*" v="*" zoom-min="14" zoom-max="16">
+		<rule e="way" k="*" v="*" zoom-min="14" zoom-max="16">
 			<line stroke="#00661A" stroke-width="0.18" stroke-dasharray="0.3, 2" />
 		</rule>
-		<rule cat="tms_new-wood" e="way" k="*" v="*" zoom-min="17" zoom-max="17">
+		<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17">
 			<line stroke="#1C9E1F" stroke-width="0.18" stroke-dasharray="0.5, 2.5" />
 		</rule>
-		<rule cat="tms_new-wood" e="way" k="*" v="*" zoom-min="18" zoom-max="18">
+		<rule e="way" k="*" v="*" zoom-min="18" zoom-max="18">
 			<line stroke="#1C9E1F" stroke-width="0.16" stroke-dasharray="0.4, 4.0" />
 		</rule>
-		<rule cat="tms_new-wood" e="way" k="*" v="*" zoom-min="19">
+		<rule e="way" k="*" v="*" zoom-min="19">
 			<line stroke="#1C9E1F" stroke-width="0.14" stroke-dasharray="0.3, 5.0" />
 		</rule>
 	</rule>
 
-	<rule cat="tms_land-base" e="way" k="natural|landuse" v="grass|grassland" zoom-min="13">
+	<rule cat="tms_terrain" e="way" k="natural|landuse" v="grass|grassland" zoom-min="13">
 		<area fill="#90E6FFDB" />
 		<!-- #26E5FF99 больше желтого  #4DFFFFFF белый #BBE6FFDB больше зеленого-->		<!-- symbol-width="32" #0D99FF99" была в версии 1.1 -->
 		<area src="file:/patterns/meadow-m-2.svg" symbol-width="16" />
 	</rule>
-	<rule cat="tms_land-base" e="way" k="landuse|natural" v="meadow" zoom-min="12">
+	<rule cat="tms_terrain" e="way" k="landuse|natural" v="meadow" zoom-min="12">
 		<area fill="#50E5FF99" />
 		<!-- stroke="#CFFFBF" stroke-width="0.125dp" -->		<!-- #26E5FF99 больше желтого-->		<!-- #0D99FF99" была в версии 1.1 -->
 		<rule e="way" k="*" v="*" zoom-min="13">
@@ -317,26 +311,26 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- Bare ground -->
-	<rule cat="tms_land-base" e="way" k="natural" v="scree|shingle" zoom-min="10">
+	<rule cat="tms_terrain" e="way" k="natural" v="scree|shingle" zoom-min="10">
 		<area fill="#BFFFFFFF"/>
 		<area src="file:/patterns/p_scree.png" symbol-width="24" />
 	</rule>
 
-	<rule cat="tms_land-base" e="way" k="natural" v="glacier" zoom-min="9">
+	<rule cat="tms_terrain" e="way" k="natural" v="glacier" zoom-min="9">
 		<area fill="#BFd0f8ff" />
 	</rule>
 
-	<rule cat="tms_land-base" e="way" k="natural" v="scrub">
-		<rule cat="tms_new-wood" e="any" k="natural" v="scrub" zoom-min="13" zoom-max="14">
+	<rule cat="tms_terrain" e="way" k="natural" v="scrub">
+		<rule e="any" k="natural" v="scrub" zoom-min="13" zoom-max="14">
 			<!-- 			<area fill="#33bfd4a9"/>  добавлено в фотошопе -->
 			<area src="file:/patterns/scrub7.png" symbol-width="32" symbol-height="32"/>
 		</rule>
-		<rule cat="tms_new-wood" e="any" k="natural" v="scrub" zoom-min="15">
+		<rule e="any" k="natural" v="scrub" zoom-min="15">
 			<area src="file:/patterns/scrub7.png" symbol-width="56" symbol-height="56"/>
 		</rule>
 	</rule>
 
-	<rule cat="tms_land-base" e="way" k="natural" v="heath" closed="yes" zoom-min="13">
+	<rule cat="tms_terrain" e="way" k="natural" v="heath" closed="yes" zoom-min="13">
 		<area fill="#bbeef0d9"/> 
 		<rule e="way" k="*" v="*" zoom-max="14">
 			<area src="file:/patterns/heath.svg" symbol-width="24" />
@@ -349,46 +343,46 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 	
-	<rule cat="tms_land-base" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="12">
+	<rule cat="tms_terrain" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="12">
 		<area src="file:/patterns/bare_rock-128.png" />
 	</rule>	<!-- symbol-width="48"  -->
 
-	<rule cat="tms_land-base" e="way" k="natural" v="fell" zoom-min="13">
+	<rule cat="tms_terrain" e="way" k="natural" v="fell" zoom-min="13">
 		<area src="file:/patterns/p_fell.svg" symbol-width="25" />
 	</rule>
-	<rule cat="tms_land-base" e="way" k="landuse|natural" v="field|farm|farmland" zoom-min="13">
+	<rule cat="tms_terrain" e="way" k="landuse|natural" v="field|farm|farmland" zoom-min="13">
 		<area src="file:/patterns/p_farmland.svg" symbol-width="128" />
 	</rule>	<!-- s -->
-	<rule cat="tms_land-base" e="way" k="landuse" v="orchard" zoom-min="13">
+	<rule cat="tms_terrain" e="way" k="landuse" v="orchard" zoom-min="13">
 		<area src="file:/patterns/p_orchard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="30" />
 	</rule>
-	<rule cat="tms_land-base" e="way" k="landuse" v="vineyard" zoom-min="13">
+	<rule cat="tms_terrain" e="way" k="landuse" v="vineyard" zoom-min="13">
 		<area src="file:/patterns/p_vineyard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="20" />
 	</rule>
 
 	<!-- Misc land use -->
-	<rule cat="tms_land-base" e="way" k="leisure" v="park" zoom-min="13">
+	<rule cat="tms_terrain" e="way" k="leisure" v="park" zoom-min="13">
 		<area fill="#80a9df82" />
 	</rule>	<!-- fill="#BBC7F1A3"  -->
-	<rule cat="tms_land-base" e="way" k="leisure" v="garden|golf_course|common" zoom-min="13">
+	<rule cat="tms_terrain" e="way" k="leisure" v="garden|golf_course|common" zoom-min="13">
 		<area fill="#BBC7F1A3" stroke="#806FC18E" stroke-width="0.2" />
 	</rule>
-	<rule cat="tms_land-base" e="way" k="landuse" v="village_green|recreation_ground|greenfield" zoom-min="13">
+	<rule cat="tms_terrain" e="way" k="landuse" v="village_green|recreation_ground|greenfield" zoom-min="13">
 		<area fill="#BBBDE3CB" stroke="#6FC13D" stroke-width="0.2" />
 	</rule>
-	<rule cat="tms_land-base" e="way" k="landuse" v="allotments" zoom-min="13">
+	<rule cat="tms_terrain" e="way" k="landuse" v="allotments" zoom-min="13">
 		<area src="file:/patterns/allotments.png" />
 	</rule>
-	<rule cat="tms_land-base" e="way" k="landuse|amenity" v="cemetery|grave_yard" zoom-min="13">
+	<rule cat="tms_terrain" e="way" k="landuse|amenity" v="cemetery|grave_yard" zoom-min="13">
 		<area fill="#adc4b6" stroke="#333333" stroke-width="0.24" />
 		<area src="file:/patterns/grave_yard.svg" symbol-height="18" />
 	</rule>
-	<rule cat="tms_land-base" e="way" k="landuse|amenity" v="cemetery|grave_yard" zoom-min="15">
+	<rule cat="tms_terrain" e="way" k="landuse|amenity" v="cemetery|grave_yard" zoom-min="15">
 		<symbol src="file:/symbols/s_cemetery.svg" symbol-width="16" />
 	</rule>
 
 	<!-- military -->
-	<rule cat="tms_land-base" e="any" k="landuse|leisure" v="military">
+	<rule cat="tms_terrain" e="any" k="landuse|leisure" v="military">
 		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-max="13" >
 			<area src="file:/patterns/military_area.svg" symbol-width="20" />
 			<line stroke="#80ff2626" stroke-width="0.4" stroke-linecap="butt" />
@@ -406,7 +400,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 	<!-- все остальные military обьекты - бомбоубежища... итд -->
-	<rule cat="tms_land-base" e="any" k="*" v="*">
+	<rule cat="tms_terrain" e="any" k="*" v="*">
 		<rule cat="tms_tmilitary" e="way" k="military" v="*" zoom-min="13">
 			<area src="file:/patterns/military_area.svg" symbol-width="30" />
 			<line stroke="#80ff2626" stroke-width="0.2" stroke-linecap="butt" />
@@ -416,21 +410,21 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- Area names Magellan -->
 	<rule cat="tms_land-names" e="way" k="*" v="*" zoom-min="13">
-		<rule cat="tms_land-base" e="way" k="natural|landuse" v="glacier|land|beach|sand|rock|fell|scree|landfill|quarry|farm|farmland" zoom-min="14">
+		<rule cat="tms_terrain" e="way" k="natural|landuse" v="glacier|land|beach|sand|rock|fell|scree|landfill|quarry|farm|farmland" zoom-min="14">
 			<caption cat="tms_land-names" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="1.5" />
 			<!-- fill="#444444"  -->
 		</rule>
-		<rule cat="tms_land-base" e="way" k="natural|landuse" v="meadow|grassland|heath|marsh|wetland|scrub|forest|wood|vineyard|field" zoom-min="14">
+		<rule cat="tms_terrain" e="way" k="natural|landuse" v="meadow|grassland|heath|marsh|wetland|scrub|forest|wood|vineyard|field" zoom-min="14">
 			<caption cat="tms_land-names" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#196600" stroke="#FFFFFF" stroke-width="1.5" />
 			<!-- fill="#444444"  -->
 		</rule>
-		<rule cat="tms_land-base" e="way" k="landuse|leisure" v="allotments|cemetery|industrial|village_green|recreation_ground|grass|park|garden|common|green|dog_park" zoom-min="15">
+		<rule cat="tms_terrain" e="way" k="landuse|leisure" v="allotments|cemetery|industrial|village_green|recreation_ground|grass|park|garden|common|green|dog_park" zoom-min="15">
 			<caption cat="tms_land-names" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#004D66" stroke="#FFFFFF" stroke-width="1.5" />
 		</rule>
 	</rule>
 
-	<rule cat="tms_new-wood" e="way" k="natural" v="tree_row">
-		<line stroke="#bee976" cat="tms_land-base" stroke-width="1.2" stroke-linecap="round"/>
+	<rule cat="tms_terrain" e="way" k="natural" v="tree_row">
+		<line stroke="#bee976" cat="tms_terrain" stroke-width="1.2" stroke-linecap="round"/>
 	</rule>
 
 	<!-- Contour lines -->
@@ -480,7 +474,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- protected, aboriginal areas -->
-	<rule cat="tms_land-base" e="way" k="*" v="*">
+	<rule cat="tms_terrain" e="way" k="*" v="*">
 		<rule e="way" k="boundary" v="aboriginal_lands" zoom-min="8" cat="tms_oopt" closed="yes">
 			<area fill="#0CFF8000" />
 			<rule e="way" k="*" v="*" zoom-min="8" zoom-max="13">
@@ -571,7 +565,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 	<!-- 		переставил выше от leisure areas -->
-	<rule cat="tms_land-base" e="way" k="leisure|sport" v="sports_centre|shooting">
+	<rule cat="tms_terrain" e="way" k="leisure|sport" v="sports_centre|shooting">
 		<area fill="#DDBDE3CB" stroke="#6FC18E" stroke-width="0.2" />
 	</rule>
 
@@ -831,7 +825,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	<!-- end tunnel -->
 
 	<!-- ВОДНЫЕ ПУТИ -->
-	<rule cat="tms_land-base" e="way" k="waterway" v="*">
+	<rule cat="tms_terrain" e="way" k="waterway" v="*">
 		<!-- drain = Канализационная канава, канализация -->
 		<!-- ditch = ров, канава водоотвода -->
 		<rule e="way" k="waterway" v="drain|ditch">
@@ -922,7 +916,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- underground waterways -->
-	<rule cat="tms_land-base" e="way" k="tunnel" v="true|yes|culvert" zoom-min="14">
+	<rule cat="tms_terrain" e="way" k="tunnel" v="true|yes|culvert" zoom-min="14">
 		<rule e="way" k="waterway" v="stream|drain|ditch">
 			<line stroke="#665887ff" stroke-width="0.7" />
 			<line stroke="#995887ff" scale="all" stroke-width="0.7" stroke-dasharray="0.6,0.6" stroke-linecap="butt" />
@@ -933,14 +927,14 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
-	<rule cat="tms_land-base" e="way" k="tunnel|location" v="yes|culvert|underground" zoom-min="16">
+	<rule cat="tms_terrain" e="way" k="tunnel|location" v="yes|culvert|underground" zoom-min="16">
 		<rule e="way" k="man_made" v="pipeline">
 			<line stroke="#995887ff" stroke-width="1.0" />
 		</rule>
 	</rule>
 
 	<!-- bodies of water -->
-	<rule cat="tms_land-base" e="way" k="landuse|natural" v="reservoir|basin|water">
+	<rule cat="tms_terrain" e="way" k="landuse|natural" v="reservoir|basin|water">
 		<rule e="way" k="*" v="*" zoom-max="12">			<!-- zoom-min="11" -->
 			<area fill="#a3dde8" stroke="#800000ff" stroke-width="0.3" />
 		</rule>
@@ -971,7 +965,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
-	<rule e="node" k="landuse|natural" v="reservoir|basin|water" cat="tms_land-base">
+	<rule e="node" k="landuse|natural" v="reservoir|basin|water" cat="tms_terrain">
 		<rule e="any" k="amenity" v="~" cat="tms_land-names">
 			<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge">
 				<caption k="name" priority="103" font-style="italic" font-size="11" fill="#2020ff" stroke="#E5FFFFFF" stroke-width="2" />
@@ -998,7 +992,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- 	БОЛОТА  -->
-	<rule cat="tms_land-base" e="way" k="natural" v="wetland" zoom-min="12">
+	<rule cat="tms_terrain" e="way" k="natural" v="wetland" zoom-min="12">
 		<rule e="way" k="wetland" v="swamp">
 			<area fill="#4D73b64b"/>
 			<area src="file:/patterns/wetland.png" />
@@ -1034,7 +1028,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	<!-- 	КОНЕЦ БОЛОТ -->
 
 	<!-- waterway structures -->
-	<rule cat="tms_land-base" e="way" k="tunnel" v="~|no">
+	<rule cat="tms_terrain" e="way" k="tunnel" v="~|no">
 		<rule e="way" k="location" v="~|overground">
 			<rule e="way" k="waterway" v="dock">
 				<area fill="#90CCCCCC" />
@@ -1078,43 +1072,43 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- natural ways -->
-	<rule cat="tms_land-base" e="way" k="natural" v="valley|gorge" zoom-min="13">
+	<rule cat="tms_relief" e="way" k="natural" v="valley|gorge" zoom-min="13">
 		<pathText cat="tms_land-names" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#E6444444" stroke="#cce0e0e0" stroke-width="2.0" />
 	</rule>
 
 	<!-- Обрывы -->
-	<rule cat="tms_land-base" e="way" k="natural" v="cliff" zoom-min="13">
+	<rule cat="tms_relief" e="way" k="natural" v="cliff" zoom-min="13">
 		<line stroke="#BF111111" dy="0.5" stroke-width="1" stroke-dasharray="0.2,1" stroke-linecap="butt" scale="all" />
 		<line stroke="#BF111111" stroke-width="0.3" stroke-linecap="butt" />
 		<pathText cat="tms_land-names" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
 	</rule>
 
-	<rule cat="tms_land-base" e="way" k="natural" v="earth_bank" zoom-min="13">
+	<rule cat="tms_relief" e="way" k="natural" v="earth_bank" zoom-min="13">
 		<line stroke="#BFbc4b00" dy="0.5" stroke-width="1" stroke-dasharray="0.2,1" stroke-linecap="butt" scale="all" />
 		<line stroke="#BFbc4b00" stroke-width="0.3" stroke-linecap="butt" />
 		<pathText cat="tms_land-names" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#313140" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
 	</rule>
 
 	<!-- Малые овраги, канавы -->
-	<rule cat="tms_land-base" e="way" k="barrier|natural" v="ditch|gully" closed="no">
+	<rule cat="tms_relief" e="way" k="barrier|natural" v="ditch|gully" closed="no">
 		<line stroke="#80bc4b00" dy="0.25" stroke-width="0.4" stroke-dasharray="1,8" stroke-linecap="butt" />
 		<line stroke="#80bc4b00" dy="-0.25" stroke-width="0.4" stroke-dasharray="0,4,1,4" stroke-linecap="butt" />
 		<line stroke="#80bc4b00" dy="0.4" stroke-width="0.1" stroke-linecap="butt" />
 		<line stroke="#80bc4b00" dy="-0.4" stroke-width="0.1" stroke-linecap="butt" />
 		<pathText cat="tms_land-names" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
 	</rule>
-	<rule cat="tms_land-base" e="way" k="barrier|natural" v="ditch|gully" closed="yes">
+	<rule cat="tms_relief" e="way" k="barrier|natural" v="ditch|gully" closed="yes">
 		<line stroke="#80bc4b00" dy="0.25" stroke-width="0.4" stroke-dasharray="1,8" stroke-linecap="butt" />
 		<line stroke="#80bc4b00" dy="0.4" stroke-width="0.1" stroke-linecap="butt" />
 		<pathText cat="tms_land-names" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
 	</rule>
 
 	<!-- Просеки OAM -->
-	<rule cat="tms_land-base" e="way" k="man_made" v="cutline" zoom-min="12">
+	<rule cat="tms_relief" e="way" k="man_made" v="cutline" zoom-min="12">
 		<line stroke="#BFDDFFDD" stroke-width="1.8" stroke-linecap="butt" />
 	</rule>
 	<!-- Хребты -->
-	<rule cat="tms_land-base" e="way" k="natural" v="ridge|arete">
+	<rule cat="tms_relief" e="way" k="natural" v="ridge|arete">
 		<line stroke="#BFbc4b00" stroke-width="0.4" stroke-dasharray="2,3" stroke-linecap="round" scale="all" />
 		<!-- <line stroke="#BF444444" stroke-width="0.4" stroke-dasharray="6,8" stroke-linecap="round" /> -->
 		<pathText cat="tms_land-names" k="name" dy="-3" font-style="italic" font-family="serif" font-size="15" fill="#BFa75c2c" stroke="#80bbbbbb" stroke-width="0.8" display="always" priority="-20" repeat-start="50" repeat-gap="300" />
@@ -1151,16 +1145,16 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
-	<rule cat="tms_land-base" e="way" k="tourism" v="zoo">
+	<rule cat="tms_terrain" e="way" k="tourism" v="zoo">
 		<area fill="#BBC7F1A3" stroke="#6FC18E" stroke-width="0.2" />
 	</rule>
-	<rule cat="tms_land-base" e="way" k="tourism" v="picnic_site|camp_site|caravan_site">
+	<rule cat="tms_terrain" e="way" k="tourism" v="picnic_site|camp_site|caravan_site">
 		<area fill="#BBC7F1A3" stroke="#6FC18E" stroke-width="0.2" />
 	</rule>
-	<rule cat="tms_land-base" e="way" k="amenity" v="parking">
+	<rule cat="tms_terrain" e="way" k="amenity" v="parking">
 		<area fill="#d3dfe2" stroke="#93b1b8" stroke-width="0.2" />
 	</rule>
-	<rule cat="tms_land-base" e="way" k="amenity|tourism|historic" v="place_of_worship|biergarten|museum|ruins|castle|memorial|monument">
+	<rule cat="tms_terrain" e="way" k="amenity|tourism|historic" v="place_of_worship|biergarten|museum|ruins|castle|memorial|monument">
 		<area fill="#E3D7C3" stroke="#B3A99A" stroke-width="0.1" />
 	</rule>
 <!--? разобраться тут фонтан как развлечение и как вода -->
@@ -1175,17 +1169,17 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- leisure areas -->
-	<rule cat="tms_land-base" e="way" k="leisure" v="stadium">
+	<rule cat="tms_terrain" e="way" k="leisure" v="stadium">
 		<area fill="#DD86D9A5" stroke="#6FC18E" stroke-width="0.2" />
 	</rule>
-	<rule cat="tms_land-base" e="way" k="leisure" v="playground|dog_park">
+	<rule cat="tms_terrain" e="way" k="leisure" v="playground|dog_park">
 		<area fill="#C7F1A3" stroke="#6FC18E" stroke-width="0.2" />
 	</rule>
-	<rule cat="tms_land-base" e="way" k="leisure" v="pitch">
+	<rule cat="tms_terrain" e="way" k="leisure" v="pitch">
 		<area fill="#80b6dea4" stroke="#808eb961" stroke-width="0.5" />
 	</rule>
 
-	<rule cat="tms_land-base" e="way" k="leisure" v="track">
+	<rule cat="tms_terrain" e="way" k="leisure" v="track">
 		<rule e="way" k="area" v="yes|true">
 			<area fill="#BBBDE3CB" stroke="#6FC18E" stroke-width="0.025" />
 		</rule>
@@ -1194,22 +1188,22 @@ Transparency for HEX colors (100% - непрозрачный)
 			<line stroke="#BDE3CB" stroke-width="0.7" />
 		</rule>
 	</rule>
-	<rule cat="tms_land-base" e="way" k="leisure" v="swimming_pool">
+	<rule cat="tms_terrain" e="way" k="leisure" v="swimming_pool">
 		<area fill="#a3dde8" stroke="#0000FF" stroke-width="0.3" />
 		<line stroke="#AAAAAA" stroke-width="0.3" stroke-dasharray="3,3" stroke-linecap="butt"/>
 	</rule>
-	<rule cat="tms_land-base" e="way" k="sport|leisure" v="swimming|water_park" zoom-min="13">
+	<rule cat="tms_terrain" e="way" k="sport|leisure" v="swimming|water_park" zoom-min="13">
 		<area fill="#6892ff" stroke="#6060FF" stroke-width="0.3" />
 	</rule>
-	<rule cat="tms_land-base" e="way" k="sport" v="tennis">
+	<rule cat="tms_terrain" e="way" k="sport" v="tennis">
 		<area fill="#D18A6A" stroke="#B36C4C" stroke-width="0.2" />
 	</rule>
-	<rule cat="tms_land-base" e="way" k="power" v="station|generator|plant">
+	<rule cat="tms_terrain" e="way" k="power" v="station|generator|plant">
 		<area fill="#C4C4C4" stroke="#e4e4e4" stroke-width="0.2" />
 	</rule>
 	
 	<!-- переставлено сверху, чтобы пляж не отображался водой -->
-	<rule cat="tms_land-base" e="way" k="natural" v="beach|sand" zoom-min="11">
+	<rule cat="tms_terrain" e="way" k="natural" v="beach|sand" zoom-min="11">
 		<area fill="#BBFAEBB9" />
 		<area src="file:/patterns/sand.svg" symbol-width="10"/>
 	</rule>
@@ -1278,25 +1272,25 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- Buildings -->
-	<rule cat="tms_land-base" e="way" k="building" v="*" zoom-max="14">
+	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-max="14">
 		<area fill="#333333" stroke="#000000" stroke-width="0.2" />
 	</rule>	<!-- area fill="#555555" stroke="#000000" -->
-	<rule cat="tms_land-base" e="way" k="building" v="*" zoom-min="15" zoom-max="16">
+	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-min="15" zoom-max="16">
 		<area fill="#666666" stroke="#000000" stroke-width="0.15" />
 	</rule>	<!-- "#666666" zoom-min="15" zoom-max="15" -->
-	<rule cat="tms_land-base" e="way" k="building" v="*" zoom-min="17" zoom-max="17">
+	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-min="17" zoom-max="17">
 		<area fill="#777777" stroke="#000000" stroke-width="0.12" />
 	</rule>	<!-- "#888888" -->
-	<rule cat="tms_land-base" e="way" k="building" v="*" zoom-min="18">
+	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-min="18">
 		<area fill="#888888" stroke="#000000" stroke-width="0.10" />
 	</rule>	<!-- area fill="#999999" stroke="#000000" -->
 
-	<rule cat="tms_land-base" e="way" k="building" v="construction">
+	<rule cat="tms_terrain" e="way" k="building" v="construction">
 		<area fill="#888888" />
 		<line stroke="#aaaaaa" stroke-width="0.2" stroke-dasharray="0.3,0.6" scale="all" />
 	</rule>
 
-	<rule cat="tms_land-base" e="way" k="building" v="ruins|collapsed" zoom-min="15">
+	<rule cat="tms_terrain" e="way" k="building" v="ruins|collapsed" zoom-min="15">
 		<line stroke="#ff9673" scale="all" stroke-width="0.15" stroke-dasharray="0.5,1" />
 	</rule>
 
@@ -1304,11 +1298,11 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol src="file:/symbols/s_ruins.svg" display="always" symbol-height="12" />
 	</rule>
 
-	<rule cat="tms_land-base" zoom-min="17" e="way" k="building" v="*">
+	<rule cat="tms_terrain" zoom-min="17" e="way" k="building" v="*">
 		<caption cat="tms_land-names" priority="0" k="name" font-style="bold" dy="-16" font-size="10" fill="#333333" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 	<!-- aeroways -->
-	<rule cat="tms_land-base" e="way" k="aeroway" v="*">
+	<rule cat="tms_terrain" e="way" k="aeroway" v="*">
 		<!-- runways areas -->
 		<rule e="way" k="aeroway" v="aerodrome|helipad" closed="yes">
 			<area fill="#90D8DCCE" stroke="#000000" stroke-width="0.5" />
@@ -1916,10 +1910,10 @@ Transparency for HEX colors (100% - непрозрачный)
 
 			<rule e="way" k="highway" v="*" zoom-min="14">
 				<rule e="way" k="access" v="destination">
-					<line src="file:/patterns/p_access-destination.svg" stroke-width="1.5" />
+					<line src="file:/patterns/p_access-destination-tms.svg" stroke-width="1.5" symbol-percent="50" />
 				</rule>
 				<rule e="way" k="access" v="private">
-					<line src="file:/patterns/p_access-private.svg" stroke-width="1.0" />
+					<line src="file:/patterns/p_access-private-tms.svg" stroke-width="1.5" symbol-percent="50" />
 				</rule>
 			</rule>
 		</rule>
@@ -1987,7 +1981,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- housenumbers -->
-	<rule cat="tms_land-base" e="any" k="addr:housenumber" v="*" zoom-min="16">
+	<rule cat="tms_terrain" e="any" k="addr:housenumber" v="*" zoom-min="16">
 		<rule cat="tms_up-osm" e="way" k="addr:housenumber" v="*" zoom-max="17">
 			<caption k="addr:housenumber" font-style="bold" font-size="9" fill="#000000" stroke="#ffffff" stroke-width="2.7" />
 		</rule>
@@ -2131,8 +2125,8 @@ Transparency for HEX colors (100% - непрозрачный)
 		<caption cat="tms_land-names" symbol-id="tms_adit" k="ele" position="below" font-style="bold" font-size="9" fill="#000000" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 
-	<rule cat="tms_new-wood" e="node" k="natural" v="tree">
-		<symbol priority="10" id="tms_tree" display="always" cat="tms_land-base" src="file:/symbols/s_tree.svg" symbol-height="15" />
+	<rule cat="tms_relief" e="node" k="natural" v="tree">
+		<symbol priority="10" id="tms_tree" display="always" cat="tms_terrain" src="file:/symbols/s_tree.svg" symbol-height="15" />
 		<caption symbol-id="tms_tree" cat="tms_land-names" k="name" font-style="bold" font-size="9" fill="#006600" stroke="#FFFFFF" stroke-width="2.0" />
 		<caption symbol-id="tms_tree" cat="tms_land-names" k="ele" position="below" font-style="bold" font-size="8" fill="#006600" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
@@ -2307,7 +2301,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- 	#WALL -->
-	<rule cat="tms_land-base" e="way" k="barrier" v="*">
+	<rule cat="tms_terrain" e="way" k="barrier" v="*">
 		<rule e="way" k="barrier|historic" v="fence|wall|city_wall" zoom-min="14">
 			<line stroke="#666666" stroke-width="0.15" stroke-linecap="butt" />
 			<line stroke="#666666" scale="all" stroke-width="0.6" stroke-dasharray="0.2,1.6" stroke-linecap="butt" />
@@ -2591,7 +2585,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- aeroway symbols and captions -->
-	<rule cat="tms_land-base" e="any" k="aeroway" v="*">
+	<rule cat="tms_terrain" e="any" k="aeroway" v="*">
 		<rule e="any" k="aeroway" v="helipad" zoom-min="13">
 			<symbol priority="255" display="always" src="file:/symbols/s_helipad.svg" symbol-height="16" symbol-width="17" />
 		</rule>

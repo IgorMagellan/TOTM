@@ -173,7 +173,7 @@ building=construction (OAM)
 bus_station, shops, рынков, фонтанов и пр.; поправил подписи playground, picnic_site, picnic_table, camp_site, bus_station, bicycle_rental; 
 переделал и разделил обрывы cliff, earth_bank;
 [Повыш.приор.:] fuel
-[Err.:] поправил неотображение подписей для hospital, pharmacy, doctors
+[Err.:] поправил неотображение подписей для hospital, pharmacy, doctors; via_ferrata
 [Доб.:] подписи stadium, sport=soccer, tennis, golf, shooting; post_office; information=guidepost, board, office; 
 tourism=information; leisure=firepit(LM); amenity=bbq(LM); shop=organic,hairdresser
 
@@ -328,5 +328,8 @@ experiment surface
 подписи для всех generator:source, сделал новые иконки для nuclear, gas, hydro, coal
 переделал s_wilderness_hut_private.svg, s_alpine_hut_w.svg, s_alpine_hut_pr_w.svg - давали ошибку (только в Cruiser 2.1.2); s_cemetery.svg
 28/01/2022
-в tms_schools из к=amenity|building убрал building
+создан tms_relief: в нём tree, cliff, ridge, valley, cutline, ditch|gully
+в tms_educat из к=amenity|building убрал building
+Переименование "tms_land-base" в "tms_terrain"
+убрал cat="tms_new-wood" (Лес+кустарник) в tms_terrain
 
