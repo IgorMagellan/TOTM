@@ -2072,23 +2072,23 @@ Transparency for HEX colors (100% - непрозрачный)
 	<!-- mountain pass -->
 	<rule cat="tms_peak" e="any" k="natural" v="saddle">
 		<rule e="any" k="dir_saddle" v="ds_0">
-			<symbol id="s_saddle" display="always" src="file:/symbols/mountain_pass_0.svg" symbol-height="16"/>
+			<symbol id="s_saddle" display="always" src="file:/symbols/mountain_pass_0.svg" symbol-height="14"/>
 		</rule>
 		<rule e="any" k="dir_saddle" v="ds_45|~">
-			<symbol id="s_saddle" display="always" src="file:/symbols/mountain_pass_45.svg" symbol-height="16"/>
+			<symbol id="s_saddle" display="always" src="file:/symbols/mountain_pass_45.svg" symbol-height="14"/>
 		</rule>
 		<rule e="any" k="dir_saddle" v="ds_90">
-			<symbol id="s_saddle" display="always" src="file:/symbols/mountain_pass_90.svg" symbol-height="16"/>
+			<symbol id="s_saddle" display="always" src="file:/symbols/mountain_pass_90.svg" symbol-height="14"/>
 		</rule>
 		<rule e="any" k="dir_saddle" v="ds_135">
-			<symbol id="s_saddle" display="always" src="file:/symbols/mountain_pass_135.svg" symbol-height="16"/>
+			<symbol id="s_saddle" display="always" src="file:/symbols/mountain_pass_135.svg" symbol-height="14"/>
 		</rule>
 		<caption cat="tms_land-names" k="ele" symbol-id="s_saddle" position="below" font-style="bold_italic" font-size="8" fill="#780000" stroke="#ffffff" stroke-width="1.2" />
-		<rule e="any" k="*" v="*" zoom-min="16">
+		<rule e="any" k="*" v="*" zoom-min="14">
 			<caption cat="tms_land-names" k="name" symbol-id="s_saddle" position="above" font-style="bold" font-size="9" fill="#780000" stroke="#ffffff" stroke-width="2" />
 		</rule>
 	</rule>
-	<rule e="any" k="mountain_pass" v="yes">
+	<rule cat="tms_peak" e="any" k="mountain_pass" v="yes">
 		<rule e="any" k="dir_saddle" v="ds_0">
 			<symbol id="s_saddle" display="always" src="file:/symbols/mountain_pass_0.svg" symbol-height="14"/>
 		</rule>
@@ -2102,7 +2102,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<symbol id="s_saddle" display="always" src="file:/symbols/mountain_pass_135.svg" symbol-height="14"/>
 		</rule>
 		<caption cat="tms_land-names" k="ele" symbol-id="s_saddle" position="below" font-style="bold_italic" font-size="8" fill="#780000" stroke="#ffffff" stroke-width="1.2" />
-		<rule e="any" k="*" v="*" zoom-min="16">
+		<rule e="any" k="*" v="*" zoom-min="14">
 			<caption cat="tms_land-names" k="name" symbol-id="s_saddle" position="above" font-style="bold" font-size="9" fill="#780000" stroke="#ffffff" stroke-width="2" />
 		</rule>
 	</rule>
