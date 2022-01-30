@@ -332,4 +332,9 @@ experiment surface
 в tms_educat из к=amenity|building убрал building
 Переименование "tms_land-base" в "tms_terrain"
 убрал cat="tms_new-wood" (Лес+кустарник) в tms_terrain
-
+29/01/2022
+кресты - улучшил wayside_cross; добавил man_made=cross
+на всех barrier поставил any 
+30/01/2022
+tms_water-land для weir, dam; переставил pipeline; переделал tms_trans-pub; tms_aerial для funicular; 
+замена subway

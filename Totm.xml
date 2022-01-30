@@ -1917,18 +1917,24 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_trans-pub" e="any" k="amenity" v="bus_station">
 		<symbol priority="215" id="tms_bus-station" force-draw="1" src="file:/symbols/s_bus_station.svg" symbol-width="16" />
 		<caption priority="110" symbol-id="tms_bus-station" cat="tms_land-names" k="name" dy="-18dp" font-style="bold" font-size="10dp" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0dp" />
+	</rule>
+
+	<rule cat="tms_trans-pub" e="any" k="station" v="light_rail">
+		<symbol priority="205" id="tms_train-station" src="file:/symbols/s_trainstation-LE.svg" symbol-height="14" />
+		<caption priority="100" symbol-id="tms_train-station" cat="tms_land-names" k="name" dy="-14dp" font-style="bold" font-size="9dp" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0dp" />
 	</rule>	
-	<rule cat="tms_trans-pub" e="any" k="railway|building|light_rail" v="station|train_station">
-		<rule e="any" k="station" v="subway">
-			<symbol id="s_pt_subway" priority="405" force-draw="1" src="file:/symbols/subway8.svg" symbol-height="22" />
-			<caption cat="tms_land-names" priority="405" k="name" symbol-id="s_pt_subway" dy="-20" font-style="bold" font-size="10dp" fill="#ff0013" stroke="#E5FFFFFF" stroke-width="2" />
-		</rule>		
-		<rule e="any" k="station" v="~">		
+	<rule cat="tms_trans-pub" e="any" k="railway" v="station|halt">
+		<rule e="any" k="station" v="~">	
 			<symbol priority="205" id="tms_train-station" src="file:/symbols/s_trainstation-LE.svg" symbol-height="14" />
 			<caption priority="100" symbol-id="tms_train-station" cat="tms_land-names" k="name" dy="-14dp" font-style="bold" font-size="9dp" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0dp" />
-		</rule>	
-	</rule>
-	<rule cat="tms_trans-pub" e="node" k="railway" v="halt|tram_stop">
+		</rule>
+	</rule>		
+	<rule cat="tms_trans-pub" e="any" k="station" v="subway">
+		<symbol id="s_pt_subway" priority="405" force-draw="1" src="file:/symbols/s_subway.svg" symbol-height="20" />
+		<caption cat="tms_land-names" priority="405" k="name" symbol-id="s_pt_subway" dy="-18dp" font-style="bold" font-size="10dp" fill="#ff0013" stroke="#E5FFFFFF" stroke-width="2" />
+</rule>	
+
+	<rule cat="tms_trans-pub" e="node" k="railway" v="tram_stop">
 		<symbol priority="205" id="tms_tram-stop" src="file:/symbols/s_tram_stop.svg" symbol-height="14" />
 		<caption priority="100" symbol-id="tms_tram-stop" cat="tms_land-names"  k="name" dy="-18" font-style="bold" font-size="9dp" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0dp" />
 	</rule>
