@@ -2546,22 +2546,22 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>	
 
-	<rule e="any" k="emergency" v="defibrillator" zoom-min="14">
-		<symbol id="s_defibrillator" priority="320" display="always" src="file:/symbols/s_defibrillator.svg" symbol-height="16" />
-		<rule e="any" k="*" v="*" zoom-min="18">
+	<rule cat="tms_emergency" e="any" k="emergency" v="defibrillator" zoom-min="14">
+		<symbol id="s_defibrillator" priority="325" display="always" src="file:/symbols/s_defibrillator.svg" symbol-height="18" />
+		<rule cat="tms_land-names" e="any" k="*" v="*" zoom-min="18">
 			<caption k="name" symbol-id="s_defibrillator" position="above" font-style="bold" font-size="10" fill="#D90000" stroke="#CCFFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 
 	<rule cat="tms_emergency" e="any" k="emergency" v="phone" zoom-min="15">
-		<symbol id="s_emergency_phone" priority="82" display="always" src="file:/symbols/s_emergency_phone.svg" symbol-height="16" />
-		<rule e="any" k="*" v="*" zoom-min="17">
+		<symbol id="s_emergency_phone" priority="320" display="always" src="file:/symbols/s_emergency_phone.svg" symbol-height="18" />
+		<rule cat="tms_land-names" e="any" k="*" v="*" zoom-min="17">
 			<caption k="name" symbol-id="s_emergency_phone" position="above" font-style="bold" font-size="10" fill="#D90000" stroke="#CCFFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 
 	<rule cat="tms_emergency" e="any" k="amenity" v="telephone">
-		<symbol priority="320" src="file:/symbols/s_telephone.svg" symbol-width="13" />
+		<symbol priority="310" src="file:/symbols/s_telephone.svg" symbol-width="13" />
 	</rule>
 
 	<rule cat="tms_emergency" e="any" k="amenity" v="police|ranger_station">

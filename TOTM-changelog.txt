@@ -337,4 +337,5 @@ experiment surface
 на всех barrier поставил any 
 30/01/2022
 tms_water-land для weir, dam; переставил pipeline; переделал tms_trans-pub; tms_aerial для funicular; 
-замена subway
+замена subway, townhall, telephone, emergency_phone, defibrillator
+
