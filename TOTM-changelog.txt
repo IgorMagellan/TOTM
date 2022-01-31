@@ -338,4 +338,5 @@ experiment surface
 30/01/2022
 tms_water-land для weir, dam; переставил pipeline; переделал tms_trans-pub; tms_aerial для funicular; 
 замена subway, townhall, telephone, emergency_phone, defibrillator
-
+31/01/2022
+оптимизация подписей alpine_hut, shelter, historical

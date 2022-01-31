@@ -2201,17 +2201,11 @@ Transparency for HEX colors (100% - непрозрачный)
 					<symbol display="always" priority="435" id="tms_hut" src="file:/symbols/s_alpine_hut.svg" symbol-width="16" />
 				</rule>
 			</rule>
-			<rule e="node" k="*" v="*" zoom-min="14">
+			<rule e="any" k="*" v="*" zoom-min="14">
 				<caption cat="tms_land-names" priority="320" symbol-id="tms_hut" k="name" position="above" font-style="bold" font-size="10" fill="#FF0000" stroke="#FFFFFF" stroke-width="2" />
 			</rule>
-			<rule e="node" k="*" v="*" zoom-min="16">
+			<rule e="any" k="*" v="*" zoom-min="16">
 				<caption cat="tms_land-names" priority="320" symbol-id="tms_hut" k="ele" position="below" font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2" />
-			</rule>
-			<rule e="way" k="*" v="*" zoom-min="14">
-				<caption cat="tms_land-names" priority="320" symbol-id="tms_hut" k="name" position="above" font-style="bold" font-size="10" fill="#FF0000" stroke="#FFFFFF" stroke-width="1.8" />
-			</rule>
-			<rule e="way" k="*" v="*" zoom-min="16">
-				<caption cat="tms_land-names" priority="320" symbol-id="tms_hut" k="ele" position="below" font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="1.8" />
 			</rule>
 		</rule>
 	</rule>
@@ -2237,21 +2231,24 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule e="any" k="shelter_type" v="rock_shelter" zoom-min="14">
 			<symbol display="always" priority="435" id="tms_hut" src="file:/symbols/s_shelter_rock.svg" symbol-width="15" />
 		</rule>
+		
 		<rule e="any" k="shelter_type" v="basic_hut" zoom-min="14">
 			<symbol display="always" priority="435" id="tms_hut" src="file:/symbols/s_shelter_basic_hut.svg" symbol-height="15" />
+			<rule e="any" k="*" v="*" zoom-min="14">
+				<caption cat="tms_land-names" priority="320" symbol-id="tms_hut" k="name" position="above" font-style="bold" font-size="10" fill="#FF0000" stroke="#FFFFFF" stroke-width="2" />
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="17">
+				<caption cat="tms_land-names" priority="320" symbol-id="tms_hut" k="ele" position="below" font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2" />
+			</rule>			
 		</rule>
+		
 		<rule e="any" k="shelter_type" v="~|weather_shelter|lean_to|picnic_shelter" zoom-min="14">
 			<symbol display="always" priority="435" id="tms_shelter" src="file:/symbols/s_shelter.svg" symbol-width="16" />
-			<rule e="any" k="*" v="*" zoom-min="16">
+			<rule e="any" k="*" v="*" zoom-min="15">
 				<caption cat="tms_land-names" priority="320" symbol-id="tms_shelter" k="name" position="above" font-style="bold" font-size="10" fill="#FF0000" stroke="#FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
-		<rule e="any" k="shelter_type" v="basic_hut" zoom-min="14">
-			<caption cat="tms_land-names" priority="320" symbol-id="tms_hut" k="name" position="above" font-style="bold" font-size="10" fill="#FF0000" stroke="#FFFFFF" stroke-width="2" />
-		</rule>
-		<rule e="any" k="shelter_type" v="basic_hut" zoom-min="17">
-			<caption cat="tms_land-names" priority="320" symbol-id="tms_hut" k="ele" position="below" font-style="bold" font-size="9" fill="#FF0000" stroke="#FFFFFF" stroke-width="2" />
-		</rule>
+
 		<rule e="node" k="tourism" v="~">
 			<rule e="node" k="shelter_type" v="picnic_shelter|rock_shelter|weather_shelter|lean_to|~" zoom-min="14">
 				<caption cat="tms_land-names" priority="320" symbol-id="tms_hut" k="name" position="above" font-style="bold" font-size="10" fill="#FF0000" stroke="#FFFFFF" stroke-width="2.0" />
@@ -2295,7 +2292,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol id="s_ford" priority="300" display="always" src="file:/symbols/s_ford-4.svg" symbol-height="18" />
 		<line stroke="#AAB3DDFF" stroke-width="0.65" />
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<caption cat="tms_land-names" k="name" symbol-id="s_ford" font-style="bold" font-size="10" fill="#d90036" stroke="#E5FFFFFF" stroke-width="2" />
+			<caption cat="tms_land-names" k="name" symbol-id="s_ford" font-style="bold" font-size="10" fill="#ff4c4d" stroke="#E5ffff00" stroke-width="2" />
 		</rule>
 	</rule>
 
@@ -2636,21 +2633,21 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<rule cat="tms_culture" zoom-min="14" e="any" k="historic" v="monument">
-		<symbol id="tms_monument" display="always" src="file:/symbols/s_monument.svg" symbol-width="20" />
+		<symbol id="tms_monument" display="always" priority="250" src="file:/symbols/s_monument.svg" symbol-width="20" />
 	</rule>
 	<rule cat="tms_culture" zoom-min="14" e="any" k="historic" v="memorial">
-		<symbol id="tms_monument" display="always" src="file:/symbols/s_memorial.svg" symbol-width="16" />
+		<symbol id="tms_monument" display="always" priority="250" src="file:/symbols/s_memorial.svg" symbol-width="16" />
 	</rule>
 	<rule cat="tms_culture" zoom-min="14" e="any" k="historic" v="memorial|monument">
-		<caption symbol-id="tms_monument" cat="tms_land-names" k="name" position="above" font-style="bold" font-size="10" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
+		<caption symbol-id="tms_monument" cat="tms_land-names" priority="250" k="name" position="above" font-style="bold" font-size="10" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 	<rule cat="tms_culture" zoom-min="14" e="any" k="historic|building" v="castle">
-		<symbol id="tms_castle" display="always" src="file:/symbols/s_castle.svg" symbol-width="17"/>
-		<caption symbol-id="tms_castle" cat="tms_land-names" k="name" position="above" font-style="bold" font-size="10" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
+		<symbol id="tms_castle" display="always" priority="260" src="file:/symbols/s_castle.svg" symbol-width="17"/>
+		<caption symbol-id="tms_castle" cat="tms_land-names" priority="260" k="name" position="above" font-style="bold" font-size="10" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 	<rule cat="tms_culture" e="any" k="tourism|building" v="museum">
-		<symbol id="tms_museum" display="always" src="file:/symbols/s_museum.svg" symbol-width="20" />
-		<caption symbol-id="tms_museum" cat="tms_land-names" k="name" position="above" font-style="bold" font-size="10" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
+		<symbol id="tms_museum" display="always" priority="260" src="file:/symbols/s_museum.svg" symbol-width="20" />
+		<caption symbol-id="tms_museum" cat="tms_land-names" priority="260" k="name" position="above" font-style="bold" font-size="10" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
 
 	<!-- #sport -->
