@@ -340,3 +340,6 @@ tms_water-land для weir, dam; переставил pipeline; передела
 замена subway, townhall, telephone, emergency_phone, defibrillator
 31/01/2022
 оптимизация подписей alpine_hut, shelter, historical
+исправлено windmill
+03/02/2022
+все generator:source на z13

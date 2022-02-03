@@ -1273,10 +1273,10 @@ Transparency for HEX colors (100% - непрозрачный)
 	<!-- Buildings -->
 	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-max="14">
 		<area fill="#333333" stroke="#000000" stroke-width="0.2" />
-	</rule>	<!-- area fill="#555555" stroke="#000000" -->
+	</rule>
 	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-min="15" zoom-max="16">
 		<area fill="#666666" stroke="#000000" stroke-width="0.15" />
-	</rule>	<!-- "#666666" zoom-min="15" zoom-max="15" -->
+	</rule>	
 	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-min="17" zoom-max="17">
 		<area fill="#777777" stroke="#000000" stroke-width="0.12" />
 	</rule>	<!-- "#888888" -->
@@ -2860,7 +2860,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<caption cat="tms_land-names" priority="200" symbol-id="hunting_stand" k="name" position="below" font-style="bold" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
-	<rule cat="tms_man-made" e="node" k="man_made" v="windmill">
+	<rule cat="tms_man-made" e="any" k="man_made|tower" v="windmill">
 		<symbol priority="200" display="always" id="s_windmill" src="file:/symbols/s_windmill.svg" symbol-width="19" />
 		<rule e="node" k="*" v="*" zoom-min="16">
 			<caption cat="tms_land-names" priority="200" symbol-id="s_windmill" k="name" position="below" font-style="bold" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
@@ -2882,28 +2882,28 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol display="always" src="file:/symbols/power_tower.svg" symbol-height="22" />
 	</rule>
 
-	<rule cat="tms_man-made" e="any" k="generator:source" v="wind">
+	<rule cat="tms_man-made" e="any" k="generator:source" v="wind" zoom-min="13">
 		<symbol display="always" id="s_generator" src="file:/symbols/s_power_wind.svg" symbol-height="29" />
 	</rule>
-	<rule cat="tms_man-made" e="any" k="generator:source" v="hydro|tidal|wave">
+	<rule cat="tms_man-made" e="any" k="generator:source" v="hydro|tidal|wave" zoom-min="13">
 		<symbol display="always" id="s_generator" src="file:/symbols/s_power_water.svg" symbol-width="18" />
 	</rule>
-	<rule cat="tms_man-made" e="any" k="generator:source" v="solar">
+	<rule cat="tms_man-made" e="any" k="generator:source" v="solar" zoom-min="13">
 		<symbol display="always" id="s_generator" src="file:/symbols/s_power_solar.svg" symbol-width="18" />
 	</rule>
-	<rule cat="tms_man-made" e="any" k="generator:source" v="gas">
+	<rule cat="tms_man-made" e="any" k="generator:source" v="gas" zoom-min="13">
 		<symbol display="always" id="s_generator" src="file:/symbols/s_power_gas.svg" symbol-width="18" />
 	</rule>
-	<rule cat="tms_man-made" e="any" k="generator:source" v="coal">
+	<rule cat="tms_man-made" e="any" k="generator:source" v="coal" zoom-min="13">
 		<symbol display="always" id="s_generator" src="file:/symbols/s_power_coal.svg" symbol-width="18" />
 	</rule>
-	<rule cat="tms_man-made" e="any" k="generator:source" v="nuclear">
+	<rule cat="tms_man-made" e="any" k="generator:source" v="nuclear" zoom-min="13">
 		<symbol display="always" id="s_generator" src="file:/symbols/s_power_nuclear.svg" symbol-width="18" />
 	</rule>
-	<rule cat="tms_man-made" e="any" k="generator:source" v="oil|diesel|gasoline|biomass|biofuel|waste|geothermal">
+	<rule cat="tms_man-made" e="any" k="generator:source" v="oil|diesel|gasoline|biomass|biofuel|waste|geothermal" zoom-min="13">
 		<symbol display="always" id="s_generator" src="file:/symbols/s_power.svg" symbol-width="16" />
 	</rule>	
-	<rule cat="tms_man-made" e="any" k="generator:source" v="*" zoom-min="16">
+	<rule cat="tms_man-made" e="any" k="generator:source" v="*" zoom-min="16" zoom-min="16">
         <caption cat="tms_land-names" priority="180" symbol-id="s_generator" k="name" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#BFffff00" stroke-width="2" />
     </rule>	
 
