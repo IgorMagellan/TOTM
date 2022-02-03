@@ -927,7 +927,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
-	<rule cat="tms_terrain" e="way" k="tunnel|location" v="yes|culvert|underground" zoom-min="16">
+	<rule cat="tms_man-made" e="way" k="tunnel|location" v="yes|culvert|underground" zoom-min="16">
 		<rule e="way" k="man_made" v="pipeline">
 			<line stroke="#995887ff" stroke-width="1.0" />
 		</rule>
@@ -990,7 +990,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			</rule>
 		</rule>
 	</rule>
-
+		
 	<!-- 	БОЛОТА  -->
 	<rule cat="tms_terrain" e="way" k="natural" v="wetland" zoom-min="12">
 		<rule e="way" k="wetland" v="swamp">
@@ -1026,7 +1026,9 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 	<!-- 	КОНЕЦ БОЛОТ -->
+		
 
+		
 	<!-- waterway structures -->
 	<rule e="way" k="tunnel" v="~|no">
 		<rule cat="tms_water-land" e="way" k="location" v="~|overground">
@@ -1124,6 +1126,13 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 		<rule e="way" k="highway" v="service|unclassified|residential|road|living_street">
 			<area fill="#FFFFFF" stroke="#707070" stroke-width="0.15" />
+		</rule>
+	</rule>
+	
+	<rule cat="tms_terrain" e="way" k="historic" v="ruins|castle|memorial|monument|archaeological_site">
+		<rule e="way" k="building" v="~">
+			<line stroke="#BBBBBB" stroke-width="0.2" />
+			<line stroke="#743a00" stroke-width="0.2" stroke-dasharray="4,4" stroke-linecap="butt" />
 		</rule>
 	</rule>
 
@@ -2451,6 +2460,12 @@ Transparency for HEX colors (100% - непрозрачный)
 			<caption k="name" symbol-id="tms_carshop" priority="135" cat="tms_land-names" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 		</rule>		
 	</rule>	
+	<rule cat="tms_trans-priv" e="any" k="shop" v="motorcycle">
+		<symbol priority="245" id="tms_motshop" display="always" src="file:/symbols/s_shop_motorcycle.svg" symbol-width="17" />
+		<rule e="any" k="*" v="*">
+			<caption k="name" symbol-id="tms_motshop" priority="135" cat="tms_land-names" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
+		</rule>		
+	</rule>	
 
 	<!-- tourist info -->
 	<rule cat="tms_info" e="any" k="information" v="office">
@@ -2756,7 +2771,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol priority="240" id="tms_leisure" display="always" src="file:/symbols/s_theatre.svg" symbol-height="19" />
 	</rule>
 	<rule cat="tms_leisure" e="any" k="*" v="playground|cinema|theatre" zoom-min="16">
-		<caption priority="-15" symbol-id="tms_leisure" cat="tms_land-names" k="name" position="above" font-size="8" font-style="bold" fill="#004900" stroke="#FFFFFF" stroke-width="2.0" />
+		<caption priority="-15" symbol-id="tms_leisure" cat="tms_land-names" k="name" position="above" font-size="9" font-style="bold" fill="#004900" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 
 	<rule cat="tms_attraction" e="node" k="tourism" v="viewpoint">
@@ -2768,12 +2783,17 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 	<rule cat="tms_attraction" e="node" k="tourism" v="attraction">
 		<symbol priority="220" id="tms_attraction" display="always" src="file:/symbols/s_attraction.svg" symbol-height="13" />
-		<caption cat="tms_land-names" priority="115" symbol-id="tms_attraction" k="name" position="above" font-style="bold" font-size="8" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
+		<caption cat="tms_land-names" priority="115" symbol-id="tms_attraction" k="name" position="above" font-style="bold" font-size="9" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-	<rule cat="tms_attraction" e="any" k="tourism" v="zoo" zoom-min="15">
+	<rule cat="tms_attraction" e="any" k="tourism" v="zoo" >
 		<symbol priority="220" id="tms_zoo" display="always" src="file:/symbols/s_zoo.svg" symbol-height="22" />
-		<caption priority="115" symbol-id="tms_zoo" cat="tms_land-names" k="name" position="above" font-style="bold" font-size="8" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
+		<caption priority="115" symbol-id="tms_zoo" cat="tms_land-names" k="name" position="above" font-style="bold" font-size="9" fill="#552200" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
+	
+	<rule cat="tms_attraction" e="any" k="historic" v="archaeological_site">
+		<symbol id="s_archaeological" priority="205" src="file:/symbols/s_archaeological_site.svg" display="always" symbol-height="18" />
+		<caption symbol-id="s_archaeological" cat="tms_land-names" k="name" position="above" font-style="bold" font-size="10" fill="#743a00" stroke="#E5FFFFFF" stroke-width="2" />
+	</rule>	
 
 	<!-- place of worship -->
 	<rule cat="tms_religion" e="any" k="historic" v="wayside_cross" zoom-min="14" >
@@ -2843,7 +2863,7 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- man_made -->
 	<rule cat="tms_man-made" e="node" k="tower" v="communication" zoom-min="13">
-		<symbol priority="200" display="always" id="s_tower" src="file:/symbols/mast-comm.svg" symbol-width="22"/>	
+		<symbol priority="200" display="always" id="s_tower" src="file:/symbols/s_mast_communication.svg" symbol-width="22"/>	
 		<rule e="node" k="*" v="*" zoom-min="16">
 			<caption cat="tms_land-names" priority="200" symbol-id="s_tower" k="name" position="below" font-style="bold" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
@@ -2855,8 +2875,8 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 	<rule cat="tms_man-made" e="any" k="amenity" v="hunting_stand" zoom-min="14" >
-		<symbol id="hunting_stand" display="always" src="file:/symbols/hunting_stand.svg" symbol-width="16"/>
-		<rule e="node" k="*" v="*" zoom-min="16">
+		<symbol id="hunting_stand" display="always" src="file:/symbols/s_hunting_stand.svg" symbol-width="22"/>
+		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_land-names" priority="200" symbol-id="hunting_stand" k="name" position="below" font-style="bold" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>

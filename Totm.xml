@@ -2008,13 +2008,13 @@ Transparency for HEX colors (100% - непрозрачный)
 
 <!-- man_made -->
 	<rule cat="tms_man-made" e="any" k="tower:type|tower" v="communication">
-	    <rule e="any" k="*" v="*" zoom-max="13">				<symbol force-draw="1" src="file:/symbols/mast-comm.svg" symbol-width="8dp"/></rule>	
-	    <rule e="any" k="*" v="*" zoom-min="14" zoom-max="16">	<symbol force-draw="1" src="file:/symbols/mast-comm.svg" symbol-width="16dp"/></rule>
-	    <rule e="any" k="*" v="*" zoom-min="17">				<symbol force-draw="1" src="file:/symbols/mast-comm.svg" symbol-width="24dp"/></rule>		
+	    <rule e="any" k="*" v="*" zoom-max="13">				<symbol force-draw="1" src="file:/symbols/s_mast_communication.svg" symbol-width="10dp"/></rule>	
+	    <rule e="any" k="*" v="*" zoom-min="14" zoom-max="16"> 	<symbol force-draw="1" src="file:/symbols/s_mast_communication.svg" symbol-width="16dp"/></rule>
+	    <rule e="any" k="*" v="*" zoom-min="17">				<symbol force-draw="1" src="file:/symbols/s_mast_communication.svg" symbol-width="24dp"/></rule>		
 	</rule>	
-	<rule cat="tms_man-made" e="node" k="amenity" v="hunting_stand" zoom-min="15">
-	    <rule e="node" k="*" v="*" zoom-min="15" zoom-max="15">	<symbol id="hunting_stand" src="file:/symbols/hunting_stand.svg" symbol-width="12dp"/></rule>	
-	    <rule e="node" k="*" v="*" zoom-min="16">				<symbol id="hunting_stand" src="file:/symbols/hunting_stand.svg" symbol-width="16dp"/></rule>	
+	<rule cat="tms_man-made" e="any" k="amenity" v="hunting_stand" zoom-min="15">
+	    <rule e="any" k="*" v="*" zoom-min="15" zoom-max="15">	<symbol id="hunting_stand" src="file:/symbols/s_hunting_stand.svg" symbol-width="12dp"/></rule>	
+	    <rule e="any" k="*" v="*" zoom-min="16">				<symbol id="hunting_stand" src="file:/symbols/s_hunting_stand.svg" symbol-width="16dp"/></rule>	
 	</rule>
  
 	<rule cat="tms_man-made" e="any"  k="tower:type|tower" v="surveillance|observation"><symbol src="file:/symbols/s_tower_observation.svg" symbol-height="16" /></rule>

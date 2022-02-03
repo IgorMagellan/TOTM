@@ -343,3 +343,7 @@ tms_water-land для weir, dam; переставил pipeline; передела
 исправлено windmill
 03/02/2022
 все generator:source на z13
+добавлен магазин - мотоциклы (shop=motorcycle ≈ motorcycle_repair,motorcycle_parts)
+заменена mast-comm.svg на s_mast_communication
+заменена hunting_stand на s_hunting_stand, в V3 проблема растеризации
+добавил archaeological site
