@@ -424,8 +424,13 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<rule cat="tms_terrain" e="way" k="natural" v="tree_row">
-		<line stroke="#bee976" cat="tms_terrain" stroke-width="1.2" stroke-linecap="round"/>
+		<line stroke="#bee976" stroke-width="1.2" stroke-linecap="round"/>
 	</rule>
+	
+	<rule cat="tms_terrain" e="way" k="barrier" v="hedge" zoom-min="15">
+		<line stroke="#A5CBA5" stroke-width="0.42" stroke-linecap="round" />
+		<line stroke="#CBE1CB" stroke-width="0.36" stroke-dasharray="2,5"  stroke-linecap="butt" />
+	</rule>	
 
 	<!-- Contour lines -->
 	<rule e="way" k="contour_ext" v="*" cat="tms_contours">

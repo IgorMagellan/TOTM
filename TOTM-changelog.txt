@@ -347,3 +347,5 @@ tms_water-land для weir, dam; переставил pipeline; передела
 заменена mast-comm.svg на s_mast_communication
 заменена hunting_stand на s_hunting_stand, в V3 проблема растеризации
 добавил archaeological site
+04/02/2022
+добавил barrier=hedge
