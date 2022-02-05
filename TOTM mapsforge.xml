@@ -480,7 +480,7 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- protected, aboriginal areas -->
 	<rule cat="tms_terrain" e="way" k="*" v="*">
-		<rule e="way" k="boundary" v="aboriginal_lands" zoom-min="8" cat="tms_oopt" closed="yes">
+		<rule e="way" k="boundary" v="aboriginal_lands" zoom-min="8" cat="tms_oopt" >
 			<area fill="#0CFF8000" />
 			<rule e="way" k="*" v="*" zoom-min="8" zoom-max="13">
 				<line stroke="#FFAF0B" stroke-width="2" stroke-linecap="butt" />
@@ -491,20 +491,19 @@ Transparency for HEX colors (100% - непрозрачный)
 			</rule>
 		</rule>
 
-		<rule e="way" k="leisure|boundary" v="nature_reserve|protected_area|national_park" zoom-min="8" cat="tms_oopt" closed="yes">
+		<rule e="way" k="leisure|boundary" v="nature_reserve|protected_area|national_park" cat="tms_oopt" >
 			<rule e="any" k="*" v="*" zoom-max="13">
 				<area fill="#707A9E52" />
 			</rule>
-			<rule e="any" k="*" v="*" zoom-min="14">
+			<rule e="any" k="*" v="*" zoom-min="14" zoom-max="17">
 				<area fill="#307A9E52" />
 			</rule>
-		</rule>
 
-		<rule e="way" k="boundary" v="protected_area|national_park" cat="tms_oopt">
+			<!--  границы  -->
 			<rule e="way" k="*" v="*" zoom-min="8" zoom-max="13">
 				<line stroke="#A5C085" stroke-width="2" stroke-linecap="butt" />
 			</rule>
-			<rule e="way" k="*" v="*" zoom-min="14">
+			<rule e="way" k="*" v="*" zoom-min="14" >
 				<line stroke="#99A5C085" stroke-width="2" dy="-2" stroke-linecap="butt" />
 				<line stroke="#99C7D2AC" stroke-width="2" stroke-linecap="butt" />
 			</rule>
@@ -2038,13 +2037,13 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge|xlarge" zoom-min="11">
 			<caption cat="tms_land-names" k="name" dy="15" priority="110" font-style="bold_italic" font-family="serif" font-size="14" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
-		<rule e="any" k="bBoxWeight" v="large" zoom-min="11">
+		<rule e="any" k="bBoxWeight" v="large" zoom-min="9">
 			<caption cat="tms_land-names" k="name" dy="15" priority="110" font-style="bold_italic" font-family="serif" font-size="13" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
-		<rule e="any" k="bBoxWeight" v="mid|~" zoom-min="12">
+		<rule e="any" k="bBoxWeight" v="mid|~" zoom-min="10">
 			<caption cat="tms_land-names" k="name" dy="15" priority="110" font-style="bold_italic" font-family="serif" font-size="11" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
-		<rule e="any" k="bBoxWeight" v="small|xsmall|tiny" zoom-min="13">
+		<rule e="any" k="bBoxWeight" v="small|xsmall|tiny" zoom-min="11">
 			<caption cat="tms_land-names" k="name" dy="15" priority="110" font-style="bold_italic" font-family="serif" font-size="10" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
@@ -2298,13 +2297,16 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>		
 		<rule e="any" k="barrier" v="log">
 			<symbol priority="415" display="always" src="file:/symbols/s_log2.svg" symbol-height="16" />
-		</rule>		
+		</rule>
+		<rule e="any" k="barrier" v="kissing_gate" >
+			<symbol priority="415" display="always" src="file:/symbols/s_kissing_gate.svg" symbol-height="16" />
+		</rule>			
 	</rule>
 
 	<!-- fords -->
 	<rule cat="tms_barriers" e="any" k="highway|ford" v="ford|fd_yes" zoom-min="15">
-		<symbol id="s_ford" priority="300" display="always" src="file:/symbols/s_ford-4.svg" symbol-height="18" />
-		<line stroke="#AAB3DDFF" stroke-width="0.65" />
+		<symbol id="s_ford" priority="300" display="always" src="file:/symbols/s_ford_6w.svg" symbol-height="18" />
+		<line stroke="#99B3DDFF" stroke-width="0.65" />
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_land-names" k="name" symbol-id="s_ford" font-style="bold" font-size="10" fill="#ff4c4d" stroke="#E5ffff00" stroke-width="2" />
 		</rule>
@@ -2338,7 +2340,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<symbol display="always" priority="505" id="tms_drop" src="file:/symbols/s_spring.svg" symbol-height="13" />
 		</rule>
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<caption symbol-id="tms_drop" k="name" priority="105" position="above" font-style="bold_italic" font-size="10" fill="#115DFF" stroke="#E5FFFFFF" stroke-width="2" />
+			<caption symbol-id="tms_drop" cat="tms_land-names" k="name" priority="105" position="above" font-style="bold_italic" font-size="10" fill="#115DFF" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 
@@ -2347,7 +2349,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<rule e="any" k="natural" v="~">
 				<rule e="any" k="man_made" v="~">	<!-- ??? -->
 					<symbol id="s_drinking_water" display="always" src="file:/symbols/s_drinking_water.svg" symbol-height="13" />
-					<rule e="any" k="*" v="*" zoom-min="16">
+					<rule cat="tms_land-names" e="any" k="*" v="*" zoom-min="16">
 						<caption k="name" symbol-id="s_drinking_water" font-style="italic" font-size="9" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
 					</rule>
 				</rule>
@@ -2358,12 +2360,12 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_water" e="any" k="man_made" v="water_well" zoom-min="15">
 		<rule e="any" k="drinking_water" v="yes|~">
 			<symbol id="s_ww_drink" display="always" src="file:/symbols/ww_drink2.svg" symbol-height="18" />
-			<rule e="any" k="*" v="*" zoom-min="16">
+			<rule cat="tms_land-names" e="any" k="*" v="*" zoom-min="16">
 				<caption k="name" symbol-id="s_ww_drink" position="above" font-style="bold_italic" font-size="10" fill="#115DFF" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
 		<rule e="any" k="drinking_water" v="no">
-			<symbol id="s_ww_nodrink" display="always" src="file:/symbols/ww_nodrink2.svg" symbol-height="18" />
+			<symbol cat="tms_land-names" id="s_ww_nodrink" display="always" src="file:/symbols/ww_nodrink2.svg" symbol-height="18" />
 			<rule e="any" k="*" v="*" zoom-min="16">
 				<caption k="name" symbol-id="s_ww_nodrink" font-style="bold" font-size="10" fill="#d900d9" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
@@ -2508,6 +2510,14 @@ Transparency for HEX colors (100% - непрозрачный)
 			<rule e="any" k="*" v="*" zoom-min="15">
 				<caption cat="tms_land-names" k="name" symbol-id="s_info_terminal" position="below" font-style="bold" font-size="10" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
+		</rule>
+	</rule>
+
+	<rule cat="tms_info" e="any" k="man_made" v="cairn">
+		<symbol priority="210" id="s_cairn" src="file:/symbols/s_cairn_totm.svg" display="always" symbol-height="16" />
+		<rule e="any" k="*" v="*">
+			<caption k="name" symbol-id="s_cairn" position="above" font-size="10" font-style="bold" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+			<caption k="ele" priority="-5" symbol-id="s_cairn" position="below" font-size="9" font-style="bold" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 
