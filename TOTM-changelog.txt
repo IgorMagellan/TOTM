@@ -354,3 +354,7 @@ tms_water-land для weir, dam; переставил pipeline; передела
 добавил cairn
 tms_land-names на источники воды
 поправил правила заливки ООПТ, корректировка зумов на -2 для названий (large, mid и меньше)
+09/02/2022
+полностью новый слой surfaces
+tms_land-names -> tms_landnames
+переделал footway
