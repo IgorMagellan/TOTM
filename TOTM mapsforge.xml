@@ -922,12 +922,12 @@ Transparency for HEX colors (100% - непрозрачный)
 	<!-- underground waterways -->
 	<rule cat="tms_terrain" e="way" k="tunnel" v="true|yes|culvert" zoom-min="14">
 		<rule e="way" k="waterway" v="stream|drain|ditch">
-			<line stroke="#665887ff" stroke-width="0.7" />
-			<line stroke="#995887ff" scale="all" stroke-width="0.7" stroke-dasharray="0.6,0.6" stroke-linecap="butt" />
+			<line stroke="#665887ff" stroke-width="0.52" />
+			<line stroke="#995887ff" scale="all" stroke-width="0.50" stroke-dasharray="0.6,0.6" stroke-linecap="butt" />
 		</rule>
 		<rule e="way" k="waterway" v="river|canal">
 			<line stroke="#405887ff" stroke-width="1" />
-			<line stroke="#995887ff" scale="all" stroke-width="1" stroke-dasharray="3,5" stroke-linecap="butt" />
+			<line stroke="#995887ff" scale="all" stroke-width="1" stroke-dasharray="1.6,2.5" stroke-linecap="butt" />
 		</rule>
 	</rule>
 
@@ -2560,15 +2560,17 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="marketplace">
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_marketplace.svg" symbol-width="17"/>
 	</rule>
+	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="ice_cream">
+		<symbol priority="164" id="tms_shop" display="always" src="file:/symbols/s_ice_cream.svg" symbol-height="17" />
+	</rule>
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="mall">
 		<symbol priority="250" id="tms_shop" display="always" src="file:/symbols/s_mall3.svg" symbol-width="20"/>
 	</rule>
-
 	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="organic|shop_farm|greengrocer|cheese">
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_organic.svg" symbol-height="16" />
 	</rule>
 
-	<rule cat="tms_food" zoom-min="15" e="any" k="shop|amenity" v="butcher|supermarket|convenience|bakery|restaurant|fast_food|biergarten|cafe|pub|bar|beverages|marketplace|mall|organic|shop_farm|greengrocer|cheese">
+	<rule cat="tms_food" zoom-min="15" e="any" k="shop|amenity" v="butcher|supermarket|convenience|bakery|restaurant|fast_food|biergarten|cafe|pub|bar|beverages|marketplace|mall|organic|shop_farm|greengrocer|cheese|ice_cream">
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption priority="135" cat="tms_landnames" symbol-id="tms_shop" k="name" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
@@ -2790,6 +2792,11 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol priority="260" id="tms_rapids" display="always" src="file:/symbols/s_rapids.svg" symbol-height="16" />
 		<caption priority="140" symbol-id="tms_rapids" k="name" cat="tms_landnames" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
+	
+	<rule cat="tms_water-land" e="any" k="natural" v="hot_spring">
+		<symbol id="s_hot_spring" priority="263" src="file:/symbols/s_hot_spring.svg" symbol-height="16" />
+		<caption cat="tms_landnames" symbol-id="s_hot_spring" k="name" position="above" font-style="bold" font-size="10" fill="#ff0040" stroke="#E5FFFFFF" stroke-width="2" />
+	</rule>	
 
 	<!-- cultural stuff -->
 	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity" v="library">
