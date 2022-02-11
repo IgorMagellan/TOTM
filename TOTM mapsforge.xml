@@ -510,6 +510,18 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
+	<!-- natural ways -->
+	<rule cat="tms_relief" e="way" k="natural" v="gorge" closed="no" zoom-min="12">
+		<rule e="way" k="*" v="*" zoom-max="13" >
+			<line stroke="#80606060" stroke-width="0.2"/>
+		</rule>
+		<rule e="way" k="*" v="*" zoom-min="14">
+			<line src="file:/patterns/bare_rock-128.png" stroke-width="1.9"/>
+			<line stroke="#40606060" stroke-width="1.6" scale="all" stroke-dasharray="0.1,0.3" stroke-linecap="butt"/>
+			<pathText cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#666666" stroke="#FFFFFF" stroke-width="3" dy="-1.1"/>
+		</rule>
+	</rule>
+
 	<!-- embankment and dyke -->
 	<!-- двесторонняя дамба,насыпь like embankment=yes -->
 	<rule e="way" k="man_made" v="dyke" zoom-min="15" cat="tms_man-made">
@@ -1076,8 +1088,8 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>	
 	</rule>
 
-	<!-- natural ways -->
-	<rule cat="tms_relief" e="way" k="natural" v="valley|gorge" zoom-min="13">
+
+	<rule cat="tms_relief" e="way" k="natural" v="valley" zoom-min="13">
 		<pathText cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#E6444444" stroke="#cce0e0e0" stroke-width="2.0" />
 	</rule>
 
@@ -2862,6 +2874,18 @@ Transparency for HEX colors (100% - непрозрачный)
 			<caption symbol-id="s_sport" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
+		<rule cat="tms_sport" e="any" k="sport|climbing" v="climbing|cl_yes">
+			<symbol  priority="225" id="s_climbing" src="file:/symbols/s_sport_climbing.svg" display="always" symbol-height="17" />
+			<rule e="any" k="*" v="*">
+				<caption cat="tms_landnames" symbol-id="s_climbing" k="name" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>	
+		<rule cat="tms_sport" e="any" k="sport" v="climbing_adventure">
+			<symbol  priority="225" id="s_climbing_adventure" src="file:/symbols/s_sport_climbing_adventure.svg" display="always" symbol-height="17" />
+			<rule e="any" k="*" v="*">
+				<caption cat="tms_landnames" symbol-id="s_climbing_adventure" k="name" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>		
 	<rule cat="tms_sport" e="any" k="leisure" v="stadium" >
 		<symbol priority="250" id="s_stadium" display="always" src="file:/symbols/s_stadium.svg" symbol-width ="21" />
 		<rule cat="tms_landnames" e="any" k="*" v="*" zoom-min="15">

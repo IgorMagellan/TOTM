@@ -359,4 +359,4 @@ tms_land-names на источники воды
 tms_land-names -> tms_landnames
 переделал footway
 10/02/2022
-добавил ice_cream, hot spring
+добавил ice_cream, hot spring, ущелья gorge
