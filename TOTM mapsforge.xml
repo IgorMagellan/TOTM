@@ -2874,13 +2874,13 @@ Transparency for HEX colors (100% - непрозрачный)
 			<caption symbol-id="s_sport" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
-		<rule cat="tms_sport" e="any" k="sport|climbing" v="climbing|cl_yes">
+		<rule cat="tms_sport" e="any" k="sport|climbing" v="climbing|cl_yes" zoom-min="13">
 			<symbol  priority="225" id="s_climbing" src="file:/symbols/s_sport_climbing.svg" display="always" symbol-height="17" />
 			<rule e="any" k="*" v="*">
 				<caption cat="tms_landnames" symbol-id="s_climbing" k="name" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>	
-		<rule cat="tms_sport" e="any" k="sport" v="climbing_adventure">
+		<rule cat="tms_sport" e="any" k="sport" v="climbing_adventure" zoom-min="13">
 			<symbol  priority="225" id="s_climbing_adventure" src="file:/symbols/s_sport_climbing_adventure.svg" display="always" symbol-height="17" />
 			<rule e="any" k="*" v="*">
 				<caption cat="tms_landnames" symbol-id="s_climbing_adventure" k="name" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
