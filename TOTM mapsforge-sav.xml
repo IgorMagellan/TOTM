@@ -1329,7 +1329,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_terrain" e="way" k="aeroway" v="*">
 		<!-- runways areas -->
 		<rule e="way" k="aeroway" v="aerodrome|helipad" closed="yes">
-			<area fill="#90D8DCCE" stroke="#000000" stroke-width="0.3" />
+			<area fill="#90D8DCCE" stroke="#000000" stroke-width="0.5" />
 		</rule>
 		<rule e="way" k="aeroway" v="apron">
 			<area fill="#eeeeee" />
@@ -2543,94 +2543,97 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- food -->
 <rule cat="tms_food" e="any" k="shop|amenity" v="*" zoom-min="15" >	
-	<rule e="any" k="shop" v="butcher">
+	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="butcher">
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_butcher.svg" symbol-height="16" />
 	</rule>
-	<rule e="any" k="shop" v="supermarket">
+	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="supermarket">
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_supermarket.svg" symbol-height="17" />
 	</rule>
-	<rule e="any" k="shop" v="convenience">
+	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="convenience">
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_convenience.svg" symbol-height="17" />
 	</rule>
-	<rule e="any" k="shop" v="bakery">
+	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="bakery">
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_bakery.svg" symbol-height="17" />
 	</rule>
-	<rule e="any" k="amenity" v="restaurant">
+	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="restaurant">
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_restaurant.svg" symbol-height="17" />
 	</rule>
-	<rule e="any" k="amenity" v="fast_food">
+	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="fast_food">
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_fastfood.svg" symbol-height="17" />
 	</rule>
-	<rule e="any" k="amenity" v="biergarten">
+	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="biergarten">
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_biergarten.svg" symbol-height="17" />
 	</rule>
-	<rule e="any" k="amenity" v="cafe">
+	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="cafe">
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_cafe.svg" symbol-height="17" />
 	</rule>
-	<rule e="any" k="shop|amenity" v="pub|bar|beverages">
+	<rule cat="tms_food" zoom-min="15" e="any" k="shop|amenity" v="pub|bar|beverages">
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_pub.svg" symbol-height="17" />
 	</rule>
-	<rule e="any" k="amenity" v="marketplace">
+	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="marketplace">
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_marketplace.svg" symbol-width="17"/>
 	</rule>
-	<rule e="any" k="amenity" v="ice_cream">
+	<rule cat="tms_food" zoom-min="15" e="any" k="amenity" v="ice_cream">
 		<symbol priority="164" id="tms_shop" display="always" src="file:/symbols/s_ice_cream.svg" symbol-height="17" />
 	</rule>
-	<rule e="any" k="shop" v="mall">
+	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="mall">
 		<symbol priority="250" id="tms_shop" display="always" src="file:/symbols/s_mall3.svg" symbol-width="20"/>
 	</rule>
-	<rule e="any" k="shop" v="organic|shop_farm|greengrocer|cheese">
+	<rule cat="tms_food" zoom-min="15" e="any" k="shop" v="organic|shop_farm|greengrocer|cheese">
 		<symbol priority="245" id="tms_shop" display="always" src="file:/symbols/s_organic.svg" symbol-height="16" />
 	</rule>
 
-	<rule zoom-min="16" e="any" k="shop|amenity" v="butcher|supermarket|convenience|bakery|restaurant|fast_food|biergarten|cafe|pub|bar|beverages|marketplace|mall|organic|shop_farm|greengrocer|cheese|ice_cream">
-		<caption priority="135" cat="tms_landnames" symbol-id="tms_shop" k="name" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
+	<rule cat="tms_food" zoom-min="15" e="any" k="shop|amenity" v="butcher|supermarket|convenience|bakery|restaurant|fast_food|biergarten|cafe|pub|bar|beverages|marketplace|mall|organic|shop_farm|greengrocer|cheese|ice_cream">
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption priority="135" cat="tms_landnames" symbol-id="tms_shop" k="name" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
+		</rule>
 	</rule>
 </rule>
 	<!-- other shops -->
-<rule cat="tms_shops" e="any" k="shop" v="*">	
-	<rule e="any" k="*" v="bicycle">
+	<rule cat="tms_shops" e="any" k="shop" v="bicycle">
 		<symbol priority="215" id="tms_shop" display="always" src="file:/symbols/s_bicycle_shop.svg" symbol-width="18"/>
 	</rule>
-	<rule e="any" k="*" v="doityourself|hardware">
+	<rule cat="tms_shops" e="any" k="shop" v="doityourself|hardware">
 		<symbol priority="215" id="tms_shop" display="always" src="file:/symbols/s_diy.svg" symbol-width="18" />
 	</rule>
-	<rule e="any" k="*" v="laundry|dry_cleaning">
+	<rule cat="tms_shops" e="any" k="shop" v="laundry|dry_cleaning">
 		<symbol priority="215" id="tms_shop" display="always" src="file:/symbols/s_laundry.svg" symbol-width="17" />
 	</rule>
-	<rule e="any" k="*" v="florist">
+	<rule cat="tms_shops" e="any" k="shop" v="florist">
 		<symbol priority="215" id="tms_shop" display="always" src="file:/symbols/s_florist.svg" symbol-width="17" />
 	</rule>
-	<rule e="any" k="*" v="sports">
+	<rule cat="tms_shops" e="any" k="shop" v="sports">
 		<symbol priority="215" id="tms_shop" display="always" src="file:/symbols/s_shop-sports.svg" symbol-width="18" />
 	</rule>
-	<rule e="any" k="*" v="hairdresser">
+	<rule cat="tms_shops" e="any" k="shop" v="hairdresser">
 		<symbol priority="210" id="tms_shop" display="always" src="file:/symbols/s_hairdresser3.svg" symbol-width="17" />
 	</rule>
-	<rule e="any" k="*" v="travel_agency">
+	<rule cat="tms_shops" e="any" k="shop" v="travel_agency">
 		<symbol priority="210" id="tms_shop" display="always" src="file:/symbols/s_travel_agency.svg" symbol-width="17" />
 	</rule>
-	<rule e="any" k="*" v="chemist">
+	<rule cat="tms_shops" e="any" k="shop" v="chemist">
 		<symbol priority="205" id="tms_shop" display="always" src="file:/symbols/s_chemist.svg" symbol-width="17" />
 	</rule>
-	<rule e="any" k="*" v="books">
+	<rule cat="tms_shops" e="any" k="shop" v="books">
 		<symbol priority="205" id="tms_shop" display="always" src="file:/symbols/s_books.svg" symbol-width="17" />
 	</rule>
-	<rule e="any" k="*" v="bicycle|doityourself|hardware|laundry|dry_cleaning|florist|sports|hairdresser|travel_agency|chemist|books" zoom-min="15" >
+
+	<rule cat="tms_shops" e="any" k="shop" v="bicycle|doityourself|hardware|laundry|dry_cleaning|florist|sports|hairdresser|travel_agency|chemist|books" zoom-min="15" >
 		<caption priority="110" cat="tms_landnames" symbol-id="tms_shop" k="name" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
-</rule>
 
-<rule cat="tms_trans-priv" e="any" k="shop" v="*">	
-	<rule e="any" k="*" v="car">
+	<rule cat="tms_trans-priv" e="any" k="shop" v="car">
 		<symbol priority="245" id="tms_carshop" display="always" src="file:/symbols/s_car-shop.svg" symbol-width="17" />
-		<caption k="name" symbol-id="tms_carshop" priority="135" cat="tms_landnames" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
+		<rule e="any" k="*" v="*">
+			<caption k="name" symbol-id="tms_carshop" priority="135" cat="tms_landnames" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
+		</rule>		
 	</rule>	
-	<rule e="any" k="*" v="motorcycle">
+	<rule cat="tms_trans-priv" e="any" k="shop" v="motorcycle">
 		<symbol priority="245" id="tms_motshop" display="always" src="file:/symbols/s_shop_motorcycle.svg" symbol-width="17" />
-		<caption k="name" symbol-id="tms_motshop" priority="135" cat="tms_landnames" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />	
+		<rule e="any" k="*" v="*">
+			<caption k="name" symbol-id="tms_motshop" priority="135" cat="tms_landnames" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
+		</rule>		
 	</rule>	
-</rule>	
 
 	<!-- tourist info -->
 	<rule cat="tms_info" e="any" k="information" v="office">
@@ -2770,13 +2773,13 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- aeroway symbols and captions -->
 	<rule cat="tms_terrain" e="any" k="aeroway" v="*">
-		<rule e="any" k="*" v="helipad" zoom-min="13">
+		<rule e="any" k="aeroway" v="helipad" zoom-min="13">
 			<symbol priority="255" display="always" src="file:/symbols/s_helipad.svg" symbol-height="16" symbol-width="17" />
 		</rule>
-		<rule e="any" k="*" v="aerodrome|airport" zoom-min="12">
+		<rule e="any" k="aeroway" v="aerodrome|airport" zoom-min="12">
 			<symbol display="always" src="file:/symbols/s_airport.svg" symbol-width="14" />
 		</rule>
-		<rule cat="tms_landnames" e="any" k="*" v="*" zoom-min="16">
+		<rule cat="tms_landnames" e="any" k="aeroway" v="*" zoom-min="16">
 			<caption k="name" font-style="bold" font-size="10" fill="#005DD5" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
@@ -2809,35 +2812,31 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>	
 
 	<!-- cultural stuff -->
-<rule cat="tms_educat" e="any" k="amenity" v="*" zoom-min="14">	
-	<rule e="any" k="*" v="library">
+	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity" v="library">
 		<symbol id="tms_educat" src="file:/symbols/s_library.svg" display="always" symbol-width="17" />
 	</rule>
-	<rule e="any" k="*" v="school">
+	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity" v="school">
 		<symbol id="tms_educat" src="file:/symbols/s_school.svg" display="always" symbol-width="17" />
 	</rule>
-	<rule e="any" k="*" v="university|college">
+	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity" v="university|college">
 		<symbol id="tms_educat" src="file:/symbols/s_university.svg" display="always" symbol-width="17" />
 	</rule>
-	<rule e="any" k="*" v="kindergarten">
+	<rule cat="tms_educat" zoom-min="14" e="any" k="amenity" v="kindergarten">
 		<symbol priority="220" id="tms_educat" src="file:/symbols/s_kindergarten.svg" display="always" symbol-width="17" />
 	</rule>
-	<rule zoom-min="16" e="any" k="*" v="school|library|university|college|kindergarten">
+	<rule cat="tms_educat" zoom-min="16" e="any" k="amenity" v="school|library|university|college|kindergarten">
 		<caption symbol-id="tms_educat" cat="tms_landnames" priority="110" k="name" display="always" font-style="bold" position="above" font-size="10" fill="#004d66" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
-</rule>
-<rule cat="tms_culture" e="any" k="historic" v="*" zoom-min="14" >
-	<rule e="any" k="*" v="monument">	
+
+	<rule cat="tms_culture" zoom-min="14" e="any" k="historic" v="monument">
 		<symbol id="tms_monument" display="always" priority="250" src="file:/symbols/s_monument.svg" symbol-width="20" />
 	</rule>
-	<rule e="any" k="*" v="memorial">
+	<rule cat="tms_culture" zoom-min="14" e="any" k="historic" v="memorial">
 		<symbol id="tms_monument" display="always" priority="250" src="file:/symbols/s_memorial.svg" symbol-width="16" />
 	</rule>
-	<rule e="any" k="*" v="memorial|monument">
+	<rule cat="tms_culture" zoom-min="14" e="any" k="historic" v="memorial|monument">
 		<caption symbol-id="tms_monument" cat="tms_landnames" priority="250" k="name" position="above" font-style="bold" font-size="10" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
-</rule>
-	
 	<rule cat="tms_culture" zoom-min="14" e="any" k="historic|building" v="castle">
 		<symbol id="tms_castle" display="always" priority="260" src="file:/symbols/s_castle.svg" symbol-width="17"/>
 		<caption symbol-id="tms_castle" cat="tms_landnames" priority="260" k="name" position="above" font-style="bold" font-size="10" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
@@ -2846,7 +2845,6 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol id="tms_museum" display="always" priority="260" src="file:/symbols/s_museum.svg" symbol-width="20" />
 		<caption symbol-id="tms_museum" cat="tms_landnames" priority="260" k="name" position="above" font-style="bold" font-size="10" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
-
 
 	<!-- #sport -->
 	<rule cat="tms_sport" e="any" k="leisure" v="slipway" zoom-min="14">
@@ -3097,32 +3095,30 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol display="always" src="file:/symbols/power_tower.svg" symbol-height="22" />
 	</rule>
 
-<rule cat="tms_man-made" e="any" k="generator:source" v="*" zoom-min="13">
-	<rule e="any" k="*" v="wind" >
+	<rule cat="tms_man-made" e="any" k="generator:source" v="wind" zoom-min="13">
 		<symbol display="always" id="s_generator" src="file:/symbols/s_power_wind.svg" symbol-height="29" />
 	</rule>
-	<rule e="any" k="*" v="hydro|tidal|wave" >
+	<rule cat="tms_man-made" e="any" k="generator:source" v="hydro|tidal|wave" zoom-min="13">
 		<symbol display="always" id="s_generator" src="file:/symbols/s_power_water.svg" symbol-width="18" />
 	</rule>
-	<rule e="any" k="*" v="solar" >
+	<rule cat="tms_man-made" e="any" k="generator:source" v="solar" zoom-min="13">
 		<symbol display="always" id="s_generator" src="file:/symbols/s_power_solar.svg" symbol-width="18" />
 	</rule>
-	<rule e="any" k="*" v="gas" >
+	<rule cat="tms_man-made" e="any" k="generator:source" v="gas" zoom-min="13">
 		<symbol display="always" id="s_generator" src="file:/symbols/s_power_gas.svg" symbol-width="18" />
 	</rule>
-	<rule e="any" k="*" v="coal" >
+	<rule cat="tms_man-made" e="any" k="generator:source" v="coal" zoom-min="13">
 		<symbol display="always" id="s_generator" src="file:/symbols/s_power_coal.svg" symbol-width="18" />
 	</rule>
-	<rule e="any" k="*" v="nuclear" >
+	<rule cat="tms_man-made" e="any" k="generator:source" v="nuclear" zoom-min="13">
 		<symbol display="always" id="s_generator" src="file:/symbols/s_power_nuclear.svg" symbol-width="18" />
 	</rule>
-	<rule e="any" k="*" v="oil|diesel|gasoline|biomass|biofuel|waste|geothermal" >
+	<rule cat="tms_man-made" e="any" k="generator:source" v="oil|diesel|gasoline|biomass|biofuel|waste|geothermal" zoom-min="13">
 		<symbol display="always" id="s_generator" src="file:/symbols/s_power.svg" symbol-width="16" />
 	</rule>	
-	<rule e="any" k="*" v="*" zoom-min="16">
+	<rule cat="tms_man-made" e="any" k="generator:source" v="*" zoom-min="16">
         <caption cat="tms_landnames" priority="180" symbol-id="s_generator" k="name" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#BFffff00" stroke-width="2" />
     </rule>	
-</rule>	
 
 	<!-- crossings -->
 	<rule cat="tms_crossings" e="any" k="highway" v="traffic_signals">

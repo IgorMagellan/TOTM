@@ -362,3 +362,6 @@ tms_land-names -> tms_landnames
 добавил ice_cream, hot spring, ущелья gorge
 11/02/2022
 добавил sport climbing, climbing_adventure
+11/02/2022
+изменил стиль шрифта для town 
+оптимизация tms_food, tms_shops, tms_trans-priv(shop), tms_educat, tms_culture(historic), generator:source
