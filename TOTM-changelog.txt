@@ -362,6 +362,15 @@ tms_land-names -> tms_landnames
 добавил ice_cream, hot spring, ущелья gorge
 11/02/2022
 добавил sport climbing, climbing_adventure
-11/02/2022
+13/02/2022
 изменил стиль шрифта для town 
 оптимизация tms_food, tms_shops, tms_trans-priv(shop), tms_educat, tms_culture(historic), generator:source
+14-16/02/2022
+добавил sport cliff_diving, free_flying, skateboard, roller_skating, miniature_golf; 
+hot_spring drinking_water; пристань ferry_terminal
+строящиеся и ремонтируемые дороги highway construction, разводной мост bridge movable
+заменил иконки колодцев water_well на ведро
+переименование mountain_pass
+расширение bridge yes|true|viaduct на yes|true|aqueduct|viaduct|movable
+17/02/2022
+добавил charging_station

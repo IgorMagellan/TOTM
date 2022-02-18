@@ -1363,7 +1363,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- bridge casings -->
-	<rule e="way" k="bridge" v="yes|true|viaduct">
+	<rule e="way" k="bridge" v="yes|true|aqueduct|viaduct|movable">
 		<!-- walls -->
 		<!-- magellan Пути через мосты -->
 		<rule e="way" k="highway" v="steps|footway|path" zoom-min="13">
@@ -1376,9 +1376,9 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule cat="tms_tracks" e="way" k="highway" v="cycleway" zoom-min="13">
 			<line stroke="#666666" stroke-width="2.08" stroke-linecap="butt" />
 		</rule>
-		<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="13">
+		<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction" zoom-min="13">
 			<line stroke="#666666" stroke-width="2.1" stroke-linecap="butt" />
-		</rule>		
+		</rule>
 		<rule e="way" k="highway" v="tertiary|secondary_link|primary_link|trunk_link|motorway_link" zoom-min="13">
 			<line stroke="#666666" stroke-width="2.95" stroke-linecap="butt" />
 		</rule>
@@ -1396,7 +1396,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule cat="tms_tracks" e="way" k="highway" v="track|bridleway" zoom-min="13">
 			<line stroke="#DDDDDD" stroke-width="1.44" stroke-linecap="butt" />
 		</rule>
-		<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="13">
+		<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction" zoom-min="13">
 			<line stroke="#dddddd" stroke-width="1.60" stroke-linecap="butt" />
 		</rule>		<!-- stroke-width="1.97" zoom-max="16" -->
 		<rule e="way" k="highway" v="tertiary|secondary_link|primary_link|trunk_link|motorway_link" zoom-min="13">
@@ -1410,7 +1410,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 
 		<!-- casings  КРАЯ МОСТА -->
-		<rule cat="tms_tracks" e="way" k="highway" v="track" zoom-min="13">
+		<rule cat="tms_tracks" e="way" k="highway" v="track" zoom-min="13" >
 			<line stroke="#000000" stroke-width="0.80" stroke-linecap="butt" />
 			<line stroke="#cccccc" stroke-width="0.60" stroke-linecap="butt" />
 		</rule>
@@ -1422,7 +1422,12 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 		<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="13">
 			<line stroke="#000000" stroke-width="0.92" stroke-linecap="butt" />
-		</rule>		
+		</rule>
+
+		<rule e="way" k="highway" v="construction" zoom-min="13">
+			<line stroke="#B3000000" stroke-width="0.92" stroke-dasharray="3,0.92,0.25,0.92" scale="all" stroke-linecap="butt" />					
+		</rule>
+
 		<rule e="way" k="highway" v="tertiary|secondary_link|primary_link|trunk_link|motorway_link" zoom-min="13">
 			<line stroke="#000000" stroke-width="1.68" stroke-linecap="butt" />
 		</rule>
@@ -1451,7 +1456,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule e="way" k="railway" v="*">
 		<rule e="way" k="tunnel" v="~|false|no">
 			<!-- railway BRIDGE casings -->			<!-- МОСТЫ -->
-			<rule e="way" k="bridge" v="yes|true">
+			<rule e="way" k="bridge" v="yes|true|aqueduct|viaduct|movable">
 				<rule e="way" k="railway" v="narrow_gauge|preserved|funicular">
 					<line stroke="#111111" stroke-width="1.8" stroke-linecap="butt" />
 					<line stroke="#999999" stroke-width="1.2" stroke-linecap="butt" />
@@ -1550,7 +1555,7 @@ Transparency for HEX colors (100% - непрозрачный)
 						<line stroke="#00d900" stroke-width="1.6" stroke-linecap="butt" />
 						<line src="file:exps/p_surf_gray.svg" symbol-height="8" stroke-width="1.6" stroke-linecap="butt" />	
 					</rule>
-					<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service">
+					<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction">
 						<line stroke="#00d900" stroke-width="2.0" stroke-linecap="butt" />
 						<line src="file:exps/p_surf_gray.svg" symbol-height="8" stroke-width="2.0" stroke-linecap="butt" />	
 					</rule>					
@@ -1577,7 +1582,7 @@ Transparency for HEX colors (100% - непрозрачный)
 						<line stroke="#888888" stroke-width="1.6" stroke-linecap="butt" />
 						<line src="file:exps/sur_gravel.png" symbol-height="20" stroke-width="1.6" stroke-linecap="butt" />	
 					</rule>			
-					<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service">
+					<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction">
 						<line stroke="#888888" stroke-width="2.0" stroke-linecap="butt" />
 						<line src="file:exps/sur_gravel.png" symbol-height="20" stroke-width="2.0" stroke-linecap="butt" />	
 					</rule>					
@@ -1604,7 +1609,7 @@ Transparency for HEX colors (100% - непрозрачный)
 						<line stroke="#ff9326" stroke-width="1.6" stroke-linecap="butt" />
 						<line src="file:exps/sur_ground.png" symbol-height="20" stroke-width="1.6" stroke-linecap="butt" />	
 					</rule>			
-					<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service">
+					<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction">
 						<line stroke="#ff9326" stroke-width="2.0" stroke-linecap="butt" />
 						<line src="file:exps/sur_ground.png" symbol-height="20" stroke-width="2.0" stroke-linecap="butt" />	
 					</rule>					
@@ -1631,7 +1636,7 @@ Transparency for HEX colors (100% - непрозрачный)
 						<line stroke="#bbbbbb" stroke-width="1.6" stroke-linecap="butt" />
 						<line src="file:exps/p_surf_gray.svg" symbol-height="8" stroke-width="1.6" stroke-linecap="butt" />	
 					</rule>
-					<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service">
+					<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction">
 						<line stroke="#bbbbbb" stroke-width="2.0" stroke-linecap="butt" />
 						<line src="file:exps/p_surf_gray.svg" symbol-height="8" stroke-width="2.0" stroke-linecap="butt" />	
 					</rule>					
@@ -1656,7 +1661,7 @@ Transparency for HEX colors (100% - непрозрачный)
 				<rule cat="tms_hk" e="way" k="surface" v="paved" >
 					<rule e="way" k="highway" v="track|path|footpath|footway">
 						<line src="file:exps/p_surf_gray.svg" symbol-height="8" stroke-width="1.6" stroke-linecap="butt" /></rule>
-					<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service">
+					<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction">
 						<line src="file:exps/p_surf_gray.svg" symbol-height="8" stroke-width="2.0" stroke-linecap="butt" /></rule>					
 					<rule e="way" k="highway" v="cycleway|bridleway">
 						<line src="file:exps/p_surf_gray.svg" symbol-height="8" stroke-width="2.4" stroke-linecap="butt" /></rule>				
@@ -1671,7 +1676,7 @@ Transparency for HEX colors (100% - непрозрачный)
 				<rule cat="tms_hk" e="way" k="surface" v="unpaved" >
 					<rule e="way" k="highway" v="track|path|footpath|footway">
 						<line stroke="#ffcc99" stroke-width="1.6" stroke-linecap="butt" /></rule>
-					<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service">
+					<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction">
 						<line stroke="#ffcc99" stroke-width="2.0" stroke-linecap="butt" /></rule>					
 					<rule e="way" k="highway" v="cycleway|bridleway">
 						<line stroke="#ffcc99" stroke-width="2.4" stroke-linecap="butt" /></rule>				
@@ -1688,7 +1693,7 @@ Transparency for HEX colors (100% - непрозрачный)
 						<line stroke="#bfffff" stroke-width="1.6" stroke-linecap="butt" />
 						<line src="file:exps/sur_winter.png" symbol-height="20" stroke-width="1.6" stroke-linecap="butt" />	
 					</rule>			
-					<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service">
+					<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service|construction">
 						<line stroke="#bfffff" stroke-width="2.0" stroke-linecap="butt" />
 						<line src="file:exps/sur_winter.png" symbol-height="20" stroke-width="2.0" stroke-linecap="butt" />	
 					</rule>					
@@ -1741,7 +1746,7 @@ Transparency for HEX colors (100% - непрозрачный)
 				<!-- взят z16 -->
 				<rule e="way" k="highway" v="byway|road|pedestrian|unclassified|residential|living_street|service" zoom-min="13">
 					<line stroke="#000000" stroke-width="0.92" stroke-linecap="round" />
-				</rule>			
+				</rule>
 				<rule e="way" k="highway" v="tertiary|secondary_link|primary_link|trunk_link|motorway_link" zoom-min="13">
 					<line stroke="#000000" stroke-width="1.80" stroke-linecap="round" />
 				</rule>				
@@ -1753,6 +1758,9 @@ Transparency for HEX colors (100% - непрозрачный)
 				</rule>
 				<rule e="way" k="highway" v="trunk|motorway" zoom-min="13">
 					<line stroke="#FF0000" stroke-width="2.25" stroke-linecap="round" />
+				</rule>
+				<rule e="way" k="highway" v="construction" zoom-min="13">
+					<line stroke="#B3000000" stroke-width="0.92" stroke-dasharray="3,0.92,0.25,0.92" scale="all" stroke-linecap="butt" />					
 				</rule>
 			</rule>
 		</rule>
@@ -1805,7 +1813,7 @@ Transparency for HEX colors (100% - непрозрачный)
 				</rule>				<!-- stroke="#cc1111" -->
 				<rule e="way" k="highway" v="secondary">
 					<line stroke="#ffd900" stroke-width="1.3" />
-				</rule>				<!-- ЗДЕСЬ??? -->
+				</rule>
 			</rule>
 			<rule e="way" k="highway" v="primary">
 				<line stroke="#fb9e2a" stroke-width="1.9" />
@@ -2242,16 +2250,16 @@ Transparency for HEX colors (100% - непрозрачный)
 	<!-- mountain pass -->
 	<rule cat="tms_peak" e="any" k="natural" v="saddle">
 		<rule e="any" k="dir_saddle" v="ds_0">
-			<symbol id="s_saddle" display="always" src="file:/symbols/mountain_pass_0.svg" symbol-height="14"/>
+			<symbol id="s_saddle" display="always" src="file:/symbols/s_mountain_pass_0.svg" symbol-height="14"/>
 		</rule>
 		<rule e="any" k="dir_saddle" v="ds_45|~">
-			<symbol id="s_saddle" display="always" src="file:/symbols/mountain_pass_45.svg" symbol-height="14"/>
+			<symbol id="s_saddle" display="always" src="file:/symbols/s_mountain_pass_45.svg" symbol-height="14"/>
 		</rule>
 		<rule e="any" k="dir_saddle" v="ds_90">
-			<symbol id="s_saddle" display="always" src="file:/symbols/mountain_pass_90.svg" symbol-height="14"/>
+			<symbol id="s_saddle" display="always" src="file:/symbols/s_mountain_pass_90.svg" symbol-height="14"/>
 		</rule>
 		<rule e="any" k="dir_saddle" v="ds_135">
-			<symbol id="s_saddle" display="always" src="file:/symbols/mountain_pass_135.svg" symbol-height="14"/>
+			<symbol id="s_saddle" display="always" src="file:/symbols/s_mountain_pass_135.svg" symbol-height="14"/>
 		</rule>
 		<caption cat="tms_landnames" k="ele" symbol-id="s_saddle" position="below" font-style="bold_italic" font-size="8" fill="#780000" stroke="#ffffff" stroke-width="1.2" />
 		<rule e="any" k="*" v="*" zoom-min="14">
@@ -2260,16 +2268,16 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 	<rule cat="tms_peak" e="any" k="mountain_pass" v="yes">
 		<rule e="any" k="dir_saddle" v="ds_0">
-			<symbol id="s_saddle" display="always" src="file:/symbols/mountain_pass_0.svg" symbol-height="14"/>
+			<symbol id="s_saddle" display="always" src="file:/symbols/s_mountain_pass_0.svg" symbol-height="14"/>
 		</rule>
 		<rule e="any" k="dir_saddle" v="ds_45|~">
-			<symbol id="s_saddle" display="always" src="file:/symbols/mountain_pass_45.svg" symbol-height="14"/>
+			<symbol id="s_saddle" display="always" src="file:/symbols/s_mountain_pass_45.svg" symbol-height="14"/>
 		</rule>
 		<rule e="any" k="dir_saddle" v="ds_90">
-			<symbol id="s_saddle" display="always" src="file:/symbols/mountain_pass_90.svg" symbol-height="14"/>
+			<symbol id="s_saddle" display="always" src="file:/symbols/s_mountain_pass_90.svg" symbol-height="14"/>
 		</rule>
 		<rule e="any" k="dir_saddle" v="ds_135">
-			<symbol id="s_saddle" display="always" src="file:/symbols/mountain_pass_135.svg" symbol-height="14"/>
+			<symbol id="s_saddle" display="always" src="file:/symbols/s_mountain_pass_135.svg" symbol-height="14"/>
 		</rule>
 		<caption cat="tms_landnames" k="ele" symbol-id="s_saddle" position="below" font-style="bold_italic" font-size="8" fill="#780000" stroke="#ffffff" stroke-width="1.2" />
 		<rule e="any" k="*" v="*" zoom-min="14">
@@ -2343,7 +2351,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<caption cat="tms_landnames" priority="220" symbol-id="s_picnic_site" position="above" k="name" font-style="bold" font-size="10" fill="#66001a" stroke="#ffffff" stroke-width="2" />
 	</rule>
 
-	<rule cat="tms_picnic" e="any" k="amenity" v="recycling">
+	<rule cat="tms_picnic" e="any" k="amenity" v="recycling" zoom-min="15"> 
 		<symbol id="s_recycling" display="always" src="file:/symbols/s_recycling.svg" symbol-height="16" />
 		<rule e="any" k="*" v="*">
 			<caption cat="tms_landnames" k="name" symbol-id="s_recycling" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
@@ -2466,7 +2474,14 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol id="s_ford" priority="300" display="always" src="file:/symbols/s_ford_6w.svg" symbol-height="18" />
 		<line stroke="#99B3DDFF" stroke-width="0.65" />
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<caption cat="tms_landnames" k="name" symbol-id="s_ford" font-style="bold" font-size="10" fill="#ff4c4d" stroke="#E5ffff00" stroke-width="2" />
+			<caption cat="tms_landnames" k="name" symbol-id="s_ford" font-style="bold" font-size="8" fill="#ff4c4d" stroke="#E5ffff00" stroke-width="2" />
+		</rule>
+	</rule>
+
+	<rule cat="tms_barriers" e="any" k="bridge" v="movable" zoom-min="15">
+		<symbol id="s_bridge_movable" priority="310" display="always" src="file:/symbols/s_bridge_movable.svg" symbol-width="20" />
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" k="name" symbol-id="s_bridge_movable" position="above" font-style="bold" font-size="8" fill="#ff4c4d" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 
@@ -2517,13 +2532,13 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<rule cat="tms_water" e="any" k="man_made" v="water_well" zoom-min="15">
 		<rule e="any" k="drinking_water" v="yes|~">
-			<symbol id="s_ww_drink" display="always" src="file:/symbols/ww_drink2.svg" symbol-height="18" />
+			<symbol id="s_ww_drink" display="always" src="file:/symbols/s_water_well_drink.svg" symbol-height="18" />
 			<rule cat="tms_landnames" e="any" k="*" v="*" zoom-min="16">
 				<caption k="name" symbol-id="s_ww_drink" position="above" font-style="bold_italic" font-size="10" fill="#115DFF" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
 		<rule e="any" k="drinking_water" v="no">
-			<symbol cat="tms_landnames" id="s_ww_nodrink" display="always" src="file:/symbols/ww_nodrink2.svg" symbol-height="18" />
+			<symbol cat="tms_landnames" id="s_ww_nodrink" display="always" src="file:/symbols/s_water_well_nodrink.svg" symbol-height="18" />
 			<rule e="any" k="*" v="*" zoom-min="16">
 				<caption k="name" symbol-id="s_ww_nodrink" font-style="bold" font-size="10" fill="#d900d9" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
@@ -2804,9 +2819,10 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 	
 	<rule cat="tms_water-land" e="any" k="natural" v="hot_spring">
-		<symbol id="s_hot_spring" priority="263" src="file:/symbols/s_hot_spring.svg" symbol-height="16" />
+		<rule e="any" k="drinking_water|amenity" v="yes|drinking_water"><symbol id="s_hot_spring" priority="253" display="always" src="file:/symbols/s_hot_spring-drinking.svg" symbol-height="16" /></rule>
+		<rule e="any" k="drinking_water" v="~|no"><symbol id="s_hot_spring" priority="263" display="always" src="file:/symbols/s_hot_spring.svg" symbol-height="16" /></rule>
 		<caption cat="tms_landnames" symbol-id="s_hot_spring" k="name" position="above" font-style="bold" font-size="10" fill="#ff0040" stroke="#E5FFFFFF" stroke-width="2" />
-	</rule>	
+	</rule>
 
 	<!-- cultural stuff -->
 <rule cat="tms_educat" e="any" k="amenity" v="*" zoom-min="14">	
@@ -2860,7 +2876,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<caption symbol-id="s_swim" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>	
 	</rule>
-	<rule cat="tms_sport" e="any" k="sport" v="*" zoom-min="14">
+	<rule cat="tms_sport" e="any" k="sport|leisure" v="*" zoom-min="14">
 		<rule e="any" k="sport" v="soccer">
 			<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_soccer.svg" symbol-height="17" />
 		</rule>
@@ -2877,18 +2893,52 @@ Transparency for HEX colors (100% - непрозрачный)
 			<caption symbol-id="s_sport" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
-		<rule cat="tms_sport" e="any" k="sport|climbing" v="climbing|cl_yes" zoom-min="13">
-			<symbol  priority="225" id="s_climbing" src="file:/symbols/s_sport_climbing.svg" display="always" symbol-height="17" />
-			<rule e="any" k="*" v="*">
-				<caption cat="tms_landnames" symbol-id="s_climbing" k="name" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-			</rule>
-		</rule>	
-		<rule cat="tms_sport" e="any" k="sport" v="climbing_adventure" zoom-min="13">
-			<symbol  priority="225" id="s_climbing_adventure" src="file:/symbols/s_sport_climbing_adventure.svg" display="always" symbol-height="17" />
-			<rule e="any" k="*" v="*">
-				<caption cat="tms_landnames" symbol-id="s_climbing_adventure" k="name" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-			</rule>
-		</rule>		
+<rule cat="tms_sport" e="any" k="sport|climbing" v="climbing|cl_yes" zoom-min="13">
+	<symbol priority="225" id="s_climbing" src="file:/symbols/s_sport_climbing.svg" display="always" symbol-height="17" />
+	<rule e="any" k="*" v="*">
+		<caption cat="tms_landnames" symbol-id="s_climbing" k="name" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+	</rule>
+</rule>
+<rule cat="tms_sport" e="any" k="sport" v="climbing_adventure" zoom-min="13">
+	<symbol priority="225" id="s_climbing_adventure" src="file:/symbols/s_sport_climbing_adventure.svg" display="always" symbol-height="17" />
+	<rule e="any" k="*" v="*">
+		<caption cat="tms_landnames" symbol-id="s_climbing_adventure" k="name" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+	</rule>
+</rule>
+
+<rule cat="tms_sport" e="any" k="sport" v="free_flying" zoom-min="13">
+	<symbol priority="225" id="s_free_flying" src="file:/symbols/s_sport_free_flying.svg" display="always" symbol-height="17" />
+	<rule e="any" k="*" v="*">
+		<caption cat="tms_landnames" k="name" symbol-id="s_free_flying" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+	</rule>
+</rule>
+<rule cat="tms_sport" e="any" k="sport" v="cliff_diving" zoom-min="13">
+	<symbol priority="225" id="s_cliff_diving" src="file:/symbols/s_sport_cliff_diving.svg" display="always" symbol-height="17" />
+	<rule e="any" k="*" v="*">
+		<caption cat="tms_landnames" k="name" symbol-id="s_cliff_diving" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+	</rule>
+</rule>
+
+<rule cat="tms_sport" e="any" k="sport" v="skateboard" zoom-min="13">
+	<symbol priority="225" id="s_skateboard" src="file:/symbols/s_sport_skateboard.svg" display="always" symbol-height="17" />
+	<rule e="any" k="*" v="*">
+		<caption cat="tms_landnames" k="name" symbol-id="s_skateboard" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+	</rule>
+</rule>
+<rule cat="tms_sport" e="any" k="sport" v="roller_skating" zoom-min="13">
+	<symbol priority="225" id="s_roller_skating" src="file:/symbols/s_sport_roller_skating.svg" display="always" symbol-height="17" />
+	<rule e="any" k="*" v="*">
+		<caption cat="tms_landnames" k="name" symbol-id="s_roller_skating" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+	</rule>
+</rule>
+
+<rule cat="tms_sport" e="any" k="sport" v="miniature_golf">
+	<symbol priority="225" id="s_miniature_golf" src="file:/symbols/s_sport_minigolf.svg" display="always" symbol-height="17" />
+	<rule e="any" k="*" v="*">
+		<caption cat="tms_landnames" k="name" symbol-id="s_miniature_golf" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+	</rule>
+</rule>
+		
 	<rule cat="tms_sport" e="any" k="leisure" v="stadium" >
 		<symbol priority="250" id="s_stadium" display="always" src="file:/symbols/s_stadium.svg" symbol-width ="21" />
 		<rule cat="tms_landnames" e="any" k="*" v="*" zoom-min="15">
@@ -2924,7 +2974,10 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol priority="310" id="s_trans-priv" display="always" src="file:/symbols/s_fuel.svg" symbol-height="16" />
 		<caption priority="310" symbol-id="s_trans-priv" cat="tms_landnames" k="name" position="above" font-style="bold" font-size="10" fill="#0036D9" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
-
+	<rule cat="tms_trans-priv" e="any" k="amenity" v="charging_station" zoom-min="14">
+		<symbol priority="310" id="s_charging_stat" display="always" src="file:/symbols/s_charging_station2.svg" symbol-height="16" />
+		<caption priority="310" symbol-id="s_charging_stat" cat="tms_landnames" k="name" position="above" font-style="bold" font-size="10" fill="#0036D9" stroke="#FFFFFF" stroke-width="2" />
+	</rule>
 	<!-- public transportation -->
 	<rule cat="tms_trans-pub" e="any" k="amenity" v="bus_station">
 		<symbol priority="215" id="tms_bus-station" display="always" src="file:/symbols/s_bus_station.svg" symbol-width="16" />
@@ -2953,6 +3006,11 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_trans-pub" e="any" k="railway" v="tram_stop">
 		<symbol priority="205" id="tms_tram-stop" display="always" src="file:/symbols/s_tram_stop.svg" symbol-height="14" />
 		<caption priority="100" symbol-id="tms_tram-stop" cat="tms_landnames" k="name" position="below" font-style="bold" font-size="10" fill="#005acf" stroke="#FFFFFF" stroke-width="2" />
+	</rule>
+
+	<rule cat="tms_trans-pub" e="any" k="amenity" v="ferry_terminal">
+		<symbol  priority="205" display="always" id="tms_ferry" src="file:/symbols/s_ferry_terminal.svg" symbol-height="18"/>
+		<caption cat="tms_landnames" priority="100" symbol-id="tms_ferry" position="below" k="name" font-style="bold" font-size="10" fill="#005acf" stroke="#FFFFFF" stroke-width="2"/>
 	</rule>
 
 	<!-- leisure time -->
