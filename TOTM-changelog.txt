@@ -374,3 +374,6 @@ hot_spring drinking_water; пристань ferry_terminal
 расширение bridge yes|true|viaduct на yes|true|aqueduct|viaduct|movable
 17/02/2022
 добавил charging_station
+
+добавил подписи для всех barriers
+оптимизация tms_sport

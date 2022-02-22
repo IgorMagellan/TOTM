@@ -2440,33 +2440,36 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- barriers -->
 	<rule cat="tms_barriers" e="any" k="barrier" v="*" zoom-min="15">
-		<rule e="any" k="barrier" v="bollard">
-			<symbol priority="415" display="always" src="file:/symbols/s_bollard.svg" symbol-height="16" />
+		<rule e="any" k="*" v="bollard">
+			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_bollard.svg" symbol-height="16" />
 		</rule>
-		<rule e="any" k="barrier" v="block">
-			<symbol priority="415" display="always" src="file:/symbols/s_block.svg" symbol-height="16" />
+		<rule e="any" k="*" v="block">
+			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_block.svg" symbol-height="16" />
 		</rule>
-		<rule e="any" k="barrier" v="lift_gate|chain">
-			<symbol priority="415" display="always" src="file:/symbols/s_lift_gate.svg" symbol-height="16" />
+		<rule e="any" k="*" v="lift_gate|chain">
+			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_lift_gate.svg" symbol-height="16" />
 		</rule>
-		<rule e="any" k="barrier" v="stile">
-			<symbol priority="415" display="always" src="file:/symbols/s_stile.svg" symbol-height="16" />
+		<rule e="any" k="*" v="stile">
+			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_stile.svg" symbol-height="16" />
 		</rule>
-		<rule e="any" k="barrier" v="cycle_barrier">
-			<symbol priority="415" display="always" src="file:/symbols/s_cycle_barrier.svg"  symbol-height="16" />
+		<rule e="any" k="*" v="cycle_barrier">
+			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_cycle_barrier.svg"  symbol-height="16" />
 		</rule>
-		<rule e="any" k="barrier" v="gate">
-			<symbol priority="415" display="always" src="file:/symbols/s_gate.svg" symbol-height="16" />
+		<rule e="any" k="*" v="gate">
+			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_gate.svg" symbol-height="16" />
 		</rule>
-		<rule e="any" k="barrier" v="turnstile">
-			<symbol priority="405" display="always" src="file:/symbols/s_turnstile3.svg" symbol-width="16" />
+		<rule e="any" k="*" v="turnstile">
+			<symbol priority="405" display="always" id="s_barrier" src="file:/symbols/s_turnstile3.svg" symbol-width="16" />
 		</rule>		
-		<rule e="any" k="barrier" v="log">
-			<symbol priority="415" display="always" src="file:/symbols/s_log2.svg" symbol-height="16" />
+		<rule e="any" k="*" v="log">
+			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_log2.svg" symbol-height="16" />
 		</rule>
-		<rule e="any" k="barrier" v="kissing_gate" >
-			<symbol priority="415" display="always" src="file:/symbols/s_kissing_gate.svg" symbol-height="16" />
-		</rule>			
+		<rule e="any" k="*" v="kissing_gate" >
+			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_kissing_gate.svg" symbol-height="16" />
+		</rule>
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" k="name" symbol-id="s_barrier" position="above" font-style="bold" font-size="9" fill="#ff4c4d" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>		
 	</rule>
 
 	<!-- fords -->
@@ -2474,14 +2477,14 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol id="s_ford" priority="300" display="always" src="file:/symbols/s_ford_6w.svg" symbol-height="18" />
 		<line stroke="#99B3DDFF" stroke-width="0.65" />
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<caption cat="tms_landnames" k="name" symbol-id="s_ford" font-style="bold" font-size="8" fill="#ff4c4d" stroke="#E5ffff00" stroke-width="2" />
+			<caption cat="tms_landnames" k="name" symbol-id="s_ford" font-style="bold" font-size="9" fill="#ff4c4d" stroke="#E5ffff00" stroke-width="2" />
 		</rule>
 	</rule>
 
 	<rule cat="tms_barriers" e="any" k="bridge" v="movable" zoom-min="15">
 		<symbol id="s_bridge_movable" priority="310" display="always" src="file:/symbols/s_bridge_movable.svg" symbol-width="20" />
 		<rule e="any" k="*" v="*" zoom-min="16">
-			<caption cat="tms_landnames" k="name" symbol-id="s_bridge_movable" position="above" font-style="bold" font-size="8" fill="#ff4c4d" stroke="#E5FFFFFF" stroke-width="2" />
+			<caption cat="tms_landnames" k="name" symbol-id="s_bridge_movable" position="above" font-style="bold" font-size="9" fill="#ff4c4d" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 
@@ -2865,84 +2868,43 @@ Transparency for HEX colors (100% - непрозрачный)
 
 
 	<!-- #sport -->
-	<rule cat="tms_sport" e="any" k="leisure" v="slipway" zoom-min="14">
-		<symbol priority="225" display="always" src="file:/symbols/s_slipway.svg" symbol-height="16" />
-	</rule>
+
 	<rule cat="tms_sport" e="any" k="sport|leisure" v="swimming|water_park" zoom-min="14">
 		<rule e="any" k="access" v="~|yes">
 			<symbol id="s_swim" priority="225" display="always" src="file:/symbols/s_swimming_outdoor.svg" symbol-height="17" />
 		</rule>
 		<rule cat="tms_landnames" e="any" k="*" v="*" zoom-min="15">
 			<caption symbol-id="s_swim" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-		</rule>	
+		</rule>
 	</rule>
 	<rule cat="tms_sport" e="any" k="sport|leisure" v="*" zoom-min="14">
-		<rule e="any" k="sport" v="soccer">
-			<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_soccer.svg" symbol-height="17" />
-		</rule>
-		<rule e="any" k="sport" v="tennis">
-			<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_tennis.svg" symbol-height="17" />
-		</rule>
-		<rule e="any" k="sport|leisure" v="golf|golf_course">
-			<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_golf.svg" symbol-height="17" />
-		</rule>
-		<rule e="any" k="sport" v="shooting">
-			<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_shooting.svg" symbol-height="17" />
-		</rule>
+		<rule e="any" k="*" v="slipway">	<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_slipway.svg" symbol-height="16" /> </rule>
+		<rule e="any" k="*" v="soccer">		<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_soccer.svg" symbol-height="17" /> </rule>
+		<rule e="any" k="*" v="tennis">		<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_tennis.svg" symbol-height="17" /> </rule>
+		<rule e="any" k="*" v="shooting">	<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_shooting.svg" symbol-height="17" /> </rule>
+		<rule e="any" k="*" v="free_flying"><symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_sport_free_flying.svg" symbol-height="17" /> </rule>
+		<rule e="any" k="*" v="skateboard">	<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_sport_skateboard.svg" symbol-height="17" /> </rule>
+		<rule e="any" k="*" v="cliff_diving"><symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_sport_cliff_diving.svg" symbol-height="17" /> </rule>
+		<rule e="any" k="*" v="roller_skating">	<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_sport_roller_skating.svg" symbol-height="17" /> </rule>
+		<rule e="any" k="*" v="miniature_golf">	<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_sport_minigolf.svg" symbol-height="17" /> </rule>
+		<rule e="any" k="*" v="golf|golf_course"> <symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_golf.svg" symbol-height="17" /> </rule>
+		<rule e="any" k="*" v="climbing_adventure">	<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_sport_climbing_adventure.svg" symbol-height="17" /> </rule>
 		<rule cat="tms_landnames" e="any" k="*" v="*" zoom-min="15">
 			<caption symbol-id="s_sport" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
+
 <rule cat="tms_sport" e="any" k="sport|climbing" v="climbing|cl_yes" zoom-min="13">
 	<symbol priority="225" id="s_climbing" src="file:/symbols/s_sport_climbing.svg" display="always" symbol-height="17" />
 	<rule e="any" k="*" v="*">
 		<caption cat="tms_landnames" symbol-id="s_climbing" k="name" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 	</rule>
 </rule>
-<rule cat="tms_sport" e="any" k="sport" v="climbing_adventure" zoom-min="13">
-	<symbol priority="225" id="s_climbing_adventure" src="file:/symbols/s_sport_climbing_adventure.svg" display="always" symbol-height="17" />
-	<rule e="any" k="*" v="*">
-		<caption cat="tms_landnames" symbol-id="s_climbing_adventure" k="name" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-	</rule>
-</rule>
-
-<rule cat="tms_sport" e="any" k="sport" v="free_flying" zoom-min="13">
-	<symbol priority="225" id="s_free_flying" src="file:/symbols/s_sport_free_flying.svg" display="always" symbol-height="17" />
-	<rule e="any" k="*" v="*">
-		<caption cat="tms_landnames" k="name" symbol-id="s_free_flying" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-	</rule>
-</rule>
-<rule cat="tms_sport" e="any" k="sport" v="cliff_diving" zoom-min="13">
-	<symbol priority="225" id="s_cliff_diving" src="file:/symbols/s_sport_cliff_diving.svg" display="always" symbol-height="17" />
-	<rule e="any" k="*" v="*">
-		<caption cat="tms_landnames" k="name" symbol-id="s_cliff_diving" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-	</rule>
-</rule>
-
-<rule cat="tms_sport" e="any" k="sport" v="skateboard" zoom-min="13">
-	<symbol priority="225" id="s_skateboard" src="file:/symbols/s_sport_skateboard.svg" display="always" symbol-height="17" />
-	<rule e="any" k="*" v="*">
-		<caption cat="tms_landnames" k="name" symbol-id="s_skateboard" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-	</rule>
-</rule>
-<rule cat="tms_sport" e="any" k="sport" v="roller_skating" zoom-min="13">
-	<symbol priority="225" id="s_roller_skating" src="file:/symbols/s_sport_roller_skating.svg" display="always" symbol-height="17" />
-	<rule e="any" k="*" v="*">
-		<caption cat="tms_landnames" k="name" symbol-id="s_roller_skating" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-	</rule>
-</rule>
-
-<rule cat="tms_sport" e="any" k="sport" v="miniature_golf">
-	<symbol priority="225" id="s_miniature_golf" src="file:/symbols/s_sport_minigolf.svg" display="always" symbol-height="17" />
-	<rule e="any" k="*" v="*">
-		<caption cat="tms_landnames" k="name" symbol-id="s_miniature_golf" position="above" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
-	</rule>
-</rule>
-		
+	
 	<rule cat="tms_sport" e="any" k="leisure" v="stadium" >
 		<symbol priority="250" id="s_stadium" display="always" src="file:/symbols/s_stadium.svg" symbol-width ="21" />
-		<rule cat="tms_landnames" e="any" k="*" v="*" zoom-min="15">
-			<caption symbol-id="s_stadium" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<caption cat="tms_landnames" symbol-id="s_stadium" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 	<rule cat="tms_sport" e="any" k="leisure" v="sports_centre">
