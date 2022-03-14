@@ -429,7 +429,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	
 	<rule cat="tms_terrain" e="way" k="barrier" v="hedge" zoom-min="15">
 		<line stroke="#A5CBA5" stroke-width="0.42" stroke-linecap="round" />
-		<line stroke="#CBE1CB" stroke-width="0.36" stroke-dasharray="2,5"  stroke-linecap="butt" />
+		<line stroke="#CBE1CB" stroke-width="0.36" scale="all" stroke-dasharray="0.2,0.5" stroke-linecap="butt" />
 	</rule>	
 
 	<!-- Contour lines -->
@@ -2152,7 +2152,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<line stroke="#666666" stroke-width="1.3" stroke-dasharray="0,20,0.6,50" stroke-linecap="butt" />
 			<line stroke="#666666" stroke-width="0.6" stroke-dasharray="0.3,40,0.3,30" />
 		</rule>
-		<rule e="way" k="power" v="minor_line" zoom-min="14">			<!-- OpenAndroMaps only-->
+		<rule e="way" k="power" v="minor_line" zoom-min="14">
 			<line stroke="#666666" stroke-width="0.2" stroke-linecap="butt" />
 			<line stroke="#666666" stroke-width="0.6" stroke-dasharray="0.3,40,0.3,30" />
 		</rule>
