@@ -2440,36 +2440,18 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- barriers -->
 	<rule cat="tms_barriers" e="any" k="barrier" v="*" zoom-min="15">
-		<rule e="any" k="*" v="bollard">
-			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_bollard.svg" symbol-height="16" />
-		</rule>
-		<rule e="any" k="*" v="block">
-			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_block.svg" symbol-height="16" />
-		</rule>
-		<rule e="any" k="*" v="lift_gate|chain">
-			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_lift_gate.svg" symbol-height="16" />
-		</rule>
-		<rule e="any" k="*" v="stile">
-			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_stile.svg" symbol-height="16" />
-		</rule>
-		<rule e="any" k="*" v="cycle_barrier">
-			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_cycle_barrier.svg"  symbol-height="16" />
-		</rule>
-		<rule e="any" k="*" v="gate">
-			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_gate.svg" symbol-height="16" />
-		</rule>
-		<rule e="any" k="*" v="turnstile">
-			<symbol priority="405" display="always" id="s_barrier" src="file:/symbols/s_turnstile3.svg" symbol-width="16" />
-		</rule>		
-		<rule e="any" k="*" v="log">
-			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_log2.svg" symbol-height="16" />
-		</rule>
-		<rule e="any" k="*" v="kissing_gate" >
-			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_kissing_gate.svg" symbol-height="16" />
-		</rule>
-		<rule e="any" k="*" v="*" zoom-min="16">
+		<rule e="any" k="*" v="bollard">		<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_bollard.svg" symbol-height="16" /> </rule>
+		<rule e="any" k="*" v="block">			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_block.svg" symbol-height="16" /> </rule>
+		<rule e="any" k="*" v="lift_gate|chain"><symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_lift_gate.svg" symbol-height="16" /> </rule>
+		<rule e="any" k="*" v="stile">			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_stile.svg" symbol-height="16" /> </rule>
+		<rule e="any" k="*" v="cycle_barrier">	<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_cycle_barrier.svg"  symbol-height="16" /> </rule>
+		<rule e="any" k="*" v="gate">			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_gate.svg" symbol-height="16" /> </rule>
+		<rule e="any" k="*" v="turnstile">		<symbol priority="405" display="always" id="s_barrier" src="file:/symbols/s_turnstile3.svg" symbol-width="16" /> </rule>		
+		<rule e="any" k="*" v="log">			<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_log2.svg" symbol-height="16" /> </rule>
+		<rule e="any" k="*" v="kissing_gate" >	<symbol priority="415" display="always" id="s_barrier" src="file:/symbols/s_kissing_gate.svg" symbol-height="16" /> </rule>
+		<rule e="any" k="*" v="*" zoom-min="16"> 
 			<caption cat="tms_landnames" k="name" symbol-id="s_barrier" position="above" font-style="bold" font-size="9" fill="#ff4c4d" stroke="#E5FFFFFF" stroke-width="2" />
-		</rule>		
+		</rule>
 	</rule>
 
 	<!-- fords -->
@@ -2488,6 +2470,13 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
+	<rule cat="tms_barriers" e="any" k="barrier|amenity" v="border_control" zoom-min="14">
+		<symbol id="s_border_control" priority="420" display="always" src="file:/symbols/s_border_control.svg" symbol-width="20" />
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" k="name" symbol-id="s_border_control" position="above" font-style="bold" font-size="9" fill="#ff4c4d" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+	
 	<!-- 	#WALL -->
 	<rule cat="tms_terrain" e="way" k="barrier" v="*">
 		<rule e="way" k="barrier|historic" v="fence|wall|city_wall" zoom-min="14">

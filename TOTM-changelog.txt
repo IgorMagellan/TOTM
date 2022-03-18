@@ -379,3 +379,5 @@ hot_spring drinking_water; пристань ferry_terminal
 оптимизация tms_sport
 14/03/2022
 переделал hedge на scale="all"
+17/03/2022
+добавил пограничный пункт контроля barrier=border_control
