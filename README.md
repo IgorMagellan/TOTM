@@ -1,7 +1,7 @@
 
 <div align="center">
   
-![TOTM.png](TOTM.png)    ![TOTM mapsforge.png](TOTM%20mapsforge.png)
+![TOTM LE.png](TOTM LE.png)    ![TOTM.png](TOTM.png)
   
 # TOTM - Tiramisu as OpenTopoMap
   

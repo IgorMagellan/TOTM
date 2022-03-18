@@ -1,5 +1,5 @@
 ~~~~~~~~~~~~~~~~~~~~~
-* TOTM версия 1.9.4 *
+* TOTM версия 1.9.6 *
 ~~~~~~~~~~~~~~~~~~~~~
 for Lomaps and mapsforge V3
 
@@ -164,7 +164,7 @@ ridge коричневый
 17/8/2020
 добавил охотничьи вышки amenity=hunting_stand в слой Элементы ландшафта
 
-ВЕРСИЯ 1.9.5
+ВЕРСИЯ 1.9.5 - 1.9.6
 май-декабрь 2021
 Переделка меню на более логичную последовательность
 [Доб.:] отображение бродов ford (cat="tms_barriers"); tree_row; станции метро subway со своей иконкой в tms_trans-pub; recycling в Picnic; 
@@ -175,12 +175,12 @@ bus_station, shops, рынков, фонтанов и пр.; поправил п
 [Повыш.приор.:] fuel
 [Err.:] поправил неотображение подписей для hospital, pharmacy, doctors; via_ferrata
 [Доб.:] подписи stadium, sport=soccer, tennis, golf, shooting; post_office; information=guidepost, board, office; 
-tourism=information; leisure=firepit(LM); amenity=bbq(LM); shop=organic,hairdresser
+tourism=information; leisure=firepit(LM); amenity=bbq(LM); shop=organic, hairdresser
 
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* TOTM версия 2.3 (mapsforge) *
+* TOTM версия 2.4 (mapsforge) *
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 for mapsforge V4+
 
@@ -262,6 +262,8 @@ display=always на всех основных symbols POI
 оптимиз.риcования river|canal|stream|drain|ditch
 12/05/2021
 оптимиз.риcования вершин peak 
+
+ВЕРСИЯ 2.4
 08/07/2021
 регулировка толщин дорог residential|service|.. 
 поправил подпись amenity=place_of_worship
@@ -381,3 +383,6 @@ hot_spring drinking_water; пристань ferry_terminal
 переделал hedge на scale="all"
 17/03/2022
 добавил пограничный пункт контроля barrier=border_control
+18/03/2022
+перименование файлов TOTM -> TOTM LE; TOTM mapsforge -> TOTM
+Release V3(LE) 1.9.6 и V4 2.4
