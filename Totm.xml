@@ -3163,40 +3163,30 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!--  place města, atd UniGCcz, изменен by Magellan  -->
 	<rule e="any" k="place" v="*">
-		<rule e="any" k="place" v="locality" zoom-min="14">
-			<caption priority="505" cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="12" fill="#555555" stroke="#eeeeee" stroke-width="2" />
-		</rule>
-		<rule e="any" k="place" v="hamlet" zoom-min="13">
-			<caption priority="515" k="name" font-style="normal" font-size="12" fill="#000000" stroke="#ffffff" stroke-width="2" />
-		</rule>
-		<rule e="any" k="place" v="suburb|neighbourhood|quarter" zoom-min="12" zoom-max="13">
-			<caption priority="505" k="name" cat="tms_landnames" font-style="bold_italic" font-family="serif" font-size="13" fill="#80000000" stroke="#B3FFFFFF" stroke-width="3" />
-		</rule>
-		<rule e="any" k="place" v="suburb|neighbourhood|quarter" zoom-min="14">
-			<caption priority="505" k="name" cat="tms_landnames" font-style="bold_italic" font-family="serif" font-size="14" fill="#80000000" stroke="#B3FFFFFF" stroke-width="3" />
-		</rule>
-		<rule e="any" k="place" v="village" zoom-min="11">
-			<caption priority="520" k="name" font-style="bold" font-size="13" fill="#000000" stroke="#ffffff" stroke-width="3.0" />
-		</rule>
+		<rule e="any" k="place" v="locality" zoom-min="14"> <caption priority="505" cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="12" fill="#555555" stroke="#eeeeee" stroke-width="2" /> </rule>
+		<rule e="any" k="place" v="hamlet" zoom-min="13"> <caption priority="515" k="name" font-style="normal" font-size="12" fill="#000000" stroke="#ffffff" stroke-width="2" /> </rule>
+		<rule e="any" k="place" v="suburb|neighbourhood|quarter" zoom-min="12" zoom-max="13">	<caption priority="505" k="name" cat="tms_landnames" font-style="bold_italic" font-family="serif" font-size="13" fill="#80000000" stroke="#B3FFFFFF" stroke-width="3" /> </rule>
+		<rule e="any" k="place" v="suburb|neighbourhood|quarter" zoom-min="14">					<caption priority="505" k="name" cat="tms_landnames" font-style="bold_italic" font-family="serif" font-size="14" fill="#80000000" stroke="#B3FFFFFF" stroke-width="3" /> </rule>
+		<rule e="any" k="place" v="village" zoom-min="11"> <caption priority="520" k="name" font-style="bold" font-size="13" fill="#000000" stroke="#ffffff" stroke-width="3.0" /> </rule>
 
 		<rule e="node" k="place" v="town" zoom-min="6">
 			<rule e="node" k="popcat" v="pc_20000|pc_30000|pc_50000|pc_100000|pc_200000|pc_500000|pc_1000000" zoom-max="6">
-				<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#C0FFFFFF" stroke-width="3" priority="104"/>
+				<caption k="name" font-style="bold" font-size="10" fill="#000000" stroke="#C0FFFFFF" stroke-width="3" priority="104" />
 			</rule>
 			<rule e="node" k="popcat" v="pc_0|pc_1|pc_1000|pc_5000|pc_10000|~" zoom-min="7" zoom-max="7">
-				<caption k="name" font-style="bold" font-size="12" fill="#000000" stroke="#C0FFFFFF" stroke-width="3" priority="104"/>
+				<caption k="name" font-style="bold" font-size="12" fill="#000000" stroke="#C0FFFFFF" stroke-width="3" priority="104" />
 			</rule>
 			<rule e="node" k="popcat" v="pc_20000|pc_30000|pc_50000|pc_100000|pc_200000|pc_500000|pc_1000000" zoom-min="7" zoom-max="7">
-				<caption k="name" font-style="bold" font-size="12" fill="#000000" stroke="#C0FFFFFF" stroke-width="3" priority="104"/>
+				<caption k="name" font-style="bold" font-size="12" fill="#000000" stroke="#C0FFFFFF" stroke-width="3" priority="104" />
 			</rule>
 			<rule e="node" k="*" v="*" zoom-min="8" zoom-max="8">
-				<caption k="name" font-style="bold" font-size="12" fill="#000000" stroke="#C0FFFFFF" stroke-width="3" priority="104"/>
+				<caption k="name" font-style="bold" font-size="12" fill="#000000" stroke="#C0FFFFFF" stroke-width="3" priority="104" />
 			</rule>
 			<rule e="node" k="*" v="*" zoom-min="9" zoom-max="12">
-				<caption k="name" font-family="sans_serif" font-style="bold" font-size="16" fill="#000000" stroke="#CCFFFFFF" stroke-width="3" dy="-4" position="center" priority="525"/>
+				<caption k="name" font-family="sans_serif" font-style="bold" font-size="16" fill="#000000" stroke="#CCFFFFFF" stroke-width="3" dy="-4" position="center" priority="525" />
 			</rule>
 			<rule e="node" k="*" v="*" zoom-min="13" zoom-max="15">
-				<caption k="name" font-family="sans_serif" font-style="bold" font-size="20" fill="#000000" stroke="#CCFFFFFF" stroke-width="3" position="center" priority="525"/>
+				<caption k="name" font-family="sans_serif" font-style="bold" font-size="20" fill="#000000" stroke="#CCFFFFFF" stroke-width="3" position="center" priority="525" />
 			</rule>
 		</rule>
 
