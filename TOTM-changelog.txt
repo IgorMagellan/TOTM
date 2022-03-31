@@ -388,4 +388,5 @@ hot_spring drinking_water; пристань ferry_terminal
 Release V3(LE) 1.9.6 и V4 2.4
 
 29-30/03/2022
-Добавил vending=bicycle_tube, amenity=bicycle_repair_station (в картах после 23/03/2022); s_bicycle_shop.svg->s_bicycle_repair_station.svg
+Добавил vending=bicycle_tube, amenity=bicycle_repair_station (в картах после 23/03/2022); 
+s_bicycle_shop.svg->s_bicycle_repair_station.svg; barrier=checkpoint

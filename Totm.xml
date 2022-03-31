@@ -2476,7 +2476,14 @@ Transparency for HEX colors (100% - непрозрачный)
 			<caption cat="tms_landnames" k="name" symbol-id="s_border_control" position="above" font-style="bold" font-size="9" fill="#ff4c4d" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
-	
+
+	<rule cat="tms_barriers" e="any" k="barrier" v="checkpoint" zoom-min="12">
+		<symbol priority="420" display="always" id="s_checkpoint" src="file:/symbols/s_checkpoint.svg" symbol-width="20" />
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption cat="tms_landnames" k="name" symbol-id="s_checkpoint" position="above" font-style="bold" font-size="9" fill="#ff4c4d" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+
 	<!-- 	#WALL -->
 	<rule cat="tms_terrain" e="way" k="barrier" v="*">
 		<rule e="way" k="barrier|historic" v="fence|wall|city_wall" zoom-min="14">
