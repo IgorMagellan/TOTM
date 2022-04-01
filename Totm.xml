@@ -1043,8 +1043,6 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 	<!-- 	КОНЕЦ БОЛОТ -->
 		
-
-		
 	<!-- waterway structures -->
 	<rule e="way" k="tunnel" v="~|no">
 		<rule cat="tms_water-land" e="way" k="location" v="~|overground">
@@ -1078,14 +1076,14 @@ Transparency for HEX colors (100% - непрозрачный)
 			<rule e="any" k="waterway" v="dam" zoom-min="15">
 				<symbol src="file:/symbols/s_dam.svg" symbol-width="13"/>
 			</rule>
-
 		</rule>
+
 		<rule cat="tms_man-made" e="way" k="man_made" v="pipeline">
 			<line stroke="#CCCCCC" stroke-width="0.9" stroke-linecap="butt" />
 			<line stroke="#9CA6BA" stroke-width="0.7" scale="all" stroke-dasharray="1.8,0.6" stroke-linecap="butt" />
 			<line stroke="#FFFFFF" stroke-width="0.15" stroke-linecap="butt" />
 			<pathText cat="tms_landnames" k="name" font-style="normal" font-size="9" fill="#9CA6BA" stroke="#FFFFFF" stroke-width="1" />
-		</rule>	
+		</rule>
 	</rule>
 
 
@@ -1107,7 +1105,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- Малые овраги, канавы -->
-	<rule cat="tms_relief" e="way" k="barrier|natural" v="ditch|gully" closed="no">
+<!-- 	<rule cat="tms_relief" e="way" k="barrier|natural" v="ditch|gully" closed="no">
 		<line stroke="#80bc4b00" dy="0.25" stroke-width="0.4" stroke-dasharray="1,8" stroke-linecap="butt" />
 		<line stroke="#80bc4b00" dy="-0.25" stroke-width="0.4" stroke-dasharray="0,4,1,4" stroke-linecap="butt" />
 		<line stroke="#80bc4b00" dy="0.4" stroke-width="0.1" stroke-linecap="butt" />
@@ -1119,6 +1117,14 @@ Transparency for HEX colors (100% - непрозрачный)
 		<line stroke="#80bc4b00" dy="0.4" stroke-width="0.1" stroke-linecap="butt" />
 		<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
 	</rule>
+ -->
+ 	<rule cat="tms_relief" e="way" k="barrier|natural" v="ditch|gully" >
+		<line stroke="#B3bc4b00" dy="0.46" stroke-width="0.54" stroke-dasharray="0.12, 0.8" scale="all" stroke-linecap="butt" />
+		<line stroke="#B3bc4b00" dy="-0.46" stroke-width="0.54" stroke-dasharray="0, 0.4, 0.12, 0.4" scale="all" stroke-linecap="butt" />
+		<line stroke="#B3bc4b00" dy="0.8" stroke-width="0.16" stroke-linecap="butt" />
+		<line stroke="#B3bc4b00" dy="-0.8" stroke-width="0.16" stroke-linecap="butt" />
+		<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#666666" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
+	</rule>
 
 	<!-- Просеки OAM -->
 	<rule cat="tms_relief" e="way" k="man_made" v="cutline" zoom-min="12">
@@ -1126,7 +1132,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 	<!-- Хребты -->
 	<rule cat="tms_relief" e="way" k="natural" v="ridge|arete">
-		<line stroke="#BFbc4b00" stroke-width="0.4" stroke-dasharray="2,3" stroke-linecap="round" scale="all" />
+		<line stroke="#BFbc4b00" scale="all" stroke-width="0.4" stroke-dasharray="2,3" stroke-linecap="round" />
 		<!-- <line stroke="#BF444444" stroke-width="0.4" stroke-dasharray="6,8" stroke-linecap="round" /> -->
 		<pathText cat="tms_landnames" k="name" dy="-3" font-style="italic" font-family="serif" font-size="15" fill="#BFa75c2c" stroke="#80bbbbbb" stroke-width="0.8" display="always" priority="-20" repeat-start="50" repeat-gap="300" />
 		<lineSymbol src="file:/symbols/s_ridge2.svg" align-center="true" repeat="true" repeat-gap="105" repeat-start="10" display="always" priority="-20" symbol-height="18" />
