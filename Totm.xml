@@ -872,7 +872,7 @@ Transparency for HEX colors (100% - непрозрачный)
 				<rule e="way" k="intermittent|seasonal" v="~">
 					<line stroke="#1d4dff" stroke-width="0.7" />
 				</rule>
-				<rule e="way" k="intermittent|seasonal" v="wwi_yes|seas_yes">					<!-- 5887ff -->
+				<rule e="way" k="intermittent|seasonal" v="wwi_yes|seas_yes">					<!-- #5887ff -->
 					<line stroke="#1d4dff" scale="all" stroke-width="0.7" stroke-dasharray="2.4,1.9" stroke-linecap="butt" />
 					<!-- stroke-dasharray="6,9"-->
 				</rule>
@@ -1011,12 +1011,11 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_terrain" e="way" k="natural" v="wetland" zoom-min="12">
 		<rule e="way" k="wetland" v="swamp">
 			<area fill="#4D73b64b"/>
-			<area src="file:/patterns/wetland.png" />
-			<!-- scale="1.2"  пока убрал у всех, хотя и работает-->
+			<area src="file:/patterns/p_wetland_blue2.svg" symbol-width="44" />
 		</rule>
 		<rule e="way" k="wetland" v="bog">
 			<area fill="#33d9cf57"/>
-			<area src="file:/patterns/wetland.png" />
+			<area src="file:/patterns/p_wetland_blue2.svg" symbol-width="44" />
 		</rule>
 		<rule e="way" k="wetland" v="reedbed">
 			<area src="file:/patterns/reedbed.png" />
@@ -1025,20 +1024,11 @@ Transparency for HEX colors (100% - непрозрачный)
 			<area src="file:/patterns/tidalflat.svg" symbol-width="10" />
 		</rule>
 		<rule e="way" k="wetland" v="marsh">
-			<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14">
-				<area src="file:/patterns/reedbed.png" />
-			</rule>
-			<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
-				<area src="file:/patterns/reedbed.png" />
-			</rule>			<!-- scale="1.7" -->
-			<rule e="any" k="*" v="*" zoom-min="17" zoom-max="99">
-				<area src="file:/patterns/reedbed.png" />
-			</rule>			<!-- scale="2.0" -->
+			<area src="file:/patterns/reedbed.png" />
 		</rule>
 		<rule e="way" k="wetland" v="*|~">
 			<area fill="#0D304eff"/>
-			<area src="file:/patterns/wetland.png" />
-			<!-- scale="0.9" -->
+			<area src="file:/patterns/p_wetland_blue2.svg" symbol-width="44" />
 		</rule>
 	</rule>
 	<!-- 	КОНЕЦ БОЛОТ -->
@@ -1133,7 +1123,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			</rule>	
 
 			<rule e="way" k="*" v="*" zoom-min="18" >
-				<line stroke="#BFbc4b00" scale="all" stroke-width="0.22" stroke-dasharray="4.2,5.0" stroke-linecap="round" />
+				<line stroke="#BFbc4b00" scale="all" stroke-width="0.20" stroke-dasharray="4.2,5.0" stroke-linecap="round" />
 				<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="italic" font-family="serif" font-size="15" fill="#BFa75c2c" stroke="#80bbbbbb" stroke-width="0.8" display="always" priority="-20" repeat-start="50" repeat-gap="300" />
 				<lineSymbol src="file:/symbols/s_ridge2.svg" symbol-height="32" align-center="true" repeat="true" repeat-gap="295" repeat-start="10" display="always" priority="-20" />
 			</rule>	

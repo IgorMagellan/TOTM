@@ -846,29 +846,37 @@ Transparency for HEX colors (100% - непрозрачный)
 
 <!-- 	БОЛОТА  -->
 	<rule cat="tms_terrain" e="way" k="natural" v="wetland" zoom-min="12">
-		<rule e="way" k="wetland" v="swamp">	
-			<area fill="#4D73b64b"/> 
-			<area src="file:/patterns/wetland.png" /> <!--  scale="1.2"  пока убрал у всех, хотя и работает-->
+		<rule e="way" k="wetland" v="swamp">
+			<area fill="#4D73b64b" />
+			<area src="file:/patterns/p_wetland_blue2.svg" symbol-width="42" /> <!--  scale="1.2"  пока убрал у всех, хотя и работает-->
 		</rule>
-		<rule e="way" k="wetland" v="bog">	
-			<area fill="#33d9cf57"/> 
-			<area src="file:/patterns/wetland.png" />
+		<rule e="way" k="wetland" v="bog">
+			<area fill="#33d9cf57" />
+			<area src="file:/patterns/p_wetland_blue2.svg" symbol-width="44" />
 		</rule>
-		<rule e="way" k="wetland" v="reedbed">	
+		<rule e="way" k="wetland" v="reedbed">
+			<area fill="#4D73b64b" />
 			<area src="file:/patterns/reedbed.png" />
-		</rule>		
-		<rule e="way" k="wetland" v="tidalflat">	
+		</rule>
+		<rule e="way" k="wetland" v="tidalflat">
+			<area fill="#0D304eff" />
 			<area src="file:/patterns/tidalflat.png" />
-		</rule>		
-		<rule e="way" k="wetland" v="marsh">	
-			<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14"><area src="file:/patterns/reedbed.png" /></rule>
-			<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16"><area src="file:/patterns/reedbed.png" scale="1.7" /></rule>
-			<rule e="any" k="*" v="*" zoom-min="17" zoom-max="99"><area src="file:/patterns/reedbed.png" scale="2.0" /></rule>					
-		</rule>			
-		<rule e="way" k="wetland" v="*|~">	
-			<area fill="#0D304eff"/> 
-			<area src="file:/patterns/wetland.png" />  <!--  scale="0.9" -->
-		</rule>			
+		</rule>
+		<rule e="way" k="wetland" v="marsh">
+			<rule e="any" k="*" v="*" zoom-min="13" zoom-max="14">
+				<area src="file:/patterns/reedbed.png" />
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="15" zoom-max="16">
+				<area src="file:/patterns/reedbed.png" scale="1.7" />
+			</rule>
+			<rule e="any" k="*" v="*" zoom-min="17" zoom-max="99">
+				<area src="file:/patterns/reedbed.png" scale="2.0" />
+			</rule>
+		</rule>
+		<rule e="way" k="wetland" v="*|~">
+			<area fill="#0D304eff" />
+			<area src="file:/patterns/p_wetland_blue2.svg" symbol-width="42" /> <!--  scale="0.9" -->
+		</rule>
 	</rule>
 <!-- 	КОНЕЦ БОЛОТ -->	
 	
