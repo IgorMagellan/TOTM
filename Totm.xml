@@ -55,7 +55,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<layer id="tms_land-ele" enabled="true">
 			<name lang="en" value="Landscape elements"/>
 			<name lang="ru" value="Элементы ландшафта" />
-			<cat id="tms_water-land"/>
+			<cat id="tms_water_land"/>
 			<cat id="tms_man-made"/>
 			<cat id="tms_aerial"/>
 			<cat id="tms_power"/>
@@ -943,12 +943,6 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
-	<rule cat="tms_man-made" e="way" k="tunnel|location" v="yes|culvert|underground" zoom-min="16">
-		<rule e="way" k="man_made" v="pipeline">
-			<line stroke="#995887ff" stroke-width="1.0" />
-		</rule>
-	</rule>
-
 	<!-- bodies of water -->
 	<rule cat="tms_terrain" e="way" k="landuse|natural" v="reservoir|basin|water">
 		<rule e="way" k="*" v="*" zoom-max="12">			<!-- zoom-min="11" -->
@@ -1035,7 +1029,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		
 	<!-- waterway structures -->
 	<rule e="way" k="tunnel" v="~|no">
-		<rule cat="tms_water-land" e="way" k="location" v="~|overground">
+		<rule cat="tms_water_land" e="way" k="location" v="~|overground">
 			<rule e="way" k="waterway" v="dock">
 				<area fill="#90CCCCCC" />
 				<line stroke="#CCCCCC" stroke-width="0.5" stroke-linecap="butt" />
@@ -1076,6 +1070,12 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
+	<rule cat="tms_man-made" e="way" k="tunnel|location" v="yes|culvert|underground" zoom-min="16">
+		<rule e="way" k="man_made" v="pipeline">
+			<line stroke="#809CA6BA" stroke-width="0.9" scale="all" stroke-dasharray="0.9,0.3" stroke-linecap="butt" />
+		</rule>
+	</rule>
+	
 	<rule cat="tms_relief" e="way" k="natural" v="*" zoom-min="13">
 		<rule e="way" k="*" v="valley">
 			<pathText cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#E6444444" stroke="#cce0e0e0" stroke-width="2.0" />
@@ -2825,28 +2825,28 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- water -->
-	<rule cat="tms_water-land" e="node" k="natural" v="geyser" zoom-min="13">
+	<rule cat="tms_water_land" e="node" k="natural" v="geyser" zoom-min="13">
 		<symbol priority="260" id="tms_geyser" display="always" src="file:/symbols/s_geyser.svg" symbol-height="20" />
 		<caption priority="140" symbol-id="tms_geyser" cat="tms_landnames" k="name" font-style="bold" font-size="10" fill="#0034AE" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
-	<rule cat="tms_water-land" e="any" k="waterway|natural" v="waterfall" zoom-min="14">
+	<rule cat="tms_water_land" e="any" k="waterway|natural" v="waterfall" zoom-min="14">
 		<symbol priority="260" id="tms_waterfall" display="always" src="file:/symbols/s_waterfall.svg" symbol-height="13"/>
 		<caption priority="140" symbol-id="tms_waterfall" k="name" cat="tms_landnames" position="above" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
+	
 	<!-- пороги, перекаты -->
-	<rule cat="tms_water-land" e="any" k="waterway|natural" v="rapids" zoom-min="14">
-		<rule  e="way" k="*" v="*" closed="yes">
+	<rule cat="tms_water_land" e="any" k="waterway|natural" v="rapids" zoom-min="14">
+		<rule cat="tms_terrain" e="way" k="*" v="*" closed="yes">
 			<area fill="#80bfefff" stroke="#a3dde8" stroke-width="0.1" />
-			<line stroke="#80d90036" stroke-width="0.1" scale="all" stroke-dasharray="0.2,0.4" stroke-linecap="round" />
 		</rule>
-		<rule  e="way" k="*" v="*" closed="no">
+		<rule  e="way" k="*" v="*" >
 			<line stroke="#80d90036" stroke-width="0.1" scale="all" stroke-dasharray="0.2,0.4" stroke-linecap="round" />
 		</rule>			
 		<symbol priority="260" id="tms_rapids" display="always" src="file:/symbols/s_rapids.svg" symbol-height="16" />
 		<caption priority="140" symbol-id="tms_rapids" k="name" cat="tms_landnames" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
 	
-	<rule cat="tms_water-land" e="any" k="natural" v="hot_spring">
+	<rule cat="tms_water_land" e="any" k="natural" v="hot_spring">
 		<rule e="any" k="drinking_water|amenity" v="yes|drinking_water"><symbol id="s_hot_spring" priority="253" display="always" src="file:/symbols/s_hot_spring-drinking.svg" symbol-height="16" /></rule>
 		<rule e="any" k="drinking_water" v="~|no"><symbol id="s_hot_spring" priority="263" display="always" src="file:/symbols/s_hot_spring.svg" symbol-height="16" /></rule>
 		<caption cat="tms_landnames" symbol-id="s_hot_spring" k="name" position="above" font-style="bold" font-size="10" fill="#ff0040" stroke="#E5FFFFFF" stroke-width="2" />

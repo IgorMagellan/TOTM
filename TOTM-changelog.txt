@@ -397,3 +397,5 @@ s_bicycle_shop.svg->s_bicycle_repair_station.svg; barrier=checkpoint
 переделал ridge|arete на группу правил по зумам
 03/05/2022
 wetland png->svg
+07/05/2022
+улучш. подземные pipeline, rapids
