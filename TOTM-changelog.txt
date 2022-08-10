@@ -399,3 +399,5 @@ s_bicycle_shop.svg->s_bicycle_repair_station.svg; barrier=checkpoint
 wetland png->svg
 07/05/2022
 улучш. подземные pipeline, rapids
+11/08/2022
+улучш. wetlands (разбивка по зумам)
