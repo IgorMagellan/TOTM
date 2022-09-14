@@ -1283,8 +1283,9 @@ Transparency for HEX colors (100% - непрозрачный)
 		<area fill="#777777" stroke="#000000" stroke-width="0.12" />
 	</rule>	<!-- "#888888" -->
 	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-min="18">
-		<area fill="#888888" stroke="#000000" stroke-width="0.10" />
-	</rule>	<!-- area fill="#999999" stroke="#000000" -->
+		<area fill="#f3f3f3" stroke="#5e5e5e" stroke-width="0.10" />
+		<area src="file:/patterns/p_building.svg" symbol-height="8" />
+	</rule>
 
 	<rule cat="tms_terrain" e="way" k="building" v="construction">
 		<area fill="#888888" />

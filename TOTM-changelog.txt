@@ -412,3 +412,4 @@ wetland png->svg
 улучшено name ООПТ, aboriginal
 14/09/2022
 переставил некоторые leisure areas повыше, до леса
+штриховка на buildings c z18
