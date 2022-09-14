@@ -242,6 +242,20 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
+	<!-- 		переставил выше от leisure areas -->
+	<rule cat="tms_terrain" e="way" k="leisure" v="park" zoom-min="13">
+		<area fill="#80a9df82" />
+	</rule>	
+
+	<rule cat="tms_terrain" e="way" k="leisure|sport" v="sports_centre|shooting">
+		<area fill="#DDBDE3CB" stroke="#6FC18E" stroke-width="0.2" />
+	</rule>
+	<rule cat="tms_terrain" e="way" k="leisure" v="stadium">
+		<area fill="#DD86D9A5" stroke="#6FC18E" stroke-width="0.2" />
+	</rule>
+
+	<!-- ***	 -->
+	
 	<rule cat="tms_terrain" e="way" k="amenity|tourism|historic" v="kindergarten|school|college|university|place_of_worship|biergarten|museum|ruins|castle|memorial|monument">
 		<area fill="#E3D7C3" stroke="#B3A99A" stroke-width="0.2" />
 	</rule>
@@ -361,9 +375,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- Misc land use -->
-	<rule cat="tms_terrain" e="way" k="leisure" v="park" zoom-min="13">
-		<area fill="#80a9df82" />
-	</rule>	<!-- fill="#BBC7F1A3"  -->
+
 	<rule cat="tms_terrain" e="way" k="leisure" v="garden|golf_course|common" zoom-min="13">
 		<area fill="#BBC7F1A3" stroke="#806FC18E" stroke-width="0.2" />
 	</rule>
@@ -577,10 +589,6 @@ Transparency for HEX colors (100% - непрозрачный)
 				<!-- stroke="#bc995f" -->
 			</rule>
 		</rule>
-	</rule>
-	<!-- 		переставил выше от leisure areas -->
-	<rule cat="tms_terrain" e="way" k="leisure|sport" v="sports_centre|shooting">
-		<area fill="#DDBDE3CB" stroke="#6FC18E" stroke-width="0.2" />
 	</rule>
 
 	<!-- pistes for WINTER LOMAPS -->
@@ -1164,9 +1172,6 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- leisure areas -->
-	<rule cat="tms_terrain" e="way" k="leisure" v="stadium">
-		<area fill="#DD86D9A5" stroke="#6FC18E" stroke-width="0.2" />
-	</rule>
 	<rule cat="tms_terrain" e="way" k="leisure" v="playground|dog_park">
 		<area fill="#C7F1A3" stroke="#6FC18E" stroke-width="0.2" />
 	</rule>
@@ -1174,7 +1179,14 @@ Transparency for HEX colors (100% - непрозрачный)
 		<area fill="#80b6dea4" stroke="#808eb961" stroke-width="0.5" />
 	</rule>
 
-	<rule cat="tms_terrain" e="way" k="leisure" v="track">
+	<rule cat="tms_terrain" e="way" k="leisure" v="swimming_pool">
+		<area fill="#a3dde8" stroke="#0000FF" stroke-width="0.3" />
+		<line stroke="#AAAAAA" stroke-width="0.3" stroke-dasharray="3,3" stroke-linecap="butt"/>
+	</rule>
+	<rule cat="tms_terrain" e="way" k="sport|leisure" v="swimming|water_park" zoom-min="13">
+		<area fill="#6892ff" stroke="#6060FF" stroke-width="0.3" />
+	</rule>		
+	<rule cat="tms_terrain" e="way" k="leisure" v="track|byway|ls_track">
 		<rule e="way" k="area" v="yes|true">
 			<area fill="#BBBDE3CB" stroke="#6FC18E" stroke-width="0.025" />
 		</rule>
@@ -1183,13 +1195,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<line stroke="#BDE3CB" stroke-width="0.7" />
 		</rule>
 	</rule>
-	<rule cat="tms_terrain" e="way" k="leisure" v="swimming_pool">
-		<area fill="#a3dde8" stroke="#0000FF" stroke-width="0.3" />
-		<line stroke="#AAAAAA" stroke-width="0.3" stroke-dasharray="3,3" stroke-linecap="butt"/>
-	</rule>
-	<rule cat="tms_terrain" e="way" k="sport|leisure" v="swimming|water_park" zoom-min="13">
-		<area fill="#6892ff" stroke="#6060FF" stroke-width="0.3" />
-	</rule>
+
 	<rule cat="tms_terrain" e="way" k="sport" v="tennis">
 		<area fill="#D18A6A" stroke="#B36C4C" stroke-width="0.2" />
 	</rule>
