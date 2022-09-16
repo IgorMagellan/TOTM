@@ -1289,19 +1289,48 @@ Transparency for HEX colors (100% - непрозрачный)
 					<line stroke="#aaaaaa" stroke-width="0.2" stroke-dasharray="0.3,0.6" scale="all" />
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="18">
-					<area fill="#80888888" />
+					<area fill="#b9aac0c0" />
 					<line stroke="#504f4f" stroke-width="0.2" stroke-dasharray="0.5,1.0" scale="all" />
 					<area src="file:/patterns/p_building.svg" symbol-height="8" />
 				</rule>
 			</rule>
 
+			<rule e="way" k="*" v="greenhouse|temporary">
+				<rule e="way" k="*" v="*" zoom-max="17">
+					<area fill="#5f6d5f" />
+					<line stroke="#25912a" stroke-width="0.15" stroke-dasharray="0.4,0.8" scale="all" />
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="18">
+					<area fill="#ddfcdf" />
+					<line stroke="#347734" stroke-width="0.15" stroke-dasharray="0.4,0.8" scale="all" />
+					<area src="file:/patterns/p_building.svg" symbol-height="8" />
+				</rule>
+			</rule>
+
 			<rule e="way" k="*" v="disused">
-				<line stroke="#ffff00" stroke-width="0.15" stroke-dasharray="0.5,1" scale="all" />
+				<rule e="way" k="*" v="*" zoom-max="17">
+					<area fill="#83816d" />
+					<line stroke="#a5a504" stroke-width="0.15" stroke-dasharray="0.4,0.8" scale="all" />
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="18">
+					<area fill="#faf8db" />
+					<line stroke="#b1b102" stroke-width="0.15" stroke-dasharray="0.5,1.0" scale="all" />
+					<area src="file:/patterns/p_building.svg" symbol-height="8" />
+				</rule>
 			</rule>
 
 			<rule e="way" k="*" v="ruins|collapsed">
-				<line stroke="#ff9673" stroke-width="0.15" stroke-dasharray="0.5,1" scale="all" />
+				<rule e="way" k="*" v="*" zoom-max="17">
+					<area fill="#745d56" />
+					<line stroke="#ff9673" stroke-width="0.15" stroke-dasharray="0.4,0.8" scale="all" />
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="18">
+					<area fill="#ece3e1" />
+					<line stroke="#d47b5e" stroke-width="0.2" stroke-dasharray="0.5,1.0" scale="all" />
+					<area src="file:/patterns/p_building.svg" symbol-height="8" />
+				</rule>
 			</rule>
+
 		</rule>
 
 	<rule cat="tms_culture" e="any" k="historic|building" v="ruins" zoom-min="15">

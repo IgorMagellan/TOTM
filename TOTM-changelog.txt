@@ -414,4 +414,4 @@ wetland png->svg
 переставил некоторые leisure areas повыше, до леса
 штриховка на buildings c z18
 15/09/2022
-оптимиз. buildings; добавил disused
+оптимиз. buildings; добавил disused, greenhouse|temporary
