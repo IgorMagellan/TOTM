@@ -1273,7 +1273,30 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- Buildings -->
-	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-max="14">
+		<rule cat="tms_terrain" e="way" k="building" v="*">
+			<rule e="way" k="*" v="*" zoom-max="14"> 				<area fill="#333333" stroke="#000000" stroke-width="0.2" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="15" zoom-max="16">	<area fill="#666666" stroke="#000000" stroke-width="0.15" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17">	<area fill="#777777" stroke="#000000" stroke-width="0.12" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="18">
+				<area fill="#f3f3f3" stroke="#5e5e5e" stroke-width="0.10" />
+				<area src="file:/patterns/p_building.svg" symbol-height="8" />
+			</rule>
+			<rule e="way" k="*" v="construction">
+				<rule e="way" k="*" v="*" zoom-max="17">
+					<area fill="#888888" />
+					<line stroke="#aaaaaa" stroke-width="0.2" stroke-dasharray="0.3,0.6" scale="all" />
+				</rule>
+				<rule e="way" k="*" v="*" zoom-min="18">
+					<area fill="#80888888" />
+					<line stroke="#504f4f" stroke-width="0.2" stroke-dasharray="0.5,1.0" scale="all" />					
+					<area src="file:/patterns/p_building.svg" symbol-height="8" />
+				</rule>
+			</rule>
+		</rule>
+
+
+
+<!-- 	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-max="14">
 		<area fill="#333333" stroke="#000000" stroke-width="0.2" />
 	</rule>
 	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-min="15" zoom-max="16">
@@ -1281,16 +1304,18 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>	
 	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-min="17" zoom-max="17">
 		<area fill="#777777" stroke="#000000" stroke-width="0.12" />
-	</rule>	<!-- "#888888" -->
+	</rule>
 	<rule cat="tms_terrain" e="way" k="building" v="*" zoom-min="18">
 		<area fill="#f3f3f3" stroke="#5e5e5e" stroke-width="0.10" />
 		<area src="file:/patterns/p_building.svg" symbol-height="8" />
-	</rule>
+	</rule> -->
 
+
+<!-- 
 	<rule cat="tms_terrain" e="way" k="building" v="construction">
 		<area fill="#888888" />
 		<line stroke="#aaaaaa" stroke-width="0.2" stroke-dasharray="0.3,0.6" scale="all" />
-	</rule>
+	</rule> -->
 
 	<rule cat="tms_terrain" e="way" k="building" v="ruins|collapsed" >
 		<line stroke="#ff9673" stroke-width="0.15" stroke-dasharray="0.5,1" scale="all" />
