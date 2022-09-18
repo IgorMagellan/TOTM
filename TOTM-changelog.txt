@@ -415,3 +415,8 @@ wetland png->svg
 штриховка на buildings c z18
 15/09/2022
 оптимиз. buildings; добавил disused, greenhouse|temporary
+17/09/2022
+добавил книжный шкаф amenity=public_bookcase
+исправил swimming_pool, swimming|water_park (переставил повыше)
+18/09/2022
+добавил водяную мельницу watermill, windpump
