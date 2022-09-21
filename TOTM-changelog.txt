@@ -418,5 +418,7 @@ wetland png->svg
 17/09/2022
 добавил книжный шкаф amenity=public_bookcase
 исправил swimming_pool, swimming|water_park (переставил повыше)
-18/09/2022
-добавил водяную мельницу watermill, windpump
+18-20/09/2022
+добавил водяную мельницу watermill, windpump, пляж beach_resort, квартира apartment, платный туалет toilets_fee,
+приватную детскую игровую площадку s_playground_private2
+cнизил name font-size railway с 14 до 9
