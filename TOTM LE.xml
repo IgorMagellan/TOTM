@@ -982,7 +982,7 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<rule cat="tms_attraction" e="way" k="tourism" v="attraction" closed="yes">
 		<area fill="#BBF2CAEA" stroke="#CCAAC5" />
-		<symbol id="tms_attraction" src="file:/symbols/s_attraction.png" />
+		<symbol id="tms_attraction" src="file:/symbols/s_attraction.svg" />
 		<rule e="any" k="*" v="*" zoom-min="15"><caption cat="tms_land-names" symbol-id="tms_attraction" k="name" font-style="bold" font-size="9dp" fill="#444444" stroke="#FFFFFF" stroke-width="2.0dp" /> </rule>
 	</rule>
 	<rule cat="tms_attraction" e="way" k="tourism" v="attraction" closed="no">

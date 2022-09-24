@@ -3241,7 +3241,13 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule e="node" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" priority="200" symbol-id="s_water_tower" k="name" position="below" font-style="bold" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
-	</rule>	
+	</rule>
+	<rule cat="tms_man-made" e="any" k="man_made" v="petroleum_well" zoom-min="14">
+		<symbol display="always" id="s_petroleum_well" src="file:/symbols/s_petroleum_well2.svg" symbol-height="27" />
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption k="name" priority="200" symbol-id="s_petroleum_well" position="below" font-style="bold" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
 	<rule cat="tms_power" e="any" k="power" v="tower" zoom-min="16">    <!-- опора ЛЭП - в OAM пока не используется -->
 		<symbol display="always" src="file:/symbols/power_tower.svg" symbol-height="22" />
 	</rule>
