@@ -982,12 +982,12 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<rule cat="tms_attraction" e="way" k="tourism" v="attraction" closed="yes">
 		<area fill="#BBF2CAEA" stroke="#CCAAC5" />
-		<symbol id="tms_attraction" src="file:/symbols/s_attraction.svg" />
+		<symbol id="tms_attraction" src="file:/symbols/s_attraction.svg" symbol-width="13dp" />
 		<rule e="any" k="*" v="*" zoom-min="15"><caption cat="tms_land-names" symbol-id="tms_attraction" k="name" font-style="bold" font-size="9dp" fill="#444444" stroke="#FFFFFF" stroke-width="2.0dp" /> </rule>
 	</rule>
 	<rule cat="tms_attraction" e="way" k="tourism" v="attraction" closed="no">
 		<line stroke="#BBF2CAEA" stroke-width="0.8" stroke-dasharray="6,12" stroke-linecap="round" />
-		<rule e="any" k="*" v="*" zoom-max="14"> <symbol id="tms_attraction"  src="file:/symbols/s_attraction.png" /> </rule>
+		<rule e="any" k="*" v="*" zoom-max="14"> <symbol id="tms_attraction"  src="file:/symbols/s_attraction.svg" symbol-width="13dp" /> </rule>
 		<rule e="any" k="*" v="*" zoom-min="15"> <caption cat="tms_land-names" symbol-id="tms_attraction" k="name" font-style="bold" font-size="9dp" fill="#444444" stroke="#FFFFFF" stroke-width="2.0dp" /> </rule>
 	</rule>
 
@@ -1961,7 +1961,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule e="any" k="*" v="*"><caption cat="tms_land-names" priority="-20" symbol-id="tms_viewpoint" k="ele"  position="below"  font-size="8dp" font-style="bold" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0dp" /></rule>
 	</rule>
 	<rule cat="tms_attraction" e="node" k="tourism" v="attraction">
-		<symbol priority="220" id="tms_attraction" src="file:/symbols/s_attraction.png" />
+		<symbol priority="220" id="tms_attraction" src="file:/symbols/s_attraction.svg" symbol-width="13dp"/>
 		<caption cat="tms_land-names" priority="115" symbol-id="tms_attraction" k="name" dy="-12" position="above" font-style="bold" font-size="8dp" fill="#552200" stroke="#FFFFFF" stroke-width="2.0dp" />
 	</rule>
 	<rule cat="tms_attraction" e="any" k="tourism" v="zoo" zoom-min="15">
