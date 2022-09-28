@@ -438,11 +438,9 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_landnames" e="way" k="*" v="*" zoom-min="13">
 		<rule cat="tms_terrain" e="way" k="natural|landuse" v="glacier|land|beach|sand|rock|fell|scree|landfill|quarry|farm|farmland" zoom-min="14">
 			<caption cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="1.5" />
-			<!-- fill="#444444"  -->
 		</rule>
-		<rule cat="tms_terrain" e="way" k="natural|landuse" v="meadow|grassland|heath|marsh|wetland|scrub|forest|wood|vineyard|field" zoom-min="14">
+		<rule cat="tms_terrain" e="way" k="natural|landuse" v="meadow|grassland|heath|marsh|wetland|scrub|vineyard|field" zoom-min="14">
 			<caption cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#196600" stroke="#FFFFFF" stroke-width="1.5" />
-			<!-- fill="#444444"  -->
 		</rule>
 		<rule cat="tms_terrain" e="way" k="landuse|leisure" v="allotments|cemetery|industrial|village_green|recreation_ground|grass|park|garden|common|green|dog_park" zoom-min="15">
 			<caption cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#004D66" stroke="#FFFFFF" stroke-width="1.5" />
@@ -1170,10 +1168,10 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 	<rule cat="tms_terrain" e="way" k="amenity" v="parking">
 		<area fill="#d3dfe2" stroke="#93b1b8" stroke-width="0.2" />
-	</rule>
-	<rule cat="tms_terrain" e="way" k="amenity|tourism|historic" v="place_of_worship|biergarten|museum|ruins|castle|memorial|monument">
+	</rule> <!-- FIXME: неверная заливка в park -->
+<!-- 	<rule cat="tms_terrain" e="way" k="amenity|tourism|historic" v="place_of_worship|biergarten|museum|ruins|castle|memorial|monument">
 		<area fill="#E3D7C3" stroke="#B3A99A" stroke-width="0.1" />
-	</rule>
+	</rule> -->
 <!--? TODO: разобраться тут фонтан как развлечение и как вода -->
 	<rule cat="tms_attraction" e="way" k="amenity" v="fountain" closed="yes" zoom-min="16">
 		<area fill="#B5D6F1" stroke="#000080" stroke-width="0.15" />
@@ -2259,6 +2257,30 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 		<rule e="any" k="bBoxWeight" v="small|xsmall|tiny" zoom-min="11">
 			<caption cat="tms_landnames" k="name" dy="15" priority="110" font-style="bold_italic" font-family="serif" font-size="10" fill="#006600" stroke="#FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
+
+	<rule cat="tms_landnames" e="node" k="landuse|natural" v="orchard|forest|wood">
+		<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge|xlarge" zoom-max="9">
+			<caption k="name" priority="100" font-style="italic" font-family="serif" font-size="14" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
+		</rule>
+		<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge|xlarge" zoom-min="10">
+			<caption k="name" priority="100" font-style="italic" font-family="serif" font-size="19" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
+		</rule>
+		<rule e="any" k="bBoxWeight" v="large">
+			<caption k="name" priority="100" font-style="italic" font-family="serif" font-size="12" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
+		</rule>
+		<rule e="any" k="bBoxWeight" v="mid">
+			<caption k="name" priority="100" font-style="italic" font-family="serif" font-size="11" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
+		</rule>
+		<rule e="any" k="bBoxWeight" v="small|~" zoom-min="13">
+			<caption k="name" priority="100" font-style="italic" font-family="serif" font-size="11" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
+		</rule>
+		<rule e="any" k="bBoxWeight" v="xsmall|tiny" zoom-min="16">
+			<caption k="name" priority="100" font-style="italic" font-family="serif" font-size="11" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
+		</rule>
+		<rule e="any" k="*" v="*" zoom-min="16">
+			<caption k="ele" priority="-5" dy="21" font-style="italic" font-family="serif" font-size="10" fill="#779977" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
 

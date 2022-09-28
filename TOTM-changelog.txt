@@ -424,3 +424,5 @@ wetland png->svg
 cнизил name font-size railway с 14 до 9
 22-23/09/2022
 добавил swimming_area, picnic_shelter, gate_private, petroleum_well
+28/09/2022
+name как в El для orchard|forest|wood;
