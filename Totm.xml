@@ -382,7 +382,6 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_terrain" e="way" k="landuse|natural" v="field|farm|farmland" zoom-min="13">
 		<area src="file:/patterns/p_farmland.svg" symbol-width="128" />
 	</rule>
-	<!-- FIXME: нет name orchard-  -->
 	<rule cat="tms_terrain" e="way" k="landuse" v="orchard" zoom-min="13">
 		<area src="file:/patterns/p_orchard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="30" />
 	</rule>
@@ -1040,35 +1039,35 @@ Transparency for HEX colors (100% - непрозрачный)
 			<rule e="any" k="waterway" v="dam" zoom-min="15">
 				<symbol src="file:/symbols/s_dam.svg" symbol-width="13"/>
 			</rule>
-		</rule>
-
-		<rule cat="tms_man-made" e="way" k="man_made" v="pipeline">
-			<line stroke="#CCCCCC" stroke-width="0.9" stroke-linecap="butt" />
-			<line stroke="#9CA6BA" stroke-width="0.7" scale="all" stroke-dasharray="1.8,0.6" stroke-linecap="butt" />
-			<line stroke="#FFFFFF" stroke-width="0.15" stroke-linecap="butt" />
-			<pathText cat="tms_landnames" k="name" font-style="normal" font-size="9" fill="#9CA6BA" stroke="#FFFFFF" stroke-width="1" />
+			<rule cat="tms_man-made" e="way" k="man_made" v="pipeline">
+				<line stroke="#CCCCCC" stroke-width="0.9" stroke-linecap="butt" />
+				<line stroke="#9CA6BA" stroke-width="0.7" scale="all" stroke-dasharray="1.8,0.6" stroke-linecap="butt" />
+				<line stroke="#FFFFFF" stroke-width="0.15" stroke-linecap="butt" />
+				<pathText cat="tms_landnames" k="name" font-family="sans_serif" font-style="normal" font-size="9" fill="#667593" stroke="#FFFFFF" stroke-width="2" repeat="true" repeat-start="100" repeat-gap="300" />
+			</rule>
 		</rule>
 	</rule>
 
 	<rule cat="tms_man-made" e="way" k="tunnel|location" v="yes|culvert|underground" zoom-min="16">
 		<rule e="way" k="man_made" v="pipeline">
 			<line stroke="#809CA6BA" stroke-width="0.9" scale="all" stroke-dasharray="0.9,0.3" stroke-linecap="butt" />
+			<pathText cat="tms_landnames" k="name" font-family="sans_serif" font-style="normal" font-size="9" fill="#667593" stroke="#FFFFFF" stroke-width="2" repeat="true" repeat-start="100" repeat-gap="300" />
 		</rule>
 	</rule>
 	
-	<rule cat="tms_relief" e="way" k="natural" v="*" zoom-min="13">
+	<rule cat="tms_relief" e="way" k="natural" v="*">
 		<rule e="way" k="*" v="valley">
 			<pathText cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#E6444444" stroke="#cce0e0e0" stroke-width="2.0" />
 		</rule>
 
 		<!-- Обрывы -->
-		<rule e="way" k="*" v="cliff">
+		<rule e="way" k="*" v="cliff" zoom-min="13">
 			<line stroke="#BF111111" dy="0.5" stroke-width="1" stroke-dasharray="0.2,1" stroke-linecap="butt" scale="all" />
 			<line stroke="#BF111111" stroke-width="0.3" stroke-linecap="butt" />
 			<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
 		</rule>
 
-		<rule e="way" k="*" v="earth_bank">
+		<rule e="way" k="*" v="earth_bank" zoom-min="13">
 			<line stroke="#BFbc4b00" dy="0.5" stroke-width="1" stroke-dasharray="0.2,1" stroke-linecap="butt" scale="all" />
 			<line stroke="#BFbc4b00" stroke-width="0.3" stroke-linecap="butt" />
 			<pathText cat="tms_landnames" k="name" dy="-1.2" font-style="bold_italic" font-family="serif" font-size="10" fill="#313140" stroke="#E5FFFFFF" stroke-width="2" repeat-start="80" repeat-gap="200" />
@@ -1170,10 +1169,8 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 	<rule cat="tms_terrain" e="way" k="amenity" v="parking">
 		<area fill="#d3dfe2" stroke="#93b1b8" stroke-width="0.2" />
-	</rule> <!-- FIXME: неверная заливка в park -->
-<!-- 	<rule cat="tms_terrain" e="way" k="amenity|tourism|historic" v="place_of_worship|biergarten|museum|ruins|castle|memorial|monument">
-		<area fill="#E3D7C3" stroke="#B3A99A" stroke-width="0.1" />
-	</rule> -->
+	</rule>
+
 <!--? TODO: разобраться тут фонтан как развлечение и как вода -->
 	<rule cat="tms_attraction" e="way" k="amenity" v="fountain" closed="yes" zoom-min="16">
 		<area fill="#B5D6F1" stroke="#000080" stroke-width="0.15" />
@@ -1501,7 +1498,7 @@ Transparency for HEX colors (100% - непрозрачный)
 				<!-- stroke-width="1.20" -->				<!-- stroke-width="0.80" -->
 				<line stroke="#555555" scale="all" stroke-width="0.6" stroke-dasharray="2.5,2" stroke-linecap="butt" />
 				<!-- stroke-dasharray="14.0,10.0" -->				<!-- stroke-dasharray="9.0,6" -->
-				<pathText k="name" priority="-1" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="2.6" repeat="true" repeat-start="10" repeat-gap="450" />
+				<pathText cat="tms_landnames" k="name" priority="-1" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="2.6" repeat="true" repeat-start="10" repeat-gap="450" />
 			</rule>
 			<rule e="way" k="railway" v="rail">
 				<rule e="way" k="*" v="*" zoom-max="16">
@@ -1511,14 +1508,14 @@ Transparency for HEX colors (100% - непрозрачный)
 					<!-- stroke-width="1.20" -->					<!-- stroke-width="0.80" -->
 					<line stroke="#252525" scale="all" stroke-width="0.90" stroke-dasharray="4,3.8" stroke-linecap="butt" />
 					<!-- stroke-dasharray="14.0,10.0" -->					<!-- stroke-dasharray="9.0,6" -->
-					<pathText k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="3.00" />
+					<pathText cat="tms_landnames" k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="3.00" repeat="true" repeat-start="10" repeat-gap="450" />
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="17">
 					<line stroke="#252525" stroke-width="0.90" stroke-linecap="butt" />
 					<line stroke="#FFFFFF" stroke-width="0.75" stroke-linecap="butt" />
 					<line stroke="#252525" scale="all" stroke-width="0.75" stroke-dasharray="4,3.8" stroke-linecap="butt" />
 					<!-- stroke-dasharray="14.0,10.0" -->					<!-- stroke-dasharray="9.0,6" -->
-					<pathText k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="3.00" />
+					<pathText cat="tms_landnames" k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="3.00" repeat="true" repeat-start="10" repeat-gap="450" />
 				</rule>
 				<!-- проверить в ОАМ не удалось; возможно, нужно доб.casing и core дороги -->
 				<rule e="way" k="service" v="siding|spur|yard">
@@ -1529,14 +1526,14 @@ Transparency for HEX colors (100% - непрозрачный)
 				<line stroke="#555555" stroke-width="1.15" stroke-linecap="butt" />
 				<line stroke="#FFFFFF" stroke-width="0.90" stroke-linecap="butt" />
 				<line stroke="#cccccc" scale="all" stroke-width="0.90" stroke-dasharray="4,3.8" stroke-linecap="butt" />
-				<pathText k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="3.00" />
+				<pathText cat="tms_landnames" k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="3.00" repeat="true" repeat-start="10" repeat-gap="450" />
 			</rule>
 			<!-- ~~~~ -->
 			<rule e="way" k="railway" v="tram">				<!-- Трамвай  line stroke="#663300"-->
 				<line stroke="#8c4600" stroke-width="0.90" stroke-linecap="butt" />
 				<line stroke="#FFFFFF" stroke-width="0.75" stroke-linecap="butt" />
 				<line stroke="#8c4600" scale="all" stroke-width="0.75" stroke-dasharray="3,3" stroke-linecap="butt" />
-				<pathText k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="1" />
+				<pathText cat="tms_landnames" k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="1" repeat="true" repeat-start="10" repeat-gap="450" />
 			</rule>
 			<rule cat="tms_aerial" e="way" k="railway" v="funicular" zoom-min="14">
 				<symbol src="file:/symbols/s_rail_funicular.svg" symbol-height="16" />
@@ -2267,7 +2264,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<caption k="name" priority="100" font-style="italic" font-family="serif" font-size="14" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 		<rule e="any" k="bBoxWeight" v="xxxlarge|xxlarge|xlarge" zoom-min="10">
-			<caption k="name" priority="100" font-style="italic" font-family="serif" font-size="19" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
+			<caption k="name" priority="100" font-style="italic" font-family="serif" font-size="16" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
 		</rule>
 		<rule e="any" k="bBoxWeight" v="large">
 			<caption k="name" priority="100" font-style="italic" font-family="serif" font-size="12" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
@@ -3133,8 +3130,8 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_attraction" e="node" k="tourism" v="viewpoint">
 		<symbol priority="215" id="tms_viewpoint" display="always" src="file:/symbols/s_viewpoint.svg" symbol-height="14" />
 		<rule e="any" k="*" v="*" cat="tms_landnames">
-			<caption priority="15" symbol-id="tms_viewpoint" k="name" position="above" font-size="9" font-style="bold" fill="#005acf" stroke="#FFFFFF" stroke-width="1.2" />
-			<caption priority="10" symbol-id="tms_viewpoint" k="ele" position="below" font-size="9" font-style="bold" fill="#005acf" stroke="#FFFFFF" stroke-width="1.2" />
+			<caption priority="15" symbol-id="tms_viewpoint" k="name" position="above" font-family="sans_serif" font-size="9" font-style="bold" fill="#005acf" stroke="#FFFFFF" stroke-width="1.4" />
+			<caption priority="10" symbol-id="tms_viewpoint" k="ele" position="below" font-family="sans_serif" font-size="9" font-style="bold" fill="#005acf" stroke="#FFFFFF" stroke-width="1.4" />
 		</rule>
 	</rule>
 	<rule cat="tms_attraction" e="node" k="tourism" v="attraction">
