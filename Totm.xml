@@ -219,6 +219,12 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
+		<rule cat="tms_terrain" e="way" k="boundary" v="~" zoom-min="11">
+			<rule e="way" k="leisure" v="park" closed="yes">
+				<area fill="#80a9df82" />
+			</rule>
+		</rule>	
+		
 	<!-- landcover -->
 	<rule cat="tms_terrain" e="way" k="landuse" v="residential|farmyard" zoom-min="10">
 		<rule e="way" k="landuse|amenity" v="residential|farmyard" zoom-min="10" zoom-max="13">
@@ -243,10 +249,10 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- 		переставил выше от leisure areas -->
-	<rule cat="tms_terrain" e="way" k="leisure" v="park" zoom-min="13">
-		<area fill="#80a9df82" />
+	
+	<rule cat="tms_terrain" e="way" k="amenity|tourism|historic" v="kindergarten|school|college|university|place_of_worship|biergarten|museum|ruins|castle|memorial|monument">
+		<area fill="#E3D7C3" stroke="#B3A99A" stroke-width="0.2" />
 	</rule>	
-
 	<rule cat="tms_terrain" e="way" k="leisure|sport" v="sports_centre|shooting">
 		<area fill="#DDBDE3CB" stroke="#6FC18E" stroke-width="0.2" />
 	</rule>
@@ -268,10 +274,6 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>		
 	
 	<!-- ***	 -->
-	
-	<rule cat="tms_terrain" e="way" k="amenity|tourism|historic" v="kindergarten|school|college|university|place_of_worship|biergarten|museum|ruins|castle|memorial|monument">
-		<area fill="#E3D7C3" stroke="#B3A99A" stroke-width="0.2" />
-	</rule>
 
 	<rule cat="tms_terrain" e="way" k="amenity" v="hospital">
 		<area fill="#F2D9D7" stroke="#DBBDBA" stroke-width="0.2" />
