@@ -431,3 +431,5 @@ name как в El для orchard|forest|wood;
 поправил pipeline, railway names, tms_relief z для (arete)
 01/10/2022
 добавил трещины ледника crevasse; labels для cape, canyon|peninsula|bay|fjord, islet, island, archipelago, sea, ocean, glacier, desert
+02/10/2022
+оптимизация tms_picnic, tms_leisure
