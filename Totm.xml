@@ -80,7 +80,6 @@ Transparency for HEX colors (100% - непрозрачный)
 		<layer id="tms_picnic" enabled="true">
 			<name lang="en" value="Camping &amp; Picnic"/>
 			<name lang="ru" value="Отдых: Стоянки, кемпинги, места д/пикника, скамейки, туалеты.." />
-			<cat id="tms_camp"/>
 			<cat id="tms_picnic"/>
 		</layer>
 		<layer id="tms_barriers-hk" enabled="false">
@@ -2520,32 +2519,17 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- accommodation -->
-	<rule cat="tms_camp" e="any" zoom-min="14" k="tourism" v="camp_site">
-		<symbol priority="235" id="s_camp" display="always" src="file:/symbols/s_camp_site.svg" symbol-height="16" />
-		<caption cat="tms_landnames" priority="510" symbol-id="s_camp" k="name" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
-	</rule>
-	<rule cat="tms_camp" e="any" zoom-min="14" k="tourism" v="caravan_site">
-		<symbol priority="235" id="tms_touring" display="always" src="file:/symbols/s_caravan_site.svg" symbol-width="16" />
-	</rule>
-	<rule cat="tms_acco" e="any" zoom-min="14" k="tourism" v="hostel">
-		<symbol priority="235" id="tms_touring" display="always" src="file:/symbols/s_hostel.svg" symbol-width="16" />
-	</rule>
-	<rule cat="tms_acco" e="any" k="tourism" v="chalet">
-		<symbol priority="235" id="tms_touring" display="always" src="file:/symbols/s_chalet.svg" symbol-width="16" />
-	</rule>
-	<rule cat="tms_acco" e="any" k="tourism" v="apartment">
-		<symbol id="s_apartment" priority="230" src="file:/symbols/s_apartment.svg" display="always" symbol-height="16" />
-		<rule e="any" k="*" v="*" cat="tms_landnames">
-			<caption k="name" priority="230" symbol-id="s_apartment" position="above" font-style="bold" font-size="10" fill="#552200" stroke="#E5FFFFFF" stroke-width="2" />
-			<caption k="ele" priority="-5" symbol-id="s_apartment" position="below" font-style="bold" font-size="10" fill="#552200" stroke="#E5FFFFFF" stroke-width="2" />
-		</rule>
-	</rule>
-	<rule cat="tms_acco" e="any" zoom-min="14" k="tourism|building" v="hotel|motel|guest_house">
-		<symbol priority="235" id="tms_touring" display="always" src="file:/symbols/s_hotel.svg" symbol-width="16" />
-	</rule>
-	<rule cat="tms_acco" e="any" zoom-min="14" k="tourism|building" v="caravan_site|hostel|chalet|hotel|motel|guest_house">
+<rule cat="tms_acco" e="any" k="*" v="*" zoom-min="13">	
+	<rule e="any" k="tourism" v="camp_site">	<symbol priority="240" id="tms_touring" display="always" src="file:/symbols/s_camp_site.svg" symbol-height="16" /></rule>
+	<rule e="any" k="tourism" v="caravan_site"> <symbol priority="235" id="tms_touring" display="always" src="file:/symbols/s_caravan_site.svg" symbol-width="16" /></rule>
+	<rule e="any" k="tourism" v="hostel">		<symbol priority="235" id="tms_touring" display="always" src="file:/symbols/s_hostel.svg" symbol-width="16" /></rule>
+	<rule e="any" k="tourism" v="chalet">		<symbol priority="235" id="tms_touring" display="always" src="file:/symbols/s_chalet.svg" symbol-width="16" /></rule>
+	<rule e="any" k="tourism" v="apartment">	<symbol priority="230" id="tms_touring" src="file:/symbols/s_apartment.svg" display="always" symbol-height="16" /></rule>	
+	<rule e="any" k="tourism|building" v="hotel|motel|guest_house"><symbol priority="235" id="tms_touring" display="always" src="file:/symbols/s_hotel.svg" symbol-width="16" /></rule>
+	<rule e="any" k="tourism|building" v="camp_site|caravan_site|hostel|chalet|apartment|hotel|motel|guest_house" zoom-min="15">
 		<caption cat="tms_landnames" priority="230" symbol-id="tms_touring" k="name" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />
 	</rule>
+</rule>
 
 	<!-- picnic -->
 	<rule cat="tms_picnic" e="any" k="*" v="*" zoom-min="14">
@@ -3285,40 +3269,40 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>	
 
 	<!-- place of worship -->
-	<rule cat="tms_religion" e="any" k="historic" v="wayside_cross" zoom-min="14" >
-		<symbol display="always" src="file:/symbols/s_wayside_cross.svg" symbol-height="11" />
-		<rule e="any" k="*" v="*" zoom-min="17">
-			<caption cat="tms_landnames" k="name" symbol-id="s_wayside_cross" position="above" font-style="bold" font-size="10" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
-		</rule>		
+	<rule cat="tms_religion" e="any" k="*" v="*">
+		<rule e="any" k="historic" v="wayside_cross" zoom-min="14">
+			<symbol display="always" src="file:/symbols/s_wayside_cross.svg" symbol-height="11" />
+			<rule e="any" k="*" v="*" zoom-min="17">
+				<caption cat="tms_landnames" k="name" symbol-id="s_wayside_cross" position="above" font-style="bold" font-size="10" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>
+		<rule e="any" k="man_made" v="cross" zoom-min="14">
+			<rule e="any" k="natural" v="~">
+				<symbol display="always" id="s_cross" priority="53" src="file:/symbols/s_wayside_cross.svg" symbol-height="11" />
+				<caption cat="tms_landnames" k="name" symbol-id="s_cross" position="above" font-style="bold" font-size="10" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
+				<caption cat="tms_landnames" k="ele" symbol-id="s_cross" position="below" font-style="bold" font-size="8" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>
+		<rule e="any" k="building" v="church">
+			<symbol display="always" id="tms_worship" src="file:/symbols/s_church.svg" symbol-height="16" />
+		</rule>
+		<rule e="any" k="amenity" v="place_of_worship">
+			<rule e="any" k="religion" v="christian">
+				<symbol id="tms_worship" display="always" src="file:/symbols/s_church.svg" symbol-height="16" />
+			</rule>
+			<rule e="any" k="religion" v="jewish">
+				<symbol id="tms_worship" display="always" src="file:/symbols/s_synagogue.svg" symbol-height="16" />
+			</rule>
+			<rule e="any" k="religion" v="muslim">
+				<symbol id="tms_worship" display="always" src="file:/symbols/s_mosque.svg" symbol-height="16" />
+			</rule>
+			<rule e="any" k="religion" v="~|*">
+				<symbol id="tms_worship" display="always" src="file:/symbols/s_place_of_worship.svg" symbol-height="13" />
+			</rule>
+			<caption symbol-id="tms_worship" cat="tms_landnames" display="always" k="name" position="above" font-size="10" font-style="bold" fill="#444444" stroke="#FFFFFF" stroke-width="2" />			
+		</rule>
 	</rule>
-	<rule cat="tms_religion" e="any" k="man_made" v="cross" zoom-min="14" >
-		<rule e="any" k="natural" v="~">
-			<symbol display="always" id="s_cross" priority="53" src="file:/symbols/s_wayside_cross.svg" symbol-height="11" />
-			<caption cat="tms_landnames" k="name" symbol-id="s_cross" position="above" font-style="bold" font-size="10" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
-			<caption cat="tms_landnames" k="ele" symbol-id="s_cross" position="below" font-style="bold" font-size="8" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
-		</rule>
-	</rule>	
-	<rule cat="tms_religion" e="any" k="building" v="church">
-		<symbol display="always" id="tms_worship" src="file:/symbols/s_church.svg" symbol-height="16"/>
-	</rule>
-	<rule cat="tms_religion" e="any" k="amenity" v="place_of_worship">
-		<rule e="any" k="religion" v="christian">
-			<symbol id="tms_worship" display="always" src="file:/symbols/s_church.svg" symbol-height="16" />
-		</rule>
-		<rule e="any" k="religion" v="jewish">
-			<symbol id="tms_worship" display="always" src="file:/symbols/s_synagogue.svg" symbol-height="16" />
-		</rule>
-		<rule e="any" k="religion" v="muslim">
-			<symbol id="tms_worship" display="always" src="file:/symbols/s_mosque.svg" symbol-height="16" />
-		</rule>
-		<rule e="any" k="religion" v="~|*">
-			<symbol id="tms_worship" display="always" src="file:/symbols/s_place_of_worship.svg" symbol-height="13" />
-		</rule>
-	</rule>
-	<rule cat="tms_religion" e="any" k="amenity" v="place_of_worship">
-		<caption symbol-id="tms_worship" cat="tms_landnames" display="always" k="name" position="above" font-size="10" font-style="bold" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
-	</rule>
-
+	
 	<!-- bureaucracy -->
 	<rule cat="tms_bureaucracy" e="any" k="*" v="*" zoom-min="14" >
 		<rule e="any" k="amenity" v="atm">
