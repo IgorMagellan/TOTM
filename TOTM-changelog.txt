@@ -436,3 +436,6 @@ name как в El для orchard|forest|wood;
 03/11/2022
 улучшен tms_borders, добавлены подписи; исправил tms_religion 
 перенес historic=wayside_cross; man_made=cross в tms_info
+05/11/2022
+убрал labels у barriers (отображались при включенных barriers для школ и детсадов)
+исправил подписи у shelter_type= ~|weather_shelter|lean_to

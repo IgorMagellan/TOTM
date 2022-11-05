@@ -25,7 +25,7 @@ https://github.com/der-stefan/OpenTopoMap
 *                Modified: igor.magellan@yandex.ru                 *
 ********************************************************************
 
-см. history.txt
+см. TOTM-changelog.txt
 
 Transparency for HEX colors (100% - непрозрачный)
 100% — FF  95% — F2  90% — E6  85% — D9  80% — CC  75% — BF  70% — B3  65% — A6  60% — 99
@@ -37,133 +37,133 @@ Transparency for HEX colors (100% - непрозрачный)
 	xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/dev/resources/renderTheme.xsd" 
 	version="1" locus-extended="1" scale-line-dy-by-zoom="1" fill-sea-areas="0" map-background="#ffffff" >
 
-<!-- *** Styles *** -->
+*** Styles ***
 
 <stylemenu id="totm_1_9_6" defaultvalue="tms_hiking" defaultlang="en">
 
-<!-- Layers -->
+	<!-- Layers -->
 	<layer id="tms_contours" enabled="true">
-		<name lang="en" value="Contour lines"/>
-		<name lang="ru" value="Контурные линии высот" />			
-		<cat id="tms_contours"/>
+		<name lang="en" value="Contour lines" />
+		<name lang="ru" value="Контурные линии высот" />
+		<cat id="tms_contours" />
 	</layer>
 	<layer id="tms_terrain" enabled="true">
-		<name lang="en" value="Terrain"/>
-		<name lang="ru" value="Местность"/>			
-		<cat id="tms_terrain"/>
+		<name lang="en" value="Terrain" />
+		<name lang="ru" value="Местность" />
+		<cat id="tms_terrain" />
 	</layer>
 	<layer id="tms_up-osm" enabled="false">
-		<name lang="en" value="Raise house numbers (z16)"/>
-		<name lang="ru" value="Поднять № домов (z16)"/>			
-		<cat id="tms_up-osm"/>
-	</layer>	
+		<name lang="en" value="Raise house numbers (z16)" />
+		<name lang="ru" value="Поднять № домов (z16)" />
+		<cat id="tms_up-osm" />
+	</layer>
 	<layer id="tms_up-hw" enabled="true">
-		<name lang="en" value="Names of streets, roads, paths"/>
-		<name lang="ru" value="Имена улиц, дорог, троп"/>			
-		<cat id="tms_up-hw"/>
-	</layer>	
+		<name lang="en" value="Names of streets, roads, paths" />
+		<name lang="ru" value="Имена улиц, дорог, троп" />
+		<cat id="tms_up-hw" />
+	</layer>
 	<layer id="tms_land-names" enabled="true">
-		<name lang="en" value="Names of places, objects, POI"/>
-		<name lang="ru" value="Названия мест, объектов, POI"/>			
-		<cat id="tms_land-names"/>
-	</layer>		
+		<name lang="en" value="Names of places, objects, POI" />
+		<name lang="ru" value="Названия мест, объектов, POI" />
+		<cat id="tms_land-names" />
+	</layer>
 	<layer id="tms_land-ele" enabled="true">
-		<name lang="en" value="Landscape elements"/>
-		<name lang="ru" value="Элементы ландшафта" />		
-		<cat id="tms_water-land"/>
-		<cat id="tms_man-made"/>
-		<cat id="tms_aerial"/>
-		<cat id="tms_power"/> 
-		<cat id="tms_peak"/>
-		<cat id="tms_relief"/>
+		<name lang="en" value="Landscape elements" />
+		<name lang="ru" value="Элементы ландшафта" />
+		<cat id="tms_water-land" />
+		<cat id="tms_man-made" />
+		<cat id="tms_aerial" />
+		<cat id="tms_power" />
+		<cat id="tms_peak" />
+		<cat id="tms_relief" />
 	</layer>
 	<layer id="tms_water" enabled="true">
-		<name lang="en" value="Water points"/>
-		<name lang="ru" value="Вода (Water points)" />		
-		<cat id="tms_water"/>
+		<name lang="en" value="Water points" />
+		<name lang="ru" value="Вода (Water points)" />
+		<cat id="tms_water" />
 	</layer>
 	<layer id="tms_huts" enabled="true">
-		<name lang="en" value="Huts and shelters"/>
-		<name lang="ru" value="Укрытия, хижины, избушки" />		
-		<cat id="tms_huts"/>
+		<name lang="en" value="Huts and shelters" />
+		<name lang="ru" value="Укрытия, хижины, избушки" />
+		<cat id="tms_huts" />
 	</layer>
 	<layer id="tms_acco" enabled="false">
-		<name lang="en" value="Accommodation"/>
-		<name lang="ru" value="Проживание: Турбазы, дачи, гостиницы, хостелы..." />			
-		<cat id="tms_acco"/>
+		<name lang="en" value="Accommodation" />
+		<name lang="ru" value="Проживание: Турбазы, дачи, гостиницы, хостелы..." />
+		<cat id="tms_acco" />
 	</layer>
 	<layer id="tms_picnic" enabled="true">
-		<name lang="en" value="Camping &amp; Picnic"/>
-		<name lang="ru" value="Отдых: Стоянки, кемпинги, места д/пикника, скамейки, туалеты.." />		
-		<cat id="tms_camp"/>
-		<cat id="tms_picnic"/>
+		<name lang="en" value="Camping &amp; Picnic" />
+		<name lang="ru" value="Отдых: Стоянки, кемпинги, места д/пикника, скамейки, туалеты.." />
+		<cat id="tms_camp" />
+		<cat id="tms_picnic" />
 	</layer>
 	<layer id="tms_barriers-hk" enabled="false">
-		<name lang="en" value="Barriers"/>
-		<name lang="ru" value="Барьеры и препятствия" />		
-		<cat id="tms_barriers"/>
-		<cat id="tms_crossings"/>		
+		<name lang="en" value="Barriers" />
+		<name lang="ru" value="Барьеры и препятствия" />
+		<cat id="tms_barriers" />
+		<cat id="tms_crossings" />
 	</layer>
 	<layer id="tms_trans-priv" enabled="false">
-		<name lang="en" value="Transportation (private)"/>
-		<name lang="ru" value="Транспорт (частный): парковки, заправки" />			
-		<cat id="tms_trans-priv"/>
+		<name lang="en" value="Transportation (private)" />
+		<name lang="ru" value="Транспорт (частный): парковки, заправки" />
+		<cat id="tms_trans-priv" />
 	</layer>
 	<layer id="tms_trans-pub" enabled="false">
-		<name lang="en" value="Transportation (public)"/>
-		<name lang="ru" value="Транспорт (общественный): станции, остановки автобусные, ж/д, трамвайные, метро" />				
-		<cat id="tms_trans-pub"/>
+		<name lang="en" value="Transportation (public)" />
+		<name lang="ru" value="Транспорт (общественный): станции, остановки автобусные, ж/д, трамвайные, метро" />
+		<cat id="tms_trans-pub" />
 	</layer>
 	<layer id="tms_tourism" enabled="true">
-		<name lang="en" value="Tourism"/>
-		<name lang="ru" value="Туризм, +пещеры, зоопарки" />		
-		<cat id="tms_tour"/>
-		<cat id="tms_info"/>
-		<cat id="tms_attraction"/>
-		<cat id="tms_safety"/>			
+		<name lang="en" value="Tourism" />
+		<name lang="ru" value="Туризм, +пещеры, зоопарки" />
+		<cat id="tms_tour" />
+		<cat id="tms_info" />
+		<cat id="tms_attraction" />
+		<cat id="tms_safety" />
 	</layer>
 	<layer id="tms_culture" enabled="false">
-		<name lang="en" value="Cultural stuff"/>
-		<name lang="ru" value="Культура: Музеи, памятники, монументы, зáмки.." />		
-		<cat id="tms_culture"/>
+		<name lang="en" value="Cultural stuff" />
+		<name lang="ru" value="Культура: Музеи, памятники, монументы, зáмки.." />
+		<cat id="tms_culture" />
 	</layer>
 	<layer id="tms_freetime" enabled="false">
-		<name lang="en" value="Free time"/>
-		<name lang="ru" value="Развлечения: Спорт, кино, театры, игр.площадки" />			
-		<cat id="tms_sport"/>
-		<cat id="tms_leisure"/>
+		<name lang="en" value="Free time" />
+		<name lang="ru" value="Развлечения: Спорт, кино, театры, игр.площадки" />
+		<cat id="tms_sport" />
+		<cat id="tms_leisure" />
 	</layer>
 	<layer id="tms_educat" enabled="false">
-		<name lang="en" value="Schools"/>
-		<name lang="ru" value="Образование: ВУЗы, колледжи, школы, д/сады" />			
-		<cat id="tms_educat"/>
-	</layer>	
+		<name lang="en" value="Schools" />
+		<name lang="ru" value="Образование: ВУЗы, колледжи, школы, д/сады" />
+		<cat id="tms_educat" />
+	</layer>
 	<layer id="tms_food" enabled="false">
-		<name lang="en" value="Food"/>
-		<name lang="ru" value="Питание: Магазины, супермаркеты, кафе, бары, рестораны" />		
-		<cat id="tms_food"/>
+		<name lang="en" value="Food" />
+		<name lang="ru" value="Питание: Магазины, супермаркеты, кафе, бары, рестораны" />
+		<cat id="tms_food" />
 	</layer>
 	<layer id="tms_shops" enabled="false">
-		<name lang="en" value="Shopping"/>	
-		<name lang="ru" value="Почта, банки, терминалы, хоз. и рем.магазины" />	
-		<cat id="tms_shops"/>
-		<cat id="tms_bureaucracy"/>
+		<name lang="en" value="Shopping" />
+		<name lang="ru" value="Почта, банки, терминалы, хоз. и рем.магазины" />
+		<cat id="tms_shops" />
+		<cat id="tms_bureaucracy" />
 	</layer>
 	<layer id="tms_religion" enabled="false">
-		<name lang="en" value="Religion"/>
-		<name lang="ru" value="Религия" />			
-		<cat id="tms_religion"/>
+		<name lang="en" value="Religion" />
+		<name lang="ru" value="Религия" />
+		<cat id="tms_religion" />
 	</layer>
 	<layer id="tms_emergency" enabled="true">
-		<name lang="en" value="Emergency"/>
-		<name lang="ru" value="Экстренные службы, полиция, больницы, аптеки, доктора.." />		
-		<cat id="tms_emergency"/>
+		<name lang="en" value="Emergency" />
+		<name lang="ru" value="Экстренные службы, полиция, больницы, аптеки, доктора.." />
+		<cat id="tms_emergency" />
 	</layer>
 	<layer id="tms_routes" enabled="false">
-		<name lang="en" value="Winter trails"/>
-		<name lang="ru" value="Зимние маршруты" />		
-		<cat id="tms_routes"/>
-	</layer>	
+		<name lang="en" value="Winter trails" />
+		<name lang="ru" value="Зимние маршруты" />
+		<cat id="tms_routes" />
+	</layer>
 
 <!-- Base -->
 	<layer id="tms_hiking" visible="true">
@@ -198,62 +198,61 @@ Transparency for HEX colors (100% - непрозрачный)
 
 <!-- Background -->
 
- 	<rule cat="tms_terrain" e="way" k="*" v="*" >
+	<rule cat="tms_terrain" e="way" k="*" v="*">
 		<rule e="way" k="natural" v="sea">
-			<area fill="#97d2e3" /> 
+			<area fill="#97d2e3" />
 		</rule>
-		<rule e="way" k="natural" v="coastline" zoom-max="17"> <line stroke="#739DBF" stroke-width="0.3" /> </rule>		
+		<rule e="way" k="natural" v="coastline" zoom-max="17">
+			<line stroke="#739DBF" stroke-width="0.3" />
+		</rule>
 		<rule e="way" k="natural" v="nosea">
-			<area fill="#F8F8F8" /> 	
-		</rule>		
+			<area fill="#F8F8F8" />
+		</rule>
 	</rule>
 	
 <!-- landcover -->
-<!-- 	<rule cat="tms_terrain" e="way" k="landuse" v="residential" zoom-min="9" zoom-max="12"> <area fill="#BB808080" stroke="#D4D4D4" stroke-width="0.2" /> </rule> -->
-	
-	
-<!-- 	<rule cat="tms_terrain" e="way" k="landuse" v="residential" zoom-min="9" zoom-max="12"> <area fill="#BB808080" stroke="#D4D4D4" stroke-width="0.2" /> </rule>
-	<rule cat="tms_terrain" e="way" k="landuse" v="residential|farmyard" zoom-min="13" zoom-max="15"> <area fill="#BBA9A9A9" /></rule>
-	<rule cat="tms_terrain" e="way" k="landuse" v="residential|farmyard" zoom-min="16"> <area fill="#BBCCCCCC" /> </rule>
- -->
-
-
-	<rule cat="tms_terrain" e="way" k="landuse" v="residential|farmyard" zoom-min="10"> 
-		<rule e="way" k="landuse|amenity" v="residential|farmyard" zoom-min="10" zoom-max="13"> 
-			<area fill="#4D888888"/>  	<!-- было <area fill="#4Daaaaaa"/>   -->
+	<rule cat="tms_terrain" e="way" k="landuse" v="residential|farmyard" zoom-min="10">
+		<rule e="way" k="landuse|amenity" v="residential|farmyard" zoom-min="10" zoom-max="13">
+			<area fill="#4D888888" /> <!-- было <area fill="#4Daaaaaa"/>   -->
 		</rule>
-		<rule e="way" k="landuse|amenity" v="residential|farmyard" zoom-min="14" zoom-max="14"> 
-			<area fill="#33888888"/>    	<!-- было <area fill="#33aaaaaa"/>   -->
-		</rule>		
-		<rule e="way" k="landuse|amenity" v="residential|farmyard" zoom-min="15" > 
-			<area fill="#26888888"/>     <!-- было <area fill="#26aaaaaa"/>   -->
-		</rule>		
-	</rule>   
+		<rule e="way" k="landuse|amenity" v="residential|farmyard" zoom-min="14" zoom-max="14">
+			<area fill="#33888888" /> <!-- было <area fill="#33aaaaaa"/>   -->
+		</rule>
+		<rule e="way" k="landuse|amenity" v="residential|farmyard" zoom-min="15">
+			<area fill="#26888888" /> <!-- было <area fill="#26aaaaaa"/>   -->
+		</rule>
+	</rule>
 
 <!-- только для LM -->
-	<rule cat="tms_terrain" e="way" k="lm_landuse" v="residential_city|residential_village" zoom-min="10"> 
-		<rule e="way" k="*" v="*" zoom-min="10" zoom-max="14"> <area fill="#4Daaaaaa"/> </rule>	
-		<rule e="way" k="*" v="*" zoom-min="15" > <area fill="#26aaaaaa"/> </rule>		
-	</rule>	
-		
-	<rule cat="tms_terrain" e="way" k="amenity|tourism|historic" v="kindergarten|school|college|university|place_of_worship|biergarten|museum|ruins|castle|memorial|monument"> 
-		<area fill="#E3D7C3" stroke="#B3A99A" stroke-width="0.2" /> 
+	<rule cat="tms_terrain" e="way" k="lm_landuse" v="residential_city|residential_village" zoom-min="10">
+		<rule e="way" k="*" v="*" zoom-min="10" zoom-max="14">
+			<area fill="#4Daaaaaa" />
+		</rule>
+		<rule e="way" k="*" v="*" zoom-min="15">
+			<area fill="#26aaaaaa" />
+		</rule>
 	</rule>
 
-	<rule cat="tms_terrain" e="way" k="amenity" v="hospital"> 
-		<area fill="#F2D9D7" stroke="#DBBDBA" stroke-width="0.2" /> 
+	<rule cat="tms_terrain" e="way" k="amenity|tourism|historic" v="kindergarten|school|college|university|place_of_worship|biergarten|museum|ruins|castle|memorial|monument">
+		<area fill="#E3D7C3" stroke="#B3A99A" stroke-width="0.2" />
 	</rule>
 
-	<rule cat="tms_terrain" e="way" k="landuse" v="retail|commercial|industrial|brownfield|railway|garages|construction" zoom-min="13"> <area fill="#BBC9DDDD" /> </rule>
-	
- 	<rule cat="tms_terrain" e="way" k="landuse" v="landfill" zoom-min="12">
-		<area src="file:/patterns/p_scree.png" symbol-width="64dp" />  
+	<rule cat="tms_terrain" e="way" k="amenity" v="hospital">
+		<area fill="#F2D9D7" stroke="#DBBDBA" stroke-width="0.2" />
+	</rule>
+
+	<rule cat="tms_terrain" e="way" k="landuse" v="retail|commercial|industrial|brownfield|railway|garages|construction" zoom-min="13">
+		<area fill="#BBC9DDDD" />
+	</rule>
+
+	<rule cat="tms_terrain" e="way" k="landuse" v="landfill" zoom-min="12">
+		<area src="file:/patterns/p_scree.png" symbol-width="64dp" />
 		<area fill="#CCF2EFE4" stroke="#9EA199" stroke-width="0.2" />
-	</rule>		
-	<rule cat="tms_terrain" e="way" k="landuse" v="quarry" zoom-min="12" >
-		<area fill="#80F2EFE4"  />	 
+	</rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="quarry" zoom-min="12">
+		<area fill="#80F2EFE4" />
 		<area src="file:/patterns/quarry.svg" symbol-width="8dp" />
-	</rule>	
+	</rule>
  
 <!-- vegetation -->
 
@@ -1894,7 +1893,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 	<rule cat="tms_sport" e="any" k="leisure" v="sports_centre">
-		<symbol id="s_gym" priority="230" src="file:/symbols/s_gym-LE.svg" symbol-height="14dp" />
+		<symbol id="s_gym" priority="230" src="file:/symbols/s_gym.svg" symbol-height="14dp" />
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_land-names" k="name" symbol-id="s_gym" font-style="bold" font-size="10dp" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2dp" />
 		</rule>
@@ -1912,14 +1911,14 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule e="any" k="*" v="*">				<symbol priority="210" src="file:/symbols/s_parking.svg" symbol-height="12" symbol-width="12" /></rule>
 	</rule>
 	<rule cat="tms_trans-priv" e="any" k="amenity" v="fuel">
-		<symbol priority="310" force-draw="1" id="s_trans-priv" src="file:/symbols/s_fuel2-LE.svg" symbol-width="16dp" />  <!-- был 2  symbol-height="16"  -->
+		<symbol priority="310" force-draw="1" id="s_trans-priv" src="file:/symbols/s_fuel.svg" symbol-width="16dp" />
 		<caption priority="250" symbol-id="s_trans-priv" cat="tms_land-names" k="name" dy="-12dp" font-style="bold" font-size="9dp" fill="#0036D9" stroke="#FFFFFF" stroke-width="2.0dp" />		
 	</rule>
 
 <!-- public transportation -->
 
 	<rule cat="tms_trans-pub" e="node" k="highway" v="bus_stop">
-		<symbol priority="205" id="tms_bus-stop" src="file:/symbols/s_bus-LE.svg" symbol-height="14" />
+		<symbol priority="205" id="tms_bus-stop" src="file:/symbols/s_bus.svg" symbol-height="14" />
 		<caption priority="100" symbol-id="tms_bus-stop" cat="tms_land-names" k="name"   dy="18dp" font-style="bold" font-size="9dp" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0dp" /> 
 	</rule>
 	<rule cat="tms_trans-pub" e="any" k="amenity" v="bus_station">
@@ -1928,12 +1927,12 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<rule cat="tms_trans-pub" e="any" k="station" v="light_rail">
-		<symbol priority="205" id="tms_train-station" src="file:/symbols/s_trainstation-LE.svg" symbol-height="14" />
+		<symbol priority="205" id="tms_train-station" src="file:/symbols/s_trainstation.svg" symbol-height="14" />
 		<caption priority="100" symbol-id="tms_train-station" cat="tms_land-names" k="name" dy="-14dp" font-style="bold" font-size="9dp" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0dp" />
 	</rule>	
 	<rule cat="tms_trans-pub" e="any" k="railway" v="station|halt">
 		<rule e="any" k="station" v="~">	
-			<symbol priority="205" id="tms_train-station" src="file:/symbols/s_trainstation-LE.svg" symbol-height="14" />
+			<symbol priority="205" id="tms_train-station" src="file:/symbols/s_trainstation.svg" symbol-height="14" />
 			<caption priority="100" symbol-id="tms_train-station" cat="tms_land-names" k="name" dy="-14dp" font-style="bold" font-size="9dp" fill="#005acf" stroke="#FFFFFF" stroke-width="2.0dp" />
 		</rule>
 	</rule>		
