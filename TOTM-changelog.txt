@@ -439,3 +439,5 @@ name как в El для orchard|forest|wood;
 05/11/2022
 убрал labels у barriers (отображались при включенных barriers для школ и детсадов)
 исправил подписи у shelter_type= ~|weather_shelter|lean_to
+07/11/2022
+оптимиз.tms_safety
