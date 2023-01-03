@@ -441,3 +441,8 @@ name как в El для orchard|forest|wood;
 исправил подписи у shelter_type= ~|weather_shelter|lean_to
 07/11/2022
 оптимиз.tms_safety
+24/11/2022
+Убрал правило ~только для LoMaps~
+e="way" k="lm_landuse" v="residential_city|residential_village"
+
+

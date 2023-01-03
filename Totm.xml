@@ -237,16 +237,6 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
-	<!--! только для LoMaps -->
-	<rule cat="tms_terrain" e="way" k="lm_landuse" v="residential_city|residential_village" zoom-min="10">
-		<rule e="way" k="lm_landuse" v="residential_city|residential_village" zoom-min="10" zoom-max="14">
-			<area fill="#4Daaaaaa"/>
-		</rule>
-		<rule e="way" k="lm_landuse" v="residential_city|residential_village" zoom-min="15">
-			<area fill="#26aaaaaa"/>
-		</rule>
-	</rule>
-
 	<!-- 		переставил выше от leisure areas -->
 	
 	<rule cat="tms_terrain" e="way" k="amenity|tourism|historic" v="kindergarten|school|college|university|place_of_worship|biergarten|museum|ruins|castle|memorial|monument">
@@ -479,11 +469,11 @@ Transparency for HEX colors (100% - непрозрачный)
 		<!-- contour lines level 16-17 -->
 		<rule e="way" k="contour_ext" v="*" zoom-min="16" zoom-max="17">
 			<rule e="way" k="contour_ext" v="elevation_minor">
-				<line stroke="#d45500" stroke-width="0.08" />
+				<line stroke="#d45500" stroke-width="0.08" />  <!-- curve="cubic" --> 
 				<!-- <line stroke="#d45500" dy="-0.2" stroke-width="0.6" stroke-dasharray="0.5,40" stroke-linecap="butt" /> 	 -->				<!-- бергштрих -->
 			</rule>
 			<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
-				<line stroke="#d45500" stroke-width="0.2" />
+				<line stroke="#d45500" stroke-width="0.2" /> <!-- curve="cubic" --> 
 				<!-- <line stroke="#d45500" dy="-0.6" stroke-width="1.0" stroke-dasharray="0.8,90" stroke-linecap="butt" /> 	 -->				<!-- бергштрих -->
 				<pathText k="ele" font-style="bold" font-size="8" fill="#bc7e55" stroke="#ffffff" stroke-width="1.5" repeat-start="100" repeat-gap="150" rotate="false"/>
 			</rule>
@@ -3279,7 +3269,7 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- place of worship -->
 	<rule cat="tms_religion" e="any" k="building" v="church">
-		<symbol display="always" id="tms_church" src="file:/symbols/s_church.svg" symbol-height="16" />
+		<symbol display="always" id="tms_church" priority="201" src="file:/symbols/s_place_of_worship.svg" symbol-height="14" />
 		<rule e="any" k="*" v="*" cat="tms_landnames">
 			<caption k="name" symbol-id="tms_church" position="above" font-style="bold" font-size="10" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
 			<caption k="ele" priority="-5" symbol-id="tms_church" position="below" font-size="10" font-style="bold" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
@@ -3290,16 +3280,16 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule e="any" k="amenity" v="place_of_worship">
 			<rule e="any" k="historic" v="~">
 				<rule e="any" k="religion" v="christian">
-					<symbol id="tms_worship" display="always" src="file:/symbols/s_church.svg" symbol-height="16" />
+					<symbol id="tms_worship" display="always" priority="210" src="file:/symbols/s_church.svg" symbol-height="18" />
 				</rule>
 				<rule e="any" k="religion" v="jewish">
-					<symbol id="tms_worship" display="always" src="file:/symbols/s_synagogue.svg" symbol-height="16" />
+					<symbol id="tms_worship" display="always" priority="210" src="file:/symbols/s_synagogue.svg" symbol-height="18" />
 				</rule>
 				<rule e="any" k="religion" v="muslim">
-					<symbol id="tms_worship" display="always" src="file:/symbols/s_mosque.svg" symbol-height="16" />
+					<symbol id="tms_worship" display="always" priority="210" src="file:/symbols/s_mosque.svg" symbol-height="18" />
 				</rule>
 				<rule e="any" k="religion" v="~">
-					<symbol id="tms_worship" display="always" src="file:/symbols/s_place_of_worship.svg" symbol-height="13" />
+					<symbol id="tms_worship" display="always" priority="210" src="file:/symbols/s_place_of_worship.svg" symbol-height="14" />
 				</rule>
 				<caption symbol-id="tms_worship" cat="tms_landnames" display="always" k="name" position="above" font-size="10" font-style="bold" fill="#444444" stroke="#FFFFFF" stroke-width="2" />
 			</rule>
