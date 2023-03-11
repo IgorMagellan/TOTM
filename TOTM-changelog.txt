@@ -445,5 +445,5 @@ name как в El для orchard|forest|wood;
 Убрал правило ~только для LoMaps~
 e="way" k="lm_landuse" v="residential_city|residential_village"
 еще раз поправил tms_religion
-
-
+11/03/2023
+text-orientation="left" и curve="cubic"  на горизонталях - нововведение!
