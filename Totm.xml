@@ -450,30 +450,33 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule e="way" k="contour_ext" v="*" cat="tms_contours">
 
 		<rule e="way" k="contour_ext" v="elevation_minor" zoom-min="01" zoom-max="13">
-			<line stroke="#d45500" stroke-width="0.14" />
+			<line stroke="#d45500" stroke-width="0.14" curve="cubic" />
 		</rule>
-		<rule e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="01" zoom-max="13">
-			<line stroke="#d45500" stroke-width="0.32" />
+		<rule e="way" k="contour_ext" v="elevation_medium|elevation_major" zoom-min="01"
+			zoom-max="13">
+			<line stroke="#d45500" stroke-width="0.32" curve="cubic" />
 		</rule>
 		<!-- contour lines level 14-15 -->
 		<rule e="way" k="contour_ext" v="*" zoom-min="14" zoom-max="15">
 			<rule e="way" k="contour_ext" v="elevation_minor">
-				<line stroke="#d45500" stroke-width="0.10" curve="cubic"/>
+				<line stroke="#d45500" stroke-width="0.10" curve="cubic" />
 			</rule>
 			<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
-				<line stroke="#d45500" stroke-width="0.25" curve="cubic"/>
-				<!-- <line stroke="#d45500" dy="-0.5" stroke-width="1.4" stroke-dasharray="0.8,70" stroke-linecap="butt" /> -->				<!-- бергштрих -->
-				<pathText k="ele" font-style="bold" font-size="8" fill="#bc7e55" stroke="#ffffff" stroke-width="1" repeat-start="100" repeat-gap="150" text-orientation="left"/>
+				<line stroke="#d45500" stroke-width="0.25" curve="cubic" />
+				<!-- <line stroke="#d45500" dy="-0.5" stroke-width="1.4" stroke-dasharray="0.8,70"
+				stroke-linecap="butt" /> -->				<!-- бергштрих -->
+				<pathText k="ele" font-style="bold" font-size="8" fill="#bc7e55" stroke="#ffffff"
+					stroke-width="1" repeat-start="100" repeat-gap="150" text-orientation="left" />
 			</rule>
 		</rule>
 		<!-- contour lines level 16-17 -->
 		<rule e="way" k="contour_ext" v="*" zoom-min="16" zoom-max="17">
 			<rule e="way" k="contour_ext" v="elevation_minor">
-				<line stroke="#d45500" stroke-width="0.08" curve="cubic" /> 
+				<line stroke="#d45500" stroke-width="0.08" curve="cubic" />
 				<!-- <line stroke="#d45500" dy="-0.2" stroke-width="0.6" stroke-dasharray="0.5,40" stroke-linecap="butt" /> 	 -->				<!-- бергштрих -->
 			</rule>
 			<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
-				<line stroke="#d45500" stroke-width="0.2" curve="cubic" /> 
+				<line stroke="#d45500" stroke-width="0.2" curve="cubic" />
 				<!-- <line stroke="#d45500" dy="-0.6" stroke-width="1.0" stroke-dasharray="0.8,90" stroke-linecap="butt" /> 	 -->				<!-- бергштрих -->
 				<pathText k="ele" font-style="bold" font-size="8" fill="#bc7e55" stroke="#ffffff" stroke-width="1.5" repeat-start="100" repeat-gap="150" text-orientation="left"/>
 			</rule>
@@ -984,7 +987,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			</rule>
 		</rule>
 	</rule>
-		
+
 	<!-- 	БОЛОТА  -->
 	<rule cat="tms_terrain" e="way" k="natural" v="wetland|marsh" zoom-min="12">
 		<area fill="#0D304eff"/>
@@ -994,7 +997,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule e="way" k="*" v="*" zoom-min="16"				>  <area src="file:/patterns/p_wetland_blue2.svg" symbol-width="60" /> </rule>
 	</rule>
 	<!-- 	КОНЕЦ БОЛОТ -->
-		
+
 	<!-- waterway structures -->
 	<rule e="way" k="tunnel" v="~|no">
 		<rule cat="tms_water_land" e="way" k="location" v="~|overground">
@@ -1167,7 +1170,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<area fill="#d3dfe2" stroke="#93b1b8" stroke-width="0.2" />
 	</rule>
 
-<!--? TODO: разобраться тут фонтан как развлечение и как вода -->
+	<!--? TODO: разобраться тут фонтан как развлечение и как вода -->
 	<rule cat="tms_attraction" e="way" k="amenity" v="fountain" closed="yes" zoom-min="16">
 		<area fill="#B5D6F1" stroke="#000080" stroke-width="0.15" />
 		<rule e="any" k="drinking_water" v="yes">
@@ -1203,7 +1206,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_terrain" e="way" k="power" v="station|generator|plant">
 		<area fill="#C4C4C4" stroke="#e4e4e4" stroke-width="0.2" />
 	</rule>
-	
+
 	<!-- переставлено сверху, чтобы пляж не отображался водой -->
 	<rule cat="tms_terrain" e="way" k="landuse|natural" v="beach|sand" zoom-min="11">
 		<area fill="#BBFAEBB9" />
@@ -1279,7 +1282,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			</rule>
 		</rule>
 	</rule>
-	
+
 	<!-- Buildings -->
 		<rule cat="tms_terrain" e="way" k="building" v="*">
 			<rule e="way" k="*" v="*" zoom-max="14"> 				<area fill="#333333" stroke="#000000" stroke-width="0.2" /> </rule>
@@ -2643,7 +2646,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<!-- fords -->
-	<rule cat="tms_barriers" e="any" k="highway|ford" v="ford|fd_yes" zoom-min="15">
+	<rule cat="tms_barriers" e="any" k="highway|ford" v="ford|fd_yes|yes" zoom-min="15">
 		<symbol id="s_ford" priority="300" display="always" src="file:/symbols/s_ford_6w.svg" symbol-height="18" />
 		<line stroke="#99B3DDFF" stroke-width="0.65" />
 		<rule e="any" k="*" v="*" zoom-min="16">
@@ -2860,7 +2863,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol priority="245" id="tms_motshop" display="always" src="file:/symbols/s_shop_motorcycle.svg" symbol-width="17" />
 		<caption k="name" symbol-id="tms_motshop" priority="135" cat="tms_landnames" position="above" font-size="10" font-style="bold" fill="#552200" stroke="#FFFFFF" stroke-width="2" />	
 	</rule>	
-</rule>	
+</rule>
 
 	<!-- tourist info -->
 	<rule cat="tms_info" e="any" k="information" v="office">
@@ -2930,7 +2933,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<caption cat="tms_landnames" k="ele" symbol-id="s_cross" position="below" font-style="bold" font-size="8" fill="#444444" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
-	
+
 	<!-- safety measures -->
 		<rule cat="tms_safety" e="any" k="*" v="*" zoom-min="13">
 			<rule e="any" k="via_ferrata_flag" v="set">
@@ -3037,7 +3040,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<symbol priority="260" id="tms_waterfall" display="always" src="file:/symbols/s_waterfall.svg" symbol-height="13"/>
 		<caption priority="140" symbol-id="tms_waterfall" k="name" cat="tms_landnames" position="above" font-style="bold" font-size="8" fill="#0034AE" stroke="#FFFFFF" stroke-width="2.0" />
 	</rule>
-	
+
 	<!-- пороги, перекаты -->
 	<rule cat="tms_water_land" e="any" k="waterway|natural" v="rapids" zoom-min="14">
 		<rule cat="tms_terrain" e="way" k="*" v="*" closed="yes">
@@ -3265,7 +3268,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_attraction" e="any" k="historic" v="archaeological_site">
 		<symbol id="s_archaeological" priority="205" src="file:/symbols/s_archaeological_site.svg" display="always" symbol-height="18" />
 		<caption symbol-id="s_archaeological" cat="tms_landnames" k="name" position="above" font-style="bold" font-size="10" fill="#743a00" stroke="#E5FFFFFF" stroke-width="2" />
-	</rule>	
+	</rule>
 
 	<!-- place of worship -->
 	<rule cat="tms_religion" e="any" k="building" v="church">
@@ -3295,7 +3298,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			</rule>
 		</rule>
 	</rule>
-	
+
 	<!-- bureaucracy -->
 	<rule cat="tms_bureaucracy" e="any" k="*" v="*" zoom-min="14" >
 		<rule e="any" k="amenity" v="atm">
@@ -3411,7 +3414,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule e="any" k="*" v="*" zoom-min="16">
         <caption cat="tms_landnames" priority="180" symbol-id="s_generator" k="name" position="below" font-style="bold" font-size="10" fill="#000000" stroke="#BFffff00" stroke-width="2" />
     </rule>	
-</rule>	
+</rule>
 
 	<!-- crossings -->
 	<rule cat="tms_crossings" e="any" k="highway" v="traffic_signals">
