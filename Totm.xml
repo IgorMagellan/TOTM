@@ -25,9 +25,8 @@ Transparency for HEX colors (100% - непрозрачный)
 55% — 8C  50% — 80  45% — 73  40% — 66  35% — 59  30% — 4D  25% — 40  20% — 33  15% — 26
 10% — 1A  5% — 0D  0% — 00
 -->
-	<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://mapsforge.org/renderTheme" 
-	xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd" 
-	version="4" map-background="#ffffff" map-background-outside="#ffffff">
+	<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://mapsforge.org/renderTheme" xsi:schemaLocation="http://mapsforge.org/renderTheme 
+	https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd" version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 	<stylemenu id="totm_2_5" defaultvalue="tms_hiking" defaultlang="en">
 
@@ -463,8 +462,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			</rule>
 			<rule e="way" k="contour_ext" v="elevation_medium|elevation_major">
 				<line stroke="#d45500" stroke-width="0.25" curve="cubic" />
-				<!-- <line stroke="#d45500" dy="-0.5" stroke-width="1.4" stroke-dasharray="0.8,70"
-				stroke-linecap="butt" /> -->				<!-- бергштрих -->
+				<!-- <line stroke="#d45500" dy="-0.5" stroke-width="1.4" stroke-dasharray="0.8,70" stroke-linecap="butt" /> -->						<!-- бергштрих -->
 				<pathText k="ele" font-style="bold" font-size="8" fill="#bc7e55" stroke="#ffffff"
 					stroke-width="1" repeat-start="100" repeat-gap="150" text-orientation="left" />
 			</rule>
@@ -2535,7 +2533,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			</rule>
 		</rule>
 		<rule e="any" k="tourism|leisure" v="picnic_site|picnic_table">
-			<symbol priority="225" id="s_picnic_site" src="file:/symbols/s_picnic_site.svg" symbol-width="14" />
+			<symbol priority="225" id="s_picnic_site" src="file:/symbols/s_picnic_site.svg" display="always" symbol-width="14" />
 			<caption cat="tms_landnames" priority="220" symbol-id="s_picnic_site" position="above" k="name" font-style="bold" font-size="10" fill="#66001a" stroke="#ffffff" stroke-width="2" />
 		</rule>
 		<rule e="any" k="amenity" v="recycling" zoom-min="15">
@@ -2544,6 +2542,19 @@ Transparency for HEX colors (100% - непрозрачный)
 				<caption cat="tms_landnames" k="name" symbol-id="s_recycling" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
+		<rule e="any" k="leisure" v="firepit" >
+			<symbol id="s_firepit" priority="215" src="file:/symbols/s_firepit.svg" display="always" symbol-width="18" />
+			<rule e="any" k="*" v="*" zoom-min="18">
+				<caption cat="tms_land-names" k="name" symbol-id="s_firepit" font-style="bold" font-size="10" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>
+		<rule e="any" k="amenity" v="bbq" >
+			<symbol id="s_bbq" priority="220" src="file:/symbols/s_bbq.svg" display="always" symbol-width="16" />
+			<rule e="any" k="*" v="*" zoom-min="17">
+				<caption cat="tms_land-names" k="name" symbol-id="s_bbq" font-style="bold" font-size="10" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+			</rule>
+		</rule>
+
 	</rule>
 
 	<!-- huts and shelters -->
