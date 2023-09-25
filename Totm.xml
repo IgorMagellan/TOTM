@@ -245,6 +245,14 @@ Transparency for HEX colors (100% - непрозрачный)
 			<area fill="#26aaaaaa" />
 		</rule>
 	</rule>
+
+
+	<!-- military -->
+<!-- 	<rule cat="tms_terrain" e="any" k="landuse|leisure" v="military">
+		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-min="12" zoom-max="13" >
+			<line stroke="#80ff2626" stroke-width="0.36" stroke-linecap="butt" />
+		</rule>		
+	</rule> -->
 	
 	<!-- 		переставил выше от leisure areas -->
 	
@@ -290,7 +298,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<area fill="#80F2EFE4" />
 		<area src="file:/patterns/quarry.svg" symbol-width="10" />
 	</rule>
-
+	
 	<!-- vegetation -->
 	<rule cat="tms_terrain" e="way" k="natural|landuse" v="forest|wood">
 		<rule e="way" k="*" v="*" zoom-min="9" zoom-max="11">
@@ -408,10 +416,14 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<!-- military -->
 	<rule cat="tms_terrain" e="any" k="landuse|leisure" v="military">
-		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-max="13" >
+		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-max="11" >
 			<area src="file:/patterns/military_area.svg" symbol-width="20" />
 			<line stroke="#80ff2626" stroke-width="0.4" stroke-linecap="butt" />
 		</rule>
+		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-min="12" zoom-max="13" >
+			<area src="file:/patterns/military_area.svg" symbol-width="25" />
+<!-- 			<line stroke="#80ff2626" stroke-width="0.4" stroke-linecap="butt" /> -->
+		</rule>		
 		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-min="14" zoom-max="16" >
 			<area src="file:/patterns/military_area.svg" symbol-width="30" />
 			<line stroke="#80ff2626" stroke-width="0.4" stroke-linecap="butt" />
@@ -432,7 +444,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<caption cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#ff4000" stroke="#FFFFFF" stroke-width="1.7" />
 		</rule>
 	</rule>
-
+	
 	<!-- Area names Magellan -->
 	<rule cat="tms_landnames" e="way" k="*" v="*" zoom-min="13">
 		<rule cat="tms_terrain" e="way" k="natural|landuse" v="land|beach|sand|rock|fell|scree|landfill|quarry|farm|farmland" zoom-min="14">
@@ -518,8 +530,8 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule cat="tms_oopt" e="way" k="leisure|boundary" v="nature_reserve|protected_area|national_park">
 			<!--  границы  -->
 			<rule e="way" k="*" v="*" zoom-min="8" zoom-max="13">
+				<area fill="#707A9E52" />			
 				<line stroke="#A5C085" stroke-width="1.6" />
-				<area fill="#707A9E52" />
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="14">
 				<line stroke="#99A5C085" stroke-width="2" dy="-2" stroke-linecap="butt" />
@@ -531,6 +543,8 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 		
 	</rule>
+
+
 
 	<!-- natural ways -->
 	<rule cat="tms_relief" e="way" k="natural" v="gorge" closed="no" zoom-min="12">
