@@ -417,6 +417,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	<!-- military -->
 	<rule cat="tms_terrain" e="any" k="landuse|leisure" v="military">
 		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-max="11" >
+			<area fill="#16df003f" />
 			<area src="file:/patterns/military_area.svg" symbol-width="18" />
 			<line stroke="#80ff2626" stroke-width="0.44" stroke-linecap="butt" />
 		</rule>
@@ -425,10 +426,12 @@ Transparency for HEX colors (100% - непрозрачный)
 <!-- 			<line stroke="#80ff2626" stroke-width="0.4" stroke-linecap="butt" /> -->
 		</rule>		
 		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-min="14" zoom-max="16" >
+			<area fill="#22df003f" />
 			<area src="file:/patterns/military_area.svg" symbol-width="30" />
 			<line stroke="#80ff2626" stroke-width="0.38" stroke-linecap="butt" />
 		</rule>
 		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-min="17" >
+			<area fill="#2bdf003f" />
 			<area src="file:/patterns/military_area.svg" symbol-width="40" />
 			<line stroke="#80ff2626" stroke-width="0.26" stroke-linecap="butt" />
 		</rule>
