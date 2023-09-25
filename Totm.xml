@@ -417,8 +417,8 @@ Transparency for HEX colors (100% - непрозрачный)
 	<!-- military -->
 	<rule cat="tms_terrain" e="any" k="landuse|leisure" v="military">
 		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-max="11" >
-			<area src="file:/patterns/military_area.svg" symbol-width="20" />
-			<line stroke="#80ff2626" stroke-width="0.4" stroke-linecap="butt" />
+			<area src="file:/patterns/military_area.svg" symbol-width="18" />
+			<line stroke="#80ff2626" stroke-width="0.44" stroke-linecap="butt" />
 		</rule>
 		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-min="12" zoom-max="13" >
 			<area src="file:/patterns/military_area.svg" symbol-width="25" />
@@ -426,11 +426,11 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>		
 		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-min="14" zoom-max="16" >
 			<area src="file:/patterns/military_area.svg" symbol-width="30" />
-			<line stroke="#80ff2626" stroke-width="0.4" stroke-linecap="butt" />
+			<line stroke="#80ff2626" stroke-width="0.38" stroke-linecap="butt" />
 		</rule>
 		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-min="17" >
 			<area src="file:/patterns/military_area.svg" symbol-width="40" />
-			<line stroke="#80ff2626" stroke-width="0.4" stroke-linecap="butt" />
+			<line stroke="#80ff2626" stroke-width="0.26" stroke-linecap="butt" />
 		</rule>
 		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-min="12">
 			<caption cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#ff4000" stroke="#FFFFFF" stroke-width="1.7" />
@@ -439,6 +439,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	<!-- все остальные military обьекты - бомбоубежища... итд -->
 	<rule cat="tms_terrain" e="any" k="*" v="*">
 		<rule cat="tms_tmilitary" e="way" k="military" v="*" zoom-min="13">
+			<area fill="#33DF003F" />		
 			<area src="file:/patterns/military_area.svg" symbol-width="30" />
 			<line stroke="#80ff2626" stroke-width="0.2" stroke-linecap="butt" />
 			<caption cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#ff4000" stroke="#FFFFFF" stroke-width="1.7" />
@@ -543,8 +544,6 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 		
 	</rule>
-
-
 
 	<!-- natural ways -->
 	<rule cat="tms_relief" e="way" k="natural" v="gorge" closed="no" zoom-min="12">
