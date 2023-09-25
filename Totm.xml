@@ -433,7 +433,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<line stroke="#80ff2626" stroke-width="0.26" stroke-linecap="butt" />
 		</rule>
 		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-min="12">
-			<caption cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#ff4000" stroke="#FFFFFF" stroke-width="1.7" />
+			<caption cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#ff4000" stroke="#FFFFFF" stroke-width="1.7" text-wrap-width="140" />
 		</rule>
 	</rule>
 	<!-- все остальные military обьекты - бомбоубежища... итд -->
@@ -442,7 +442,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<area fill="#33DF003F" />		
 			<area src="file:/patterns/military_area.svg" symbol-width="30" />
 			<line stroke="#80ff2626" stroke-width="0.2" stroke-linecap="butt" />
-			<caption cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#ff4000" stroke="#FFFFFF" stroke-width="1.7" />
+			<caption cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#ff4000" stroke="#FFFFFF" stroke-width="1.7" text-wrap-width="140" />
 		</rule>
 	</rule>
 	
