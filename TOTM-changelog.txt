@@ -452,4 +452,10 @@ text-orientation="left" и curve="cubic"  на горизонталях - нов
 добавил amenity=bbq; leisure=firepit (только для LomapsV4!)
 вернул k="lm_landuse" v="residential_city|residential_village" ~только для LoMaps~  а надо ли???
 25/09/2023
-переделал tms_tmilitary - для z12-13 выключено <line stroke>, доб. розовую заливку на остальные зумы
+переделал tms_tmilitary - для z12-13 выключено <line stroke> - иначе появляются квадратики, 
+доб. розовую заливку на младшие зумы
+02/12/2023
+embankment emb_yes|yes для совместим.с LomapsV4
+07/12/2023
+поправил ссылку на актуальную xsi:schemaLocation
+ремонт подписей кладбищ cemetery|grave_yard

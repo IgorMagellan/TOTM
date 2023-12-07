@@ -26,7 +26,8 @@ Transparency for HEX colors (100% - непрозрачный)
 10% — 1A  5% — 0D  0% — 00
 -->
 	<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://mapsforge.org/renderTheme" xsi:schemaLocation="http://mapsforge.org/renderTheme 
-	https://raw.githubusercontent.com/mapsforge/mapsforge/master/resources/renderTheme.xsd" version="5" map-background="#ffffff" map-background-outside="#ffffff">
+	https://github.com/mapsforge/mapsforge/raw/master/resources/renderTheme.xsd"
+	version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
 	<stylemenu id="totm_2_5" defaultvalue="tms_hiking" defaultlang="en">
 
@@ -406,12 +407,14 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_terrain" e="way" k="landuse" v="allotments" zoom-min="13">
 		<area src="file:/patterns/allotments.png" />
 	</rule>
+
 	<rule cat="tms_terrain" e="way" k="landuse|amenity" v="cemetery|grave_yard" zoom-min="13">
 		<area fill="#adc4b6" stroke="#333333" stroke-width="0.24" />
 		<area src="file:/patterns/grave_yard.svg" symbol-height="18" />
-	</rule>
-	<rule cat="tms_terrain" e="way" k="landuse|amenity" v="cemetery|grave_yard" zoom-min="15">
-		<symbol src="file:/symbols/s_cemetery.svg" symbol-width="16" />
+		<rule e="way" k="*" v="*" zoom-min="15">
+			<symbol id="s_cemetery" src="file:/symbols/s_cemetery.svg" symbol-width="16" />
+			<caption cat="tms_landnames" symbol-id="s_cemetery" position="below" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#004D66" stroke="#FFFFFF" stroke-width="2.0" text-wrap-width="120" />
+		</rule>
 	</rule>
 
 	<!-- military -->
@@ -419,7 +422,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-max="11" >
 			<area fill="#16df003f" />
 			<area src="file:/patterns/military_area.svg" symbol-width="18" />
-			<line stroke="#80ff2626" stroke-width="0.44" stroke-linecap="butt" />	
+			<line stroke="#80ff2626" stroke-width="0.82" stroke-linecap="butt" />	
 		</rule>
 		<rule cat="tms_tmilitary" e="way" k="landuse|leisure" v="military" zoom-min="12" zoom-max="13" >
 			<area src="file:/patterns/military_area.svg" symbol-width="25" />
@@ -449,13 +452,13 @@ Transparency for HEX colors (100% - непрозрачный)
 	<!-- Area names Magellan -->
 	<rule cat="tms_landnames" e="way" k="*" v="*" zoom-min="13">
 		<rule cat="tms_terrain" e="way" k="natural|landuse" v="land|beach|sand|rock|fell|scree|landfill|quarry|farm|farmland" zoom-min="14">
-			<caption cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="2.0" text-wrap-width="140" />
+			<caption k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#444444" stroke="#FFFFFF" stroke-width="2.0" text-wrap-width="140" />
 		</rule>
 		<rule cat="tms_terrain" e="way" k="natural|landuse" v="meadow|grassland|heath|marsh|wetland|scrub|vineyard|field" zoom-min="14">
-			<caption cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#196600" stroke="#FFFFFF" stroke-width="2.0" text-wrap-width="140" />
+			<caption k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#196600" stroke="#FFFFFF" stroke-width="2.0" text-wrap-width="140" />
 		</rule>
-		<rule cat="tms_terrain" e="way" k="landuse|leisure" v="allotments|cemetery|industrial|village_green|recreation_ground|grass|park|garden|common|green|dog_park" zoom-min="15">
-			<caption cat="tms_landnames" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#004D66" stroke="#FFFFFF" stroke-width="2.0" text-wrap-width="140" />
+		<rule cat="tms_terrain" e="way" k="landuse|leisure" v="allotments|industrial|village_green|recreation_ground|grass|park|garden|common|green|dog_park" zoom-min="15">
+			<caption k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#004D66" stroke="#FFFFFF" stroke-width="2.0" text-wrap-width="140" />
 		</rule>
 	</rule>
 
@@ -577,7 +580,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
-	<rule e="way" k="embankment" v="emb_yes" zoom-min="15" cat="tms_man-made">
+	<rule e="way" k="embankment" v="emb_yes|yes" zoom-min="15" cat="tms_man-made">
 		<rule e="way" k="highway" v="~">			<!-- жд -->
 			<line stroke="#222222" scale="all" stroke-width="2.8" stroke-dasharray="0.14,1.06" stroke-linecap="butt" />
 			<line stroke="#333333" stroke-width="1.50" stroke-linecap="butt" />
