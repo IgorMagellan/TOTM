@@ -560,8 +560,20 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
+	<!-- подземные трубопроводы underground pipelines -->
+	<rule cat="tms_man-made" e="way" k="man_made" v="pipeline">
+		<rule e="way" k="tunnel|location" v="yes|underground">
+			<line stroke="#80cccccc" stroke-width="0.9" stroke-linecap="butt" />
+			<line stroke="#609ca6ba" stroke-width="0.7" scale="all" stroke-dasharray="1.8,0.6" stroke-linecap="butt" />
+			<line stroke="#80FFFFFF" stroke-width="0.15" stroke-linecap="butt" />
+			<pathText cat="tms_landnames" k="name" font-family="sans_serif" font-style="normal" font-size="9" fill="#667593" stroke="#FFFFFF" stroke-width="2" repeat="true" repeat-start="100" repeat-gap="300" />
+		</rule>
+	</rule>
+
+	<hillshading zoom-min="9" zoom-max="17" />
+
 	<!-- embankment and dyke -->
-	<!-- двесторонняя дамба,насыпь like embankment=yes -->
+	<!-- двусторонняя дамба,насыпь like embankment=yes -->
 	<rule e="way" k="man_made" v="dyke" zoom-min="15" cat="tms_man-made">
 		<rule e="way" k="embankment|highway" v="~">
 			<line stroke="#b38600" scale="all" stroke-width="3.2" stroke-dasharray="0.16,2.0" stroke-linecap="butt" />
@@ -1054,21 +1066,19 @@ Transparency for HEX colors (100% - непрозрачный)
 			<rule e="any" k="waterway" v="dam" zoom-min="15">
 				<symbol src="file:/symbols/s_dam.svg" symbol-width="13"/>
 			</rule>
-			<rule cat="tms_man-made" e="way" k="man_made" v="pipeline">
+		</rule>
+
+		<!-- наземные трубопроводы pipeline overground -->
+		<rule cat="tms_man-made" e="way" k="man_made" v="pipeline">
+			<rule e="way" k="location" v="~|overground|overhead">
 				<line stroke="#CCCCCC" stroke-width="0.9" stroke-linecap="butt" />
 				<line stroke="#9CA6BA" stroke-width="0.7" scale="all" stroke-dasharray="1.8,0.6" stroke-linecap="butt" />
-				<line stroke="#FFFFFF" stroke-width="0.15" stroke-linecap="butt" />
+				<line stroke="#ffffff" stroke-width="0.15" stroke-linecap="butt" />
 				<pathText cat="tms_landnames" k="name" font-family="sans_serif" font-style="normal" font-size="9" fill="#667593" stroke="#FFFFFF" stroke-width="2" repeat="true" repeat-start="100" repeat-gap="300" />
 			</rule>
 		</rule>
 	</rule>
 
-	<rule cat="tms_man-made" e="way" k="tunnel|location" v="yes|culvert|underground" zoom-min="16">
-		<rule e="way" k="man_made" v="pipeline">
-			<line stroke="#809CA6BA" stroke-width="0.9" scale="all" stroke-dasharray="0.9,0.3" stroke-linecap="butt" />
-			<pathText cat="tms_landnames" k="name" font-family="sans_serif" font-style="normal" font-size="9" fill="#667593" stroke="#FFFFFF" stroke-width="2" repeat="true" repeat-start="100" repeat-gap="300" />
-		</rule>
-	</rule>
 	
 	<rule cat="tms_relief" e="way" k="natural" v="*">
 
@@ -2711,7 +2721,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
-	<rule cat="tms_barriers" e="any" k="barrier" v="checkpoint" zoom-min="12">
+	<rule cat="tms_barriers" e="any" k="military|police" v="checkpoint" zoom-min="12">
 		<symbol priority="420" display="always" id="s_checkpoint" src="file:/symbols/s_checkpoint.svg" symbol-width="20" />
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" k="name" symbol-id="s_checkpoint" position="above" font-style="bold" font-size="9" fill="#ff4c4d" stroke="#E5FFFFFF" stroke-width="2" />
@@ -3372,7 +3382,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<caption cat="tms_landnames" priority="200" symbol-id="s_tower" k="name" position="below" font-style="bold" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>
-	<rule cat="tms_man-made" e="any" k="tower" v="observation" zoom-min="13">
+	<rule cat="tms_man-made" e="any" k="tower" v="observation|watchtower" zoom-min="13">
 		<symbol priority="200" display="always" id="s_tower" src="file:/symbols/s_tower_observation.svg" symbol-height="16" />
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" priority="200" symbol-id="s_tower" k="name" position="below" font-style="bold" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />

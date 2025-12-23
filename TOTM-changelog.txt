@@ -459,3 +459,8 @@ embankment emb_yes|yes для совместим.с LomapsV4
 07/12/2023
 поправил ссылку на актуальную xsi:schemaLocation
 ремонт подписей кладбищ cemetery|grave_yard
+23/12/2025
+трубопроводы pipeline разделены на подземные underground и наземные overground
+hillshading для Cruiser, Orux,...
+Добавлен tower=watchtower
+Поправил military|police=checkpoint в barrier
