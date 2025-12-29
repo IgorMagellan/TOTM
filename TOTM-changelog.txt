@@ -464,3 +464,14 @@ embankment emb_yes|yes для совместим.с LomapsV4
 hillshading для Cruiser, Orux,...
 Добавлен tower=watchtower
 Поправил military|police=checkpoint в barrier
+26/12/2025
+Добавлен public_bath, water_park в cat="tms_leisure", amenity=lounger, barrier=cattle_grid, wastewater_plant, water_works,
+amenity=watering_place
+Изменен swimming_area в cat="tms_leisure"
+Увеличен  firepit, bbq, поправлены названия
+28/12/2025
+Добавлено два правила для зарядки электровелосипедов ebike_charging: бесплатные и платные станции в слое Транспорт(частный)
+29/12/2025
+Переделал sports_centre - разделил area и stroke, исключил в нем building
+Убрал заливку для way tourism=attraction closed=yes, display=always для solar generator - редакторы OSM вешают тег 
+на каждую отдельную панель
