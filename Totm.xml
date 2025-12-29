@@ -2584,7 +2584,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			</rule>
 		</rule>
 		<rule e="any" k="amenity" v="lounger" >
-			<symbol id="s_lounger" priority="200" src="file:/symbols/s_lounger2.svg" display="always" symbol-width="18" />
+			<symbol id="s_lounger" priority="200" src="file:/symbols/s_lounger-2.svg" display="always" symbol-width="18" />
 			<rule e="any" k="*" v="*" zoom-min="16">
 				<caption cat="tms_landnames" k="name" symbol-id="s_lounger" position="above" font-style="bold" font-size="10" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
