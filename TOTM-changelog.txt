@@ -479,3 +479,8 @@ amenity=watering_place
 Замена атрибута align-center="true" на position="center" для всех lineSymbol bluearrow.svg, oneway.svg, ridge|arete - а то валидаторы ругаются..
 02/01/2026
 Добавил флажок tms_surface_text "Поверхность, tracktype как текст", при включении которого выводится текстом тег surface и tracktype любого way
+05/01/2026
+Изменил на dy вместо position="below" у bbq, firepit; zoom-min=15
+06/01/2026
+Добавил иконку s_farmyard
+Добавил правило leisure=fitness_station. Отображается ТОЛЬКО(!) в LomapsV4+

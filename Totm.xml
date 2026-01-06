@@ -547,6 +547,8 @@ Transparency for HEX colors (100% - непрозрачный)
 		
 	</rule>
 
+	<hillshading zoom-min="9" zoom-max="17" magnitude="64"/>
+
 	<!-- natural ways -->
 	<rule cat="tms_relief" e="way" k="natural" v="gorge" closed="no" zoom-min="12">
 		<rule e="way" k="*" v="*" zoom-max="13" >
@@ -568,8 +570,6 @@ Transparency for HEX colors (100% - непрозрачный)
 			<pathText cat="tms_landnames" k="name" font-family="sans_serif" font-style="normal" font-size="9" fill="#667593" stroke="#FFFFFF" stroke-width="2" repeat="true" repeat-start="100" repeat-gap="300" />
 		</rule>
 	</rule>
-
-	<hillshading zoom-min="9" zoom-max="17" />
 
 	<!-- embankment and dyke -->
 	<!-- двусторонняя дамба,насыпь like embankment=yes -->
@@ -1221,7 +1221,6 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_terrain" e="way" k="leisure" v="pitch">
 		<area fill="#80b6dea4" stroke="#808eb961" stroke-width="0.5" />
 	</rule>
-
 	
 	<rule cat="tms_terrain" e="way" k="leisure" v="track|byway|ls_track">
 		<rule e="way" k="area" v="yes|true">
@@ -2588,20 +2587,20 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 		<rule e="any" k="leisure" v="firepit" >
 			<symbol id="s_firepit" priority="215" src="file:/symbols/s_firepit.svg" display="always" symbol-width="20" />
-			<rule e="any" k="*" v="*" zoom-min="16">
-				<caption cat="tms_landnames" k="name" symbol-id="s_firepit" font-style="bold" font-size="10" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+			<rule e="any" k="*" v="*" zoom-min="15">
+				<caption cat="tms_landnames" k="name" symbol-id="s_firepit" dy="-1.2" font-style="bold" font-size="9" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
 		<rule e="any" k="amenity" v="bbq" >
 			<symbol id="s_bbq" priority="220" src="file:/symbols/s_bbq.svg" display="always" symbol-width="18" />
-			<rule e="any" k="*" v="*" zoom-min="16">
-				<caption cat="tms_landnames" k="name" symbol-id="s_bbq" position="below" font-style="bold" font-size="9" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+			<rule e="any" k="*" v="*" zoom-min="15"> 
+				<caption cat="tms_landnames" k="name" symbol-id="s_bbq" dy="-1.2" font-style="bold" font-size="9" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
 		<rule e="any" k="amenity" v="lounger" >
 			<symbol id="s_lounger" priority="200" src="file:/symbols/s_lounger-2.svg" display="always" symbol-width="18" />
 			<rule e="any" k="*" v="*" zoom-min="16">
-				<caption cat="tms_landnames" k="name" symbol-id="s_lounger" position="above" font-style="bold" font-size="10" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
+				<caption cat="tms_landnames" k="name" symbol-id="s_lounger" position="above" font-style="bold" font-size="9" fill="#734A08" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
 
@@ -2786,6 +2785,10 @@ Transparency for HEX colors (100% - непрозрачный)
 						<caption k="name" symbol-id="s_drinking_water" font-style="italic" font-size="9" fill="#0034AE" stroke="#E5FFFFFF" stroke-width="2" />
 					</rule>
 				</rule>
+				<!-- водоколонка --> <!-- Никогда не сработает - в tagmapping нет water_tap, трансфоримруется в drinking_water=yes в tagtransform -->
+<!-- 				<rule e="any" k="man_made" v="water_tap">
+					<symbol id="s_drinking_water" display="always" src="file:/symbols/s_drinking_water.svg" symbol-height="13" />
+				</rule>		 -->		
 			</rule>
 		</rule>
 	</rule>
@@ -2798,8 +2801,8 @@ Transparency for HEX colors (100% - непрозрачный)
 			</rule>
 		</rule>
 		<rule e="any" k="drinking_water" v="no">
-			<symbol cat="tms_landnames" id="s_ww_nodrink" display="always" src="file:/symbols/s_water_well_nodrink.svg" symbol-height="18" />
-			<rule e="any" k="*" v="*" zoom-min="16">
+			<symbol id="s_ww_nodrink" display="always" src="file:/symbols/s_water_well_nodrink.svg" symbol-height="18" />
+			<rule cat="tms_landnames" e="any" k="*" v="*" zoom-min="16">
 				<caption k="name" symbol-id="s_ww_nodrink" font-style="bold" font-size="10" fill="#d900d9" stroke="#E5FFFFFF" stroke-width="2" />
 			</rule>
 		</rule>
@@ -2926,6 +2929,8 @@ Transparency for HEX colors (100% - непрозрачный)
 		<caption k="name" symbol-id="s_bi_repair" position="above" font-style="bold" font-size="10" fill="#552200" stroke="#E5FFFFFF" stroke-width="2" />
 	</rule>
 </rule>
+
+<!-- вставить сюда bicycle_parking для Lomaps-->
 
 <rule cat="tms_trans-priv" e="any" k="shop" v="*">	
 	<rule e="any" k="*" v="car">
@@ -3196,6 +3201,8 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule e="any" k="*" v="miniature_golf">		<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_sport_minigolf.svg" symbol-height="17" /> </rule>
 		<rule e="any" k="*" v="golf|golf_course">	<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_golf.svg" symbol-height="17" /> </rule>
 		<rule e="any" k="*" v="climbing_adventure">	<symbol id="s_sport" priority="225" display="always" src="file:/symbols/s_sport_climbing_adventure.svg" symbol-height="17" /> </rule>
+		<rule e="any" k="*" v="fitness_station">	<symbol id="s_sport" priority="220" display="always" src="file:/symbols/s_fitness_runner-2.svg" symbol-height="14" /> </rule>
+	
 		<rule cat="tms_landnames" e="any" k="*" v="*" zoom-min="15">
 			<caption symbol-id="s_sport" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" text-wrap-width="140" />
 		</rule>
@@ -3501,6 +3508,13 @@ Transparency for HEX colors (100% - непрозрачный)
 			<caption cat="tms_landnames" k="name" priority="180" symbol-id="s_water_works" dy="-4" font-style="bold" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
 		</rule>
 	</rule>	
+
+	<rule cat="tms_man-made" e="any" k="landuse" v="farmyard" zoom-min="14">
+		<symbol display="always" id="s_farmyard" src="file:/symbols/s_farmyard_v.svg" symbol-width="22" />
+		<rule e="any" k="*" v="*" zoom-min="15">
+			<caption cat="tms_landnames" k="name" priority="200" symbol-id="s_farmyard" position="below" font-style="bold" font-size="10" fill="#333333" stroke="#E5FFFFFF" stroke-width="2" />
+		</rule>
+	</rule>
 
 	<rule cat="tms_man-made" e="any" k="man_made" v="wastewater_plant" zoom-min="14">
 		<symbol display="always" id="s_wastewater_plant" src="file:/symbols/s_wastewater_plant-3.svg" symbol-width="24" />
