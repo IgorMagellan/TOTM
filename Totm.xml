@@ -685,7 +685,7 @@ Transparency for HEX colors (100% - непрозрачный)
 				<line stroke="#8C505050" stroke-width="2" />
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="16">
-				<pathText k="name" font-style="bold" font-size="6" dy="5" fill="#004D66" stroke="#ffffff" stroke-width="2.0" />
+				<pathText cat="tms_up-hw" k="name" font-style="bold" font-size="6" dy="5" fill="#004D66" stroke="#ffffff" stroke-width="2.0" />
 			</rule>
 		</rule>
 		<rule e="way" k="piste:type" v="sled">
@@ -791,16 +791,17 @@ Transparency for HEX colors (100% - непрозрачный)
 				</rule>
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="15">
-				<pathText k="name" font-style="bold_italic" font-size="9" dy="4" fill="#333333" stroke="#ffffff" stroke-width="2.0" />
+				<pathText cat="tms_up-hw" k="name" font-style="bold_italic" font-size="9" dy="4" fill="#333333" stroke="#ffffff" stroke-width="2.0" />
 			</rule>
 		</rule>
 		<rule e="way" k="piste:type" v="skitour">
 			<rule e="way" k="*" v="*" zoom-max="15">
 				<line stroke="#FF1BAFFF" stroke-width="1" />
+				<pathText cat="tms_up-hw" k="name" font-style="bold_italic" font-size="9" dy="4" fill="#00A4F7" stroke="#ffffff" stroke-width="2" repeat-start="5" repeat-gap="200" />
 			</rule>
 			<rule e="way" k="*" v="*" zoom-min="16">
 				<line stroke="#8000A4F7" stroke-width="0.9" />
-				<pathText k="name" font-style="bold_italic" font-size="9" dy="12" fill="#00A4F7" stroke="#ffffff" stroke-width="2" />
+				<pathText cat="tms_up-hw" k="name" font-style="bold_italic" font-size="10" dy="2" fill="#00A4F7" stroke="#ffffff" stroke-width="2" repeat-start="5" repeat-gap="180" />
 			</rule>
 		</rule>
 	</rule>	<!-- end of pistes -->
@@ -1222,14 +1223,14 @@ Transparency for HEX colors (100% - непрозрачный)
 		<area fill="#80b6dea4" stroke="#808eb961" stroke-width="0.5" />
 	</rule>
 	
-	<rule cat="tms_terrain" e="way" k="leisure" v="track|byway|ls_track">
-		<rule e="way" k="area" v="yes|true">
+	<rule cat="tms_terrain" e="way" k="leisure" v="track|byway|ls_track" closed="yes">
+		<rule e="way" k="area|based_on_rel" v="yes|true|mp">
 			<area fill="#BBBDE3CB" stroke="#6FC18E" stroke-width="0.025" />
-		</rule>
-		<rule e="way" k="area" v="~|no|false">
+		</rule>		
+		<rule e="way" k="area|based_on_rel" v="area_no|no|false|~">
 			<line stroke="#6FC18E" stroke-width="0.8" />
 			<line stroke="#BDE3CB" stroke-width="0.7" />
-		</rule>
+		</rule>		
 	</rule>
 
 	<rule cat="tms_terrain" e="way" k="sport" v="tennis">
@@ -1536,7 +1537,7 @@ Transparency for HEX colors (100% - непрозрачный)
 				<!-- stroke-width="1.20" -->				<!-- stroke-width="0.80" -->
 				<line stroke="#555555" scale="all" stroke-width="0.6" stroke-dasharray="2.5,2" stroke-linecap="butt" />
 				<!-- stroke-dasharray="14.0,10.0" -->				<!-- stroke-dasharray="9.0,6" -->
-				<pathText cat="tms_landnames" k="name" priority="-1" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="2.6" repeat="true" repeat-start="10" repeat-gap="450" />
+				<pathText cat="tms_up-hw" k="name" priority="-1" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="2.6" repeat="true" repeat-start="10" repeat-gap="450" />
 			</rule>
 			<rule e="way" k="railway" v="rail">
 				<rule e="way" k="*" v="*" zoom-max="16">
@@ -1546,14 +1547,14 @@ Transparency for HEX colors (100% - непрозрачный)
 					<!-- stroke-width="1.20" -->					<!-- stroke-width="0.80" -->
 					<line stroke="#252525" scale="all" stroke-width="0.90" stroke-dasharray="4,3.8" stroke-linecap="butt" />
 					<!-- stroke-dasharray="14.0,10.0" -->					<!-- stroke-dasharray="9.0,6" -->
-					<pathText cat="tms_landnames" k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="3.00" repeat="true" repeat-start="10" repeat-gap="450" />
+					<pathText cat="tms_up-hw" k="name" font-style="bold" font-size="10" stroke="#ffffff" stroke-width="3.00" repeat="true" repeat-start="10" repeat-gap="450" />
 				</rule>
 				<rule e="way" k="*" v="*" zoom-min="17">
 					<line stroke="#252525" stroke-width="0.90" stroke-linecap="butt" />
 					<line stroke="#FFFFFF" stroke-width="0.75" stroke-linecap="butt" />
 					<line stroke="#252525" scale="all" stroke-width="0.75" stroke-dasharray="4,3.8" stroke-linecap="butt" />
 					<!-- stroke-dasharray="14.0,10.0" -->					<!-- stroke-dasharray="9.0,6" -->
-					<pathText cat="tms_landnames" k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="3.00" repeat="true" repeat-start="10" repeat-gap="450" />
+					<pathText cat="tms_up-hw" k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="3.00" repeat="true" repeat-start="10" repeat-gap="450" />
 				</rule>
 				<!-- проверить в ОАМ не удалось; возможно, нужно доб.casing и core дороги -->
 				<rule e="way" k="service" v="siding|spur|yard">
@@ -1564,14 +1565,14 @@ Transparency for HEX colors (100% - непрозрачный)
 				<line stroke="#555555" stroke-width="1.15" stroke-linecap="butt" />
 				<line stroke="#FFFFFF" stroke-width="0.90" stroke-linecap="butt" />
 				<line stroke="#cccccc" scale="all" stroke-width="0.90" stroke-dasharray="4,3.8" stroke-linecap="butt" />
-				<pathText cat="tms_landnames" k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="3.00" repeat="true" repeat-start="10" repeat-gap="450" />
+				<pathText cat="tms_up-hw" k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="3.00" repeat="true" repeat-start="10" repeat-gap="450" />
 			</rule>
 			<!-- ~~~~ -->
 			<rule e="way" k="railway" v="tram">				<!-- Трамвай  line stroke="#663300"-->
 				<line stroke="#8c4600" stroke-width="0.90" stroke-linecap="butt" />
 				<line stroke="#FFFFFF" stroke-width="0.75" stroke-linecap="butt" />
 				<line stroke="#8c4600" scale="all" stroke-width="0.75" stroke-dasharray="3,3" stroke-linecap="butt" />
-				<pathText cat="tms_landnames" k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="1" repeat="true" repeat-start="10" repeat-gap="450" />
+				<pathText cat="tms_up-hw" k="name" font-style="bold" font-size="9" stroke="#ffffff" stroke-width="1" repeat="true" repeat-start="10" repeat-gap="450" />
 			</rule>
 			<rule cat="tms_aerial" e="way" k="railway" v="funicular" zoom-min="14">
 				<symbol src="file:/symbols/s_rail_funicular.svg" symbol-height="16" />
@@ -1885,7 +1886,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 	<rule e="way" k="tunnel" v="~|no|false">
-		<rule e="way" k="area" v="~|no|false">
+		<rule e="way" k="area|based_on_rel" v="~|no|false|area_no">
 
 			<!-- paths and footways -->
 			<!--   #FOOTWAY -->
@@ -1926,50 +1927,50 @@ Transparency for HEX colors (100% - непрозрачный)
 				<!-- конец otm	 -->
 
 				<rule e="way" k="trail_visibility" v="good|excellent">
-					<rule e="way" k="sac_scale" v="T1" zoom-min="13">
+					<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="13">
 						<line stroke="#AB0F23" stroke-width="0.58" stroke-linecap="round" />
 					</rule>
-					<rule e="way" k="sac_scale" v="T2" zoom-min="13">
+					<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="13">
 						<line stroke="#E1001A" stroke-width="0.52" stroke-linecap="round" />
 					</rule>
-					<rule e="way" k="sac_scale" v="T3" zoom-min="13">
+					<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="13">
 						<line stroke="#ff6b00" stroke-width="0.47" stroke-linecap="round" />
 					</rule>
 				</rule>
 				<rule e="way" k="trail_visibility" v="intermediate|bad">
-					<rule e="way" k="sac_scale" v="T1" zoom-min="13">
+					<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="13">
 						<line stroke="#AB0F23" stroke-width="0.58" stroke-dasharray="06.00,06.00" stroke-linecap="round" />
 					</rule>
-					<rule e="way" k="sac_scale" v="T2" zoom-min="13">
+					<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="13">
 						<line stroke="#E1001A" stroke-width="0.52" stroke-dasharray="06.00,06.00" stroke-linecap="round" />
 					</rule>
-					<rule e="way" k="sac_scale" v="T3" zoom-min="13">
+					<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="13">
 						<line stroke="#ff6b00" stroke-width="0.47" stroke-dasharray="06.00,06.00" stroke-linecap="round" />
 					</rule>
 				</rule>
 				<rule e="way" k="trail_visibility" v="horrible|no">
-					<rule e="way" k="sac_scale" v="T1" zoom-min="13">
+					<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="13">
 						<line stroke="#AB0F23" stroke-width="0.67" stroke-dasharray="0.2,6.00" stroke-linecap="round" />
 					</rule>
-					<rule e="way" k="sac_scale" v="T2" zoom-min="13">
+					<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="13">
 						<line stroke="#E1001A" stroke-width="0.60" stroke-dasharray="0.2,6.00" stroke-linecap="round" />
 					</rule>
-					<rule e="way" k="sac_scale" v="T3" zoom-min="13">
+					<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="13">
 						<line stroke="#ff6b00" stroke-width="0.54" stroke-dasharray="0.2,6.00" stroke-linecap="round" />
 					</rule>
 				</rule>
 				<rule e="way" k="trail_visibility" v="~">
-					<rule e="way" k="sac_scale" v="T1" zoom-min="13">
+					<rule e="way" k="sac_scale" v="T1|hiking" zoom-min="13">
 						<line stroke="#AB0F23" stroke-width="0.58" stroke-linecap="round" />
 					</rule>
-					<rule e="way" k="sac_scale" v="T2" zoom-min="13">
+					<rule e="way" k="sac_scale" v="T2|mountain_hiking" zoom-min="13">
 						<line stroke="#E1001A" stroke-width="0.52" stroke-linecap="round" />
 					</rule>
-					<rule e="way" k="sac_scale" v="T3" zoom-min="13">
+					<rule e="way" k="sac_scale" v="T3|demanding_mountain_hiking" zoom-min="13">
 						<line stroke="#ff6b00" stroke-width="0.47" stroke-dasharray="08.00,08.00" stroke-linecap="round" />
 					</rule>
 				</rule>
-				<rule e="way" k="sac_scale" v="T4">
+				<rule e="way" k="sac_scale" v="T4|alpine_hiking">
 					<rule e="way" k="sac_scale" v="*" zoom-min="13">
 						<line stroke="#D9CDBA" stroke-width="0.47" stroke-linecap="butt" />
 					</rule>
@@ -1977,7 +1978,7 @@ Transparency for HEX colors (100% - непрозрачный)
 						<line stroke="#000000" stroke-width="0.47" stroke-dasharray="08.00,08.00" stroke-linecap="butt" />
 					</rule>
 				</rule>
-				<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5">
+				<rule e="way" k="raw_sac_scale|sac_scale" v="T5|RT5|demanding_alpine_hiking">
 					<rule e="way" k="raw_sac_scale|sac_scale" v="*" zoom-min="13">
 						<line stroke="#D9CDBA" stroke-width="0.47" stroke-linecap="butt" />
 					</rule>
@@ -1988,7 +1989,7 @@ Transparency for HEX colors (100% - непрозрачный)
 						<line stroke="#000000" stroke-width="0.47" stroke-dasharray="08.00,08.00" stroke-linecap="butt" />
 					</rule>
 				</rule>
-				<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6">
+				<rule e="way" k="raw_sac_scale|sac_scale" v="T6|RT6|difficult_alpine_hiking">
 					<rule e="way" k="raw_sac_scale|sac_scale" v="*" zoom-min="13">
 						<line stroke="#D9CDBA" stroke-width="0.47" stroke-linecap="butt" />
 					</rule>
@@ -2162,12 +2163,12 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 	<!-- end highway cores block-->
 
-	<rule e="way" cat="tms_surface_text" k="*" v="*" zoom-min="13">
+	<rule e="way" cat="tms_surface_text" k="*" v="*" zoom-min="14">
 		<rule e="any" k="surface" v="*">
-			<pathText priority="80" dy="-1" k="surface" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" repeat-start="0" repeat-gap="36" />
+			<pathText priority="80" dy="-1.2" k="surface" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" repeat-start="0" repeat-gap="90" />
 		</rule>
 		<rule e="any" k="tracktype" v="*">
-			<pathText priority="70" k="tracktype" dy="1" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" repeat-start="25" repeat-gap="100" />
+			<pathText priority="70" k="tracktype" dy="1.4" font-style="bold" font-size="9" fill="#000000" stroke="#E5FFFFFF" stroke-width="2" repeat-start="10" repeat-gap="140" />
 		</rule>		
 	</rule>   
 
@@ -2193,7 +2194,7 @@ Transparency for HEX colors (100% - непрозрачный)
 			<lineSymbol src="file:/symbols/s_gondola.svg" repeat="true" repeat-start="0" repeat-gap="200" symbol-width="16" />
 		</rule>
 		<rule e="way" k="*" v="*">
-			<pathText display="always" k="name" dy="-2" font-style="bold" font-size="8" fill="#222222" stroke="#E5FFFFFF" stroke-width="1.1" />
+			<pathText cat="tms_up-hw" display="always" k="name" dy="-2" font-style="bold" font-size="8" fill="#222222" stroke="#E5FFFFFF" stroke-width="1.1" />
 		</rule>
 	</rule>
 

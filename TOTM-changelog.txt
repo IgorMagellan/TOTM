@@ -478,9 +478,17 @@ amenity=watering_place
 01/01/2026
 Замена атрибута align-center="true" на position="center" для всех lineSymbol bluearrow.svg, oneway.svg, ridge|arete - а то валидаторы ругаются..
 02/01/2026
-Добавил флажок tms_surface_text "Поверхность, tracktype как текст", при включении которого выводится текстом тег surface и tracktype любого way
+Добавил флажок tms_surface_text "Поверхность, tracktype как текст", при включении которого выводится текстом тег surface и tracktype любого way.
+В OAM_V4+ отображается и surface и tracktype, в LoMaps_V4+ только tracktype
 05/01/2026
 Изменил на dy вместо position="below" у bbq, firepit; zoom-min=15
 06/01/2026
 Добавил иконку s_farmyard
-Добавил правило leisure=fitness_station. Отображается ТОЛЬКО(!) в LomapsV4+
+Добавил правило leisure=fitness_station. Отображается ТОЛЬКО(!) в LomapsV4+ (s_fitness_runner-2)
+08/01/2026
+Ремонт leisure=track|byway|ls_track неотображения на OAM, добавил based_on_rel area_no или mp
+Исправил неотображение тротуаров в отношениях на OAM и LoMaps_V4 (based_on_rel=area_no)
+Подписи skitour на всех ZL
+Подписи на railway, pistes, aerialway изменены на tms_up-hw 
+09/01/2026
+поправлены тропы, имеющих тег sac_scale путем добавления для всех правил, например T2|mountain_hiking...
