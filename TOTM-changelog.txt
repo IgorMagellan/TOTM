@@ -491,4 +491,14 @@ amenity=watering_place
 Подписи skitour на всех ZL
 Подписи на railway, pistes, aerialway изменены на tms_up-hw 
 09/01/2026
-поправлены тропы, имеющих тег sac_scale путем добавления для всех правил, например T2|mountain_hiking...
+Поправлены тропы, имеющих тег sac_scale путем добавления для всех правил, например T2|mountain_hiking...
+26/11/2026
+Версия 2.7
+Переставил повыше природных заливок field|farm|farmland а также orchard, vineyard
+Разделил scrub на лиственные🌳, хвойные🌲 и смешанные; нарисовал новые паттерны для них, в первом приближении.. 
+для кустарников с неуказаным leaf_type, перерисовал прежний паттерн, но в svg
+также были изменены tree_row, barrier=hedge
+Для wood/forest был 🠕 zoom-min=8 
+Поменял местами s_fitness_runner-2.svg и s_gym.svg, как более логичные иконки для объектов
+❗Добавил отображение natural|wetland=mud для LoMapsV4+ только ☝. В ОАМ эти теги трансформируются tag-tranform в простой natural=wetland.
+

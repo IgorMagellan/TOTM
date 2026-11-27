@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* TOTM версия 2.6 (mapsforge) *
+* TOTM версия 2.7 (mapsforge) *
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 for mapsforge V4+
 
@@ -26,10 +26,10 @@ Transparency for HEX colors (100% - непрозрачный)
 10% — 1A  5% — 0D  0% — 00
 -->
 	<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://mapsforge.org/renderTheme" xsi:schemaLocation="http://mapsforge.org/renderTheme 
-	https://github.com/mapsforge/mapsforge/raw/master/resources/renderTheme.xsd"
+	https://github.com/mapsforge/mapsforge/raw/master/resources/renderTheme.xsd" base-stroke-width="1.0" base-text-size="1.0"
 	version="5" map-background="#ffffff" map-background-outside="#ffffff">
 
-	<stylemenu id="totm_2_6" defaultvalue="tms_hiking" defaultlang="en">
+	<stylemenu id="totm_2_7" defaultvalue="tms_hiking" defaultlang="en">
 
 		<!-- Layers -->
 		<layer id="tms_contours" enabled="true">
@@ -41,7 +41,14 @@ Transparency for HEX colors (100% - непрозрачный)
 			<name lang="en" value="Terrain"/>
 			<name lang="ru" value="Местность"/>
 			<cat id="tms_terrain"/>
+		</layer> 
+
+		<layer id="tms_terrain_ext" enabled="true">
+			<name lang="en" value="╚  Expanded woods, wetlands."/>
+			<name lang="ru" value="╚  Расширенные лес, болота"/>
+			<cat id="tms_terrain_ext"/>
 		</layer>
+
 		<layer id="tms_up-hw" enabled="true">
 			<name lang="en" value="Names of streets, roads, paths"/>
 			<name lang="ru" value="Имена улиц, дорог, троп"/>
@@ -176,11 +183,12 @@ Transparency for HEX colors (100% - непрозрачный)
 		</layer>
 		<!-- Base -->
 		<layer id="tms_hiking" visible="true">
-			<name lang="en" value="Topographic map v2.6" />
-			<name lang="ru" value="Топокарта v2.6" />
+			<name lang="en" value="Topographic map v2.7" />
+			<name lang="ru" value="Топокарта v2.7" />
 			<cat id="tms_tracks" />
 			<cat id="tms_hk" />
 			<overlay id="tms_terrain" />
+			<overlay id="tms_terrain_ext" />
 			<overlay id="tms_contours" />
 			<overlay id="tms_oopt" />
 			<overlay id="tms_tmilitary" />
@@ -289,6 +297,16 @@ Transparency for HEX colors (100% - непрозрачный)
 		<area fill="#BBC9DDDD" />
 	</rule>
 
+	<rule cat="tms_terrain" e="way" k="landuse|natural" v="field|farm|farmland" zoom-min="13">
+		<area src="patterns/p_farmland.svg" symbol-width="128" />
+	</rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="orchard" zoom-min="13">
+		<area src="patterns/p_orchard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="30" />
+	</rule>
+	<rule cat="tms_terrain" e="way" k="landuse" v="vineyard" zoom-min="13">
+		<area src="patterns/p_vineyard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="20" />
+	</rule>
+
 	<rule cat="tms_terrain" e="way" k="landuse" v="landfill" zoom-min="12">
 		<area src="patterns/p_scree.png" symbol-width="64" />
 		<area fill="#CCF2EFE4" stroke="#9EA199" stroke-width="0.2" />
@@ -299,10 +317,10 @@ Transparency for HEX colors (100% - непрозрачный)
 		<area src="patterns/quarry.svg" symbol-width="10" />
 	</rule>
 	
-	<!-- vegetation -->
+	<!-- vegetation Растительность и природные площадные объекты и заливки -->
 	<rule cat="tms_terrain" e="way" k="natural|landuse" v="forest|wood">
-		<rule e="way" k="*" v="*" zoom-min="9" zoom-max="11">
-			<area fill="#b3d97e" />
+		<rule e="way" k="*" v="*" zoom-min="8" zoom-max="11">
+			<area fill="#c2e492" />
 		</rule>
 
 		<rule e="way" k="*" v="*" zoom-min="12">
@@ -317,19 +335,11 @@ Transparency for HEX colors (100% - непрозрачный)
 			</rule>
 		</rule>
 
-		<!-- Обводка -->
-		<rule e="way" k="*" v="*" zoom-min="14" zoom-max="16">
-			<line stroke="#00661A" stroke-width="0.18" stroke-dasharray="0.3, 2" />
-		</rule>
-		<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17">
-			<line stroke="#1C9E1F" stroke-width="0.18" stroke-dasharray="0.5, 2.5" />
-		</rule>
-		<rule e="way" k="*" v="*" zoom-min="18" zoom-max="18">
-			<line stroke="#1C9E1F" stroke-width="0.16" stroke-dasharray="0.4, 4.0" />
-		</rule>
-		<rule e="way" k="*" v="*" zoom-min="19">
-			<line stroke="#1C9E1F" stroke-width="0.14" stroke-dasharray="0.3, 5.0" />
-		</rule>
+		<!-- Обводка леса -->
+		<rule e="way" k="*" v="*" zoom-min="14" zoom-max="16"><line stroke="#00661A" stroke-width="0.18" stroke-dasharray="0.3, 2"   /></rule>
+		<rule e="way" k="*" v="*" zoom-min="17" zoom-max="17"><line stroke="#1C9E1F" stroke-width="0.18" stroke-dasharray="0.5, 2.5" /></rule>
+		<rule e="way" k="*" v="*" zoom-min="18" zoom-max="18"><line stroke="#1C9E1F" stroke-width="0.16" stroke-dasharray="0.4, 4.0" /></rule>
+		<rule e="way" k="*" v="*" zoom-min="19">			  <line stroke="#1C9E1F" stroke-width="0.14" stroke-dasharray="0.3, 5.0" /></rule>
 	</rule>
 
 	<rule cat="tms_terrain" e="way" k="natural|landuse" v="grass|grassland" zoom-min="13">
@@ -355,27 +365,53 @@ Transparency for HEX colors (100% - непрозрачный)
 		<area fill="#BFd0f8ff" />
 	</rule>
 
-	<rule cat="tms_terrain" e="way" k="natural" v="scrub">
-		<rule e="any" k="natural" v="scrub" zoom-min="13" zoom-max="14">
-			<!-- 			<area fill="#33bfd4a9"/>  добавлено в фотошопе -->
-			<area src="patterns/scrub7.png" symbol-width="32" symbol-height="32"/>
+	<rule cat="tms_terrain" e="way" k="natural" v="scrub" closed="yes"> 
+		<rule e="way" k="leaf_cycle|leaf_type" v="deciduous|broadleaved"> 
+			<rule e="way" k="*" v="*" zoom-min="12"	zoom-max="13"> <area src="patterns/p_scrub_ls.svg" symbol-width="24" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15"> <area src="patterns/p_scrub_ls.svg" symbol-width="32" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17"> <area src="patterns/p_scrub_ls.svg" symbol-width="42" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="18"				 > <area src="patterns/p_scrub_ls.svg" symbol-width="54" /> </rule>		
 		</rule>
-		<rule e="any" k="natural" v="scrub" zoom-min="15">
-			<area src="patterns/scrub7.png" symbol-width="56" symbol-height="56"/>
+		<rule e="way" k="leaf_cycle|leaf_type" v="evergreen|needleleaved"> 
+			<rule e="way" k="*" v="*" zoom-min="12"	zoom-max="13"> <area src="patterns/p_scrub_xv.svg" symbol-width="20" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15"> <area src="patterns/p_scrub_xv.svg" symbol-width="28" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17"> <area src="patterns/p_scrub_xv.svg" symbol-width="36" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="18"				 > <area src="patterns/p_scrub_xv.svg" symbol-width="54" /> </rule>		
+		</rule>		
+		<rule e="way" k="leaf_cycle|leaf_type" v="mixed"> 
+			<rule e="way" k="*" v="*" zoom-min="12"	zoom-max="13"> <area src="patterns/p_scrub_mx.svg" symbol-width="26" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15"> <area src="patterns/p_scrub_mx.svg" symbol-width="30" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17"> <area src="patterns/p_scrub_mx.svg" symbol-width="40" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="18"				 > <area src="patterns/p_scrub_mx.svg" symbol-width="56" /> </rule>		
 		</rule>
+ 		<rule e="way" k="leaf_cycle|leaf_type" v="leafless|~"> 
+			<rule e="way" k="*" v="*" zoom-min="12"	zoom-max="13"> <area src="patterns/p_scrub8.svg" symbol-width="32" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15"> <area src="patterns/p_scrub8.svg" symbol-width="48" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17"> <area src="patterns/p_scrub8.svg" symbol-width="64" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="18"				 > <area src="patterns/p_scrub8.svg" symbol-width="72" /> </rule>		
+		</rule>			
+<!--  	Для нового паттерна точной копией с scrub7.png 75x75 но 128x128
+		<rule e="way" k="leaf_cycle|leaf_type" v="leafless|~"> 
+			<rule e="way" k="*" v="*" zoom-min="12"	zoom-max="13"> <area src="patterns/scrub7.svg" symbol-width="16" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15"> <area src="patterns/scrub7.svg" symbol-width="26" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17"> <area src="patterns/scrub7.svg" symbol-width="30" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="18"				 > <area src="patterns/scrub7.svg" symbol-width="39" /> </rule>		
+		</rule>	 -->	
+<!--	Для старого паттерна с scrub7.png 75x75
+ 		<rule e="way" k="leaf_cycle|leaf_type" v="leafless|~"> 
+			<rule e="way" k="*" v="*" zoom-min="12"	zoom-max="13"> <area src="patterns/scrub7.png" symbol-width="28" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="14" zoom-max="15"> <area src="patterns/scrub7.png" symbol-width="44" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="16" zoom-max="17"> <area src="patterns/scrub7.png" symbol-width="52" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="18"				 > <area src="patterns/scrub7.png" symbol-width="66" /> </rule>		
+		</rule>	 
+-->	
 	</rule>
 
 	<rule cat="tms_terrain" e="way" k="natural" v="heath" closed="yes" zoom-min="13">
 		<area fill="#bbeef0d9"/> 
-		<rule e="way" k="*" v="*" zoom-max="14">
-			<area src="patterns/heath.svg" symbol-width="24" />
-		</rule>
-		<rule e="way" k="*" v="*" zoom-min="15" zoom-max="16">
-			<area src="patterns/heath.svg" symbol-width="28" />
-		</rule>		
-		<rule e="way" k="*" v="*" zoom-min="17">
-			<area src="patterns/heath.svg" symbol-width="32" />
-		</rule>
+		<rule e="way" k="*" v="*" zoom-max="14">			  <area src="patterns/heath.svg" symbol-width="24" /></rule>
+		<rule e="way" k="*" v="*" zoom-min="15" zoom-max="16"><area src="patterns/heath.svg" symbol-width="28" /></rule>		
+		<rule e="way" k="*" v="*" zoom-min="17">			  <area src="patterns/heath.svg" symbol-width="32" /></rule>
 	</rule>
 	
 	<rule cat="tms_terrain" e="way" k="natural" v="rock|stone|bare_rock|bedrock" zoom-min="12">
@@ -385,17 +421,9 @@ Transparency for HEX colors (100% - непрозрачный)
 	<rule cat="tms_terrain" e="way" k="natural" v="fell" zoom-min="13">
 		<area src="patterns/p_fell.svg" symbol-width="25" />
 	</rule>
-	<rule cat="tms_terrain" e="way" k="landuse|natural" v="field|farm|farmland" zoom-min="13">
-		<area src="patterns/p_farmland.svg" symbol-width="128" />
-	</rule>
-	<rule cat="tms_terrain" e="way" k="landuse" v="orchard" zoom-min="13">
-		<area src="patterns/p_orchard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="30" />
-	</rule>
-	<rule cat="tms_terrain" e="way" k="landuse" v="vineyard" zoom-min="13">
-		<area src="patterns/p_vineyard.svg" stroke="#E4E4E4" stroke-width="0.2" symbol-width="20" />
-	</rule>
 
-	<!-- Misc land use -->
+
+	<!-- Misc land use  Тоже наверх?-->
 
 	<rule cat="tms_terrain" e="way" k="leisure" v="garden|golf_course|common" zoom-min="13">
 		<area fill="#BBC7F1A3" stroke="#806FC18E" stroke-width="0.2" />
@@ -409,11 +437,15 @@ Transparency for HEX colors (100% - непрозрачный)
 
 	<rule cat="tms_terrain" e="way" k="landuse|amenity" v="cemetery|grave_yard" zoom-min="13">
 		<area fill="#adc4b6" stroke="#333333" stroke-width="0.24" />
-		<area src="patterns/grave_yard.svg" symbol-height="18" />
+
+		<rule e="way" k="religion" v="christian" > <area src="patterns/p_grave_yard.svg" symbol-height="22" /> </rule>	
+		<rule e="way" k="religion" v="muslim" > <area src="patterns/p_muslim_128.svg" symbol-width="18" /> </rule>
+ 			
 		<rule e="way" k="*" v="*" zoom-min="15">
-			<symbol id="s_cemetery" src="symbols/s_cemetery.svg" symbol-width="16" />
-			<caption cat="tms_landnames" symbol-id="s_cemetery" position="below" k="name" font-style="bold_italic" font-family="serif" font-size="10" fill="#004D66" stroke="#FFFFFF" stroke-width="2.0" text-wrap-width="120" />
-		</rule>
+		  		<symbol id="s_cemetery" src="symbols/s_cemetery.svg" symbol-width="16" />
+		</rule>			
+		<caption cat="tms_landnames" symbol-id="s_cemetery" position="below" k="name" font-style="bold_italic" font-family="serif" font-size="11" fill="#004D66" stroke="#FFFFFF" stroke-width="1.4" text-wrap-width="120" />
+	
 	</rule>
 
 	<!-- military -->
@@ -462,13 +494,31 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<rule cat="tms_terrain" e="way" k="natural" v="tree_row">
-		<line stroke="#bee976" stroke-width="1.2" stroke-linecap="round"/>
+		<rule e="way" k="leaf_cycle|leaf_type" v="deciduous|broadleaved">
+			<line stroke="#BF4ccc40" stroke-width="1.05" stroke-linecap="round"/>
+		</rule>		
+		<rule e="way" k="leaf_cycle|leaf_type" v="evergreen|needleleaved"> 
+			<line stroke="#BF328b5a" stroke-width="1.05" stroke-linecap="round"/>
+		</rule>		
+		<rule e="way" k="leaf_cycle|leaf_type" v="mixed|~">
+			<line stroke="#BF3ab262" stroke-width="1.05" stroke-linecap="round"/>
+		</rule>				
+		<rule e="way" k="leaf_cycle|leaf_type" v="leafless"> 
+			<line stroke="#67908463" stroke-width="1.05" stroke-linecap="round"/>  
+		</rule>				
 	</rule>
-	
-	<rule cat="tms_terrain" e="way" k="barrier" v="hedge" zoom-min="15">
-		<line stroke="#A5CBA5" stroke-width="0.42" stroke-linecap="round" />
-		<line stroke="#CBE1CB" stroke-width="0.36" scale="all" stroke-dasharray="0.2,0.5" stroke-linecap="butt" />
-	</rule>	
+
+	<rule cat="tms_terrain" e="way" k="barrier" v="hedge" zoom-min="14">
+		<rule e="way" k="leaf_cycle|leaf_type" v="evergreen|needleleaved"> 
+			<line stroke="#BF328b5a" stroke-width="0.42" stroke-linecap="round" />			
+			<line stroke="#eff6fcf4" stroke-width="0.34" scale="all" stroke-dasharray="0.25,0.5" stroke-linecap="butt" />
+		</rule>		
+		<rule e="way" k="leaf_cycle|leaf_type" v="deciduous|broadleaved|mixed|~">
+			<line stroke="#bf44a53b" stroke-width="0.42" stroke-linecap="round" />
+			<line stroke="#eff6fcf4" stroke-width="0.34" scale="all" stroke-dasharray="0.25,0.5" stroke-linecap="butt" />
+		</rule>			
+ 	</rule>
+
 
 	<!-- Contour lines -->
 	<rule e="way" k="contour_ext" v="*" cat="tms_contours">
@@ -1023,6 +1073,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		</rule>
 	</rule>
 
+<!-- Начало болот (исходное) -->	
 	<!-- 	БОЛОТА  -->
 	<rule cat="tms_terrain" e="way" k="natural" v="wetland|marsh" zoom-min="12">
 		<area fill="#0D304eff"/>
@@ -1032,6 +1083,23 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule e="way" k="*" v="*" zoom-min="16"				>  <area src="patterns/p_wetland_blue2.svg" symbol-width="60" /> </rule>
 	</rule>
 	<!-- 	КОНЕЦ БОЛОТ -->
+<!-- Конец болот (исходное) -->
+ 
+<!-- Начало болот экспериментальное -->
+
+<!-- mud -Только lomaps -->
+	<rule e="way" k="natural|wetland" v="mud" closed="yes">
+		<rule e="way" k="*" v="*" zoom-max="13"><area fill="#ffa58774" /></rule> 
+		<rule e="way" k="*" v="*" zoom-min="14" >
+			<area src="file:/patterns/p_wetland_mud_36.svg" symbol-width="36" />
+    		<rule e="way" k="*" v="*" zoom-min="14" zoom-max="14"><area src="patterns/p_wetland_blue2.svg" symbol-width="18" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="15" zoom-max="15"><area src="patterns/p_wetland_blue2.svg" symbol-width="24" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="16" zoom-max="16"><area src="patterns/p_wetland_blue2.svg" symbol-width="36" /> </rule>
+			<rule e="way" k="*" v="*" zoom-min="17"			     ><area src="patterns/p_wetland_blue2.svg" symbol-width="48" /> </rule>
+		</rule>
+	</rule>
+<!-- Конец болот экспериментальное -->
+
 
 	<!-- waterway structures -->
 	<rule e="way" k="tunnel" v="~|no">
@@ -3202,7 +3270,7 @@ Transparency for HEX colors (100% - непрозрачный)
 		<rule e="any" k="*" v="miniature_golf">		<symbol id="s_sport" priority="225" display="always" src="symbols/s_sport_minigolf.svg" symbol-height="17" /> </rule>
 		<rule e="any" k="*" v="golf|golf_course">	<symbol id="s_sport" priority="225" display="always" src="symbols/s_golf.svg" symbol-height="17" /> </rule>
 		<rule e="any" k="*" v="climbing_adventure">	<symbol id="s_sport" priority="225" display="always" src="symbols/s_sport_climbing_adventure.svg" symbol-height="17" /> </rule>
-		<rule e="any" k="*" v="fitness_station">	<symbol id="s_sport" priority="220" display="always" src="symbols/s_fitness_runner-2.svg" symbol-height="14" /> </rule>
+		<rule e="any" k="*" v="fitness_station">	<symbol id="s_sport" priority="220" display="always" src="symbols/s_gym.svg" symbol-height="17" /> </rule>
 	
 		<rule cat="tms_landnames" e="any" k="*" v="*" zoom-min="15">
 			<caption symbol-id="s_sport" k="name" position="below" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" text-wrap-width="140" />
@@ -3217,7 +3285,7 @@ Transparency for HEX colors (100% - непрозрачный)
 	</rule>
 
 	<rule cat="tms_sport" e="any" k="leisure" v="sports_centre">
-		<symbol priority="220" id="s_gym" display="always" src="symbols/s_gym.svg" symbol-height="17" />
+		<symbol priority="220" id="s_gym" display="always" src="symbols/s_fitness_runner-2.svg" symbol-height="17" />
 		<rule e="any" k="*" v="*" zoom-min="16">
 			<caption cat="tms_landnames" k="name" symbol-id="s_gym" font-style="bold" font-size="10" fill="#008c00" stroke="#E5FFFFFF" stroke-width="2" text-wrap-width="140"/>
 		</rule>
