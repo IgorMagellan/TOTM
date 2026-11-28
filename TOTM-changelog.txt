@@ -500,5 +500,6 @@ amenity=watering_place
 также были изменены tree_row, barrier=hedge
 Для wood/forest был 🠕 zoom-min=8 
 Поменял местами s_fitness_runner-2.svg и s_gym.svg, как более логичные иконки для объектов
-❗Добавил отображение natural|wetland=mud для LoMapsV4+ только ☝. В ОАМ эти теги трансформируются tag-tranform в простой natural=wetland.
-
+❗Добавил отображение natural|wetland=mud заливкой для только ☝ LoMapsV4+. В ОАМ эти теги трансформируются tag-tranform в простой natural=wetland.
+27/11/2026 
+Добавил другую заливку на христианские и мусульманские кладбища
